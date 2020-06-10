@@ -1,0 +1,14 @@
+(GOAL COMPLEXITY)
+(STARTTERM (FUNCTIONSYMBOLS evalSimpleMultiplestart))
+(VAR A B C D)
+(RULES
+  evalSimpleMultiplestart(A,B,C,D) -> Com_1(evalSimpleMultipleentryin(A,B,C,D))
+  evalSimpleMultipleentryin(A,B,C,D) -> Com_1(evalSimpleMultiplebb3in(0,0,C,D))
+  evalSimpleMultiplebb3in(A,B,C,D) -> Com_1(evalSimpleMultiplebbin(A,B,C,D)) :|: C >= B + 1
+  evalSimpleMultiplebb3in(A,B,C,D) -> Com_1(evalSimpleMultiplereturnin(A,B,C,D)) :|: B >= C
+  evalSimpleMultiplebbin(A,B,C,D) -> Com_1(evalSimpleMultiplebb1in(A,B,C,D)) :|: D >= A + 1
+  evalSimpleMultiplebbin(A,B,C,D) -> Com_1(evalSimpleMultiplebb2in(A,B,C,D)) :|: A >= D
+  evalSimpleMultiplebb1in(A,B,C,D) -> Com_1(evalSimpleMultiplebb3in(A + 1,B,C,D))
+  evalSimpleMultiplebb2in(A,B,C,D) -> Com_1(evalSimpleMultiplebb3in(A,B + 1,C,D))
+  evalSimpleMultiplereturnin(A,B,C,D) -> Com_1(evalSimpleMultiplestop(A,B,C,D))
+)

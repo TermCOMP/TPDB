@@ -1,0 +1,15 @@
+(GOAL COMPLEXITY)
+(STARTTERM (FUNCTIONSYMBOLS evaleasy1start))
+(VAR A B)
+(RULES
+  evaleasy1start(A,B) -> Com_1(evaleasy1entryin(A,B))
+  evaleasy1entryin(A,B) -> Com_1(evaleasy1bb3in(0,B))
+  evaleasy1bb3in(A,B) -> Com_1(evaleasy1bbin(A,B)) :|: 39 >= A
+  evaleasy1bb3in(A,B) -> Com_1(evaleasy1returnin(A,B)) :|: A >= 40
+  evaleasy1bbin(A,B) -> Com_1(evaleasy1bb1in(A,B)) :|: B = 0
+  evaleasy1bbin(A,B) -> Com_1(evaleasy1bb2in(A,B)) :|: 0 >= B + 1
+  evaleasy1bbin(A,B) -> Com_1(evaleasy1bb2in(A,B)) :|: B >= 1
+  evaleasy1bb1in(A,B) -> Com_1(evaleasy1bb3in(A + 1,B))
+  evaleasy1bb2in(A,B) -> Com_1(evaleasy1bb3in(A + 2,B))
+  evaleasy1returnin(A,B) -> Com_1(evaleasy1stop(A,B))
+)

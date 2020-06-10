@@ -1,0 +1,35 @@
+(GOAL COMPLEXITY)
+(STARTTERM (FUNCTIONSYMBOLS eval_counterex1a_start))
+(VAR nondef_0 nondef_1 v__0 v__01 v__04 v_4 v_5 v_7 v_8 v_b v_n v_x v_y)
+(RULES
+  eval_counterex1a_start(v__0, v__01, v__04, v_4, v_5, v_7, v_8, v_b, v_n, v_x, v_y) -> Com_1(eval_counterex1a_bb0_in(v__0, v__01, v__04, v_4, v_5, v_7, v_8, v_b, v_n, v_x, v_y))
+  eval_counterex1a_bb0_in(v__0, v__01, v__04, v_4, v_5, v_7, v_8, v_b, v_n, v_x, v_y) -> Com_1(eval_counterex1a_0(v__0, v__01, v__04, v_4, v_5, v_7, v_8, v_b, v_n, v_x, v_y))
+  eval_counterex1a_0(v__0, v__01, v__04, v_4, v_5, v_7, v_8, v_b, v_n, v_x, v_y) -> Com_1(eval_counterex1a_1(v__0, v__01, v__04, v_4, v_5, v_7, v_8, v_b, v_n, v_x, v_y))
+  eval_counterex1a_1(v__0, v__01, v__04, v_4, v_5, v_7, v_8, v_b, v_n, v_x, v_y) -> Com_1(eval_counterex1a_2(v__0, v__01, v__04, v_4, v_5, v_7, v_8, v_b, v_n, v_x, v_y))
+  eval_counterex1a_2(v__0, v__01, v__04, v_4, v_5, v_7, v_8, v_b, v_n, v_x, v_y) -> Com_1(eval_counterex1a_3(v__0, v__01, v__04, v_4, v_5, v_7, v_8, v_b, v_n, v_x, v_y))
+  eval_counterex1a_3(v__0, v__01, v__04, v_4, v_5, v_7, v_8, v_b, v_n, v_x, v_y) -> Com_1(eval_counterex1a_4(v__0, v__01, v__04, v_4, v_5, v_7, v_8, v_b, v_n, v_x, v_y))
+  eval_counterex1a_4(v__0, v__01, v__04, v_4, v_5, v_7, v_8, v_b, v_n, v_x, v_y) -> Com_1(eval_counterex1a_5(v__0, v__01, v__04, v_4, v_5, v_7, v_8, v_b, v_n, v_x, v_y))
+  eval_counterex1a_5(v__0, v__01, v__04, v_4, v_5, v_7, v_8, v_b, v_n, v_x, v_y) -> Com_1(eval_counterex1a_6(v__0, v__01, v__04, v_4, v_5, v_7, v_8, v_b, v_n, v_x, v_y))
+  eval_counterex1a_6(v__0, v__01, v__04, v_4, v_5, v_7, v_8, v_b, v_n, v_x, v_y) -> Com_1(eval_counterex1a_7(v__0, v__01, v__04, v_4, v_5, v_7, v_8, v_b, v_n, v_x, v_y))
+  eval_counterex1a_7(v__0, v__01, v__04, v_4, v_5, v_7, v_8, v_b, v_n, v_x, v_y) -> Com_1(eval_counterex1a_8(v__0, v__01, v__04, v_4, v_5, v_7, v_8, v_b, v_n, v_x, v_y))
+  eval_counterex1a_8(v__0, v__01, v__04, v_4, v_5, v_7, v_8, v_b, v_n, v_x, v_y) -> Com_1(eval_counterex1a_9(v__0, v__01, v__04, v_4, v_5, v_7, v_8, v_b, v_n, v_x, v_y))
+  eval_counterex1a_9(v__0, v__01, v__04, v_4, v_5, v_7, v_8, v_b, v_n, v_x, v_y) -> Com_1(eval_counterex1a_bb1_in(v_b, v_x, v_y, v_4, v_5, v_7, v_8, v_b, v_n, v_x, v_y))
+  eval_counterex1a_bb1_in(v__0, v__01, v__04, v_4, v_5, v_7, v_8, v_b, v_n, v_x, v_y) -> Com_1(eval_counterex1a_bb2_in(v__0, v__01, v__04, v_4, v_5, v_7, v_8, v_b, v_n, v_x, v_y)) :|: v__01 >= 0 && 0 <= v__04 && v__04 <= v_n
+  eval_counterex1a_bb1_in(v__0, v__01, v__04, v_4, v_5, v_7, v_8, v_b, v_n, v_x, v_y) -> Com_1(eval_counterex1a__critedge_in(v__0, v__01, v__04, v_4, v_5, v_7, v_8, v_b, v_n, v_x, v_y)) :|: v__01 < 0
+  eval_counterex1a_bb1_in(v__0, v__01, v__04, v_4, v_5, v_7, v_8, v_b, v_n, v_x, v_y) -> Com_1(eval_counterex1a__critedge_in(v__0, v__01, v__04, v_4, v_5, v_7, v_8, v_b, v_n, v_x, v_y)) :|: 0 > v__04
+  eval_counterex1a_bb1_in(v__0, v__01, v__04, v_4, v_5, v_7, v_8, v_b, v_n, v_x, v_y) -> Com_1(eval_counterex1a__critedge_in(v__0, v__01, v__04, v_4, v_5, v_7, v_8, v_b, v_n, v_x, v_y)) :|: v__04 > v_n
+  eval_counterex1a_bb2_in(v__0, v__01, v__04, v_4, v_5, v_7, v_8, v_b, v_n, v_x, v_y) -> Com_1(eval_counterex1a_bb3_in(v__0, v__01, v__04, v_4, v_5, v_7, v_8, v_b, v_n, v_x, v_y)) :|: v__0 = 0
+  eval_counterex1a_bb2_in(v__0, v__01, v__04, v_4, v_5, v_7, v_8, v_b, v_n, v_x, v_y) -> Com_1(eval_counterex1a_bb4_in(v__0, v__01, v__04, v_4, v_5, v_7, v_8, v_b, v_n, v_x, v_y)) :|: v__0 < 0
+  eval_counterex1a_bb2_in(v__0, v__01, v__04, v_4, v_5, v_7, v_8, v_b, v_n, v_x, v_y) -> Com_1(eval_counterex1a_bb4_in(v__0, v__01, v__04, v_4, v_5, v_7, v_8, v_b, v_n, v_x, v_y)) :|: v__0 > 0
+  eval_counterex1a_bb3_in(v__0, v__01, v__04, v_4, v_5, v_7, v_8, v_b, v_n, v_x, v_y) -> Com_1(eval_counterex1a_11(v__0, v__01, v__04, v__04 + 1, v_5, v_7, v_8, v_b, v_n, v_x, v_y))
+  eval_counterex1a_11(v__0, v__01, v__04, v_4, v_5, v_7, v_8, v_b, v_n, v_x, v_y) -> Com_1(eval_counterex1a_12(v__0, v__01, v__04, v_4, nondef_0, v_7, v_8, v_b, v_n, v_x, v_y))
+  eval_counterex1a_12(v__0, v__01, v__04, v_4, v_5, v_7, v_8, v_b, v_n, v_x, v_y) -> Com_1(eval_counterex1a_bb1_in(1, v__01, v_4, v_4, v_5, v_7, v_8, v_b, v_n, v_x, v_y)) :|: v_5 > 0
+  eval_counterex1a_12(v__0, v__01, v__04, v_4, v_5, v_7, v_8, v_b, v_n, v_x, v_y) -> Com_1(eval_counterex1a_bb1_in(v__0, v__01, v_4, v_4, v_5, v_7, v_8, v_b, v_n, v_x, v_y)) :|: v_5 <= 0
+  eval_counterex1a_bb4_in(v__0, v__01, v__04, v_4, v_5, v_7, v_8, v_b, v_n, v_x, v_y) -> Com_1(eval_counterex1a_15(v__0, v__01, v__04, v_4, v_5, v__04 - 1, v_8, v_b, v_n, v_x, v_y))
+  eval_counterex1a_15(v__0, v__01, v__04, v_4, v_5, v_7, v_8, v_b, v_n, v_x, v_y) -> Com_1(eval_counterex1a_16(v__0, v__01, v__04, v_4, v_5, v_7, nondef_1, v_b, v_n, v_x, v_y))
+  eval_counterex1a_16(v__0, v__01, v__04, v_4, v_5, v_7, v_8, v_b, v_n, v_x, v_y) -> Com_1(eval_counterex1a_bb1_in(0, v__01 - 1, v_7, v_4, v_5, v_7, v_8, v_b, v_n, v_x, v_y)) :|: v_8 > 0 && v_8 > 0
+  eval_counterex1a_16(v__0, v__01, v__04, v_4, v_5, v_7, v_8, v_b, v_n, v_x, v_y) -> Com_1(eval_counterex1a_bb1_in(v__0, v__01 - 1, v_7, v_4, v_5, v_7, v_8, v_b, v_n, v_x, v_y)) :|: v_8 > 0 && v_8 <= 0
+  eval_counterex1a_16(v__0, v__01, v__04, v_4, v_5, v_7, v_8, v_b, v_n, v_x, v_y) -> Com_1(eval_counterex1a_bb1_in(0, v__01, v_7, v_4, v_5, v_7, v_8, v_b, v_n, v_x, v_y)) :|: v_8 <= 0 && v_8 > 0
+  eval_counterex1a_16(v__0, v__01, v__04, v_4, v_5, v_7, v_8, v_b, v_n, v_x, v_y) -> Com_1(eval_counterex1a_bb1_in(v__0, v__01, v_7, v_4, v_5, v_7, v_8, v_b, v_n, v_x, v_y)) :|: v_8 <= 0 && v_8 <= 0
+  eval_counterex1a__critedge_in(v__0, v__01, v__04, v_4, v_5, v_7, v_8, v_b, v_n, v_x, v_y) -> Com_1(eval_counterex1a_stop(v__0, v__01, v__04, v_4, v_5, v_7, v_8, v_b, v_n, v_x, v_y))
+)

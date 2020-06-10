@@ -1,0 +1,1 @@
+{-# htermination tan :: Float -> Float #-}

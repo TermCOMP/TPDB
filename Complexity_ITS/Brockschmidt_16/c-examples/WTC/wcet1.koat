@@ -1,0 +1,19 @@
+(GOAL COMPLEXITY)
+(STARTTERM (FUNCTIONSYMBOLS evalwcet1start))
+(VAR A B C D E)
+(RULES
+  evalwcet1start(A,B,C,D) -> Com_1(evalwcet1entryin(A,B,C,D))
+  evalwcet1entryin(A,B,C,D) -> Com_1(evalwcet1bbin(A,0,A,D)) :|: A >= 1
+  evalwcet1entryin(A,B,C,D) -> Com_1(evalwcet1returnin(A,B,C,D)) :|: 0 >= A
+  evalwcet1bbin(A,B,C,D) -> Com_1(evalwcet1bb1in(A,B,C,D)) :|: 0 >= E + 1
+  evalwcet1bbin(A,B,C,D) -> Com_1(evalwcet1bb1in(A,B,C,D)) :|: E >= 1
+  evalwcet1bbin(A,B,C,D) -> Com_1(evalwcet1bb4in(A,B,C,D))
+  evalwcet1bb1in(A,B,C,D) -> Com_1(evalwcet1bb6in(A,B,C,0)) :|: B + 1 >= A
+  evalwcet1bb1in(A,B,C,D) -> Com_1(evalwcet1bb6in(A,B,C,B + 1)) :|: A >= B + 2
+  evalwcet1bb4in(A,B,C,D) -> Com_1(evalwcet1bb5in(A,B,C,D)) :|: 1 >= B
+  evalwcet1bb4in(A,B,C,D) -> Com_1(evalwcet1bb6in(A,B,C,B - 1)) :|: B >= 2
+  evalwcet1bb5in(A,B,C,D) -> Com_1(evalwcet1bb6in(A,B,C,0))
+  evalwcet1bb6in(A,B,C,D) -> Com_1(evalwcet1bbin(A,D,C - 1,D)) :|: C >= 2
+  evalwcet1bb6in(A,B,C,D) -> Com_1(evalwcet1returnin(A,B,C,D)) :|: 1 >= C
+  evalwcet1returnin(A,B,C,D) -> Com_1(evalwcet1stop(A,B,C,D))
+)

@@ -1,0 +1,24 @@
+(GOAL COMPLEXITY)
+(STARTTERM (FUNCTIONSYMBOLS eval_ax_start))
+(VAR v__0 v__01 v_3 v_i v_j v_n)
+(RULES
+  eval_ax_start(v__0, v__01, v_3, v_i, v_j, v_n) -> Com_1(eval_ax_bb0_in(v__0, v__01, v_3, v_i, v_j, v_n))
+  eval_ax_bb0_in(v__0, v__01, v_3, v_i, v_j, v_n) -> Com_1(eval_ax_0(v__0, v__01, v_3, v_i, v_j, v_n))
+  eval_ax_0(v__0, v__01, v_3, v_i, v_j, v_n) -> Com_1(eval_ax_1(v__0, v__01, v_3, v_i, v_j, v_n))
+  eval_ax_1(v__0, v__01, v_3, v_i, v_j, v_n) -> Com_1(eval_ax_2(v__0, v__01, v_3, v_i, v_j, v_n))
+  eval_ax_2(v__0, v__01, v_3, v_i, v_j, v_n) -> Com_1(eval_ax_3(v__0, v__01, v_3, v_i, v_j, v_n))
+  eval_ax_3(v__0, v__01, v_3, v_i, v_j, v_n) -> Com_1(eval_ax_4(v__0, v__01, v_3, v_i, v_j, v_n))
+  eval_ax_4(v__0, v__01, v_3, v_i, v_j, v_n) -> Com_1(eval_ax_5(v__0, v__01, v_3, v_i, v_j, v_n))
+  eval_ax_5(v__0, v__01, v_3, v_i, v_j, v_n) -> Com_1(eval_ax_6(v__0, v__01, v_3, v_i, v_j, v_n))
+  eval_ax_6(v__0, v__01, v_3, v_i, v_j, v_n) -> Com_1(eval_ax_bb1_in(0, v__01, v_3, v_i, v_j, v_n))
+  eval_ax_bb1_in(v__0, v__01, v_3, v_i, v_j, v_n) -> Com_1(eval_ax_bb2_in(v__0, 0, v_3, v_i, v_j, v_n))
+  eval_ax_bb2_in(v__0, v__01, v_3, v_i, v_j, v_n) -> Com_1(eval_ax_bb3_in(v__0, v__01, v_3, v_i, v_j, v_n)) :|: v__01 < v_n - 1
+  eval_ax_bb2_in(v__0, v__01, v_3, v_i, v_j, v_n) -> Com_1(eval_ax_bb4_in(v__0, v__01, v_3, v_i, v_j, v_n)) :|: v__01 >= v_n - 1
+  eval_ax_bb3_in(v__0, v__01, v_3, v_i, v_j, v_n) -> Com_1(eval_ax_bb2_in(v__0, v__01 + 1, v_3, v_i, v_j, v_n))
+  eval_ax_bb4_in(v__0, v__01, v_3, v_i, v_j, v_n) -> Com_1(eval_ax_12(v__0, v__01, v__0 + 1, v_i, v_j, v_n))
+  eval_ax_12(v__0, v__01, v_3, v_i, v_j, v_n) -> Com_1(eval_ax_13(v__0, v__01, v_3, v_i, v_j, v_n))
+  eval_ax_13(v__0, v__01, v_3, v_i, v_j, v_n) -> Com_1(eval_ax_bb1_in(v_3, v__01, v_3, v_i, v_j, v_n)) :|: v__01 >= v_n - 1 && v_3 < v_n - 1
+  eval_ax_13(v__0, v__01, v_3, v_i, v_j, v_n) -> Com_1(eval_ax_bb5_in(v__0, v__01, v_3, v_i, v_j, v_n)) :|: v__01 < v_n - 1
+  eval_ax_13(v__0, v__01, v_3, v_i, v_j, v_n) -> Com_1(eval_ax_bb5_in(v__0, v__01, v_3, v_i, v_j, v_n)) :|: v_3 >= v_n - 1
+  eval_ax_bb5_in(v__0, v__01, v_3, v_i, v_j, v_n) -> Com_1(eval_ax_stop(v__0, v__01, v_3, v_i, v_j, v_n))
+)

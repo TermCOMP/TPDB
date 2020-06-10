@@ -1,0 +1,9 @@
+(VAR x y z)
+(RULES
+div(x, y) -> divNat(x >= 0 && y >= 1, x, y)
+divNat(TRUE, x, y) -> d(x, y, 0)
+d(x, y, z) -> dNat(x >= 0 && y >= 1 && z >= 0, x, y, z)
+dNat(TRUE, x, y, z) -> cond(x >= z, x, y-1, z)
+cond(TRUE, x, y, z) -> 1 + d(x, y+1, y+1+z)
+cond(FALSE, x, y, z) -> 0
+)

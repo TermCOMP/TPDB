@@ -1,0 +1,8 @@
+(GOAL COMPLEXITY)
+(STARTTERM (FUNCTIONSYMBOLS f1))
+(VAR A B)
+(RULES
+  f1(A,B) -> Com_1(f2(A,B)) :|: 0 >= A + B + 1 && A >= 1
+  f2(A,B) -> Com_1(f2(A - B,B)) :|: A >= 0
+  f2(A,B) -> Com_1(f3(A,B)) :|: 0 >= A + 1
+)

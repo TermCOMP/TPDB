@@ -1,0 +1,8 @@
+(VAR x y)
+(RULES
+diff(x, y) -> cond1(x = y, x, y)
+cond1(TRUE, x, y) -> 0
+cond1(FALSE, x, y) -> cond2(x > y, x, y)
+cond2(TRUE, x, y) -> 1 + diff(x, y+1)
+cond2(FALSE, x, y) -> 1 + diff(x+1, y)
+)

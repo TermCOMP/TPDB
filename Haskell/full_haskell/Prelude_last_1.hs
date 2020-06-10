@@ -1,0 +1,1 @@
+{-# htermination last :: [a] -> a #-}

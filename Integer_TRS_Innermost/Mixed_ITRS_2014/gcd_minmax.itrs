@@ -1,0 +1,7 @@
+(VAR x y)
+(RULES
+gcd(x, 0) -> x
+gcd(0, y) -> y
+gcd(x, y) -> gcd(x - y, y) :|: x >= y && y > 0
+gcd(x, y) -> gcd(y - x, x) :|: y > x && x > 0
+)

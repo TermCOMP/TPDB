@@ -1,0 +1,11 @@
+(GOAL COMPLEXITY)
+(STARTTERM (FUNCTIONSYMBOLS evalndecrstart))
+(VAR A)
+(RULES
+  evalndecrstart(A) -> Com_1(evalndecrentryin(A))
+  evalndecrentryin(A) -> Com_1(evalndecrbb1in(A - 1))
+  evalndecrbb1in(A) -> Com_1(evalndecrbbin(A)) :|: A >= 2
+  evalndecrbb1in(A) -> Com_1(evalndecrreturnin(A)) :|: 1 >= A
+  evalndecrbbin(A) -> Com_1(evalndecrbb1in(A - 1))
+  evalndecrreturnin(A) -> Com_1(evalndecrstop(A))
+)

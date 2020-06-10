@@ -1,0 +1,25 @@
+(GOAL COMPLEXITY)
+(STARTTERM (FUNCTIONSYMBOLS eval_foo_start))
+(VAR nondef_0 v_1 v_2 v_3 v_n v_p_0 v_r_0 v_x_0)
+(RULES
+  eval_foo_start(v_1, v_2, v_3, v_n, v_p_0, v_r_0, v_x_0) -> Com_1(eval_foo_bb0_in(v_1, v_2, v_3, v_n, v_p_0, v_r_0, v_x_0))
+  eval_foo_bb0_in(v_1, v_2, v_3, v_n, v_p_0, v_r_0, v_x_0) -> Com_1(eval_foo_0(v_1, v_2, v_3, v_n, v_p_0, v_r_0, v_x_0))
+  eval_foo_0(v_1, v_2, v_3, v_n, v_p_0, v_r_0, v_x_0) -> Com_1(eval_foo_1(v_1, v_2, v_3, v_n, v_p_0, v_r_0, v_x_0))
+  eval_foo_1(v_1, v_2, v_3, v_n, v_p_0, v_r_0, v_x_0) -> Com_1(eval_foo_2(v_1, v_2, v_3, v_n, v_p_0, v_r_0, v_x_0))
+  eval_foo_2(v_1, v_2, v_3, v_n, v_p_0, v_r_0, v_x_0) -> Com_1(eval_foo_3(v_1, v_2, v_3, v_n, v_p_0, v_r_0, v_x_0))
+  eval_foo_3(v_1, v_2, v_3, v_n, v_p_0, v_r_0, v_x_0) -> Com_1(eval_foo_4(v_1, v_2, v_3, v_n, v_p_0, v_r_0, v_x_0))
+  eval_foo_4(v_1, v_2, v_3, v_n, v_p_0, v_r_0, v_x_0) -> Com_1(eval_foo_5(v_1, v_2, v_3, v_n, v_p_0, v_r_0, v_x_0))
+  eval_foo_5(v_1, v_2, v_3, v_n, v_p_0, v_r_0, v_x_0) -> Com_1(eval_foo_6(v_1, v_2, v_3, v_n, v_p_0, v_r_0, v_x_0))
+  eval_foo_6(v_1, v_2, v_3, v_n, v_p_0, v_r_0, v_x_0) -> Com_1(eval_foo_7(v_1, v_2, v_3, v_n, v_p_0, v_r_0, v_x_0))
+  eval_foo_7(v_1, v_2, v_3, v_n, v_p_0, v_r_0, v_x_0) -> Com_1(eval_foo_bb1_in(v_1, v_2, v_3, v_n, v_p_0, 0, v_n))
+  eval_foo_bb1_in(v_1, v_2, v_3, v_n, v_p_0, v_r_0, v_x_0) -> Com_1(eval_foo_bb2_in(v_1, v_2, v_3, v_n, v_p_0, v_r_0, v_x_0)) :|: v_x_0 > 0
+  eval_foo_bb1_in(v_1, v_2, v_3, v_n, v_p_0, v_r_0, v_x_0) -> Com_1(eval_foo_bb5_in(v_1, v_2, v_3, v_n, v_p_0, v_r_0, v_x_0)) :|: v_x_0 <= 0
+  eval_foo_bb2_in(v_1, v_2, v_3, v_n, v_p_0, v_r_0, v_x_0) -> Com_1(eval_foo_10(v_x_0 - 1, v_r_0 + 1, v_3, v_n, v_p_0, v_r_0, v_x_0))
+  eval_foo_10(v_1, v_2, v_3, v_n, v_p_0, v_r_0, v_x_0) -> Com_1(eval_foo_11(v_1, v_2, nondef_0, v_n, v_p_0, v_r_0, v_x_0))
+  eval_foo_11(v_1, v_2, v_3, v_n, v_p_0, v_r_0, v_x_0) -> Com_1(eval_foo_bb3_in(v_1, v_2, v_3, v_n, v_2, v_r_0, v_x_0)) :|: v_3 > 0
+  eval_foo_11(v_1, v_2, v_3, v_n, v_p_0, v_r_0, v_x_0) -> Com_1(eval_foo_bb1_in(v_1, v_2, v_3, v_n, v_p_0, v_2, v_1)) :|: v_3 <= 0
+  eval_foo_bb3_in(v_1, v_2, v_3, v_n, v_p_0, v_r_0, v_x_0) -> Com_1(eval_foo_bb4_in(v_1, v_2, v_3, v_n, v_p_0, v_r_0, v_x_0)) :|: v_p_0 > 0
+  eval_foo_bb3_in(v_1, v_2, v_3, v_n, v_p_0, v_r_0, v_x_0) -> Com_1(eval_foo_bb1_in(v_1, v_2, v_3, v_n, v_p_0, 0, v_1)) :|: v_p_0 <= 0
+  eval_foo_bb4_in(v_1, v_2, v_3, v_n, v_p_0, v_r_0, v_x_0) -> Com_1(eval_foo_bb3_in(v_1, v_2, v_3, v_n, v_p_0 - 1, v_r_0, v_x_0))
+  eval_foo_bb5_in(v_1, v_2, v_3, v_n, v_p_0, v_r_0, v_x_0) -> Com_1(eval_foo_stop(v_1, v_2, v_3, v_n, v_p_0, v_r_0, v_x_0))
+)

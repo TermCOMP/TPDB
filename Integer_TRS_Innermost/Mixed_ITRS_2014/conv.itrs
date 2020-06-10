@@ -1,0 +1,8 @@
+(VAR x)
+(RULES
+lastbit(0) -> 0
+lastbit(1) -> 1
+lastbit(x) -> lastbit(x - 2) :|: x > 1
+conv(0) -> cons(nil, 0)
+conv(x) -> cons(conv(x / 2), lastbit(x)) :|: x > 0
+)

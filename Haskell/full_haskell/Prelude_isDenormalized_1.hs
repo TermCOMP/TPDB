@@ -1,0 +1,1 @@
+{-# htermination isDenormalized :: Float -> Bool #-}

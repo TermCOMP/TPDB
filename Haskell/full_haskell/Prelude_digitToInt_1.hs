@@ -1,0 +1,1 @@
+{-# htermination digitToInt :: Char -> Int #-}

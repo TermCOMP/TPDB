@@ -1,0 +1,2 @@
+{-# htermination delete :: () -> [()] -> [()] #-}
+import List

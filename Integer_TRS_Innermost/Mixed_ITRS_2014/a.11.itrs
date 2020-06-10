@@ -1,0 +1,7 @@
+(VAR x y z)
+(RULES
+eval_1(x, y, z) -> eval_2(x, y, z) :|: x > y
+eval_2(x, y, z) -> eval_1(x, y + 1, z) :|: x > z
+eval_2(x, y, z) -> eval_1(x, y, z + 1) :|: x > z
+eval_2(x, y, z) -> eval_1(x - 1, y, z) :|: z >= x
+)

@@ -1,0 +1,4 @@
+(VAR x y z)
+(RULES
+eval(x, y, z) -> eval(x, y, z + y) :|: x >= z && y > 0
+)

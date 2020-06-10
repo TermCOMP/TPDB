@@ -1,0 +1,14 @@
+(GOAL COMPLEXITY)
+(STARTTERM (FUNCTIONSYMBOLS start0))
+(VAR A B C D E F)
+(RULES
+  start(A,B,C,D,E,F) -> Com_1(lbl71(A,B,1,D,0,F)) :|: A >= 2 && B = A && C = D && E = F
+  start(A,B,C,D,E,F) -> Com_1(stop(A,B,0,D,1,F)) :|: 1 >= A && B = A && C = D && E = F
+  lbl71(A,B,C,D,E,F) -> Com_1(lbl71(A,B,1 + C,D,E,F)) :|: A >= C + 2 && A >= C + 1 && A >= E + 2 && C >= 1 && E >= 0 && B = A
+  lbl71(A,B,C,D,E,F) -> Com_1(cut(A,B,C,D,1 + E,F)) :|: A >= E + 3 && A >= E + 2 && A >= 2 && E >= 0 && C + 1 = A && B = A
+  lbl71(A,B,C,D,E,F) -> Com_1(stop(A,B,C,D,1 + E,F)) :|: A >= 2 && E + 2 = A && C + 1 = A && B = A
+  cut(A,B,C,D,E,F) -> Com_1(lbl71(A,B,1,D,E,F)) :|: A >= 2 && A >= 2 + E && E >= 1 && C + 1 = A && B = A
+  cut(A,B,C,D,E,F) -> Com_1(cut(A,B,0,D,1 + E,F)) :|: 1 >= A && A >= E + 3 && A >= 2 + E && E >= 1 && C + 1 = A && B = A
+  cut(A,B,C,D,E,F) -> Com_1(stop(A,B,0,D,1 + E,F)) :|: 1 >= A && A >= 3 && C + 1 = A && E + 2 = A && B = A
+  start0(A,B,C,D,E,F) -> Com_1(start(A,A,D,D,F,F))
+)

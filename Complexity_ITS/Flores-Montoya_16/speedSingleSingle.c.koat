@@ -1,0 +1,18 @@
+(GOAL COMPLEXITY)
+(STARTTERM (FUNCTIONSYMBOLS eval_speedSingleSingle_start))
+(VAR v_n v_x_0)
+(RULES
+  eval_speedSingleSingle_start(v_n, v_x_0) -> Com_1(eval_speedSingleSingle_bb0_in(v_n, v_x_0))
+  eval_speedSingleSingle_bb0_in(v_n, v_x_0) -> Com_1(eval_speedSingleSingle_0(v_n, v_x_0))
+  eval_speedSingleSingle_0(v_n, v_x_0) -> Com_1(eval_speedSingleSingle_1(v_n, v_x_0))
+  eval_speedSingleSingle_1(v_n, v_x_0) -> Com_1(eval_speedSingleSingle_2(v_n, v_x_0))
+  eval_speedSingleSingle_2(v_n, v_x_0) -> Com_1(eval_speedSingleSingle_3(v_n, v_x_0))
+  eval_speedSingleSingle_3(v_n, v_x_0) -> Com_1(eval_speedSingleSingle_4(v_n, v_x_0))
+  eval_speedSingleSingle_4(v_n, v_x_0) -> Com_1(eval_speedSingleSingle_bb1_in(v_n, 0))
+  eval_speedSingleSingle_bb1_in(v_n, v_x_0) -> Com_1(eval_speedSingleSingle_bb2_in(v_n, v_x_0)) :|: v_x_0 < v_n
+  eval_speedSingleSingle_bb1_in(v_n, v_x_0) -> Com_1(eval_speedSingleSingle_bb3_in(v_n, v_x_0)) :|: v_x_0 >= v_n
+  eval_speedSingleSingle_bb2_in(v_n, v_x_0) -> Com_1(eval_speedSingleSingle_5(v_n, v_x_0))
+  eval_speedSingleSingle_5(v_n, v_x_0) -> Com_1(eval_speedSingleSingle_6(v_n, v_x_0))
+  eval_speedSingleSingle_6(v_n, v_x_0) -> Com_1(eval_speedSingleSingle_bb1_in(v_n, v_x_0 + 1))
+  eval_speedSingleSingle_bb3_in(v_n, v_x_0) -> Com_1(eval_speedSingleSingle_stop(v_n, v_x_0))
+)

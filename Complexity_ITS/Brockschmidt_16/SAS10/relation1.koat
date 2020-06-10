@@ -1,0 +1,8 @@
+(GOAL COMPLEXITY)
+(STARTTERM (FUNCTIONSYMBOLS start0))
+(VAR A B C D E)
+(RULES
+  start(A,B,C,D) -> Com_1(lbl41(E,B,C,D)) :|: A = B && C = D
+  lbl41(A,B,C,D) -> Com_1(stop(A,B,A,D)) :|: C = D
+  start0(A,B,C,D) -> Com_1(start(B,B,D,D))
+)

@@ -1,0 +1,4 @@
+(VAR x y)
+(RULES
+f(TRUE, x, y) -> f(x > y && y > 2, 1+x, 2*y)
+)

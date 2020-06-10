@@ -1,0 +1,12 @@
+(GOAL COMPLEXITY)
+(STARTTERM (FUNCTIONSYMBOLS start0))
+(VAR A B C D E F)
+(RULES
+  start(A,B,C,D,E,F) -> Com_1(stop(A,B,C,D,E,F)) :|: 0 >= A && B = C && D = A && E = F
+  start(A,B,C,D,E,F) -> Com_1(lbl101(A,2,C,D,1,F)) :|: A >= 1 && B = C && D = A && E = F
+  start(A,B,C,D,E,F) -> Com_1(lbl101(A,2,C,D,-1,F)) :|: A >= 1 && B = C && D = A && E = F
+  lbl101(A,B,C,D,E,F) -> Com_1(stop(A,B,C,D,E,F)) :|: E + A >= 0 && A >= 1 && A >= E && B = A + 1 && D = A
+  lbl101(A,B,C,D,E,F) -> Com_1(lbl101(A,1 + B,C,D,1 + E,F)) :|: A >= B && E + B >= 1 && A + 1 >= B && B >= 2 && B >= E + 1 && D = A
+  lbl101(A,B,C,D,E,F) -> Com_1(lbl101(A,1 + B,C,D,E - 1,F)) :|: A >= B && E + B >= 1 && A + 1 >= B && B >= 2 && B >= E + 1 && D = A
+  start0(A,B,C,D,E,F) -> Com_1(start(A,C,C,A,F,F))
+)

@@ -1,0 +1,72 @@
+(GOAL COMPLEXITY)
+(STARTTERM (FUNCTIONSYMBOLS f0))
+(VAR A B C D E F G H I J K L M N O P Q R S T U V W X Y Z A1 B1 C1 D1)
+(RULES
+  f129(A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V) -> Com_1(f130(A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V)) :|: 0 >= A + 1
+  f129(A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V) -> Com_1(f130(A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V)) :|: A >= 1
+  f130(A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V) -> Com_1(f131(A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V)) :|: 0 >= B + 1
+  f130(A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V) -> Com_1(f131(A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V)) :|: B >= 1
+  f131(A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V) -> Com_1(f132(A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V)) :|: 0 >= C + 1
+  f131(A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V) -> Com_1(f132(A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V)) :|: C >= 1
+  f0(A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V) -> Com_1(f25(1,1,1,4,W,X,0,0,0,0,0,Y,0,N,O,P,Q,R,S,T,U,V))
+  f25(A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V) -> Com_1(f25(A,B,C,D,E,F,G,H,I,J,K,L,M + 1,N,O,P,Q,R,S,T,U,V)) :|: E >= M + 1
+  f31(A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V) -> Com_1(f34(A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V)) :|: E >= M + 1 && 0 >= A + 1
+  f31(A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V) -> Com_1(f34(A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V)) :|: E >= M + 1 && A >= 1
+  f34(A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V) -> Com_1(f31(1,B,C,D,E,F,G,H,I,J,K,L,M + 1,1,O,P,Q,R,S,T,U,V)) :|: W >= 1
+  f34(A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V) -> Com_1(f31(0,B,C,D,E,F,G,H,I,J,K,L,M + 1,0,O,P,Q,R,S,T,U,V)) :|: W >= 1
+  f34(A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V) -> Com_1(f31(0,B,C,D,E,F,G,H,I,J,K,L,M + 1,0,O,P,Q,R,S,T,U,V)) :|: 0 >= W
+  f31(A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V) -> Com_1(f31(0,B,C,D,E,F,G,H,I,J,K,L,M + 1,0,O,P,Q,R,S,T,U,V)) :|: E >= M + 1 && A = 0
+  f44(A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V) -> Com_1(f47(A,B,C,D,E,F,G,H,I,J,K,L,M,N,M + 1,P,Q,R,S,T,U,V)) :|: E >= M + 1
+  f47(A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V) -> Com_1(f50(A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V)) :|: E >= O + 1 && 0 >= B + 1
+  f47(A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V) -> Com_1(f50(A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V)) :|: E >= O + 1 && B >= 1
+  f50(A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V) -> Com_1(f47(A,1,C,D,E,F,G,H,I,J,K,L,M,N,O + 1,1,Q,R,S,T,U,V)) :|: W >= X + 1
+  f50(A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V) -> Com_1(f47(A,1,C,D,E,F,G,H,I,J,K,L,M,N,O + 1,1,Q,R,S,T,U,V))
+  f50(A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V) -> Com_1(f47(A,0,C,D,E,F,G,H,I,J,K,L,M,N,O + 1,0,Q,R,S,T,U,V))
+  f47(A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V) -> Com_1(f47(A,0,C,D,E,F,G,H,I,J,K,L,M,N,O + 1,0,Q,R,S,T,U,V)) :|: E >= O + 1 && B = 0
+  f60(A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V) -> Com_1(f60(A,B,C,D,E,F,G,H + W,I,J,K,L,M + 1,N,O,P,Q,R,S,T,U,V)) :|: D >= M + 1
+  f66(A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V) -> Com_1(f72(A,B,1,D,E,F,G,F,I,J,K,L,0,N,O,P,1,R,S,T,U,V)) :|: F = H
+  f66(A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V) -> Com_1(f72(A,B,0,D,E,F,G,H,I,J,K,L,0,N,O,P,0,R,S,T,U,V)) :|: F >= H + 1
+  f66(A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V) -> Com_1(f72(A,B,0,D,E,F,G,H,I,J,K,L,0,N,O,P,0,R,S,T,U,V)) :|: H >= 1 + F
+  f72(A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V) -> Com_1(f72(A,B,C,D,E,F,G,H,I + W,J,K,L,M + 1,N,O,P,Q,R,S,T,U,V)) :|: D >= M + 1
+  f78(A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V) -> Com_1(f84(A,B,1,D,E,F,G,H,F,J,K,L,0,N,O,P,Q,1,S,T,U,V)) :|: F = I
+  f78(A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V) -> Com_1(f84(A,B,0,D,E,F,G,H,I,J,K,L,0,N,O,P,Q,0,S,T,U,V)) :|: F >= I + 1
+  f78(A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V) -> Com_1(f84(A,B,0,D,E,F,G,H,I,J,K,L,0,N,O,P,Q,0,S,T,U,V)) :|: I >= 1 + F
+  f84(A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V) -> Com_1(f88(A,B,C,D,E,F,G,H,I,0,K,L,M,N,0,P,Q,R,S,T,U,V)) :|: D >= M + 1
+  f88(A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V) -> Com_1(f88(A,B,C,D,E,F,G,H,I,J + W,K,L,M,N,O + 1,P,Q,R,S,T,U,V)) :|: D >= O + 1
+  f94(A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V) -> Com_1(f84(A,B,1,D,E,F,G,H,I,F,K,L,M + 1,N,O,P,Q,R,1,T,U,V)) :|: F = J
+  f94(A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V) -> Com_1(f84(A,B,0,D,E,F,G,H,I,J,K,L,M + 1,N,O,P,Q,R,0,T,U,V)) :|: F >= J + 1
+  f94(A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V) -> Com_1(f84(A,B,0,D,E,F,G,H,I,J,K,L,M + 1,N,O,P,Q,R,0,T,U,V)) :|: J >= 1 + F
+  f102(A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V) -> Com_1(f106(A,B,C,D,E,F,G,H,I,J,0,L,0,N,O,P,Q,R,S,T,U,V)) :|: D >= O + 1
+  f106(A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V) -> Com_1(f106(A,B,C,D,E,F,G,H,I,J,K + W,L,M + 1,N,O,P,Q,R,S,T,U,V)) :|: D >= M + 1
+  f112(A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V) -> Com_1(f102(A,B,1,D,E,F,G,H,I,J,F,L,M,N,O + 1,P,Q,R,S,1,U,V)) :|: F = K
+  f112(A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V) -> Com_1(f102(A,B,0,D,E,F,G,H,I,J,K,L,M,N,O + 1,P,Q,R,S,0,U,V)) :|: F >= K + 1
+  f112(A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V) -> Com_1(f102(A,B,0,D,E,F,G,H,I,J,K,L,M,N,O + 1,P,Q,R,S,0,U,V)) :|: K >= 1 + F
+  f132(A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V) -> Com_1(f141(A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,0,V)) :|: 0 >= G + 1
+  f132(A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V) -> Com_1(f141(A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,0,V)) :|: G >= 1
+  f132(A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V) -> Com_1(f141(A,B,C,D,E,F,0,H,I,J,K,L,M,N,O,P,Q,R,S,T,1,V)) :|: G = 0
+  f131(A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V) -> Com_1(f141(A,B,0,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,1,V)) :|: C = 0
+  f130(A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V) -> Com_1(f141(A,0,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,1,V)) :|: B = 0
+  f129(A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V) -> Com_1(f141(0,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,1,V)) :|: A = 0
+  f106(A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V) -> Com_1(f112(A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V)) :|: M >= D && 0 >= C + 1
+  f106(A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V) -> Com_1(f112(A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V)) :|: M >= D && C >= 1
+  f106(A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V) -> Com_1(f102(A,B,0,D,E,F,G,H,I,J,K,L,M,N,O + 1,P,Q,R,S,0,U,V)) :|: M >= D && C = 0
+  f102(A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V) -> Com_1(f129(A,B,C,D,E,F,1,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,1)) :|: W >= X + 1 && Y >= Z + 1 && A1 >= B1 + 1 && O >= D && C1 >= D1 + 1
+  f102(A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V) -> Com_1(f129(A,B,C,D,E,F,0,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,0)) :|: W >= X + 1 && Y >= Z + 1 && O >= D && A1 >= B1 + 1
+  f102(A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V) -> Com_1(f129(A,B,C,D,E,F,0,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,0)) :|: W >= X + 1 && O >= D && Y >= Z + 1
+  f102(A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V) -> Com_1(f129(A,B,C,D,E,F,0,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,0)) :|: O >= D && W >= X + 1
+  f102(A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V) -> Com_1(f129(A,B,C,D,E,F,0,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,0)) :|: O >= D
+  f88(A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V) -> Com_1(f94(A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V)) :|: O >= D && 0 >= C + 1
+  f88(A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V) -> Com_1(f94(A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V)) :|: O >= D && C >= 1
+  f88(A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V) -> Com_1(f84(A,B,0,D,E,F,G,H,I,J,K,L,M + 1,N,O,P,Q,R,0,T,U,V)) :|: O >= D && C = 0
+  f84(A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V) -> Com_1(f102(A,B,C,D,E,F,G,H,I,J,K,L,M,N,0,P,Q,R,S,T,U,V)) :|: M >= D
+  f72(A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V) -> Com_1(f78(A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V)) :|: M >= D && 0 >= C + 1
+  f72(A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V) -> Com_1(f78(A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V)) :|: M >= D && C >= 1
+  f72(A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V) -> Com_1(f84(A,B,0,D,E,F,G,H,I,J,K,L,0,N,O,P,Q,0,S,T,U,V)) :|: M >= D && C = 0
+  f60(A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V) -> Com_1(f66(A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V)) :|: M >= D && 0 >= C + 1
+  f60(A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V) -> Com_1(f66(A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V)) :|: M >= D && C >= 1
+  f60(A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V) -> Com_1(f72(A,B,0,D,E,F,G,H,I,J,K,L,0,N,O,P,0,R,S,T,U,V)) :|: M >= D && C = 0
+  f47(A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V) -> Com_1(f44(A,B,C,D,E,F,G,H,I,J,K,L,M + 1,N,O,P,Q,R,S,T,U,V)) :|: O >= E
+  f44(A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V) -> Com_1(f60(A,B,C,D,E,F,G,H,I,J,K,L,0,N,O,P,Q,R,S,T,U,V)) :|: M >= E
+  f31(A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V) -> Com_1(f44(A,B,C,D,E,F,G,H,I,J,K,L,0,N,O,P,Q,R,S,T,U,V)) :|: M >= E
+  f25(A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V) -> Com_1(f31(A,B,C,D,E,F,G,H,I,J,K,L,0,N,O,P,Q,R,S,T,U,V)) :|: M >= E
+)

@@ -1,0 +1,5 @@
+(VAR x y)
+(RULES
+sumto(x, y) -> 0 :|: x > y
+sumto(x, y) -> x + sumto(x + 1, y) :|: y >= x
+)

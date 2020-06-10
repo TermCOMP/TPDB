@@ -1,0 +1,14 @@
+(GOAL COMPLEXITY)
+(STARTTERM (FUNCTIONSYMBOLS evalSimpleMultipleDepstart))
+(VAR A B C D)
+(RULES
+  evalSimpleMultipleDepstart(A,B,C,D) -> Com_1(evalSimpleMultipleDepentryin(A,B,C,D))
+  evalSimpleMultipleDepentryin(A,B,C,D) -> Com_1(evalSimpleMultipleDepbb3in(0,0,C,D))
+  evalSimpleMultipleDepbb3in(A,B,C,D) -> Com_1(evalSimpleMultipleDepbbin(A,B,C,D)) :|: C >= B + 1
+  evalSimpleMultipleDepbb3in(A,B,C,D) -> Com_1(evalSimpleMultipleDepreturnin(A,B,C,D)) :|: B >= C
+  evalSimpleMultipleDepbbin(A,B,C,D) -> Com_1(evalSimpleMultipleDepbb1in(A,B,C,D)) :|: D >= A + 1
+  evalSimpleMultipleDepbbin(A,B,C,D) -> Com_1(evalSimpleMultipleDepbb2in(A,B,C,D)) :|: A >= D
+  evalSimpleMultipleDepbb1in(A,B,C,D) -> Com_1(evalSimpleMultipleDepbb3in(A + 1,B,C,D))
+  evalSimpleMultipleDepbb2in(A,B,C,D) -> Com_1(evalSimpleMultipleDepbb3in(0,B + 1,C,D))
+  evalSimpleMultipleDepreturnin(A,B,C,D) -> Com_1(evalSimpleMultipleDepstop(A,B,C,D))
+)

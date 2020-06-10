@@ -1,0 +1,18 @@
+(GOAL COMPLEXITY)
+(STARTTERM (FUNCTIONSYMBOLS eval_nd_loop_start))
+(VAR nondef_0 v_0 v_x_0)
+(RULES
+  eval_nd_loop_start(v_0, v_x_0) -> Com_1(eval_nd_loop_bb0_in(v_0, v_x_0))
+  eval_nd_loop_bb0_in(v_0, v_x_0) -> Com_1(eval_nd_loop_0(v_0, v_x_0))
+  eval_nd_loop_0(v_0, v_x_0) -> Com_1(eval_nd_loop_1(v_0, v_x_0))
+  eval_nd_loop_1(v_0, v_x_0) -> Com_1(eval_nd_loop_2(v_0, v_x_0))
+  eval_nd_loop_2(v_0, v_x_0) -> Com_1(eval_nd_loop_3(v_0, v_x_0))
+  eval_nd_loop_3(v_0, v_x_0) -> Com_1(eval_nd_loop_bb1_in(v_0, 0))
+  eval_nd_loop_bb1_in(v_0, v_x_0) -> Com_1(eval_nd_loop_4(v_0, v_x_0))
+  eval_nd_loop_4(v_0, v_x_0) -> Com_1(eval_nd_loop_5(nondef_0, v_x_0))
+  eval_nd_loop_5(v_0, v_x_0) -> Com_1(eval_nd_loop_bb1_in(v_0, v_0)) :|: v_0 - v_x_0 <= 2 && v_0 - v_x_0 >= 1 && v_0 < 10
+  eval_nd_loop_5(v_0, v_x_0) -> Com_1(eval_nd_loop_bb2_in(v_0, v_x_0)) :|: v_0 - v_x_0 > 2
+  eval_nd_loop_5(v_0, v_x_0) -> Com_1(eval_nd_loop_bb2_in(v_0, v_x_0)) :|: v_0 - v_x_0 < 1
+  eval_nd_loop_5(v_0, v_x_0) -> Com_1(eval_nd_loop_bb2_in(v_0, v_x_0)) :|: v_0 >= 10
+  eval_nd_loop_bb2_in(v_0, v_x_0) -> Com_1(eval_nd_loop_stop(v_0, v_x_0))
+)

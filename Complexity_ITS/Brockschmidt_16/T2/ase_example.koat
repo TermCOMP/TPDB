@@ -1,0 +1,12 @@
+(GOAL COMPLEXITY)
+(STARTTERM (FUNCTIONSYMBOLS f0))
+(VAR A B C D E F G H)
+(RULES
+  f18(A,B,C,D,E,F) -> Com_1(f18(A,B + 1,C,D,E,F)) :|: A >= B + 1
+  f24(A,B,C,D,E,F) -> Com_1(f24(A,B + 1,C,D,E,F)) :|: A >= B + 1
+  f31(A,B,C,D,E,F) -> Com_1(f31(A,B + 1,C,D,E,F)) :|: A >= B + 1
+  f31(A,B,C,D,E,F) -> Com_1(f39(A,B,C,D,E,F)) :|: B >= A
+  f24(A,B,C,D,E,F) -> Com_1(f31(A,0,C,D,E,F)) :|: B >= A
+  f18(A,B,C,D,E,F) -> Com_1(f24(A,0,C,D,E,F)) :|: B >= A
+  f0(A,B,C,D,E,F) -> Com_1(f18(10,0,10,G,10,H))
+)

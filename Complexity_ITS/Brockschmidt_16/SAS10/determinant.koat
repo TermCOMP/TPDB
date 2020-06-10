@@ -1,0 +1,14 @@
+(GOAL COMPLEXITY)
+(STARTTERM (FUNCTIONSYMBOLS start0))
+(VAR A B C D E F G H)
+(RULES
+  start(A,B,C,D,E,F,G,H) -> Com_1(a(A,B,C,D,E,F,G,H)) :|: A >= 1 && B = A && C = D && E = F && G = H
+  a(A,B,C,D,E,F,G,H) -> Com_1(d(A,B,1,D,E,F,G,H)) :|: A >= 1 && G = H && E = F && C = D && B = A
+  d(A,B,C,D,E,F,G,H) -> Com_1(b(A,B,C,D,E,F,1 + C,H)) :|: A >= C + 1 && A >= C && A >= 1 && C >= 1 && B = A
+  d(A,B,C,D,E,F,G,H) -> Com_1(halt(A,B,C,D,E,F,G,H)) :|: A >= 1 && C = A && B = A
+  b(A,B,C,D,E,F,G,H) -> Com_1(d(A,B,1 + C,D,E,F,G,H)) :|: A >= C + 1 && C >= 1 && A >= C && G = A + 1 && B = A
+  b(A,B,C,D,E,F,G,H) -> Com_1(c(A,B,C,D,B,F,G,H)) :|: A >= G && A + 1 >= G && A >= C + 1 && C >= 1 && G >= C + 1 && B = A
+  c(A,B,C,D,E,F,G,H) -> Com_1(c(A,B,C,D,E - 1,F,G,H)) :|: E >= C + 1 && A >= E && A >= G && C >= 1 && E >= C && G >= C + 1 && B = A
+  c(A,B,C,D,E,F,G,H) -> Com_1(b(A,B,C,D,E,F,1 + G,H)) :|: A >= E && A >= G && E >= 1 && G >= E + 1 && C = E && B = A
+  start0(A,B,C,D,E,F,G,H) -> Com_1(start(A,A,D,D,F,F,H,H))
+)

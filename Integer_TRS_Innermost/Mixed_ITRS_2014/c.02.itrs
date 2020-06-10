@@ -1,0 +1,7 @@
+# Cook/Podelski/Rybalchenko: Abstraction Refinement for Termination (SAS 2005)
+(VAR x y)
+(RULES
+eval_1(x, y) -> eval_2(x + 1, 1) :|: x >= 0
+eval_2(x, y) -> eval_2(x, y + 1) :|: x >= 0 && y > 0 && x >= y
+eval_2(x, y) -> eval_1(x - 2, y) :|: x >= 0 && y > 0 && y > x
+)

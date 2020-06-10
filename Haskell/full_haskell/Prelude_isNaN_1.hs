@@ -1,0 +1,1 @@
+{-# htermination isNaN :: Float -> Bool #-}

@@ -1,0 +1,15 @@
+(VAR x y ys zs)
+(RULES
+primes(x) -> sieve(nats(2, x))
+nats(x, y) -> nil :|: x > y
+nats(x, y) -> cons(x, nats(x + 1, y)) :|: y >= x
+sieve(nil) -> nil
+sieve(cons(x, ys)) -> cons(x, sieve(filter(x, ys)))
+filter(x, nil) -> nil
+filter(x, cons(y, zs)) -> if(isdiv(x, y), x, y, zs)
+if(TRUE, x, y, zs) -> filter(x, zs)
+if(FALSE, x, y, zs) -> cons(y, filter(x, zs))
+isdiv(x, 0) -> TRUE :|: x > 0
+isdiv(x, y) -> FALSE :|: x > y && y > 0
+isdiv(x, y) -> isdiv(x, y - x) :|: y >= x && x > 0
+)

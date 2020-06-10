@@ -1,0 +1,1 @@
+{-# htermination enumFrom :: Ordering -> [Ordering] #-}

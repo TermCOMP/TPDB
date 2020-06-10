@@ -1,0 +1,14 @@
+(GOAL COMPLEXITY)
+(STARTTERM (FUNCTIONSYMBOLS evalrandom1dstart))
+(VAR A B C)
+(RULES
+  evalrandom1dstart(A,B) -> Com_1(evalrandom1dentryin(A,B))
+  evalrandom1dentryin(A,B) -> Com_1(evalrandom1dbb5in(A,1)) :|: A >= 1
+  evalrandom1dentryin(A,B) -> Com_1(evalrandom1dreturnin(A,B)) :|: 0 >= A
+  evalrandom1dbb5in(A,B) -> Com_1(evalrandom1dbb1in(A,B)) :|: A >= B
+  evalrandom1dbb5in(A,B) -> Com_1(evalrandom1dreturnin(A,B)) :|: B >= A + 1
+  evalrandom1dbb1in(A,B) -> Com_1(evalrandom1dbb5in(A,B + 1)) :|: 0 >= C + 1
+  evalrandom1dbb1in(A,B) -> Com_1(evalrandom1dbb5in(A,B + 1)) :|: C >= 1
+  evalrandom1dbb1in(A,B) -> Com_1(evalrandom1dbb5in(A,B + 1))
+  evalrandom1dreturnin(A,B) -> Com_1(evalrandom1dstop(A,B))
+)

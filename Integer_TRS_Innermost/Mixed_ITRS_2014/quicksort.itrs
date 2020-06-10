@@ -1,0 +1,13 @@
+(VAR zs x ys y zl zh yl yh)
+(RULES
+app(nil, zs) -> zs
+app(cons(x, ys), zs) -> cons(x, app(ys, zs))
+split(x, e) -> pair(e, e)
+split(x, ins(y, zs)) -> if_1(split(x, zs), x, y, zs) :|: x > y
+if_1(pair(zl, zh), x, y, zs) -> pair(ins(y, zl), zh) :|: x > y
+split(x, ins(y, zs)) -> if_2(split(x, zs), x, y, zs) :|: y >= x
+if_2(pair(zl, zh), x, y, zs) -> pair(zl, ins(y, zh)) :|: y >= x
+qsort(e) -> nil
+qsort(ins(x, ys)) -> if_3(split(x, ys), x, ys)
+if_3(pair(yl, yh), x, ys) -> app(qsort(yl), cons(x, qsort(yh)))
+)

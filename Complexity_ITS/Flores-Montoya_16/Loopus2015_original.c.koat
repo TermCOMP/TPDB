@@ -1,0 +1,31 @@
+(GOAL COMPLEXITY)
+(STARTTERM (FUNCTIONSYMBOLS eval_xnu_start))
+(VAR nondef_0 nondef_1 v__end_0 v_1 v_2 v_4 v_7 v_beg_0 v_end_0 v_i_0 v_k_0 v_len)
+(RULES
+  eval_xnu_start(v__end_0, v_1, v_2, v_4, v_7, v_beg_0, v_end_0, v_i_0, v_k_0, v_len) -> Com_1(eval_xnu_bb0_in(v__end_0, v_1, v_2, v_4, v_7, v_beg_0, v_end_0, v_i_0, v_k_0, v_len))
+  eval_xnu_bb0_in(v__end_0, v_1, v_2, v_4, v_7, v_beg_0, v_end_0, v_i_0, v_k_0, v_len) -> Com_1(eval_xnu_0(v__end_0, v_1, v_2, v_4, v_7, v_beg_0, v_end_0, v_i_0, v_k_0, v_len))
+  eval_xnu_0(v__end_0, v_1, v_2, v_4, v_7, v_beg_0, v_end_0, v_i_0, v_k_0, v_len) -> Com_1(eval_xnu_1(v__end_0, v_1, v_2, v_4, v_7, v_beg_0, v_end_0, v_i_0, v_k_0, v_len))
+  eval_xnu_1(v__end_0, v_1, v_2, v_4, v_7, v_beg_0, v_end_0, v_i_0, v_k_0, v_len) -> Com_1(eval_xnu_2(v__end_0, v_1, v_2, v_4, v_7, v_beg_0, v_end_0, v_i_0, v_k_0, v_len))
+  eval_xnu_2(v__end_0, v_1, v_2, v_4, v_7, v_beg_0, v_end_0, v_i_0, v_k_0, v_len) -> Com_1(eval_xnu_3(v__end_0, v_1, v_2, v_4, v_7, v_beg_0, v_end_0, v_i_0, v_k_0, v_len))
+  eval_xnu_3(v__end_0, v_1, v_2, v_4, v_7, v_beg_0, v_end_0, v_i_0, v_k_0, v_len) -> Com_1(eval_xnu_4(v__end_0, v_1, v_2, v_4, v_7, v_beg_0, v_end_0, v_i_0, v_k_0, v_len))
+  eval_xnu_4(v__end_0, v_1, v_2, v_4, v_7, v_beg_0, v_end_0, v_i_0, v_k_0, v_len) -> Com_1(eval_xnu_5(v__end_0, v_1, v_2, v_4, v_7, v_beg_0, v_end_0, v_i_0, v_k_0, v_len))
+  eval_xnu_5(v__end_0, v_1, v_2, v_4, v_7, v_beg_0, v_end_0, v_i_0, v_k_0, v_len) -> Com_1(eval_xnu_6(v__end_0, v_1, v_2, v_4, v_7, v_beg_0, v_end_0, v_i_0, v_k_0, v_len))
+  eval_xnu_6(v__end_0, v_1, v_2, v_4, v_7, v_beg_0, v_end_0, v_i_0, v_k_0, v_len) -> Com_1(eval_xnu_7(v__end_0, v_1, v_2, v_4, v_7, v_beg_0, v_end_0, v_i_0, v_k_0, v_len))
+  eval_xnu_7(v__end_0, v_1, v_2, v_4, v_7, v_beg_0, v_end_0, v_i_0, v_k_0, v_len) -> Com_1(eval_xnu_8(v__end_0, v_1, v_2, v_4, v_7, v_beg_0, v_end_0, v_i_0, v_k_0, v_len))
+  eval_xnu_8(v__end_0, v_1, v_2, v_4, v_7, v_beg_0, v_end_0, v_i_0, v_k_0, v_len) -> Com_1(eval_xnu_bb1_in(v__end_0, v_1, v_2, v_4, v_7, 0, 0, 0, v_k_0, v_len))
+  eval_xnu_bb1_in(v__end_0, v_1, v_2, v_4, v_7, v_beg_0, v_end_0, v_i_0, v_k_0, v_len) -> Com_1(eval_xnu_bb2_in(v__end_0, v_1, v_2, v_4, v_7, v_beg_0, v_end_0, v_i_0, v_k_0, v_len)) :|: v_i_0 < v_len
+  eval_xnu_bb1_in(v__end_0, v_1, v_2, v_4, v_7, v_beg_0, v_end_0, v_i_0, v_k_0, v_len) -> Com_1(eval_xnu_bb5_in(v__end_0, v_1, v_2, v_4, v_7, v_beg_0, v_end_0, v_i_0, v_k_0, v_len)) :|: v_i_0 >= v_len
+  eval_xnu_bb2_in(v__end_0, v_1, v_2, v_4, v_7, v_beg_0, v_end_0, v_i_0, v_k_0, v_len) -> Com_1(eval_xnu_10(v__end_0, v_i_0 + 1, v_2, v_4, v_7, v_beg_0, v_end_0, v_i_0, v_k_0, v_len))
+  eval_xnu_10(v__end_0, v_1, v_2, v_4, v_7, v_beg_0, v_end_0, v_i_0, v_k_0, v_len) -> Com_1(eval_xnu_11(v__end_0, v_1, nondef_0, v_4, v_7, v_beg_0, v_end_0, v_i_0, v_k_0, v_len))
+  eval_xnu_11(v__end_0, v_1, v_2, v_4, v_7, v_beg_0, v_end_0, v_i_0, v_k_0, v_len) -> Com_1(eval_xnu_12(v_1, v_1, v_2, v_4, v_7, v_beg_0, v_end_0, v_i_0, v_k_0, v_len)) :|: v_2 > 0
+  eval_xnu_11(v__end_0, v_1, v_2, v_4, v_7, v_beg_0, v_end_0, v_i_0, v_k_0, v_len) -> Com_1(eval_xnu_12(v_end_0, v_1, v_2, v_4, v_7, v_beg_0, v_end_0, v_i_0, v_k_0, v_len)) :|: v_2 <= 0
+  eval_xnu_12(v__end_0, v_1, v_2, v_4, v_7, v_beg_0, v_end_0, v_i_0, v_k_0, v_len) -> Com_1(eval_xnu_13(v__end_0, v_1, v_2, nondef_1, v_7, v_beg_0, v_end_0, v_i_0, v_k_0, v_len))
+  eval_xnu_13(v__end_0, v_1, v_2, v_4, v_7, v_beg_0, v_end_0, v_i_0, v_k_0, v_len) -> Com_1(eval_xnu_bb3_in(v__end_0, v_1, v_2, v_4, v_7, v_beg_0, v_end_0, v_i_0, v_beg_0, v_len)) :|: v_4 > 0
+  eval_xnu_13(v__end_0, v_1, v_2, v_4, v_7, v_beg_0, v_end_0, v_i_0, v_k_0, v_len) -> Com_1(eval_xnu_bb1_in(v__end_0, v_1, v_2, v_4, v_7, v_beg_0, v__end_0, v_1, v_k_0, v_len)) :|: v_4 <= 0
+  eval_xnu_bb3_in(v__end_0, v_1, v_2, v_4, v_7, v_beg_0, v_end_0, v_i_0, v_k_0, v_len) -> Com_1(eval_xnu_bb4_in(v__end_0, v_1, v_2, v_4, v_7, v_beg_0, v_end_0, v_i_0, v_k_0, v_len)) :|: v_k_0 < v__end_0
+  eval_xnu_bb3_in(v__end_0, v_1, v_2, v_4, v_7, v_beg_0, v_end_0, v_i_0, v_k_0, v_len) -> Com_1(eval_xnu_bb1_in(v__end_0, v_1, v_2, v_4, v_7, v_1, v_1, v_1, v_k_0, v_len)) :|: v_k_0 >= v__end_0
+  eval_xnu_bb4_in(v__end_0, v_1, v_2, v_4, v_7, v_beg_0, v_end_0, v_i_0, v_k_0, v_len) -> Com_1(eval_xnu_15(v__end_0, v_1, v_2, v_4, v_k_0 + 1, v_beg_0, v_end_0, v_i_0, v_k_0, v_len))
+  eval_xnu_15(v__end_0, v_1, v_2, v_4, v_7, v_beg_0, v_end_0, v_i_0, v_k_0, v_len) -> Com_1(eval_xnu_16(v__end_0, v_1, v_2, v_4, v_7, v_beg_0, v_end_0, v_i_0, v_k_0, v_len))
+  eval_xnu_16(v__end_0, v_1, v_2, v_4, v_7, v_beg_0, v_end_0, v_i_0, v_k_0, v_len) -> Com_1(eval_xnu_bb3_in(v__end_0, v_1, v_2, v_4, v_7, v_beg_0, v_end_0, v_i_0, v_7, v_len))
+  eval_xnu_bb5_in(v__end_0, v_1, v_2, v_4, v_7, v_beg_0, v_end_0, v_i_0, v_k_0, v_len) -> Com_1(eval_xnu_stop(v__end_0, v_1, v_2, v_4, v_7, v_beg_0, v_end_0, v_i_0, v_k_0, v_len))
+)

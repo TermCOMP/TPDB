@@ -1,0 +1,17 @@
+(GOAL COMPLEXITY)
+(STARTTERM (FUNCTIONSYMBOLS start0))
+(VAR A B C D E F)
+(RULES
+  start(A,B,C,D,E,F) -> Com_1(lbl91(A,B,100,D,1,F)) :|: A = 0 && B = 0 && C = D && E = F
+  start(A,B,C,D,E,F) -> Com_1(lbl111(A,B,100,D,2,F)) :|: 0 >= B + 1 && A = B && C = D && E = F
+  start(A,B,C,D,E,F) -> Com_1(lbl111(A,B,100,D,2,F)) :|: B >= 1 && A = B && C = D && E = F
+  lbl91(A,B,C,D,E,F) -> Com_1(stop(A,B,C,D,E,F)) :|: E = 40 && C = 100 && A = 0 && B = 0
+  lbl91(A,B,C,D,E,F) -> Com_1(lbl91(A,B,C,D,1 + E,F)) :|: 39 >= E && E >= 1 && 40 >= E && A = 0 && C = 100 && B = 0
+  lbl91(A,B,C,D,E,F) -> Com_1(lbl111(A,B,C,D,2 + E,F)) :|: 0 >= 1 && 39 >= E && E >= 1 && 40 >= E && C = 100 && A = 0 && B = 0
+  lbl91(A,B,C,D,E,F) -> Com_1(lbl111(A,B,C,D,2 + E,F)) :|: 0 >= 1 && 39 >= E && E >= 1 && 40 >= E && C = 100 && A = 0 && B = 0
+  lbl111(A,B,C,D,E,F) -> Com_1(stop(A,B,C,D,E,F)) :|: E >= 40 && E >= 2 && 41 >= E && C = 100 && A = B
+  lbl111(A,B,C,D,E,F) -> Com_1(lbl91(A,B,C,D,1 + E,F)) :|: 39 >= E && E >= 2 && 41 >= E && A = 0 && C = 100 && B = 0
+  lbl111(A,B,C,D,E,F) -> Com_1(lbl111(A,B,C,D,2 + E,F)) :|: 0 >= B + 1 && 39 >= E && E >= 2 && 41 >= E && C = 100 && A = B
+  lbl111(A,B,C,D,E,F) -> Com_1(lbl111(A,B,C,D,2 + E,F)) :|: B >= 1 && 39 >= E && E >= 2 && 41 >= E && C = 100 && A = B
+  start0(A,B,C,D,E,F) -> Com_1(start(B,B,D,D,F,F))
+)

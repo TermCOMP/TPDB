@@ -1,0 +1,20 @@
+(GOAL COMPLEXITY)
+(STARTTERM (FUNCTIONSYMBOLS eval_exmini_start))
+(VAR v__0 v__01 v__02 v_i v_j v_k)
+(RULES
+  eval_exmini_start(v__0, v__01, v__02, v_i, v_j, v_k) -> Com_1(eval_exmini_bb0_in(v__0, v__01, v__02, v_i, v_j, v_k))
+  eval_exmini_bb0_in(v__0, v__01, v__02, v_i, v_j, v_k) -> Com_1(eval_exmini_0(v__0, v__01, v__02, v_i, v_j, v_k))
+  eval_exmini_0(v__0, v__01, v__02, v_i, v_j, v_k) -> Com_1(eval_exmini_1(v__0, v__01, v__02, v_i, v_j, v_k))
+  eval_exmini_1(v__0, v__01, v__02, v_i, v_j, v_k) -> Com_1(eval_exmini_2(v__0, v__01, v__02, v_i, v_j, v_k))
+  eval_exmini_2(v__0, v__01, v__02, v_i, v_j, v_k) -> Com_1(eval_exmini_3(v__0, v__01, v__02, v_i, v_j, v_k))
+  eval_exmini_3(v__0, v__01, v__02, v_i, v_j, v_k) -> Com_1(eval_exmini_4(v__0, v__01, v__02, v_i, v_j, v_k))
+  eval_exmini_4(v__0, v__01, v__02, v_i, v_j, v_k) -> Com_1(eval_exmini_5(v__0, v__01, v__02, v_i, v_j, v_k))
+  eval_exmini_5(v__0, v__01, v__02, v_i, v_j, v_k) -> Com_1(eval_exmini_6(v__0, v__01, v__02, v_i, v_j, v_k))
+  eval_exmini_6(v__0, v__01, v__02, v_i, v_j, v_k) -> Com_1(eval_exmini_7(v__0, v__01, v__02, v_i, v_j, v_k))
+  eval_exmini_7(v__0, v__01, v__02, v_i, v_j, v_k) -> Com_1(eval_exmini_bb1_in(v_i, v_j, v_k, v_i, v_j, v_k))
+  eval_exmini_bb1_in(v__0, v__01, v__02, v_i, v_j, v_k) -> Com_1(eval_exmini_bb2_in(v__0, v__01, v__02, v_i, v_j, v_k)) :|: v__0 <= 100 && v__01 <= v__02
+  eval_exmini_bb1_in(v__0, v__01, v__02, v_i, v_j, v_k) -> Com_1(eval_exmini_bb3_in(v__0, v__01, v__02, v_i, v_j, v_k)) :|: v__0 > 100
+  eval_exmini_bb1_in(v__0, v__01, v__02, v_i, v_j, v_k) -> Com_1(eval_exmini_bb3_in(v__0, v__01, v__02, v_i, v_j, v_k)) :|: v__01 > v__02
+  eval_exmini_bb2_in(v__0, v__01, v__02, v_i, v_j, v_k) -> Com_1(eval_exmini_bb1_in(v__01, v__0 + 1, v__02 - 1, v_i, v_j, v_k))
+  eval_exmini_bb3_in(v__0, v__01, v__02, v_i, v_j, v_k) -> Com_1(eval_exmini_stop(v__0, v__01, v__02, v_i, v_j, v_k))
+)

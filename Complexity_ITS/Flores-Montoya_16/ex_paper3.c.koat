@@ -1,0 +1,32 @@
+(GOAL COMPLEXITY)
+(STARTTERM (FUNCTIONSYMBOLS eval_p3_start))
+(VAR nondef_0 nondef_1 nondef_2 v__0 v__01 v__1 v__3 v_12 v_x v_y v_z)
+(RULES
+  eval_p3_start(v__0, v__01, v__1, v__3, v_12, v_x, v_y, v_z) -> Com_1(eval_p3_bb0_in(v__0, v__01, v__1, v__3, v_12, v_x, v_y, v_z))
+  eval_p3_bb0_in(v__0, v__01, v__1, v__3, v_12, v_x, v_y, v_z) -> Com_1(eval_p3_0(v__0, v__01, v__1, v__3, v_12, v_x, v_y, v_z))
+  eval_p3_0(v__0, v__01, v__1, v__3, v_12, v_x, v_y, v_z) -> Com_1(eval_p3_1(v__0, v__01, v__1, v__3, v_12, v_x, v_y, v_z))
+  eval_p3_1(v__0, v__01, v__1, v__3, v_12, v_x, v_y, v_z) -> Com_1(eval_p3_2(v__0, v__01, v__1, v__3, v_12, v_x, v_y, v_z))
+  eval_p3_2(v__0, v__01, v__1, v__3, v_12, v_x, v_y, v_z) -> Com_1(eval_p3_3(v__0, v__01, v__1, v__3, v_12, v_x, v_y, v_z))
+  eval_p3_3(v__0, v__01, v__1, v__3, v_12, v_x, v_y, v_z) -> Com_1(eval_p3_4(v__0, v__01, v__1, v__3, v_12, v_x, v_y, v_z))
+  eval_p3_4(v__0, v__01, v__1, v__3, v_12, v_x, v_y, v_z) -> Com_1(eval_p3_5(v__0, v__01, v__1, v__3, v_12, v_x, v_y, v_z))
+  eval_p3_5(v__0, v__01, v__1, v__3, v_12, v_x, v_y, v_z) -> Com_1(eval_p3_6(v__0, v__01, v__1, v__3, v_12, v_x, v_y, v_z))
+  eval_p3_6(v__0, v__01, v__1, v__3, v_12, v_x, v_y, v_z) -> Com_1(eval_p3_7(v__0, v__01, v__1, v__3, v_12, v_x, v_y, v_z))
+  eval_p3_7(v__0, v__01, v__1, v__3, v_12, v_x, v_y, v_z) -> Com_1(eval_p3_bb1_in(v_x, v_y, v__1, v__3, v_12, v_x, v_y, v_z))
+  eval_p3_bb1_in(v__0, v__01, v__1, v__3, v_12, v_x, v_y, v_z) -> Com_1(eval_p3_bb2_in(v__0, v__01, v__1, v__3, v_12, v_x, v_y, v_z)) :|: v__0 > 0
+  eval_p3_bb1_in(v__0, v__01, v__1, v__3, v_12, v_x, v_y, v_z) -> Com_1(eval_p3_bb7_in(v__0, v__01, v__1, v__3, v_12, v_x, v_y, v_z)) :|: v__0 <= 0
+  eval_p3_bb2_in(v__0, v__01, v__1, v__3, v_12, v_x, v_y, v_z) -> Com_1(eval_p3_bb3_in(v__0, v__01, v__01, v__3, v_12, v_x, v_y, v_z)) :|: nondef_0 < 0
+  eval_p3_bb2_in(v__0, v__01, v__1, v__3, v_12, v_x, v_y, v_z) -> Com_1(eval_p3_bb3_in(v__0, v__01, v__01, v__3, v_12, v_x, v_y, v_z)) :|: nondef_0 > 0
+  eval_p3_bb2_in(v__0, v__01, v__1, v__3, v_12, v_x, v_y, v_z) -> Com_1(eval_p3_bb5_in(v__0, v__01, v__1, v__3, v_12, v_x, v_y, v_z)) :|: nondef_0 = 0
+  eval_p3_bb3_in(v__0, v__01, v__1, v__3, v_12, v_x, v_y, v_z) -> Com_1(eval_p3_bb4_in(v__0, v__01, v__1, v__3, v_12, v_x, v_y, v_z)) :|: nondef_1 < 0 && v__1 > 0
+  eval_p3_bb3_in(v__0, v__01, v__1, v__3, v_12, v_x, v_y, v_z) -> Com_1(eval_p3_bb4_in(v__0, v__01, v__1, v__3, v_12, v_x, v_y, v_z)) :|: nondef_1 > 0 && v__1 > 0
+  eval_p3_bb3_in(v__0, v__01, v__1, v__3, v_12, v_x, v_y, v_z) -> Com_1(eval_p3_bb6_in(v__0, v__01, v__1, v__1, v_12, v_x, v_y, v_z)) :|: nondef_1 = 0
+  eval_p3_bb3_in(v__0, v__01, v__1, v__3, v_12, v_x, v_y, v_z) -> Com_1(eval_p3_bb6_in(v__0, v__01, v__1, v__1, v_12, v_x, v_y, v_z)) :|: v__1 <= 0
+  eval_p3_bb4_in(v__0, v__01, v__1, v__3, v_12, v_x, v_y, v_z) -> Com_1(eval_p3_15(v__0, v__01, v__1, v__3, v__1 - 1, v_x, v_y, v_z))
+  eval_p3_15(v__0, v__01, v__1, v__3, v_12, v_x, v_y, v_z) -> Com_1(eval_p3_16(v__0, v__01, v__1, v__3, v_12, v_x, v_y, v_z))
+  eval_p3_16(v__0, v__01, v__1, v__3, v_12, v_x, v_y, v_z) -> Com_1(eval_p3_bb3_in(v__0, v__01, v_12, v__3, v_12, v_x, v_y, v_z))
+  eval_p3_bb5_in(v__0, v__01, v__1, v__3, v_12, v_x, v_y, v_z) -> Com_1(eval_p3_bb6_in(v__0, v__01, v__1, v__01 + 1, v_12, v_x, v_y, v_z)) :|: nondef_2 < 0
+  eval_p3_bb5_in(v__0, v__01, v__1, v__3, v_12, v_x, v_y, v_z) -> Com_1(eval_p3_bb6_in(v__0, v__01, v__1, v__01 + 1, v_12, v_x, v_y, v_z)) :|: nondef_2 > 0
+  eval_p3_bb5_in(v__0, v__01, v__1, v__3, v_12, v_x, v_y, v_z) -> Com_1(eval_p3_bb6_in(v__0, v__01, v__1, v_z, v_12, v_x, v_y, v_z)) :|: nondef_2 = 0
+  eval_p3_bb6_in(v__0, v__01, v__1, v__3, v_12, v_x, v_y, v_z) -> Com_1(eval_p3_bb1_in(v__0 - 1, v__3, v__1, v__3, v_12, v_x, v_y, v_z))
+  eval_p3_bb7_in(v__0, v__01, v__1, v__3, v_12, v_x, v_y, v_z) -> Com_1(eval_p3_stop(v__0, v__01, v__1, v__3, v_12, v_x, v_y, v_z))
+)

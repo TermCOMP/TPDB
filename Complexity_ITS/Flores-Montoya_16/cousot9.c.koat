@@ -1,0 +1,21 @@
+(GOAL COMPLEXITY)
+(STARTTERM (FUNCTIONSYMBOLS eval_cousot9_start))
+(VAR v__0 v_N v_i_0 v_j)
+(RULES
+  eval_cousot9_start(v__0, v_N, v_i_0, v_j) -> Com_1(eval_cousot9_bb0_in(v__0, v_N, v_i_0, v_j))
+  eval_cousot9_bb0_in(v__0, v_N, v_i_0, v_j) -> Com_1(eval_cousot9_0(v__0, v_N, v_i_0, v_j))
+  eval_cousot9_0(v__0, v_N, v_i_0, v_j) -> Com_1(eval_cousot9_1(v__0, v_N, v_i_0, v_j))
+  eval_cousot9_1(v__0, v_N, v_i_0, v_j) -> Com_1(eval_cousot9_2(v__0, v_N, v_i_0, v_j))
+  eval_cousot9_2(v__0, v_N, v_i_0, v_j) -> Com_1(eval_cousot9_3(v__0, v_N, v_i_0, v_j))
+  eval_cousot9_3(v__0, v_N, v_i_0, v_j) -> Com_1(eval_cousot9_4(v__0, v_N, v_i_0, v_j))
+  eval_cousot9_4(v__0, v_N, v_i_0, v_j) -> Com_1(eval_cousot9_5(v__0, v_N, v_i_0, v_j))
+  eval_cousot9_5(v__0, v_N, v_i_0, v_j) -> Com_1(eval_cousot9_6(v__0, v_N, v_i_0, v_j))
+  eval_cousot9_6(v__0, v_N, v_i_0, v_j) -> Com_1(eval_cousot9_bb1_in(v_j, v_N, v_N, v_j))
+  eval_cousot9_bb1_in(v__0, v_N, v_i_0, v_j) -> Com_1(eval_cousot9_bb2_in(v__0, v_N, v_i_0, v_j)) :|: v_i_0 > 0
+  eval_cousot9_bb1_in(v__0, v_N, v_i_0, v_j) -> Com_1(eval_cousot9_bb3_in(v__0, v_N, v_i_0, v_j)) :|: v_i_0 <= 0
+  eval_cousot9_bb2_in(v__0, v_N, v_i_0, v_j) -> Com_1(eval_cousot9_bb1_in(v__0 - 1, v_N, v_i_0, v_j)) :|: v__0 > 0 && v__0 > 0
+  eval_cousot9_bb2_in(v__0, v_N, v_i_0, v_j) -> Com_1(eval_cousot9_bb1_in(v_N, v_N, v_i_0, v_j)) :|: v__0 > 0 && v__0 <= 0
+  eval_cousot9_bb2_in(v__0, v_N, v_i_0, v_j) -> Com_1(eval_cousot9_bb1_in(v__0 - 1, v_N, v_i_0 - 1, v_j)) :|: v__0 <= 0 && v__0 > 0
+  eval_cousot9_bb2_in(v__0, v_N, v_i_0, v_j) -> Com_1(eval_cousot9_bb1_in(v_N, v_N, v_i_0 - 1, v_j)) :|: v__0 <= 0 && v__0 <= 0
+  eval_cousot9_bb3_in(v__0, v_N, v_i_0, v_j) -> Com_1(eval_cousot9_stop(v__0, v_N, v_i_0, v_j))
+)

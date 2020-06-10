@@ -1,0 +1,1 @@
+{-# htermination succ :: Char -> Char #-}

@@ -1,0 +1,23 @@
+(VAR l m n u v)
+(RULES
+sort(l) -> st(0, l)
+
+st(n, l) -> stNat(n >= 0, n, l)
+
+stNat(TRUE, n, l) -> cond1(member(n, l), n, l)
+
+cond1(TRUE, n, l) -> cons(n, st(n+1, l))
+cond1(FALSE, n, l) -> cond2(n > max(l), n, l)
+
+cond2(TRUE, n, l) -> nil
+cond2(FALSE, n, l) -> st(n+1, l)
+
+member(n, nil) -> FALSE
+member(n, cons(m, l)) -> n = m || member(n, l)
+
+max(nil) -> 0
+max(cons(u, l)) -> if(u > max(l), u, max(l))
+
+if(TRUE, u, v) -> u
+if(FALSE, u, v) -> v
+)

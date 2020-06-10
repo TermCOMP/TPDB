@@ -1,0 +1,31 @@
+(GOAL COMPLEXITY)
+(STARTTERM (FUNCTIONSYMBOLS eval_terminatorbubble_start))
+(VAR nondef_0 v_11 v_b_0 v_j_0 v_size v_t_0)
+(RULES
+  eval_terminatorbubble_start(v_11, v_b_0, v_j_0, v_size, v_t_0) -> Com_1(eval_terminatorbubble_bb0_in(v_11, v_b_0, v_j_0, v_size, v_t_0))
+  eval_terminatorbubble_bb0_in(v_11, v_b_0, v_j_0, v_size, v_t_0) -> Com_1(eval_terminatorbubble_0(v_11, v_b_0, v_j_0, v_size, v_t_0))
+  eval_terminatorbubble_0(v_11, v_b_0, v_j_0, v_size, v_t_0) -> Com_1(eval_terminatorbubble_1(v_11, v_b_0, v_j_0, v_size, v_t_0))
+  eval_terminatorbubble_1(v_11, v_b_0, v_j_0, v_size, v_t_0) -> Com_1(eval_terminatorbubble_2(v_11, v_b_0, v_j_0, v_size, v_t_0))
+  eval_terminatorbubble_2(v_11, v_b_0, v_j_0, v_size, v_t_0) -> Com_1(eval_terminatorbubble_3(v_11, v_b_0, v_j_0, v_size, v_t_0))
+  eval_terminatorbubble_3(v_11, v_b_0, v_j_0, v_size, v_t_0) -> Com_1(eval_terminatorbubble_bb1_in(v_11, v_size, v_j_0, v_size, v_t_0)) :|: v_size > 0
+  eval_terminatorbubble_3(v_11, v_b_0, v_j_0, v_size, v_t_0) -> Com_1(eval_terminatorbubble_bb7_in(v_11, v_b_0, v_j_0, v_size, v_t_0)) :|: v_size <= 0
+  eval_terminatorbubble_bb1_in(v_11, v_b_0, v_j_0, v_size, v_t_0) -> Com_1(eval_terminatorbubble_bb7_in(v_11, v_b_0, v_j_0, v_size, v_t_0)) :|: v_b_0 < 1
+  eval_terminatorbubble_bb1_in(v_11, v_b_0, v_j_0, v_size, v_t_0) -> Com_1(eval_terminatorbubble_bb7_in(v_11, v_b_0, v_j_0, v_size, v_t_0)) :|: v_size <= 0
+  eval_terminatorbubble_bb1_in(v_11, v_b_0, v_j_0, v_size, v_t_0) -> Com_1(eval_terminatorbubble_bb2_in(v_11, v_b_0, 1, v_size, 0)) :|: v_b_0 >= 1 && v_size > 0
+  eval_terminatorbubble_bb2_in(v_11, v_b_0, v_j_0, v_size, v_t_0) -> Com_1(eval_terminatorbubble_bb3_in(v_11, v_b_0, v_j_0, v_size, v_t_0)) :|: v_j_0 <= v_b_0 - 1
+  eval_terminatorbubble_bb2_in(v_11, v_b_0, v_j_0, v_size, v_t_0) -> Com_1(eval_terminatorbubble_bb6_in(v_11, v_b_0, v_j_0, v_size, v_t_0)) :|: v_j_0 > v_b_0 - 1
+  eval_terminatorbubble_bb3_in(v_11, v_b_0, v_j_0, v_size, v_t_0) -> Com_1(eval_terminatorbubble_bb7_in(v_11, v_b_0, v_j_0, v_size, v_t_0)) :|: v_j_0 < 1
+  eval_terminatorbubble_bb3_in(v_11, v_b_0, v_j_0, v_size, v_t_0) -> Com_1(eval_terminatorbubble_bb7_in(v_11, v_b_0, v_j_0, v_size, v_t_0)) :|: v_j_0 > v_size
+  eval_terminatorbubble_bb3_in(v_11, v_b_0, v_j_0, v_size, v_t_0) -> Com_1(eval_terminatorbubble_bb4_in(v_11, v_b_0, v_j_0, v_size, v_t_0)) :|: v_j_0 >= 1 && v_j_0 <= v_size
+  eval_terminatorbubble_bb4_in(v_11, v_b_0, v_j_0, v_size, v_t_0) -> Com_1(eval_terminatorbubble_bb7_in(v_11, v_b_0, v_j_0, v_size, v_t_0)) :|: v_j_0 + 1 < 1
+  eval_terminatorbubble_bb4_in(v_11, v_b_0, v_j_0, v_size, v_t_0) -> Com_1(eval_terminatorbubble_bb7_in(v_11, v_b_0, v_j_0, v_size, v_t_0)) :|: v_j_0 + 1 > v_size
+  eval_terminatorbubble_bb4_in(v_11, v_b_0, v_j_0, v_size, v_t_0) -> Com_1(eval_terminatorbubble_bb5_in(v_11, v_b_0, v_j_0, v_size, v_t_0)) :|: v_j_0 + 1 >= 1 && v_j_0 + 1 <= v_size
+  eval_terminatorbubble_bb5_in(v_11, v_b_0, v_j_0, v_size, v_t_0) -> Com_1(eval_terminatorbubble_9(v_11, v_b_0, v_j_0, v_size, v_t_0))
+  eval_terminatorbubble_9(v_11, v_b_0, v_j_0, v_size, v_t_0) -> Com_1(eval_terminatorbubble_10(nondef_0, v_b_0, v_j_0, v_size, v_t_0))
+  eval_terminatorbubble_10(v_11, v_b_0, v_j_0, v_size, v_t_0) -> Com_1(eval_terminatorbubble_bb2_in(v_11, v_b_0, v_j_0 + 1, v_size, v_j_0)) :|: v_11 > 0
+  eval_terminatorbubble_10(v_11, v_b_0, v_j_0, v_size, v_t_0) -> Com_1(eval_terminatorbubble_bb2_in(v_11, v_b_0, v_j_0 + 1, v_size, v_t_0)) :|: v_11 <= 0
+  eval_terminatorbubble_bb6_in(v_11, v_b_0, v_j_0, v_size, v_t_0) -> Com_1(eval_terminatorbubble_bb7_in(v_11, v_b_0, v_j_0, v_size, v_t_0)) :|: 1 > v_t_0
+  eval_terminatorbubble_bb6_in(v_11, v_b_0, v_j_0, v_size, v_t_0) -> Com_1(eval_terminatorbubble_bb7_in(v_11, v_b_0, v_j_0, v_size, v_t_0)) :|: v_t_0 >= v_b_0
+  eval_terminatorbubble_bb6_in(v_11, v_b_0, v_j_0, v_size, v_t_0) -> Com_1(eval_terminatorbubble_bb1_in(v_11, v_t_0, v_j_0, v_size, v_t_0)) :|: 1 <= v_t_0 && v_t_0 < v_b_0
+  eval_terminatorbubble_bb7_in(v_11, v_b_0, v_j_0, v_size, v_t_0) -> Com_1(eval_terminatorbubble_stop(v_11, v_b_0, v_j_0, v_size, v_t_0))
+)

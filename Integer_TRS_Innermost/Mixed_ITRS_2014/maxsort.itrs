@@ -1,0 +1,18 @@
+(VAR x y z ys xs)
+(RULES
+max(nil) -> 0
+max(cons(x, nil)) -> x
+max(cons(x, cons(y, xs))) -> if1(x >= y, x, y, xs)
+
+if1(TRUE, x, y, xs) -> max(cons(x, xs))
+if1(FALSE, x, y, xs) -> max(cons(y, xs))
+
+del(x, nil) -> nil
+del(x, cons(y, xs)) -> if2(x = y, x, y, xs)
+
+if2(TRUE, x, y, xs) -> xs
+if2(FALSE, x, y, xs) -> cons(y, del(x, xs))
+
+sort(nil) -> nil
+sort(cons(x, xs)) -> cons(max(cons(x, xs)), sort(del(max(cons(x, xs)), cons(x, xs))))
+)

@@ -1,0 +1,1 @@
+{-# htermination userError :: String -> IOError #-}

@@ -1,0 +1,32 @@
+(GOAL COMPLEXITY)
+(STARTTERM (FUNCTIONSYMBOLS eval_realbubble_start))
+(VAR nondef_1 nondef_2 v_1 v_26 v_i_0 v_j_0 v_length v_test_0 v_test_1)
+(RULES
+  eval_realbubble_start(v_1, v_26, v_i_0, v_j_0, v_length, v_test_0, v_test_1) -> Com_1(eval_realbubble_bb0_in(v_1, v_26, v_i_0, v_j_0, v_length, v_test_0, v_test_1))
+  eval_realbubble_bb0_in(v_1, v_26, v_i_0, v_j_0, v_length, v_test_0, v_test_1) -> Com_1(eval_realbubble_1(v_1, v_26, v_i_0, v_j_0, v_length, v_test_0, v_test_1))
+  eval_realbubble_1(v_1, v_26, v_i_0, v_j_0, v_length, v_test_0, v_test_1) -> Com_1(eval_realbubble_2(v_1, v_26, v_i_0, v_j_0, v_length, v_test_0, v_test_1))
+  eval_realbubble_2(v_1, v_26, v_i_0, v_j_0, v_length, v_test_0, v_test_1) -> Com_1(eval_realbubble_3(v_1, v_26, v_i_0, v_j_0, v_length, v_test_0, v_test_1))
+  eval_realbubble_3(v_1, v_26, v_i_0, v_j_0, v_length, v_test_0, v_test_1) -> Com_1(eval_realbubble_4(v_length - 1, v_26, v_i_0, v_j_0, v_length, v_test_0, v_test_1))
+  eval_realbubble_4(v_1, v_26, v_i_0, v_j_0, v_length, v_test_0, v_test_1) -> Com_1(eval_realbubble_5(v_1, v_26, v_i_0, v_j_0, v_length, v_test_0, v_test_1))
+  eval_realbubble_5(v_1, v_26, v_i_0, v_j_0, v_length, v_test_0, v_test_1) -> Com_1(eval_realbubble_6(v_1, v_26, v_i_0, v_j_0, v_length, v_test_0, v_test_1))
+  eval_realbubble_6(v_1, v_26, v_i_0, v_j_0, v_length, v_test_0, v_test_1) -> Com_1(eval_realbubble_7(v_1, v_26, v_i_0, v_j_0, v_length, v_test_0, v_test_1))
+  eval_realbubble_7(v_1, v_26, v_i_0, v_j_0, v_length, v_test_0, v_test_1) -> Com_1(eval_realbubble_8(v_1, v_26, v_i_0, v_j_0, v_length, v_test_0, v_test_1))
+  eval_realbubble_8(v_1, v_26, v_i_0, v_j_0, v_length, v_test_0, v_test_1) -> Com_1(eval_realbubble_9(v_1, v_26, v_i_0, v_j_0, v_length, v_test_0, v_test_1))
+  eval_realbubble_9(v_1, v_26, v_i_0, v_j_0, v_length, v_test_0, v_test_1) -> Com_1(eval_realbubble_10(v_1, v_26, v_i_0, v_j_0, v_length, v_test_0, v_test_1))
+  eval_realbubble_10(v_1, v_26, v_i_0, v_j_0, v_length, v_test_0, v_test_1) -> Com_1(eval_realbubble_bb1_in(v_1, v_26, v_1, v_j_0, v_length, v_test_0, v_test_1))
+  eval_realbubble_bb1_in(v_1, v_26, v_i_0, v_j_0, v_length, v_test_0, v_test_1) -> Com_1(eval_realbubble_bb2_in(v_1, v_26, v_i_0, 0, v_length, 0, v_test_1)) :|: v_i_0 > 0
+  eval_realbubble_bb1_in(v_1, v_26, v_i_0, v_j_0, v_length, v_test_0, v_test_1) -> Com_1(eval_realbubble_bb8_in(v_1, v_26, v_i_0, v_j_0, v_length, v_test_0, v_test_1)) :|: v_i_0 <= 0
+  eval_realbubble_bb2_in(v_1, v_26, v_i_0, v_j_0, v_length, v_test_0, v_test_1) -> Com_1(eval_realbubble_bb3_in(v_1, v_26, v_i_0, v_j_0, v_length, v_test_0, v_test_1)) :|: v_j_0 < v_i_0
+  eval_realbubble_bb2_in(v_1, v_26, v_i_0, v_j_0, v_length, v_test_0, v_test_1) -> Com_1(eval_realbubble_bb6_in(v_1, v_26, v_i_0, v_j_0, v_length, v_test_0, v_test_1)) :|: v_j_0 >= v_i_0
+  eval_realbubble_bb3_in(v_1, v_26, v_i_0, v_j_0, v_length, v_test_0, v_test_1) -> Com_1(eval_realbubble_bb4_in(v_1, v_26, v_i_0, v_j_0, v_length, v_test_0, v_test_1)) :|: nondef_1 > nondef_2
+  eval_realbubble_bb3_in(v_1, v_26, v_i_0, v_j_0, v_length, v_test_0, v_test_1) -> Com_1(eval_realbubble_bb5_in(v_1, v_26, v_i_0, v_j_0, v_length, v_test_0, v_test_0)) :|: nondef_1 <= nondef_2
+  eval_realbubble_bb4_in(v_1, v_26, v_i_0, v_j_0, v_length, v_test_0, v_test_1) -> Com_1(eval_realbubble_bb5_in(v_1, v_26, v_i_0, v_j_0, v_length, v_test_0, 1))
+  eval_realbubble_bb5_in(v_1, v_26, v_i_0, v_j_0, v_length, v_test_0, v_test_1) -> Com_1(eval_realbubble_bb2_in(v_1, v_26, v_i_0, v_j_0 + 1, v_length, v_test_1, v_test_1))
+  eval_realbubble_bb6_in(v_1, v_26, v_i_0, v_j_0, v_length, v_test_0, v_test_1) -> Com_1(eval_realbubble_bb8_in(v_1, v_26, v_i_0, v_j_0, v_length, v_test_0, v_test_1)) :|: v_test_0 = 0
+  eval_realbubble_bb6_in(v_1, v_26, v_i_0, v_j_0, v_length, v_test_0, v_test_1) -> Com_1(eval_realbubble_bb7_in(v_1, v_26, v_i_0, v_j_0, v_length, v_test_0, v_test_1)) :|: v_test_0 < 0
+  eval_realbubble_bb6_in(v_1, v_26, v_i_0, v_j_0, v_length, v_test_0, v_test_1) -> Com_1(eval_realbubble_bb7_in(v_1, v_26, v_i_0, v_j_0, v_length, v_test_0, v_test_1)) :|: v_test_0 > 0
+  eval_realbubble_bb7_in(v_1, v_26, v_i_0, v_j_0, v_length, v_test_0, v_test_1) -> Com_1(eval_realbubble_31(v_1, v_i_0 - 1, v_i_0, v_j_0, v_length, v_test_0, v_test_1))
+  eval_realbubble_31(v_1, v_26, v_i_0, v_j_0, v_length, v_test_0, v_test_1) -> Com_1(eval_realbubble_32(v_1, v_26, v_i_0, v_j_0, v_length, v_test_0, v_test_1))
+  eval_realbubble_32(v_1, v_26, v_i_0, v_j_0, v_length, v_test_0, v_test_1) -> Com_1(eval_realbubble_bb1_in(v_1, v_26, v_26, v_j_0, v_length, v_test_0, v_test_1))
+  eval_realbubble_bb8_in(v_1, v_26, v_i_0, v_j_0, v_length, v_test_0, v_test_1) -> Com_1(eval_realbubble_stop(v_1, v_26, v_i_0, v_j_0, v_length, v_test_0, v_test_1))
+)

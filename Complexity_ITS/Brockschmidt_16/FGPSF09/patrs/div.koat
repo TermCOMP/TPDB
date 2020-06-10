@@ -1,0 +1,9 @@
+(GOAL COMPLEXITY)
+(STARTTERM (FUNCTIONSYMBOLS start))
+(VAR A B)
+(RULES
+  div(A,B) -> Com_1(end(A,B)) :|: 0 >= A
+  div(A,B) -> Com_1(end(A,B)) :|: A >= B
+  div(A,B) -> Com_1(div(A,B - A)) :|: B >= A + 1 && A >= 1
+  start(A,B) -> Com_1(div(A,B))
+)

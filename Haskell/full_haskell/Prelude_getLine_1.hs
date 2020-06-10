@@ -1,0 +1,1 @@
+{-# htermination getLine :: IO String #-}

@@ -1,0 +1,12 @@
+(GOAL COMPLEXITY)
+(STARTTERM (FUNCTIONSYMBOLS start))
+(VAR A B C)
+(RULES
+  eval(A,B,C) -> Com_1(eval(A - 1,B,C)) :|: A >= B + 1
+  eval(A,B,C) -> Com_1(eval(A - 1,B,C)) :|: C >= B + 1 && A >= B + 1
+  eval(A,B,C) -> Com_1(eval(A,B,C - 1)) :|: A >= B + 1 && B >= A && C >= B + 1
+  eval(A,B,C) -> Com_1(eval(A,B,C - 1)) :|: C >= B + 1 && B >= A
+  eval(A,B,C) -> Com_1(eval(A,B,C)) :|: A >= B + 1 && B >= A && B >= C
+  eval(A,B,C) -> Com_1(eval(A,B,C)) :|: C >= B + 1 && B >= A && B >= C
+  start(A,B,C) -> Com_1(eval(A,B,C))
+)

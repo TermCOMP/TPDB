@@ -1,0 +1,9 @@
+(VAR x y u v)
+(RULES
+minus(x, x) -> 0
+minus(x, y) -> cond(min(x, y) = y, x, y)
+cond(TRUE, x, y) -> 1 + minus(x, y+1)
+min(u, v) -> if(u < v, u, v)
+if(TRUE, u, v) -> u
+if(FALSE, u, v) -> v
+)

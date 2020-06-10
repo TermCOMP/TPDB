@@ -1,0 +1,7 @@
+(VAR x y)
+(RULES
+eval(x, y) -> eval(x, y + 1) :|: x > y
+eval(x, y) -> eval(x, y + 1) :|: y > x && x > y
+eval(x, y) -> eval(x + 1, y) :|: x > y && y >= x
+eval(x, y) -> eval(x + 1, y) :|: y > x && y >= x
+)

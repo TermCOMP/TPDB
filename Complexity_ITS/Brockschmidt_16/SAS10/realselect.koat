@@ -1,0 +1,16 @@
+(GOAL COMPLEXITY)
+(STARTTERM (FUNCTIONSYMBOLS start0))
+(VAR A B C D E F G H I J K L M N O)
+(RULES
+  start(A,B,C,D,E,F,G,H,I,J,K,L,M,N) -> Com_1(stop(A,B,C,D,E,F,G,H,I,J,K,0,M,N)) :|: 1 >= A && B = C && D = E && F = G && H = I && J = K && L = M && N = A
+  start(A,B,C,D,E,F,G,H,I,J,K,L,M,N) -> Com_1(lbl53(A,B,C,1,E,F,G,0,I,2,K,0,M,N)) :|: A >= 2 && B = C && D = E && F = G && H = I && J = K && L = M && N = A
+  start(A,B,C,D,E,F,G,H,I,J,K,L,M,N) -> Com_1(lbl53(A,B,C,1,E,F,G,1,I,2,K,0,M,N)) :|: A >= 2 && B = C && D = E && F = G && H = I && J = K && L = M && N = A
+  lbl91(A,B,C,D,E,F,G,H,I,J,K,L,M,N) -> Com_1(lbl13(A,L,C,D,E,F,G,H,I,J,K,1 + L,M,N)) :|: D >= H && D >= 1 && H + 1 >= D && A >= 1 + D && N = A && L + 1 = D && J = A
+  lbl53(A,B,C,D,E,F,G,H,I,J,K,L,M,N) -> Com_1(lbl91(A,B,C,D,E,O,G,H,I,J,K,L,M,N)) :|: D >= H && D >= 1 && A >= 1 + D && H + 1 >= D && J = A && L + 1 = D && N = A
+  lbl53(A,B,C,D,E,F,G,H,I,J,K,L,M,N) -> Com_1(lbl53(A,B,C,J,E,F,G,H,I,1 + J,K,L,M,N)) :|: A >= J + 1 && D >= H && D >= 1 && A >= J && J >= 1 + D && H + 1 >= D && L + 1 = D && N = A
+  lbl53(A,B,C,D,E,F,G,H,I,J,K,L,M,N) -> Com_1(lbl53(A,B,C,J,E,F,G,J,I,1 + J,K,L,M,N)) :|: A >= J + 1 && D >= H && D >= 1 && A >= J && J >= 1 + D && H + 1 >= D && L + 1 = D && N = A
+  lbl13(A,B,C,D,E,F,G,H,I,J,K,L,M,N) -> Com_1(stop(A,B,C,D,E,F,G,H,I,J,K,L,M,N)) :|: H + 2 >= A && A >= 2 && A >= 1 + H && L + 1 = A && B + 2 = A && D + 1 = A && N = A && J = A
+  lbl13(A,B,C,D,E,F,G,H,I,J,K,L,M,N) -> Com_1(lbl53(A,B,C,1 + L,E,F,G,L,I,2 + L,K,L,M,N)) :|: A >= B + 3 && A >= B + 2 && H >= B && B >= 0 && B + 1 >= H && L = B + 1 && D = B + 1 && N = A && J = A
+  lbl13(A,B,C,D,E,F,G,H,I,J,K,L,M,N) -> Com_1(lbl53(A,B,C,1 + L,E,F,G,1 + L,I,2 + L,K,L,M,N)) :|: A >= B + 3 && A >= B + 2 && H >= B && B >= 0 && B + 1 >= H && L = B + 1 && D = B + 1 && N = A && J = A
+  start0(A,B,C,D,E,F,G,H,I,J,K,L,M,N) -> Com_1(start(A,C,C,E,E,G,G,I,I,K,K,M,M,A))
+)

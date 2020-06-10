@@ -1,0 +1,15 @@
+(GOAL COMPLEXITY)
+(STARTTERM (FUNCTIONSYMBOLS evalwcet2start))
+(VAR A B)
+(RULES
+  evalwcet2start(A,B) -> Com_1(evalwcet2entryin(A,B))
+  evalwcet2entryin(A,B) -> Com_1(evalwcet2bb5in(A,B))
+  evalwcet2bb5in(A,B) -> Com_1(evalwcet2bb2in(A,0)) :|: 4 >= A
+  evalwcet2bb5in(A,B) -> Com_1(evalwcet2returnin(A,B)) :|: A >= 5
+  evalwcet2bb2in(A,B) -> Com_1(evalwcet2bb1in(A,B)) :|: A >= 3 && 9 >= B
+  evalwcet2bb2in(A,B) -> Com_1(evalwcet2bb4in(A,B)) :|: 2 >= A
+  evalwcet2bb2in(A,B) -> Com_1(evalwcet2bb4in(A,B)) :|: B >= 10
+  evalwcet2bb1in(A,B) -> Com_1(evalwcet2bb2in(A,B + 1))
+  evalwcet2bb4in(A,B) -> Com_1(evalwcet2bb5in(A + 1,B))
+  evalwcet2returnin(A,B) -> Com_1(evalwcet2stop(A,B))
+)

@@ -1,0 +1,14 @@
+(GOAL COMPLEXITY)
+(STARTTERM (FUNCTIONSYMBOLS evalEx6start))
+(VAR A B C)
+(RULES
+  evalEx6start(A,B,C) -> Com_1(evalEx6entryin(A,B,C))
+  evalEx6entryin(A,B,C) -> Com_1(evalEx6bb3in(B,A,C))
+  evalEx6bb3in(A,B,C) -> Com_1(evalEx6bbin(A,B,C)) :|: C >= B + 1
+  evalEx6bb3in(A,B,C) -> Com_1(evalEx6returnin(A,B,C)) :|: B >= C
+  evalEx6bbin(A,B,C) -> Com_1(evalEx6bb1in(A,B,C)) :|: A >= B + 1
+  evalEx6bbin(A,B,C) -> Com_1(evalEx6bb2in(A,B,C)) :|: B >= A
+  evalEx6bb1in(A,B,C) -> Com_1(evalEx6bb3in(A,B + 1,C))
+  evalEx6bb2in(A,B,C) -> Com_1(evalEx6bb3in(A + 1,B,C))
+  evalEx6returnin(A,B,C) -> Com_1(evalEx6stop(A,B,C))
+)

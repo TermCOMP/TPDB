@@ -1,0 +1,24 @@
+(GOAL COMPLEXITY)
+(STARTTERM (FUNCTIONSYMBOLS start0))
+(VAR A B C D E F G H)
+(RULES
+  start(A,B,C,D,E,F,G,H) -> Com_1(stop(A,H - 10,C,1,E,H,G,H)) :|: A >= 101 && B = C && D = E && F = G && H = A
+  start(A,B,C,D,E,F,G,H) -> Com_1(lbl111(A,B,C,2,E,11 + H,G,H)) :|: 100 >= A && B = C && D = E && F = G && H = A
+  lbl161(A,B,C,D,E,F,G,H) -> Com_1(stop(A,B,C,D,E,F,G,H)) :|: 89 >= A && D = 1 && H = A && F = 101 && B = 91
+  lbl161(A,B,C,D,E,F,G,H) -> Com_1(lbl161(A,F - 20,C,D - 1,E,F - 10,G,H)) :|: 0 >= 10 && 89 >= A && 0 >= 1 && D = 2 && H = A && F = 101 && B = 91
+  lbl161(A,B,C,D,E,F,G,H) -> Com_1(lbl221(A,B,C,D,E,1 + F,G,H)) :|: 0 >= 2 && 89 >= A && H = A && F = 101 && D = 1 && B = 91
+  lbl161(A,B,C,D,E,F,G,H) -> Com_1(lbl221(A,B,C,D,E,1 + F,G,H)) :|: 0 >= 1 && 89 >= A && H = A && F = 101 && D = 1 && B = 91
+  lbl161(A,B,C,D,E,F,G,H) -> Com_1(lbl221(A,B,C,D - 1,E,F - 9,G,H)) :|: 0 >= 10 && 0 >= 2 && 89 >= A && H = A && F = 101 && D = 1 && B = 91
+  lbl221(A,B,C,D,E,F,G,H) -> Com_1(stop(A,B,C,D,E,F,G,H)) :|: 1 >= D && D >= 2 && F >= 102 && 111 >= F && F + 10 >= A + 11*D && 89 >= A && H = A && B = C
+  lbl221(A,B,C,D,E,F,G,H) -> Com_1(lbl161(A,F - 20,C,D - 1,E,F - 10,G,H)) :|: 99 >= A && 89 >= A && F = 111 && D = 2 && H = A && B = C
+  lbl221(A,B,C,D,E,F,G,H) -> Com_1(lbl221(A,B,C,D,E,1 + F,G,H)) :|: D >= 3 && 110 >= F && D >= 2 && F >= 102 && 111 >= F && F + 10 >= A + 11*D && 89 >= A && H = A && B = C
+  lbl221(A,B,C,D,E,F,G,H) -> Com_1(lbl221(A,B,C,D,E,1 + F,G,H)) :|: D >= 2 && 110 >= F && F >= 102 && 111 >= F && F + 10 >= A + 11*D && 89 >= A && H = A && B = C
+  lbl221(A,B,C,D,E,F,G,H) -> Com_1(lbl221(A,B,C,D - 1,E,F - 9,G,H)) :|: D >= 3 && D >= 2 && 121 >= A + 11*D && 89 >= A && F = 111 && H = A && B = C
+  lbl111(A,B,C,D,E,F,G,H) -> Com_1(lbl111(A,B,C,1 + D,E,11 + F,G,H)) :|: 111 >= 11*D + A && 122 >= 11*D + A && 11*D >= 22 && H = A && B = C && F + 11 = 11*D + A
+  lbl111(A,B,C,D,E,F,G,H) -> Com_1(stop(A,B,C,D,E,F,G,H)) :|: 11*D + A >= 112 && 1 >= D && 122 >= 11*D + A && 11*D >= 22 && H = A && B = C && F + 11 = 11*D + A
+  lbl111(A,B,C,D,E,F,G,H) -> Com_1(lbl161(A,F - 20,C,D - 1,E,F - 10,G,H)) :|: F = 111 && D = 2 && H = 100 && B = C && A = 100
+  lbl111(A,B,C,D,E,F,G,H) -> Com_1(lbl221(A,B,C,D,E,1 + F,G,H)) :|: 11*D + A >= 112 && D >= 3 && 121 >= 11*D + A && 122 >= 11*D + A && 11*D >= 22 && H = A && B = C && F + 11 = 11*D + A
+  lbl111(A,B,C,D,E,F,G,H) -> Com_1(lbl221(A,B,C,D,E,1 + F,G,H)) :|: 11*D + A >= 112 && D >= 2 && 121 >= 11*D + A && 122 >= 11*D + A && 11*D >= 22 && H = A && B = C && F + 11 = 11*D + A
+  lbl111(A,B,C,D,E,F,G,H) -> Com_1(lbl221(A,B,C,D - 1,E,F - 9,G,H)) :|: D >= 3 && 11*D >= 22 && F = 111 && H + 11*D = 122 && B = C && A + 11*D = 122
+  start0(A,B,C,D,E,F,G,H) -> Com_1(start(A,C,C,E,E,G,G,A))
+)

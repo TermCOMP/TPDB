@@ -1,0 +1,1 @@
+{-# htermination floatDigits :: Float -> Int #-}

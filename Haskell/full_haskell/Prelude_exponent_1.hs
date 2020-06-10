@@ -1,0 +1,1 @@
+{-# htermination exponent :: Float -> Int #-}

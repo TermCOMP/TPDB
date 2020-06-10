@@ -1,0 +1,6 @@
+(VAR x y z)
+(RULES
+sumto(x, y) -> wrap(0) :|: x > y
+sumto(x, y) -> if(sumto(x + 1, y), x, y) :|: y >= x
+if(wrap(z), x, y) -> wrap(x + z)
+)

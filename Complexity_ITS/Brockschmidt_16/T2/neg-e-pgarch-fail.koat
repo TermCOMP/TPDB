@@ -1,0 +1,15 @@
+(GOAL COMPLEXITY)
+(STARTTERM (FUNCTIONSYMBOLS f0))
+(VAR A B C D E F G H I J K L M N)
+(RULES
+  f18(A,B,C,D,E,F,G,H,I,J,K) -> Com_1(f24(A,B,C,D,E,F,G,H,I,J,K)) :|: 0 >= A
+  f32(A,B,C,D,E,F,G,H,I,J,K) -> Com_1(f32(A,B,C,D,E,F,G,H,I,J,K))
+  f34(A,B,C,D,E,F,G,H,I,J,K) -> Com_1(f37(A,B,C,D,E,F,G,H,I,J,K))
+  f24(A,B,C,D,E,F,G,H,I,J,K) -> Com_1(f32(A,L,C,D,E,F,G,H,I,J,K)) :|: A >= 1
+  f24(A,B,C,D,E,F,G,H,I,J,K) -> Com_1(f32(A,M,C,L,L,F,G,H,I,J,K)) :|: 0 >= A && 999 + C >= L
+  f24(A,B,C,D,E,F,G,H,I,J,K) -> Com_1(f32(1,M,C,L,L,F,G,H,I,J,K)) :|: 0 >= A && L >= C + 1000
+  f18(A,B,C,D,E,F,G,H,I,J,K) -> Com_1(f24(0,B,L,D,E,L,G,H,I,J,K)) :|: A >= 1
+  f0(A,B,C,D,E,F,G,H,I,J,K) -> Com_1(f18(1,B,C,D,E,F,L,M,I,J,K)) :|: 0 >= M
+  f0(A,B,C,D,E,F,G,H,I,J,K) -> Com_1(f18(1,B,C,D,E,F,L,0,1,M,M)) :|: M >= 1 && N >= 1
+  f0(A,B,C,D,E,F,G,H,I,J,K) -> Com_1(f32(1,B,C,D,E,F,L,0,1,M,M)) :|: 0 >= M && N >= 1
+)

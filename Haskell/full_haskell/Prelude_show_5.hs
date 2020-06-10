@@ -1,0 +1,1 @@
+{-# htermination show :: Int -> String #-}

@@ -1,0 +1,16 @@
+(GOAL COMPLEXITY)
+(STARTTERM (FUNCTIONSYMBOLS evalspeedpldi3start))
+(VAR A B C D)
+(RULES
+  evalspeedpldi3start(A,B,C,D) -> Com_1(evalspeedpldi3entryin(A,B,C,D))
+  evalspeedpldi3entryin(A,B,C,D) -> Com_1(evalspeedpldi3returnin(A,B,C,D)) :|: 0 >= A
+  evalspeedpldi3entryin(A,B,C,D) -> Com_1(evalspeedpldi3returnin(A,B,C,D)) :|: A >= B
+  evalspeedpldi3entryin(A,B,C,D) -> Com_1(evalspeedpldi3bb5in(A,B,0,0)) :|: A >= 1 && B >= A + 1
+  evalspeedpldi3bb5in(A,B,C,D) -> Com_1(evalspeedpldi3bb2in(A,B,C,D)) :|: B >= D + 1
+  evalspeedpldi3bb5in(A,B,C,D) -> Com_1(evalspeedpldi3returnin(A,B,C,D)) :|: D >= B
+  evalspeedpldi3bb2in(A,B,C,D) -> Com_1(evalspeedpldi3bb3in(A,B,C,D)) :|: A >= C + 1
+  evalspeedpldi3bb2in(A,B,C,D) -> Com_1(evalspeedpldi3bb4in(A,B,C,D)) :|: C >= A
+  evalspeedpldi3bb3in(A,B,C,D) -> Com_1(evalspeedpldi3bb5in(A,B,C + 1,D))
+  evalspeedpldi3bb4in(A,B,C,D) -> Com_1(evalspeedpldi3bb5in(A,B,0,D + 1))
+  evalspeedpldi3returnin(A,B,C,D) -> Com_1(evalspeedpldi3stop(A,B,C,D))
+)

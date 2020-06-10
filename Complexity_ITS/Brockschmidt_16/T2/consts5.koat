@@ -1,0 +1,7 @@
+(GOAL COMPLEXITY)
+(STARTTERM (FUNCTIONSYMBOLS f0))
+(VAR A B)
+(RULES
+  f0(A,B) -> Com_1(f1(3000,B))
+  f1(A,B) -> Com_1(f1(A,B + 1000)) :|: B + 889 >= 0 && 1999 >= A
+)

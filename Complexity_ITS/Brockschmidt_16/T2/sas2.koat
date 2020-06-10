@@ -1,0 +1,27 @@
+(GOAL COMPLEXITY)
+(STARTTERM (FUNCTIONSYMBOLS f0))
+(VAR A B C D E F G)
+(RULES
+  f5(A,B,C,D,E,F) -> Com_1(f7(A,B,C,D,E,F)) :|: 0 >= A
+  f5(A,B,C,D,E,F) -> Com_1(f7(A,B,C,D,E,F)) :|: A >= 2
+  f7(A,B,C,D,E,F) -> Com_1(f9(A,0,C,D,E,F)) :|: B = 0
+  f16(A,B,C,D,E,F) -> Com_1(f5(A,B,C,G,E,F)) :|: 255 >= C
+  f25(A,B,C,D,E,F) -> Com_1(f5(A,B,C,G,E,F)) :|: C >= 0
+  f0(A,B,C,D,E,F) -> Com_1(f5(4,0,C,G,0,F))
+  f7(A,B,C,D,E,F) -> Com_1(f9(A - 1,B,C,D,E,F)) :|: 0 >= B + 1
+  f7(A,B,C,D,E,F) -> Com_1(f9(A - 1,B,C,D,E,F)) :|: B >= 1
+  f9(A,B,C,D,E,F) -> Com_1(f16(A,B,C + A,D,2,F)) :|: 0 >= E && D >= 1 + F
+  f9(A,B,C,D,E,F) -> Com_1(f16(A,B,C + A,D,2,F)) :|: E >= 2 && D >= 1 + F
+  f9(A,B,C,D,E,F) -> Com_1(f16(A,B,C + A,D,2,F)) :|: 0 >= B + 1 && D >= 1 + F && E = 1
+  f9(A,B,C,D,E,F) -> Com_1(f16(A,B,C + A,D,2,F)) :|: B >= 1 && D >= 1 + F && E = 1
+  f9(A,B,C,D,E,F) -> Com_1(f16(A - 1,1,C + A - 1,D,2,F)) :|: D >= 1 + F && B = 0 && E = 1
+  f9(A,B,C,D,E,F) -> Com_1(f25(A,B,C - A,D,1,F)) :|: 1 >= E && F >= D + 1
+  f9(A,B,C,D,E,F) -> Com_1(f25(A,B,C - A,D,1,F)) :|: E >= 3 && F >= D + 1
+  f9(A,B,C,D,E,F) -> Com_1(f25(A,B,C - A,D,1,F)) :|: 0 >= B + 1 && F >= D + 1 && E = 2
+  f9(A,B,C,D,E,F) -> Com_1(f25(A,B,C - A,D,1,F)) :|: B >= 1 && F >= D + 1 && E = 2
+  f9(A,B,C,D,E,F) -> Com_1(f25(A - 1,1,C - A + 1,D,1,F)) :|: F >= D + 1 && B = 0 && E = 2
+  f5(A,B,C,D,E,F) -> Com_1(f30(1,B,C,D,E,F)) :|: A = 1
+  f16(A,B,C,D,E,F) -> Com_1(f30(A,B,C,D,E,F)) :|: C >= 256
+  f25(A,B,C,D,E,F) -> Com_1(f30(A,B,C,D,E,F)) :|: 0 >= C + 1
+  f9(A,B,C,D,E,F) -> Com_1(f30(A,B,C,D,E,D)) :|: D = F
+)

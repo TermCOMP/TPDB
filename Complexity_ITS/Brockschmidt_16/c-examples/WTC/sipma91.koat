@@ -1,0 +1,22 @@
+(GOAL COMPLEXITY)
+(STARTTERM (FUNCTIONSYMBOLS evalsipma91start))
+(VAR A B C D)
+(RULES
+  evalsipma91start(A,B,C,D) -> Com_1(evalsipma91entryin(A,B,C,D))
+  evalsipma91entryin(A,B,C,D) -> Com_1(evalsipma91returnin(A,B,C,D)) :|: A >= 101
+  evalsipma91entryin(A,B,C,D) -> Com_1(evalsipma91bb3in(1,A,C,D)) :|: 100 >= A
+  evalsipma91bb3in(A,B,C,D) -> Com_1(evalsipma91bb2in(A,B,C,D)) :|: 100 >= B
+  evalsipma91bb3in(A,B,C,D) -> Com_1(evalsipma91bb11in(A,B,C,D)) :|: B >= 101
+  evalsipma91bb2in(A,B,C,D) -> Com_1(evalsipma91bb3in(A + 1,B + 11,C,D))
+  evalsipma91bb11in(A,B,C,D) -> Com_1(evalsipma91bb5in(A,B,C,D)) :|: A >= 2
+  evalsipma91bb11in(A,B,C,D) -> Com_1(evalsipma91returnin(A,B,C,D)) :|: 1 >= A
+  evalsipma91bb5in(A,B,C,D) -> Com_1(evalsipma91bb8in(A,B,B - 10,A - 1)) :|: 110 >= B
+  evalsipma91bb5in(A,B,C,D) -> Com_1(evalsipma91bb8in(A,B,B - 10,A - 1)) :|: 1 >= A
+  evalsipma91bb5in(A,B,C,D) -> Com_1(evalsipma91bb8in(A,B,B - 10,A - 1)) :|: A >= 3
+  evalsipma91bb5in(A,B,C,D) -> Com_1(evalsipma91bb11in(A - 1,B - 10,C,D)) :|: B >= 111 && A = 2
+  evalsipma91bb8in(A,B,C,D) -> Com_1(evalsipma91bb11in(D,C + 1,C,D)) :|: C >= 101
+  evalsipma91bb8in(A,B,C,D) -> Com_1(evalsipma91bb11in(D,C + 11,C,D)) :|: C >= 101 && 100 >= C
+  evalsipma91bb8in(A,B,C,D) -> Com_1(evalsipma91bb11in(D + 1,C + 1,C,D)) :|: 100 >= C && C >= 101
+  evalsipma91bb8in(A,B,C,D) -> Com_1(evalsipma91bb11in(D + 1,C + 11,C,D)) :|: 100 >= C
+  evalsipma91returnin(A,B,C,D) -> Com_1(evalsipma91stop(A,B,C,D))
+)

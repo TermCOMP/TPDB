@@ -1,0 +1,17 @@
+(GOAL COMPLEXITY)
+(STARTTERM (FUNCTIONSYMBOLS evalaaron2start))
+(VAR A B C D)
+(RULES
+  evalaaron2start(A,B,C) -> Com_1(evalaaron2entryin(A,B,C))
+  evalaaron2entryin(A,B,C) -> Com_1(evalaaron2bb6in(A,C,B)) :|: A >= 0
+  evalaaron2entryin(A,B,C) -> Com_1(evalaaron2returnin(A,B,C)) :|: 0 >= A + 1
+  evalaaron2bb6in(A,B,C) -> Com_1(evalaaron2returnin(A,B,C)) :|: B >= C + 1
+  evalaaron2bb6in(A,B,C) -> Com_1(evalaaron2returnin(A,B,C)) :|: 0 >= A + 1
+  evalaaron2bb6in(A,B,C) -> Com_1(evalaaron2bb3in(A,B,C)) :|: C >= B && A >= 0
+  evalaaron2bb3in(A,B,C) -> Com_1(evalaaron2bb4in(A,B,C)) :|: 0 >= D + 1
+  evalaaron2bb3in(A,B,C) -> Com_1(evalaaron2bb4in(A,B,C)) :|: D >= 1
+  evalaaron2bb3in(A,B,C) -> Com_1(evalaaron2bb5in(A,B,C))
+  evalaaron2bb4in(A,B,C) -> Com_1(evalaaron2bb6in(A,B,C - A - 1))
+  evalaaron2bb5in(A,B,C) -> Com_1(evalaaron2bb6in(A,B + A + 1,C))
+  evalaaron2returnin(A,B,C) -> Com_1(evalaaron2stop(A,B,C))
+)

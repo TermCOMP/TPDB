@@ -1,0 +1,4 @@
+(VAR x y)
+(RULES
+eval(x, y) -> eval(x + 1, y + 2) :|: x > y
+)

@@ -1,0 +1,1 @@
+{-# htermination repeat :: a -> [a] #-}

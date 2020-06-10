@@ -1,0 +1,13 @@
+(VAR l n x)
+(RULES
+nthtail(n, l) -> cond(n >= length(l), n, l)
+
+cond(TRUE, n, l) -> l
+cond(FALSE, n, l) -> tail(nthtail(n+1, l))
+
+tail(nil) -> nil
+tail(cons(x, l)) -> l
+
+length(nil) -> 0
+length(cons(x, l)) -> 1 + length(l)
+)

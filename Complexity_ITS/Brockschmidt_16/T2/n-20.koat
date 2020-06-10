@@ -1,0 +1,9 @@
+(GOAL COMPLEXITY)
+(STARTTERM (FUNCTIONSYMBOLS f300))
+(VAR A B C D E F G H I J K L M N O P Q R S)
+(RULES
+  f2(A,B,C,D,E,F,G,H,I,J,K) -> Com_1(f2(A,C,C,L,M,N,G,H,I,J,K)) :|: A >= 1
+  f300(A,B,C,D,E,F,G,H,I,J,K) -> Com_1(f1(A,L,N,P,Q,F,G,L,M,O,R)) :|: 0 >= G
+  f300(A,B,C,D,E,F,G,H,I,J,K) -> Com_1(f2(A,N,N,P,Q,R,G,L,M,O,K)) :|: A >= 1 && G >= 1
+  f300(A,B,C,D,E,F,G,H,I,J,K) -> Com_1(f1(A,N,N,P,Q,R,G,L,M,O,S)) :|: 0 >= A && G >= 1
+)

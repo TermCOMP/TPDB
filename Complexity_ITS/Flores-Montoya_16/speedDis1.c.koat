@@ -1,0 +1,21 @@
+(GOAL COMPLEXITY)
+(STARTTERM (FUNCTIONSYMBOLS eval_speedDis1_start))
+(VAR v__0 v__01 v_m v_n v_x v_y)
+(RULES
+  eval_speedDis1_start(v__0, v__01, v_m, v_n, v_x, v_y) -> Com_1(eval_speedDis1_bb0_in(v__0, v__01, v_m, v_n, v_x, v_y))
+  eval_speedDis1_bb0_in(v__0, v__01, v_m, v_n, v_x, v_y) -> Com_1(eval_speedDis1_0(v__0, v__01, v_m, v_n, v_x, v_y))
+  eval_speedDis1_0(v__0, v__01, v_m, v_n, v_x, v_y) -> Com_1(eval_speedDis1_1(v__0, v__01, v_m, v_n, v_x, v_y))
+  eval_speedDis1_1(v__0, v__01, v_m, v_n, v_x, v_y) -> Com_1(eval_speedDis1_2(v__0, v__01, v_m, v_n, v_x, v_y))
+  eval_speedDis1_2(v__0, v__01, v_m, v_n, v_x, v_y) -> Com_1(eval_speedDis1_3(v__0, v__01, v_m, v_n, v_x, v_y))
+  eval_speedDis1_3(v__0, v__01, v_m, v_n, v_x, v_y) -> Com_1(eval_speedDis1_4(v__0, v__01, v_m, v_n, v_x, v_y))
+  eval_speedDis1_4(v__0, v__01, v_m, v_n, v_x, v_y) -> Com_1(eval_speedDis1_5(v__0, v__01, v_m, v_n, v_x, v_y))
+  eval_speedDis1_5(v__0, v__01, v_m, v_n, v_x, v_y) -> Com_1(eval_speedDis1_6(v__0, v__01, v_m, v_n, v_x, v_y))
+  eval_speedDis1_6(v__0, v__01, v_m, v_n, v_x, v_y) -> Com_1(eval_speedDis1_bb1_in(v_x, v_y, v_m, v_n, v_x, v_y))
+  eval_speedDis1_bb1_in(v__0, v__01, v_m, v_n, v_x, v_y) -> Com_1(eval_speedDis1_bb2_in(v__0, v__01, v_m, v_n, v_x, v_y)) :|: v__0 < v_n
+  eval_speedDis1_bb1_in(v__0, v__01, v_m, v_n, v_x, v_y) -> Com_1(eval_speedDis1_bb3_in(v__0, v__01, v_m, v_n, v_x, v_y)) :|: v__0 >= v_n
+  eval_speedDis1_bb2_in(v__0, v__01, v_m, v_n, v_x, v_y) -> Com_1(eval_speedDis1_bb1_in(v__0, v__01 + 1, v_m, v_n, v_x, v_y)) :|: v__01 < v_m && v__01 < v_m
+  eval_speedDis1_bb2_in(v__0, v__01, v_m, v_n, v_x, v_y) -> Com_1(eval_speedDis1_bb1_in(v__0 + 1, v__01 + 1, v_m, v_n, v_x, v_y)) :|: v__01 < v_m && v__01 >= v_m
+  eval_speedDis1_bb2_in(v__0, v__01, v_m, v_n, v_x, v_y) -> Com_1(eval_speedDis1_bb1_in(v__0, v__01, v_m, v_n, v_x, v_y)) :|: v__01 >= v_m && v__01 < v_m
+  eval_speedDis1_bb2_in(v__0, v__01, v_m, v_n, v_x, v_y) -> Com_1(eval_speedDis1_bb1_in(v__0 + 1, v__01, v_m, v_n, v_x, v_y)) :|: v__01 >= v_m && v__01 >= v_m
+  eval_speedDis1_bb3_in(v__0, v__01, v_m, v_n, v_x, v_y) -> Com_1(eval_speedDis1_stop(v__0, v__01, v_m, v_n, v_x, v_y))
+)

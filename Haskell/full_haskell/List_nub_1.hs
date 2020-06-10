@@ -1,0 +1,2 @@
+{-# htermination nub :: [()] -> [()] #-}
+import List

@@ -1,0 +1,6 @@
+(VAR x y)
+(RULES
+minus(x, y) -> cond(x >= y+1, x, y)
+cond(FALSE, x, y) -> 0
+cond(TRUE, x, y) -> 1 + minus(x, y+1)
+)

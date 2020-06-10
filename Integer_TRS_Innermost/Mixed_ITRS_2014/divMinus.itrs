@@ -1,0 +1,6 @@
+(VAR x y)
+(RULES
+div(x, y) -> if (x >= y && y > 0, x, y)
+if (TRUE, x, y) -> div(x-y, y) + 1
+
+)

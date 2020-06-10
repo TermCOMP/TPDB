@@ -1,0 +1,1 @@
+{-# htermination abs :: Float -> Float #-}

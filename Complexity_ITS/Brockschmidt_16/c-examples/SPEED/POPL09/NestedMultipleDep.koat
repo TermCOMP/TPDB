@@ -1,0 +1,14 @@
+(GOAL COMPLEXITY)
+(STARTTERM (FUNCTIONSYMBOLS evalNestedMultipleDepstart))
+(VAR A B C D E)
+(RULES
+  evalNestedMultipleDepstart(A,B,C,D,E) -> Com_1(evalNestedMultipleDepentryin(A,B,C,D,E))
+  evalNestedMultipleDepentryin(A,B,C,D,E) -> Com_1(evalNestedMultipleDepbb3in(0,B,C,D,E))
+  evalNestedMultipleDepbb3in(A,B,C,D,E) -> Com_1(evalNestedMultipleDepbbin(A,B,C,D,E)) :|: B >= A + 1
+  evalNestedMultipleDepbb3in(A,B,C,D,E) -> Com_1(evalNestedMultipleDepreturnin(A,B,C,D,E)) :|: A >= B
+  evalNestedMultipleDepbbin(A,B,C,D,E) -> Com_1(evalNestedMultipleDepbb2in(A,B,A + 1,0,E))
+  evalNestedMultipleDepbb2in(A,B,C,D,E) -> Com_1(evalNestedMultipleDepbb1in(A,B,C,D,E)) :|: E >= D + 1
+  evalNestedMultipleDepbb2in(A,B,C,D,E) -> Com_1(evalNestedMultipleDepbb3in(C,B,C,D,E)) :|: D >= E
+  evalNestedMultipleDepbb1in(A,B,C,D,E) -> Com_1(evalNestedMultipleDepbb2in(A,B,C,D + 1,E))
+  evalNestedMultipleDepreturnin(A,B,C,D,E) -> Com_1(evalNestedMultipleDepstop(A,B,C,D,E))
+)

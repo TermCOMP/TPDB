@@ -1,0 +1,19 @@
+(GOAL COMPLEXITY)
+(STARTTERM (FUNCTIONSYMBOLS start0))
+(VAR A B C D E F G H)
+(RULES
+  start(A,B,C,D,E,F,G,H) -> Com_1(stop(A,B,C,D,E,F,G,H)) :|: 0 >= A + 1 && B = C && D = A && E = F && G = H
+  start(A,B,C,D,E,F,G,H) -> Com_1(lbl42(A,B - 1,C,D,E,F,G,H)) :|: A >= 0 && C >= 0 && B = C && D = A && E = F && G = H
+  start(A,B,C,D,E,F,G,H) -> Com_1(cut(A,B,C,D - 1,E,F,G,H)) :|: A >= 0 && B = C && D = A && E = F && G = H
+  start(A,B,C,D,E,F,G,H) -> Com_1(lbl72(A,1 + B,C,D - 1,B,F,G,H)) :|: H >= C && A >= 0 && B = C && D = A && E = F && G = H
+  lbl72(A,B,C,D,E,F,G,H) -> Com_1(cut(A,B,C,D,E,F,G,H)) :|: A >= D + 1 && D + 1 >= 0 && H + 1 >= B && E + 1 = B && G = H
+  lbl72(A,B,C,D,E,F,G,H) -> Com_1(lbl72(A,1 + B,C,D,B,F,G,H)) :|: H >= B && A >= D + 1 && D + 1 >= 0 && H + 1 >= B && E + 1 = B && G = H
+  lbl42(A,B,C,D,E,F,G,H) -> Com_1(lbl42(A,B - 1,C,D,E,F,G,H)) :|: B >= 0 && B + 1 >= 0 && D >= 0 && A >= D && G = H
+  lbl42(A,B,C,D,E,F,G,H) -> Com_1(cut(A,B,C,D - 1,E,F,G,H)) :|: B + 1 >= 0 && D >= 0 && A >= D && G = H
+  lbl42(A,B,C,D,E,F,G,H) -> Com_1(lbl72(A,1 + B,C,D - 1,B,F,G,H)) :|: H >= B && B + 1 >= 0 && D >= 0 && A >= D && G = H
+  cut(A,B,C,D,E,F,G,H) -> Com_1(stop(A,B,C,D,E,F,G,H)) :|: A >= 0 && D + 1 = 0 && G = H
+  cut(A,B,C,D,E,F,G,H) -> Com_1(lbl42(A,B - 1,C,D,E,F,G,H)) :|: D >= 0 && B >= 0 && D + 1 >= 0 && A >= D + 1 && G = H
+  cut(A,B,C,D,E,F,G,H) -> Com_1(cut(A,B,C,D - 1,E,F,G,H)) :|: D >= 0 && D + 1 >= 0 && A >= D + 1 && G = H
+  cut(A,B,C,D,E,F,G,H) -> Com_1(lbl72(A,1 + B,C,D - 1,B,F,G,H)) :|: H >= B && D >= 0 && D + 1 >= 0 && A >= D + 1 && G = H
+  start0(A,B,C,D,E,F,G,H) -> Com_1(start(A,C,C,A,F,F,H,H))
+)

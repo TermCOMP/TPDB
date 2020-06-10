@@ -1,0 +1,1 @@
+{-# htermination enumFrom :: Bool -> [Bool] #-}

@@ -1,0 +1,11 @@
+(VAR x y zs m zh ys)
+(RULES
+min(x, e) -> pair(x, e)
+min(x, ins(y, zs)) -> if_1(min(y, zs), x, y, zs)
+if_1(pair(m, zh), x, y, zs) -> pair(x, ins(m, zh)) :|: m > x
+min(x, ins(y, zs)) -> if_2(min(y, zs), x, y, zs)
+if_2(pair(m, zh), x, y, zs) -> pair(m, ins(x, zh)) :|: x >= m
+msort(e) -> nil
+msort(ins(x, ys)) -> if_3(min(x, ys), x, ys)
+if_3(pair(m, zs), x, ys) -> cons(m, msort(zs))
+)

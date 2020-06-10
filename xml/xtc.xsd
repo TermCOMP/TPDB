@@ -1,0 +1,378 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- $Id: xtc.xsd,v 1.1 2009/04/15 12:13:51 rene Exp $ -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" version="0.4">
+  <xs:element name="problem">
+    <xs:annotation>
+      <xs:documentation>This is the root element representing a termination problem.</xs:documentation>
+      <xs:documentation>Versioning Information:</xs:documentation>
+      <xs:documentation>Version 0.4: added higher-order features (courtesy Albert Rubio and Rene Thiemann)</xs:documentation>
+      <xs:documentation>Version 0.32: removed the targetNamespace</xs:documentation>
+      <xs:documentation>Version 0.31: adds the capability to have multiple originalfilename tags;
+      removed the strategy=NONE.</xs:documentation>
+      <xs:documentation>Version 0.3: adds the /problem/metainformation/originalfilename tag.</xs:documentation>
+      <xs:documentation>Version 0.2: first official release</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="trs"/>
+        <xs:element ref="strategy"/>
+        <xs:element ref="startterm" minOccurs="0"/>
+        <xs:element ref="status" minOccurs="0"/>
+        <xs:element ref="metainformation" minOccurs="0"/>
+      </xs:sequence>
+      <xs:attribute name="type" use="required">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="termination"/>
+            <xs:enumeration value="complexity"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:attribute>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="trs">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="rules"/>
+        <xs:choice>
+          <xs:element ref="signature"/>
+          <xs:element ref="higherOrderSignature"/>
+        </xs:choice>
+        <xs:element ref="comment" minOccurs="0"/>
+        <xs:element ref="conditiontype" minOccurs="0"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="rules">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="rule"/>
+        <xs:element ref="relrules" minOccurs="0"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="relrules">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" ref="rule"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="signature">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" ref="funcsym"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="funcsym">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="name"/>
+        <xs:element ref="arity"/>
+        <xs:element ref="theory" minOccurs="0"/>
+        <xs:element ref="replacementmap" minOccurs="0"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="arity" type="xs:int"/>
+
+  <xs:element name="theory">
+    <xs:simpleType>
+      <xs:restriction base="xs:string">
+        <xs:enumeration value="A"/>
+        <xs:enumeration value="C"/>
+        <xs:enumeration value="AC"/>
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:element>
+
+  <xs:element name="conditiontype">
+    <xs:simpleType>
+      <xs:restriction base="xs:string">
+        <xs:enumeration value="JOIN"/>
+        <xs:enumeration value="ORIENTED"/>
+        <xs:enumeration value="OTHER"/>
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:element>
+
+  <xs:element name="strategy">
+    <xs:simpleType>
+      <xs:restriction base="xs:string">
+        <xs:enumeration value="FULL"/>
+        <xs:enumeration value="INNERMOST"/>
+        <xs:enumeration value="OUTERMOST"/>
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:element>
+
+  <xs:element name="status">
+    <xs:annotation>
+      <xs:documentation>
+       This tag shows the termination status of this problem, if known.
+       The reason for using sub-elements is that &lt;yes/&gt; can optionally 
+       be extended by complexity bound information.
+     </xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:choice>
+        <xs:element ref="no"/>
+        <xs:element ref="maybe"/>
+        <xs:element ref="yes"/>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="metainformation">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="originalfilename" minOccurs="0" maxOccurs="unbounded"/>
+        <xs:element ref="author" minOccurs="0"/>
+        <xs:element ref="date" minOccurs="0"/>
+        <xs:element ref="comment" minOccurs="0"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="originalfilename" type="xs:string"/>
+  <xs:element name="author" type="xs:string"/>
+
+  <xs:element name="date" type="xs:date"/>
+  <xs:element name="rule">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="lhs"/>
+        <xs:element ref="rhs"/>
+        <xs:element minOccurs="0" ref="conditions"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="conditions">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" ref="condition"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="condition">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="lhs"/>
+        <xs:element ref="rhs"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="name" type="xs:string"/>
+
+  <xs:element name="comment">
+    <xs:complexType mixed="true">
+      <xs:attribute name="author" use="required" type="xs:string"/>
+      <xs:attribute name="date" use="required" type="xs:date"/>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="lhs">
+    <xs:complexType>
+      <xs:group ref="term"/>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="rhs">
+    <xs:complexType>
+      <xs:group ref="term"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="higherOrderSignature">
+    <xs:annotation>
+      <xs:documentation/>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="variableTypeInfo" minOccurs="0">
+          <xs:annotation>
+            <xs:documentation>type for free variables
+</xs:documentation>
+          </xs:annotation>
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element ref="varDeclaration" maxOccurs="unbounded" minOccurs="0"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="functionSymbolTypeInfo">
+          <xs:annotation>
+            <xs:documentation>a higher-order symbol f with children types t1,...,tn,t has type: (t1,...,tn) -&gt; t</xs:documentation>
+          </xs:annotation>
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element ref="funcDeclaration" maxOccurs="unbounded" minOccurs="0"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="varDeclaration">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="var"/>
+        <xs:element ref="type"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="funcDeclaration">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="name"/>
+        <xs:element ref="typeDeclaration"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="typeDeclaration">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" ref="type"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="type">
+    <xs:complexType>
+      <xs:choice>
+        <xs:element name="basic" type="xs:string"/>
+        <xs:element name="arrow">
+          <xs:annotation>
+            <xs:documentation/>
+          </xs:annotation>
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element ref="type"/>
+              <xs:element ref="type"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+  <xs:group name="term">
+    <xs:annotation>
+      <xs:documentation>for first-order terms, only funapp and var may be used</xs:documentation>
+    </xs:annotation>
+    <xs:choice>
+      <xs:element name="funapp">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="name" maxOccurs="1"/>
+            <xs:element maxOccurs="unbounded" minOccurs="0" name="arg">
+              <xs:complexType>
+                <xs:group ref="term"/>
+              </xs:complexType>
+            </xs:element>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element ref="var"/>
+      <xs:element name="lambda">
+        <xs:annotation>
+          <xs:documentation>the type is the type of the bound variable</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="var"/>
+            <xs:element ref="type"/>
+            <xs:group ref="term"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="application">
+        <xs:annotation>
+          <xs:documentation>an application of a function (first term) on an argument (second term): (first second)</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+          <xs:sequence>
+            <xs:group ref="term"/>
+            <xs:group ref="term"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:choice>
+  </xs:group>
+  <xs:element name="var" type="xs:string"/>
+  <xs:element name="replacementmap">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="entry" minOccurs="0" maxOccurs="unbounded"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="entry" type="xs:int"/>
+
+  <xs:element name="startterm">
+    <xs:complexType>
+      <xs:choice>
+        <xs:element ref="constructor-based"/>
+        <xs:element ref="full"/>
+        <xs:element ref="automaton"/>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="constructor-based">
+    <xs:complexType/>
+  </xs:element>
+
+  <xs:element name="full">
+    <xs:complexType/>
+  </xs:element>
+
+  <xs:element name="automaton">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="automatonstuff"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="automatonstuff" type="xs:string"/>
+
+  <xs:element name="no">
+    <xs:complexType/>
+  </xs:element>
+
+  <xs:element name="maybe">
+    <xs:complexType/>
+  </xs:element>
+
+  <xs:element name="yes">
+    <xs:complexType>
+      <xs:sequence minOccurs="0">
+        <xs:element name="lowerbound" type="bound"/>
+        <xs:element name="upperbound" type="bound"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:simpleType name="bound">
+    <xs:union>
+      <xs:simpleType>
+        <xs:restriction base="xs:string">
+          <xs:enumeration value="?"/>
+          <xs:enumeration value="POLY"/>
+          <xs:enumeration value="O(1)"/>
+        </xs:restriction>
+      </xs:simpleType>
+      <xs:simpleType>
+        <xs:restriction base="xs:string">
+          <xs:pattern value="O\(n\^[0-9]+\)"/>
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:union>
+  </xs:simpleType>
+</xs:schema>

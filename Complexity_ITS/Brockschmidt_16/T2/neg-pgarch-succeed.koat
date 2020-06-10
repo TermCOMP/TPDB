@@ -1,0 +1,15 @@
+(GOAL COMPLEXITY)
+(STARTTERM (FUNCTIONSYMBOLS f0))
+(VAR A B C D E F G H I J K L M N O P Q)
+(RULES
+  f21(A,B,C,D,E,F,G,H,I,J,K,L,M,N,O) -> Com_1(f29(A,B,C,D,E,F,G,H,I,J,K,L,M,N,O)) :|: 0 >= A
+  f41(A,B,C,D,E,F,G,H,I,J,K,L,M,N,O) -> Com_1(f41(A,B,C,D,E,F,G,H,I,J,K,L,M,N,O))
+  f43(A,B,C,D,E,F,G,H,I,J,K,L,M,N,O) -> Com_1(f46(A,B,C,D,E,F,G,H,I,J,K,L,M,N,O))
+  f29(A,B,C,D,E,F,G,H,I,J,K,L,M,N,O) -> Com_1(f41(A,B,C,D,E,F,G,H,I,J,K,L,M,N,O)) :|: A >= 1
+  f29(A,B,C,D,E,F,G,H,I,J,K,L,M,N,O) -> Com_1(f41(A,B,P,0,P,P,G,H,I,J,K,L,M,N,O)) :|: 0 >= A && 999 + B >= P
+  f29(A,B,C,D,E,F,G,H,I,J,K,L,M,N,O) -> Com_1(f41(1,B,P,0,P,P,G,H,I,J,K,L,M,N,O)) :|: 0 >= A && P >= B + 1000
+  f21(A,B,C,D,E,F,G,H,I,J,K,L,M,N,O) -> Com_1(f29(0,P,P,D,E,F,0,P,I,J,K,L,M,N,O)) :|: A >= 1
+  f0(A,B,C,D,E,F,G,H,I,J,K,L,M,N,O) -> Com_1(f21(1,B,C,D,E,F,G,H,P,P,K,L,M,N,O)) :|: 0 >= P
+  f0(A,B,C,D,E,F,G,H,I,J,K,L,M,N,O) -> Com_1(f21(1,B,C,D,E,F,G,H,P,0,1,Q,Q,Q,Q)) :|: P >= 1 && Q >= 1
+  f0(A,B,C,D,E,F,G,H,I,J,K,L,M,N,O) -> Com_1(f41(1,B,C,D,E,F,G,H,P,0,1,Q,Q,Q,Q)) :|: P >= 1 && 0 >= Q
+)

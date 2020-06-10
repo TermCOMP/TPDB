@@ -1,0 +1,30 @@
+(GOAL COMPLEXITY)
+(STARTTERM (FUNCTIONSYMBOLS eval_complex_start))
+(VAR v__0 v__01 v__1 v__12 v_10 v_9 v_a v_b)
+(RULES
+  eval_complex_start(v__0, v__01, v__1, v__12, v_10, v_9, v_a, v_b) -> Com_1(eval_complex_bb0_in(v__0, v__01, v__1, v__12, v_10, v_9, v_a, v_b))
+  eval_complex_bb0_in(v__0, v__01, v__1, v__12, v_10, v_9, v_a, v_b) -> Com_1(eval_complex_0(v__0, v__01, v__1, v__12, v_10, v_9, v_a, v_b))
+  eval_complex_0(v__0, v__01, v__1, v__12, v_10, v_9, v_a, v_b) -> Com_1(eval_complex_1(v__0, v__01, v__1, v__12, v_10, v_9, v_a, v_b))
+  eval_complex_1(v__0, v__01, v__1, v__12, v_10, v_9, v_a, v_b) -> Com_1(eval_complex_2(v__0, v__01, v__1, v__12, v_10, v_9, v_a, v_b))
+  eval_complex_2(v__0, v__01, v__1, v__12, v_10, v_9, v_a, v_b) -> Com_1(eval_complex_3(v__0, v__01, v__1, v__12, v_10, v_9, v_a, v_b))
+  eval_complex_3(v__0, v__01, v__1, v__12, v_10, v_9, v_a, v_b) -> Com_1(eval_complex_4(v__0, v__01, v__1, v__12, v_10, v_9, v_a, v_b))
+  eval_complex_4(v__0, v__01, v__1, v__12, v_10, v_9, v_a, v_b) -> Com_1(eval_complex_5(v__0, v__01, v__1, v__12, v_10, v_9, v_a, v_b))
+  eval_complex_5(v__0, v__01, v__1, v__12, v_10, v_9, v_a, v_b) -> Com_1(eval_complex_6(v__0, v__01, v__1, v__12, v_10, v_9, v_a, v_b))
+  eval_complex_6(v__0, v__01, v__1, v__12, v_10, v_9, v_a, v_b) -> Com_1(eval_complex_bb1_in(v_a, v_b, v__1, v__12, v_10, v_9, v_a, v_b))
+  eval_complex_bb1_in(v__0, v__01, v__1, v__12, v_10, v_9, v_a, v_b) -> Com_1(eval_complex_bb2_in(v__0, v__01, v__0, v__01, v_10, v_9, v_a, v_b)) :|: v__0 < 30
+  eval_complex_bb1_in(v__0, v__01, v__1, v__12, v_10, v_9, v_a, v_b) -> Com_1(eval_complex_bb5_in(v__0, v__01, v__1, v__12, v_10, v_9, v_a, v_b)) :|: v__0 >= 30
+  eval_complex_bb2_in(v__0, v__01, v__1, v__12, v_10, v_9, v_a, v_b) -> Com_1(eval_complex_bb3_in(v__0, v__01, v__1, v__12, v_10, v_9, v_a, v_b)) :|: v__12 < v__1
+  eval_complex_bb2_in(v__0, v__01, v__1, v__12, v_10, v_9, v_a, v_b) -> Com_1(eval_complex_bb4_in(v__0, v__01, v__1, v__12, v_10, v_9, v_a, v_b)) :|: v__12 >= v__1
+  eval_complex_bb3_in(v__0, v__01, v__1, v__12, v_10, v_9, v_a, v_b) -> Com_1(eval_complex_bb2_in(v__0, v__01, v__1 + 10, v__12 + 7, v_10, v_9, v_a, v_b)) :|: v__12 > 5 && v__12 + 7 >= 10 && v__12 + 7 <= 12
+  eval_complex_bb3_in(v__0, v__01, v__1, v__12, v_10, v_9, v_a, v_b) -> Com_1(eval_complex_bb2_in(v__0, v__01, v__1 + 1, v__12 + 7, v_10, v_9, v_a, v_b)) :|: v__12 > 5 && v__12 + 7 < 10
+  eval_complex_bb3_in(v__0, v__01, v__1, v__12, v_10, v_9, v_a, v_b) -> Com_1(eval_complex_bb2_in(v__0, v__01, v__1 + 1, v__12 + 7, v_10, v_9, v_a, v_b)) :|: v__12 > 5 && v__12 + 7 > 12
+  eval_complex_bb3_in(v__0, v__01, v__1, v__12, v_10, v_9, v_a, v_b) -> Com_1(eval_complex_bb2_in(v__0, v__01, v__1 + 10, v__12 + 2, v_10, v_9, v_a, v_b)) :|: v__12 <= 5 && v__12 + 2 >= 10 && v__12 + 2 <= 12
+  eval_complex_bb3_in(v__0, v__01, v__1, v__12, v_10, v_9, v_a, v_b) -> Com_1(eval_complex_bb2_in(v__0, v__01, v__1 + 1, v__12 + 2, v_10, v_9, v_a, v_b)) :|: v__12 <= 5 && v__12 + 2 < 10
+  eval_complex_bb3_in(v__0, v__01, v__1, v__12, v_10, v_9, v_a, v_b) -> Com_1(eval_complex_bb2_in(v__0, v__01, v__1 + 1, v__12 + 2, v_10, v_9, v_a, v_b)) :|: v__12 <= 5 && v__12 + 2 > 12
+  eval_complex_bb4_in(v__0, v__01, v__1, v__12, v_10, v_9, v_a, v_b) -> Com_1(eval_complex_15(v__0, v__01, v__1, v__12, v_10, v__1 + 2, v_a, v_b))
+  eval_complex_15(v__0, v__01, v__1, v__12, v_10, v_9, v_a, v_b) -> Com_1(eval_complex_16(v__0, v__01, v__1, v__12, v_10, v_9, v_a, v_b))
+  eval_complex_16(v__0, v__01, v__1, v__12, v_10, v_9, v_a, v_b) -> Com_1(eval_complex_17(v__0, v__01, v__1, v__12, v__12 - 10, v_9, v_a, v_b))
+  eval_complex_17(v__0, v__01, v__1, v__12, v_10, v_9, v_a, v_b) -> Com_1(eval_complex_18(v__0, v__01, v__1, v__12, v_10, v_9, v_a, v_b))
+  eval_complex_18(v__0, v__01, v__1, v__12, v_10, v_9, v_a, v_b) -> Com_1(eval_complex_bb1_in(v_9, v_10, v__1, v__12, v_10, v_9, v_a, v_b))
+  eval_complex_bb5_in(v__0, v__01, v__1, v__12, v_10, v_9, v_a, v_b) -> Com_1(eval_complex_stop(v__0, v__01, v__1, v__12, v_10, v_9, v_a, v_b))
+)

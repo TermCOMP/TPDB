@@ -1,0 +1,65 @@
+(declare-sort Loc 0)
+(declare-const l0 Loc)
+(declare-const l1 Loc)
+(declare-const l2 Loc)
+(declare-const l3 Loc)
+(declare-const l4 Loc)
+(declare-const l5 Loc)
+(declare-const l6 Loc)
+(declare-const l7 Loc)
+(declare-const l8 Loc)
+(declare-const l9 Loc)
+(declare-const l10 Loc)
+(declare-const l11 Loc)
+(declare-const l12 Loc)
+(declare-const l13 Loc)
+(declare-const l14 Loc)
+(declare-const l15 Loc)
+(assert (distinct l0 l1 l2 l3 l4 l5 l6 l7 l8 l9 l10 l11 l12 l13 l14 l15))
+
+(define-fun cfg_init ( (pc Loc) (src Loc) (rel Bool) ) Bool
+  (and (= pc src) rel))
+
+(define-fun cfg_trans2 ( (pc Loc) (src Loc)
+                         (pc1 Loc) (dst Loc)
+                         (rel Bool) ) Bool
+  (and (= pc src) (= pc1 dst) rel))
+
+(define-fun cfg_trans3 ( (pc Loc) (exit Loc)
+                         (pc1 Loc) (call Loc)
+                         (pc2 Loc) (return Loc)
+                         (rel Bool) ) Bool
+  (and (= pc exit) (= pc1 call) (= pc2 return) rel))
+
+(define-fun init_main ( (pc^0 Loc) (Index2^0 Int) (Index7^0 Int) (Sorted5^0 Int) (Temp6^0 Int) (__const_100^0 Int) (__const_99^0 Int) (fact3^0 Int) (factor^0 Int) (i8^0 Int) ) Bool
+  (cfg_init pc^0 l15 true))
+
+(define-fun next_main (
+                 (pc^0 Loc) (Index2^0 Int) (Index7^0 Int) (Sorted5^0 Int) (Temp6^0 Int) (__const_100^0 Int) (__const_99^0 Int) (fact3^0 Int) (factor^0 Int) (i8^0 Int)
+                 (pc^post Loc) (Index2^post Int) (Index7^post Int) (Sorted5^post Int) (Temp6^post Int) (__const_100^post Int) (__const_99^post Int) (fact3^post Int) (factor^post Int) (i8^post Int)
+             ) Bool
+  (or
+    (cfg_trans2 pc^0 l0 pc^post l1 (and (and (and (and (and (and (and (and (and (<= (+ 1 __const_100^0) (+ 0 Index2^0)) (= Sorted5^post 0)) (= i8^post 1)) (= Index2^0 Index2^post)) (= Index7^0 Index7^post)) (= Temp6^0 Temp6^post)) (= __const_100^0 __const_100^post)) (= __const_99^0 __const_99^post)) (= fact3^0 fact3^post)) (= factor^0 factor^post)))
+    (cfg_trans2 pc^0 l0 pc^post l2 (and (and (and (and (and (and (and (and (and (<= (+ 0 Index2^0) (+ 0 __const_100^0)) (= Index2^post (+ 1 Index2^0))) (= Index7^0 Index7^post)) (= Sorted5^0 Sorted5^post)) (= Temp6^0 Temp6^post)) (= __const_100^0 __const_100^post)) (= __const_99^0 __const_99^post)) (= fact3^0 fact3^post)) (= factor^0 factor^post)) (= i8^0 i8^post)))
+    (cfg_trans2 pc^0 l2 pc^post l0 (and (and (and (and (and (and (and (and (= Index2^0 Index2^post) (= Index7^0 Index7^post)) (= Sorted5^0 Sorted5^post)) (= Temp6^0 Temp6^post)) (= __const_100^0 __const_100^post)) (= __const_99^0 __const_99^post)) (= fact3^0 fact3^post)) (= factor^0 factor^post)) (= i8^0 i8^post)))
+    (cfg_trans2 pc^0 l3 pc^post l4 (and (and (and (and (and (and (and (and (= Index2^0 Index2^post) (= Index7^0 Index7^post)) (= Sorted5^0 Sorted5^post)) (= Temp6^0 Temp6^post)) (= __const_100^0 __const_100^post)) (= __const_99^0 __const_99^post)) (= fact3^0 fact3^post)) (= factor^0 factor^post)) (= i8^0 i8^post)))
+    (cfg_trans2 pc^0 l5 pc^post l3 (and (and (and (and (and (and (and (and (= Index2^0 Index2^post) (= Index7^0 Index7^post)) (= Sorted5^0 Sorted5^post)) (= Temp6^0 Temp6^post)) (= __const_100^0 __const_100^post)) (= __const_99^0 __const_99^post)) (= fact3^0 fact3^post)) (= factor^0 factor^post)) (= i8^0 i8^post)))
+    (cfg_trans2 pc^0 l6 pc^post l7 (and (and (and (and (and (and (and (and (= Index2^0 Index2^post) (= Index7^0 Index7^post)) (= Sorted5^0 Sorted5^post)) (= Temp6^0 Temp6^post)) (= __const_100^0 __const_100^post)) (= __const_99^0 __const_99^post)) (= fact3^0 fact3^post)) (= factor^0 factor^post)) (= i8^0 i8^post)))
+    (cfg_trans2 pc^0 l7 pc^post l1 (and (and (and (and (and (and (and (and (and (and (<= (+ 0 Sorted5^0) 0) (<= 0 (+ 0 Sorted5^0))) (= i8^post (+ 1 i8^0))) (= Index2^0 Index2^post)) (= Index7^0 Index7^post)) (= Sorted5^0 Sorted5^post)) (= Temp6^0 Temp6^post)) (= __const_100^0 __const_100^post)) (= __const_99^0 __const_99^post)) (= fact3^0 fact3^post)) (= factor^0 factor^post)))
+    (cfg_trans2 pc^0 l7 pc^post l5 (and (and (and (and (and (and (and (and (and (<= 1 (+ 0 Sorted5^0)) (= Index2^0 Index2^post)) (= Index7^0 Index7^post)) (= Sorted5^0 Sorted5^post)) (= Temp6^0 Temp6^post)) (= __const_100^0 __const_100^post)) (= __const_99^0 __const_99^post)) (= fact3^0 fact3^post)) (= factor^0 factor^post)) (= i8^0 i8^post)))
+    (cfg_trans2 pc^0 l7 pc^post l5 (and (and (and (and (and (and (and (and (and (<= (+ 1 Sorted5^0) 0) (= Index2^0 Index2^post)) (= Index7^0 Index7^post)) (= Sorted5^0 Sorted5^post)) (= Temp6^0 Temp6^post)) (= __const_100^0 __const_100^post)) (= __const_99^0 __const_99^post)) (= fact3^0 fact3^post)) (= factor^0 factor^post)) (= i8^0 i8^post)))
+    (cfg_trans2 pc^0 l8 pc^post l9 (and (and (and (and (and (and (and (and (= Index7^post (+ 1 Index7^0)) (= Index2^0 Index2^post)) (= Sorted5^0 Sorted5^post)) (= Temp6^0 Temp6^post)) (= __const_100^0 __const_100^post)) (= __const_99^0 __const_99^post)) (= fact3^0 fact3^post)) (= factor^0 factor^post)) (= i8^0 i8^post)))
+    (cfg_trans2 pc^0 l1 pc^post l10 (and (and (and (and (and (and (and (and (= Index2^0 Index2^post) (= Index7^0 Index7^post)) (= Sorted5^0 Sorted5^post)) (= Temp6^0 Temp6^post)) (= __const_100^0 __const_100^post)) (= __const_99^0 __const_99^post)) (= fact3^0 fact3^post)) (= factor^0 factor^post)) (= i8^0 i8^post)))
+    (cfg_trans2 pc^0 l11 pc^post l8 (and (and (and (and (and (and (and (and (= Temp6^post Temp6^post) (= Sorted5^post 0)) (= Index2^0 Index2^post)) (= Index7^0 Index7^post)) (= __const_100^0 __const_100^post)) (= __const_99^0 __const_99^post)) (= fact3^0 fact3^post)) (= factor^0 factor^post)) (= i8^0 i8^post)))
+    (cfg_trans2 pc^0 l11 pc^post l8 (and (and (and (and (and (and (and (and (= Index2^0 Index2^post) (= Index7^0 Index7^post)) (= Sorted5^0 Sorted5^post)) (= Temp6^0 Temp6^post)) (= __const_100^0 __const_100^post)) (= __const_99^0 __const_99^post)) (= fact3^0 fact3^post)) (= factor^0 factor^post)) (= i8^0 i8^post)))
+    (cfg_trans2 pc^0 l12 pc^post l11 (and (and (and (and (and (and (and (and (and (<= (+ 0 Index7^0) (+ (+ 0 __const_100^0) (* -1 i8^0))) (= Index2^0 Index2^post)) (= Index7^0 Index7^post)) (= Sorted5^0 Sorted5^post)) (= Temp6^0 Temp6^post)) (= __const_100^0 __const_100^post)) (= __const_99^0 __const_99^post)) (= fact3^0 fact3^post)) (= factor^0 factor^post)) (= i8^0 i8^post)))
+    (cfg_trans2 pc^0 l12 pc^post l6 (and (and (and (and (and (and (and (and (and (<= (+ (+ 1 __const_100^0) (* -1 i8^0)) (+ 0 Index7^0)) (= Index2^0 Index2^post)) (= Index7^0 Index7^post)) (= Sorted5^0 Sorted5^post)) (= Temp6^0 Temp6^post)) (= __const_100^0 __const_100^post)) (= __const_99^0 __const_99^post)) (= fact3^0 fact3^post)) (= factor^0 factor^post)) (= i8^0 i8^post)))
+    (cfg_trans2 pc^0 l13 pc^post l6 (and (and (and (and (and (and (and (and (and (<= (+ 1 __const_99^0) (+ 0 Index7^0)) (= Index2^0 Index2^post)) (= Index7^0 Index7^post)) (= Sorted5^0 Sorted5^post)) (= Temp6^0 Temp6^post)) (= __const_100^0 __const_100^post)) (= __const_99^0 __const_99^post)) (= fact3^0 fact3^post)) (= factor^0 factor^post)) (= i8^0 i8^post)))
+    (cfg_trans2 pc^0 l13 pc^post l12 (and (and (and (and (and (and (and (and (and (<= (+ 0 Index7^0) (+ 0 __const_99^0)) (= Index2^0 Index2^post)) (= Index7^0 Index7^post)) (= Sorted5^0 Sorted5^post)) (= Temp6^0 Temp6^post)) (= __const_100^0 __const_100^post)) (= __const_99^0 __const_99^post)) (= fact3^0 fact3^post)) (= factor^0 factor^post)) (= i8^0 i8^post)))
+    (cfg_trans2 pc^0 l9 pc^post l13 (and (and (and (and (and (and (and (and (= Index2^0 Index2^post) (= Index7^0 Index7^post)) (= Sorted5^0 Sorted5^post)) (= Temp6^0 Temp6^post)) (= __const_100^0 __const_100^post)) (= __const_99^0 __const_99^post)) (= fact3^0 fact3^post)) (= factor^0 factor^post)) (= i8^0 i8^post)))
+    (cfg_trans2 pc^0 l10 pc^post l3 (and (and (and (and (and (and (and (and (and (<= (+ 1 __const_99^0) (+ 0 i8^0)) (= Index2^0 Index2^post)) (= Index7^0 Index7^post)) (= Sorted5^0 Sorted5^post)) (= Temp6^0 Temp6^post)) (= __const_100^0 __const_100^post)) (= __const_99^0 __const_99^post)) (= fact3^0 fact3^post)) (= factor^0 factor^post)) (= i8^0 i8^post)))
+    (cfg_trans2 pc^0 l10 pc^post l9 (and (and (and (and (and (and (and (and (and (<= (+ 0 i8^0) (+ 0 __const_99^0)) (= Sorted5^post 1)) (= Index7^post 1)) (= Index2^0 Index2^post)) (= Temp6^0 Temp6^post)) (= __const_100^0 __const_100^post)) (= __const_99^0 __const_99^post)) (= fact3^0 fact3^post)) (= factor^0 factor^post)) (= i8^0 i8^post)))
+    (cfg_trans2 pc^0 l14 pc^post l2 (and (and (and (and (and (and (and (and (= factor^post -1) (= fact3^post (+ 0 factor^post))) (= Index2^post 1)) (= Index7^0 Index7^post)) (= Sorted5^0 Sorted5^post)) (= Temp6^0 Temp6^post)) (= __const_100^0 __const_100^post)) (= __const_99^0 __const_99^post)) (= i8^0 i8^post)))
+    (cfg_trans2 pc^0 l15 pc^post l14 (and (and (and (and (and (and (and (and (= Index2^0 Index2^post) (= Index7^0 Index7^post)) (= Sorted5^0 Sorted5^post)) (= Temp6^0 Temp6^post)) (= __const_100^0 __const_100^post)) (= __const_99^0 __const_99^post)) (= fact3^0 fact3^post)) (= factor^0 factor^post)) (= i8^0 i8^post)))
+  )
+)

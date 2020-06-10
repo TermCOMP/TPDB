@@ -1,0 +1,64 @@
+(GOAL COMPLEXITY)
+(STARTTERM (FUNCTIONSYMBOLS evalrealheapsortstart))
+(VAR A B C D E F G)
+(RULES
+  evalrealheapsortstart(A,B,C,D) -> Com_1(evalrealheapsortentryin(A,B,C,D))
+  evalrealheapsortentryin(A,B,C,D) -> Com_1(evalrealheapsortbb6in(A,1,C,D)) :|: A >= 3
+  evalrealheapsortentryin(A,B,C,D) -> Com_1(evalrealheapsortreturnin(A,B,C,D)) :|: 2 >= A
+  evalrealheapsortbb6in(A,B,C,D) -> Com_1(evalrealheapsortbb3in(A,B,B,D)) :|: A >= 1 + B
+  evalrealheapsortbb6in(A,B,C,D) -> Com_1(evalrealheapsortbb7in(A,B,C,D)) :|: B >= A
+  evalrealheapsortbb3in(A,B,C,D) -> Com_1(evalrealheapsortbb5in(A,B,C,D)) :|: 0 >= C
+  evalrealheapsortbb3in(A,B,C,D) -> Com_1(evalrealheapsortbb4in(A,B,C,D)) :|: C >= 1
+  evalrealheapsortbb4in(A,B,C,D) -> Com_1(evalrealheapsortbb2in(A,B,C,D)) :|: C + 1 = 0
+  evalrealheapsortbb4in(A,B,C,D) -> Com_1(evalrealheapsortbb2in(A,B,C,D)) :|: C >= 0 && E >= 0 && C + 1 >= 2*E && 2*E >= C
+  evalrealheapsortbb4in(A,B,C,D) -> Com_1(evalrealheapsortbb2in(A,B,C,D)) :|: 0 >= C + 2 && 0 >= E && 2*E >= C + 1 && 2 + C >= 2*E
+  evalrealheapsortbb4in(A,B,C,D) -> Com_1(evalrealheapsortbb5in(A,B,C,D)) :|: C + 1 = 0
+  evalrealheapsortbb4in(A,B,C,D) -> Com_1(evalrealheapsortbb5in(A,B,C,D)) :|: C >= 0 && E >= 0 && C + 1 >= 2*E && 2*E >= C
+  evalrealheapsortbb4in(A,B,C,D) -> Com_1(evalrealheapsortbb5in(A,B,C,D)) :|: 0 >= C + 2 && 0 >= E && 2*E >= C + 1 && 2 + C >= 2*E
+  evalrealheapsortbb2in(A,B,C,D) -> Com_1(evalrealheapsortbb3in(A,B,-1,D)) :|: C + 1 = 0
+  evalrealheapsortbb2in(A,B,C,D) -> Com_1(evalrealheapsortbb3in(A,B,E - 1,D)) :|: 0 >= 1 && E >= 0 && 0 >= 2*E && 1 + 2*E >= 0 && C + 1 = 0
+  evalrealheapsortbb2in(A,B,C,D) -> Com_1(evalrealheapsortbb3in(A,B,E - 1,D)) :|: 0 >= 1 && 0 >= E && C + 1 = 0 && 2*E >= C + 1 && 2 + C >= 2*E
+  evalrealheapsortbb2in(A,B,C,D) -> Com_1(evalrealheapsortbb3in(A,B,-1,D)) :|: 0 >= 1 && E >= 0 && 0 >= 2*E && 1 + 2*E >= 0 && C + 1 = 0
+  evalrealheapsortbb2in(A,B,C,D) -> Com_1(evalrealheapsortbb3in(A,B,E - 1,D)) :|: 0 >= 1 && F >= 0 && 0 >= 2*F && 1 + 2*F >= 0 && E >= 0 && 0 >= 2*E && 1 + 2*E >= 0 && C + 1 = 0
+  evalrealheapsortbb2in(A,B,C,D) -> Com_1(evalrealheapsortbb3in(A,B,E - 1,D)) :|: 0 >= 1 && F >= 0 && 0 >= 2*F && 1 + 2*F >= 0 && 0 >= E && C + 1 = 0 && 2*E >= C + 1 && 2 + C >= 2*E
+  evalrealheapsortbb2in(A,B,C,D) -> Com_1(evalrealheapsortbb3in(A,B,-1,D)) :|: 0 >= 1 && 0 >= E && C + 1 = 0 && 2*E >= C + 1 && 2 + C >= 2*E
+  evalrealheapsortbb2in(A,B,C,D) -> Com_1(evalrealheapsortbb3in(A,B,E - 1,D)) :|: 0 >= 1 && 0 >= F && E >= 0 && 0 >= 2*E && 1 + 2*E >= 0 && C + 1 = 0 && 2*F >= C + 1 && 2 + C >= 2*F
+  evalrealheapsortbb2in(A,B,C,D) -> Com_1(evalrealheapsortbb3in(A,B,E - 1,D)) :|: 0 >= 1 && 0 >= F && 0 >= E && C + 1 = 0 && 2*F >= C + 1 && 2 + C >= 2*F && 2*E >= C + 1 && 2 + C >= 2*E
+  evalrealheapsortbb2in(A,B,C,D) -> Com_1(evalrealheapsortbb3in(A,B,-1,D)) :|: 0 >= 1 && E >= 0 && 0 >= 2*E && 1 + 2*E >= 0 && C + 1 = 0
+  evalrealheapsortbb2in(A,B,C,D) -> Com_1(evalrealheapsortbb3in(A,B,E - 1,D)) :|: 0 >= 1 && F >= 0 && 0 >= 2*F && 1 + 2*F >= 0 && E >= 0 && 0 >= 2*E && 1 + 2*E >= 0 && C + 1 = 0
+  evalrealheapsortbb2in(A,B,C,D) -> Com_1(evalrealheapsortbb3in(A,B,E - 1,D)) :|: 0 >= 1 && F >= 0 && 0 >= 2*F && 1 + 2*F >= 0 && 0 >= E && C + 1 = 0 && 2*E >= C + 1 && 2 + C >= 2*E
+  evalrealheapsortbb2in(A,B,C,D) -> Com_1(evalrealheapsortbb3in(A,B,-1,D)) :|: 0 >= 1 && E >= 0 && 0 >= 2*E && 1 + 2*E >= 0 && F >= 0 && 0 >= 2*F && 1 + 2*F >= 0 && C + 1 = 0
+  evalrealheapsortbb2in(A,B,C,D) -> Com_1(evalrealheapsortbb3in(A,B,E - 1,D)) :|: C >= 0 && F >= 0 && C + 1 >= 2*F && 2*F >= C && G >= 0 && C + 1 >= 2*G && 2*G >= C && E >= 0 && C + 1 >= 2*E && 2*E >= C
+  evalrealheapsortbb2in(A,B,C,D) -> Com_1(evalrealheapsortbb3in(A,B,E - 1,D)) :|: C >= 0 && F >= 0 && C + 1 >= 2*F && 2*F >= C && G >= 0 && C + 1 >= 2*G && 2*G >= C && 0 >= C + 2 && 0 >= E && 2*E >= C + 1 && 2 + C >= 2*E
+  evalrealheapsortbb2in(A,B,C,D) -> Com_1(evalrealheapsortbb3in(A,B,-1,D)) :|: 0 >= 1 && E >= 0 && 0 >= 2*E && 1 + 2*E >= 0 && 0 >= F && C + 1 = 0 && 2*F >= C + 1 && 2 + C >= 2*F
+  evalrealheapsortbb2in(A,B,C,D) -> Com_1(evalrealheapsortbb3in(A,B,E - 1,D)) :|: C >= 0 && F >= 0 && C + 1 >= 2*F && 2*F >= C && 0 >= C + 2 && 0 >= G && E >= 0 && C + 1 >= 2*E && 2*E >= C && 2*G >= C + 1 && 2 + C >= 2*G
+  evalrealheapsortbb2in(A,B,C,D) -> Com_1(evalrealheapsortbb3in(A,B,E - 1,D)) :|: C >= 0 && F >= 0 && C + 1 >= 2*F && 2*F >= C && 0 >= C + 2 && 0 >= G && 0 >= E && 2*G >= C + 1 && 2 + C >= 2*G && 2*E >= C + 1 && 2 + C >= 2*E
+  evalrealheapsortbb2in(A,B,C,D) -> Com_1(evalrealheapsortbb3in(A,B,-1,D)) :|: 0 >= 1 && 0 >= E && C + 1 = 0 && 2*E >= C + 1 && 2 + C >= 2*E
+  evalrealheapsortbb2in(A,B,C,D) -> Com_1(evalrealheapsortbb3in(A,B,E - 1,D)) :|: 0 >= 1 && 0 >= F && E >= 0 && 0 >= 2*E && 1 + 2*E >= 0 && C + 1 = 0 && 2*F >= C + 1 && 2 + C >= 2*F
+  evalrealheapsortbb2in(A,B,C,D) -> Com_1(evalrealheapsortbb3in(A,B,E - 1,D)) :|: 0 >= 1 && 0 >= F && 0 >= E && C + 1 = 0 && 2*F >= C + 1 && 2 + C >= 2*F && 2*E >= C + 1 && 2 + C >= 2*E
+  evalrealheapsortbb2in(A,B,C,D) -> Com_1(evalrealheapsortbb3in(A,B,-1,D)) :|: 0 >= 1 && 0 >= E && F >= 0 && 0 >= 2*F && 1 + 2*F >= 0 && C + 1 = 0 && 2*E >= C + 1 && 2 + C >= 2*E
+  evalrealheapsortbb2in(A,B,C,D) -> Com_1(evalrealheapsortbb3in(A,B,E - 1,D)) :|: 0 >= C + 2 && 0 >= F && C >= 0 && G >= 0 && C + 1 >= 2*G && 2*G >= C && E >= 0 && C + 1 >= 2*E && 2*E >= C && 2*F >= C + 1 && 2 + C >= 2*F
+  evalrealheapsortbb2in(A,B,C,D) -> Com_1(evalrealheapsortbb3in(A,B,E - 1,D)) :|: 0 >= C + 2 && 0 >= F && C >= 0 && G >= 0 && C + 1 >= 2*G && 2*G >= C && 0 >= E && 2*F >= C + 1 && 2 + C >= 2*F && 2*E >= C + 1 && 2 + C >= 2*E
+  evalrealheapsortbb2in(A,B,C,D) -> Com_1(evalrealheapsortbb3in(A,B,-1,D)) :|: 0 >= 1 && 0 >= E && 0 >= F && C + 1 = 0 && 2*E >= C + 1 && 2 + C >= 2*E && 2*F >= C + 1 && 2 + C >= 2*F
+  evalrealheapsortbb2in(A,B,C,D) -> Com_1(evalrealheapsortbb3in(A,B,E - 1,D)) :|: 0 >= C + 2 && 0 >= F && 0 >= G && C >= 0 && E >= 0 && C + 1 >= 2*E && 2*E >= C && 2*F >= C + 1 && 2 + C >= 2*F && 2*G >= C + 1 && 2 + C >= 2*G
+  evalrealheapsortbb2in(A,B,C,D) -> Com_1(evalrealheapsortbb3in(A,B,E - 1,D)) :|: 0 >= C + 2 && 0 >= F && 0 >= G && 0 >= E && 2*F >= C + 1 && 2 + C >= 2*F && 2*G >= C + 1 && 2 + C >= 2*G && 2*E >= C + 1 && 2 + C >= 2*E
+  evalrealheapsortbb5in(A,B,C,D) -> Com_1(evalrealheapsortbb6in(A,B + 1,C,D))
+  evalrealheapsortbb7in(A,B,C,D) -> Com_1(evalrealheapsortbb18in(A,0,C,D))
+  evalrealheapsortbb18in(A,B,C,D) -> Com_1(evalrealheapsortbb8in(A,B,C,D)) :|: A >= 2 + B
+  evalrealheapsortbb18in(A,B,C,D) -> Com_1(evalrealheapsortreturnin(A,B,C,D)) :|: B + 1 >= A
+  evalrealheapsortbb8in(A,B,C,D) -> Com_1(evalrealheapsortbb16in(A,B,0,D))
+  evalrealheapsortbb16in(A,B,C,D) -> Com_1(evalrealheapsortbb9in(A,B,C,D)) :|: A >= B + 3 + 2*C
+  evalrealheapsortbb16in(A,B,C,D) -> Com_1(evalrealheapsortbb17in(A,B,C,D)) :|: 2*C + 2 + B >= A
+  evalrealheapsortbb9in(A,B,C,D) -> Com_1(evalrealheapsortbb11in(A,B,C,D)) :|: A = 2*C + 3 + B
+  evalrealheapsortbb9in(A,B,C,D) -> Com_1(evalrealheapsortbb10in(A,B,C,D)) :|: A >= B + 4 + 2*C
+  evalrealheapsortbb9in(A,B,C,D) -> Com_1(evalrealheapsortbb10in(A,B,C,D)) :|: 2*C + 2 + B >= A
+  evalrealheapsortbb10in(A,B,C,D) -> Com_1(evalrealheapsortbb11in(A,B,C,D))
+  evalrealheapsortbb10in(A,B,C,D) -> Com_1(evalrealheapsortbb12in(A,B,C,D))
+  evalrealheapsortbb11in(A,B,C,D) -> Com_1(evalrealheapsortbb13in(A,B,C,2*C + 1))
+  evalrealheapsortbb12in(A,B,C,D) -> Com_1(evalrealheapsortbb13in(A,B,C,2*C + 2))
+  evalrealheapsortbb13in(A,B,C,D) -> Com_1(evalrealheapsortbb14in(A,B,C,D))
+  evalrealheapsortbb13in(A,B,C,D) -> Com_1(evalrealheapsortbb16in(A,B,A,D))
+  evalrealheapsortbb14in(A,B,C,D) -> Com_1(evalrealheapsortbb16in(A,B,D,D))
+  evalrealheapsortbb17in(A,B,C,D) -> Com_1(evalrealheapsortbb18in(A,B + 1,C,D))
+  evalrealheapsortreturnin(A,B,C,D) -> Com_1(evalrealheapsortstop(A,B,C,D))
+)

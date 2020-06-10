@@ -1,0 +1,1 @@
+{-# htermination getContents :: IO String #-}

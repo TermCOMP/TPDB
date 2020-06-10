@@ -1,0 +1,10 @@
+(VAR x y u)
+(RULES
+log(x, y) -> logNat(x >= 0 && y >= 2, x, y)
+
+logNat(TRUE, x, y) -> cond(x <= y, x, y)
+
+cond(TRUE, x, y) -> 1
+cond(FALSE, x, y) -> 2*log(x, y * y)
+
+)

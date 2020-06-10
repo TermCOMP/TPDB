@@ -1,0 +1,26 @@
+(GOAL COMPLEXITY)
+(STARTTERM (FUNCTIONSYMBOLS eval_sipmabubble_start))
+(VAR nondef_0 nondef_1 v_24 v_i_0 v_j_0 v_n)
+(RULES
+  eval_sipmabubble_start(v_24, v_i_0, v_j_0, v_n) -> Com_1(eval_sipmabubble_bb0_in(v_24, v_i_0, v_j_0, v_n))
+  eval_sipmabubble_bb0_in(v_24, v_i_0, v_j_0, v_n) -> Com_1(eval_sipmabubble_0(v_24, v_i_0, v_j_0, v_n))
+  eval_sipmabubble_0(v_24, v_i_0, v_j_0, v_n) -> Com_1(eval_sipmabubble_1(v_24, v_i_0, v_j_0, v_n))
+  eval_sipmabubble_1(v_24, v_i_0, v_j_0, v_n) -> Com_1(eval_sipmabubble_2(v_24, v_i_0, v_j_0, v_n))
+  eval_sipmabubble_2(v_24, v_i_0, v_j_0, v_n) -> Com_1(eval_sipmabubble_3(v_24, v_i_0, v_j_0, v_n))
+  eval_sipmabubble_3(v_24, v_i_0, v_j_0, v_n) -> Com_1(eval_sipmabubble_4(v_24, v_i_0, v_j_0, v_n))
+  eval_sipmabubble_4(v_24, v_i_0, v_j_0, v_n) -> Com_1(eval_sipmabubble_5(v_24, v_i_0, v_j_0, v_n))
+  eval_sipmabubble_5(v_24, v_i_0, v_j_0, v_n) -> Com_1(eval_sipmabubble_6(v_24, v_i_0, v_j_0, v_n))
+  eval_sipmabubble_6(v_24, v_i_0, v_j_0, v_n) -> Com_1(eval_sipmabubble_bb1_in(v_24, v_n, v_j_0, v_n))
+  eval_sipmabubble_bb1_in(v_24, v_i_0, v_j_0, v_n) -> Com_1(eval_sipmabubble_bb2_in(v_24, v_i_0, 0, v_n)) :|: v_i_0 >= 0
+  eval_sipmabubble_bb1_in(v_24, v_i_0, v_j_0, v_n) -> Com_1(eval_sipmabubble_bb7_in(v_24, v_i_0, v_j_0, v_n)) :|: v_i_0 < 0
+  eval_sipmabubble_bb2_in(v_24, v_i_0, v_j_0, v_n) -> Com_1(eval_sipmabubble_bb3_in(v_24, v_i_0, v_j_0, v_n)) :|: v_j_0 <= v_i_0 - 1
+  eval_sipmabubble_bb2_in(v_24, v_i_0, v_j_0, v_n) -> Com_1(eval_sipmabubble_bb6_in(v_24, v_i_0, v_j_0, v_n)) :|: v_j_0 > v_i_0 - 1
+  eval_sipmabubble_bb3_in(v_24, v_i_0, v_j_0, v_n) -> Com_1(eval_sipmabubble_bb4_in(v_24, v_i_0, v_j_0, v_n)) :|: nondef_0 > nondef_1
+  eval_sipmabubble_bb3_in(v_24, v_i_0, v_j_0, v_n) -> Com_1(eval_sipmabubble_bb5_in(v_24, v_i_0, v_j_0, v_n)) :|: nondef_0 <= nondef_1
+  eval_sipmabubble_bb4_in(v_24, v_i_0, v_j_0, v_n) -> Com_1(eval_sipmabubble_bb5_in(v_24, v_i_0, v_j_0, v_n))
+  eval_sipmabubble_bb5_in(v_24, v_i_0, v_j_0, v_n) -> Com_1(eval_sipmabubble_bb2_in(v_24, v_i_0, v_j_0 + 1, v_n))
+  eval_sipmabubble_bb6_in(v_24, v_i_0, v_j_0, v_n) -> Com_1(eval_sipmabubble_29(v_i_0 - 1, v_i_0, v_j_0, v_n))
+  eval_sipmabubble_29(v_24, v_i_0, v_j_0, v_n) -> Com_1(eval_sipmabubble_30(v_24, v_i_0, v_j_0, v_n))
+  eval_sipmabubble_30(v_24, v_i_0, v_j_0, v_n) -> Com_1(eval_sipmabubble_bb1_in(v_24, v_24, v_j_0, v_n))
+  eval_sipmabubble_bb7_in(v_24, v_i_0, v_j_0, v_n) -> Com_1(eval_sipmabubble_stop(v_24, v_i_0, v_j_0, v_n))
+)

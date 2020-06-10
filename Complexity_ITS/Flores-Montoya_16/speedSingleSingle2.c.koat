@@ -1,0 +1,23 @@
+(GOAL COMPLEXITY)
+(STARTTERM (FUNCTIONSYMBOLS eval_speedSingleSingle2_start))
+(VAR nondef_0 v_2 v_m v_n v_x_0 v_y_0)
+(RULES
+  eval_speedSingleSingle2_start(v_2, v_m, v_n, v_x_0, v_y_0) -> Com_1(eval_speedSingleSingle2_bb0_in(v_2, v_m, v_n, v_x_0, v_y_0))
+  eval_speedSingleSingle2_bb0_in(v_2, v_m, v_n, v_x_0, v_y_0) -> Com_1(eval_speedSingleSingle2_0(v_2, v_m, v_n, v_x_0, v_y_0))
+  eval_speedSingleSingle2_0(v_2, v_m, v_n, v_x_0, v_y_0) -> Com_1(eval_speedSingleSingle2_1(v_2, v_m, v_n, v_x_0, v_y_0))
+  eval_speedSingleSingle2_1(v_2, v_m, v_n, v_x_0, v_y_0) -> Com_1(eval_speedSingleSingle2_2(v_2, v_m, v_n, v_x_0, v_y_0))
+  eval_speedSingleSingle2_2(v_2, v_m, v_n, v_x_0, v_y_0) -> Com_1(eval_speedSingleSingle2_bb6_in(v_2, v_m, v_n, v_x_0, v_y_0)) :|: v_n < 0
+  eval_speedSingleSingle2_2(v_2, v_m, v_n, v_x_0, v_y_0) -> Com_1(eval_speedSingleSingle2_bb6_in(v_2, v_m, v_n, v_x_0, v_y_0)) :|: v_m < 0
+  eval_speedSingleSingle2_2(v_2, v_m, v_n, v_x_0, v_y_0) -> Com_1(eval_speedSingleSingle2_bb1_in(v_2, v_m, v_n, 0, 0)) :|: v_n >= 0 && v_m >= 0
+  eval_speedSingleSingle2_bb1_in(v_2, v_m, v_n, v_x_0, v_y_0) -> Com_1(eval_speedSingleSingle2_3(v_2, v_m, v_n, v_x_0, v_y_0))
+  eval_speedSingleSingle2_3(v_2, v_m, v_n, v_x_0, v_y_0) -> Com_1(eval_speedSingleSingle2_4(nondef_0, v_m, v_n, v_x_0, v_y_0))
+  eval_speedSingleSingle2_4(v_2, v_m, v_n, v_x_0, v_y_0) -> Com_1(eval_speedSingleSingle2_bb2_in(v_2, v_m, v_n, v_x_0, v_y_0)) :|: v_2 > 0
+  eval_speedSingleSingle2_4(v_2, v_m, v_n, v_x_0, v_y_0) -> Com_1(eval_speedSingleSingle2_bb6_in(v_2, v_m, v_n, v_x_0, v_y_0)) :|: v_2 <= 0
+  eval_speedSingleSingle2_bb2_in(v_2, v_m, v_n, v_x_0, v_y_0) -> Com_1(eval_speedSingleSingle2_bb3_in(v_2, v_m, v_n, v_x_0, v_y_0)) :|: v_x_0 < v_n
+  eval_speedSingleSingle2_bb2_in(v_2, v_m, v_n, v_x_0, v_y_0) -> Com_1(eval_speedSingleSingle2_bb4_in(v_2, v_m, v_n, v_x_0, v_y_0)) :|: v_x_0 >= v_n
+  eval_speedSingleSingle2_bb3_in(v_2, v_m, v_n, v_x_0, v_y_0) -> Com_1(eval_speedSingleSingle2_bb1_in(v_2, v_m, v_n, v_x_0 + 1, v_y_0 + 1))
+  eval_speedSingleSingle2_bb4_in(v_2, v_m, v_n, v_x_0, v_y_0) -> Com_1(eval_speedSingleSingle2_bb5_in(v_2, v_m, v_n, v_x_0, v_y_0)) :|: v_y_0 < v_m
+  eval_speedSingleSingle2_bb4_in(v_2, v_m, v_n, v_x_0, v_y_0) -> Com_1(eval_speedSingleSingle2_bb6_in(v_2, v_m, v_n, v_x_0, v_y_0)) :|: v_y_0 >= v_m
+  eval_speedSingleSingle2_bb5_in(v_2, v_m, v_n, v_x_0, v_y_0) -> Com_1(eval_speedSingleSingle2_bb1_in(v_2, v_m, v_n, v_x_0 + 1, v_y_0 + 1))
+  eval_speedSingleSingle2_bb6_in(v_2, v_m, v_n, v_x_0, v_y_0) -> Com_1(eval_speedSingleSingle2_stop(v_2, v_m, v_n, v_x_0, v_y_0))
+)

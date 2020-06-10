@@ -1,0 +1,1 @@
+{-# htermination isPrint :: Char -> Bool #-}

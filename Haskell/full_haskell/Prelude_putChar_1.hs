@@ -1,0 +1,1 @@
+{-# htermination putChar :: Char -> IO () #-}

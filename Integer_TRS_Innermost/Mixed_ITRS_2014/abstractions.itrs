@@ -1,0 +1,6 @@
+# Chawdhary/Cook/Gulwani/Sagiv/Yang: Ranking Abstractions
+(VAR x y z)
+(RULES
+eval(x, y) -> eval(x - 1, z) :|: x > 0 && y > 0
+eval(x, y) -> eval(x, y - 1) :|: x > 0 && y > 0
+)

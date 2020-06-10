@@ -1,0 +1,1 @@
+{-# htermination isOctDigit :: Char -> Bool #-}

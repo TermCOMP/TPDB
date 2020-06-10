@@ -1,0 +1,15 @@
+(GOAL COMPLEXITY)
+(STARTTERM (FUNCTIONSYMBOLS evalaxstart))
+(VAR A B C)
+(RULES
+  evalaxstart(A,B,C) -> Com_1(evalaxentryin(A,B,C))
+  evalaxentryin(A,B,C) -> Com_1(evalaxbbin(0,B,C))
+  evalaxbbin(A,B,C) -> Com_1(evalaxbb2in(A,0,C))
+  evalaxbb2in(A,B,C) -> Com_1(evalaxbb1in(A,B,C)) :|: C >= 2 + B
+  evalaxbb2in(A,B,C) -> Com_1(evalaxbb3in(A,B,C)) :|: B + 1 >= C
+  evalaxbb1in(A,B,C) -> Com_1(evalaxbb2in(A,B + 1,C))
+  evalaxbb3in(A,B,C) -> Com_1(evalaxbbin(A + 1,B,C)) :|: B + 1 >= C && C >= 3 + A
+  evalaxbb3in(A,B,C) -> Com_1(evalaxreturnin(A,B,C)) :|: C >= 2 + B
+  evalaxbb3in(A,B,C) -> Com_1(evalaxreturnin(A,B,C)) :|: A + 2 >= C
+  evalaxreturnin(A,B,C) -> Com_1(evalaxstop(A,B,C))
+)

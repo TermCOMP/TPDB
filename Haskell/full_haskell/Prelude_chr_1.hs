@@ -1,0 +1,1 @@
+{-# htermination chr :: Int -> Char #-}

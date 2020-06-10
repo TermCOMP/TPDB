@@ -1,0 +1,30 @@
+(GOAL COMPLEXITY)
+(STARTTERM (FUNCTIONSYMBOLS eval_rsd_start))
+(VAR nondef_0 v_1 v_2 v_4 v_da_0 v_db_0 v_r)
+(RULES
+  eval_rsd_start(v_1, v_2, v_4, v_da_0, v_db_0, v_r) -> Com_1(eval_rsd_bb0_in(v_1, v_2, v_4, v_da_0, v_db_0, v_r))
+  eval_rsd_bb0_in(v_1, v_2, v_4, v_da_0, v_db_0, v_r) -> Com_1(eval_rsd_0(v_1, v_2, v_4, v_da_0, v_db_0, v_r))
+  eval_rsd_0(v_1, v_2, v_4, v_da_0, v_db_0, v_r) -> Com_1(eval_rsd_1(v_1, v_2, v_4, v_da_0, v_db_0, v_r))
+  eval_rsd_1(v_1, v_2, v_4, v_da_0, v_db_0, v_r) -> Com_1(eval_rsd_2(v_1, v_2, v_4, v_da_0, v_db_0, v_r))
+  eval_rsd_2(v_1, v_2, v_4, v_da_0, v_db_0, v_r) -> Com_1(eval_rsd_bb1_in(v_1, v_2, v_4, v_da_0, v_db_0, v_r)) :|: v_r >= 0
+  eval_rsd_2(v_1, v_2, v_4, v_da_0, v_db_0, v_r) -> Com_1(eval_rsd_bb4_in(v_1, v_2, v_4, v_da_0, v_db_0, v_r)) :|: v_r < 0
+  eval_rsd_bb1_in(v_1, v_2, v_4, v_da_0, v_db_0, v_r) -> Com_1(eval_rsd_4(2*v_r, v_2, v_4, v_da_0, v_db_0, v_r))
+  eval_rsd_4(v_1, v_2, v_4, v_da_0, v_db_0, v_r) -> Com_1(eval_rsd_5(v_1, v_2, v_4, v_da_0, v_db_0, v_r))
+  eval_rsd_5(v_1, v_2, v_4, v_da_0, v_db_0, v_r) -> Com_1(eval_rsd_6(v_1, 2*v_r, v_4, v_da_0, v_db_0, v_r))
+  eval_rsd_6(v_1, v_2, v_4, v_da_0, v_db_0, v_r) -> Com_1(eval_rsd_7(v_1, v_2, v_4, v_da_0, v_db_0, v_r))
+  eval_rsd_7(v_1, v_2, v_4, v_da_0, v_db_0, v_r) -> Com_1(eval_rsd_8(v_1, v_2, v_4, v_da_0, v_db_0, v_r))
+  eval_rsd_8(v_1, v_2, v_4, v_da_0, v_db_0, v_r) -> Com_1(eval_rsd_9(v_1, v_2, v_4, v_da_0, v_db_0, v_r))
+  eval_rsd_9(v_1, v_2, v_4, v_da_0, v_db_0, v_r) -> Com_1(eval_rsd_10(v_1, v_2, v_4, v_da_0, v_db_0, v_r))
+  eval_rsd_10(v_1, v_2, v_4, v_da_0, v_db_0, v_r) -> Com_1(eval_rsd_11(v_1, v_2, v_4, v_da_0, v_db_0, v_r))
+  eval_rsd_11(v_1, v_2, v_4, v_da_0, v_db_0, v_r) -> Com_1(eval_rsd_12(v_1, v_2, v_4, v_da_0, v_db_0, v_r))
+  eval_rsd_12(v_1, v_2, v_4, v_da_0, v_db_0, v_r) -> Com_1(eval_rsd_bb2_in(v_1, v_2, v_4, v_1, v_2, v_r))
+  eval_rsd_bb2_in(v_1, v_2, v_4, v_da_0, v_db_0, v_r) -> Com_1(eval_rsd_bb3_in(v_1, v_2, v_4, v_da_0, v_db_0, v_r)) :|: v_da_0 >= v_r
+  eval_rsd_bb2_in(v_1, v_2, v_4, v_da_0, v_db_0, v_r) -> Com_1(eval_rsd_bb4_in(v_1, v_2, v_4, v_da_0, v_db_0, v_r)) :|: v_da_0 < v_r
+  eval_rsd_bb3_in(v_1, v_2, v_4, v_da_0, v_db_0, v_r) -> Com_1(eval_rsd_13(v_1, v_2, v_4, v_da_0, v_db_0, v_r))
+  eval_rsd_13(v_1, v_2, v_4, v_da_0, v_db_0, v_r) -> Com_1(eval_rsd_14(v_1, v_2, nondef_0, v_da_0, v_db_0, v_r))
+  eval_rsd_14(v_1, v_2, v_4, v_da_0, v_db_0, v_r) -> Com_1(eval_rsd_bb2_in(v_1, v_2, v_4, v_da_0 - 1, v_db_0, v_r)) :|: v_4 > 0 && v_4 > 0
+  eval_rsd_14(v_1, v_2, v_4, v_da_0, v_db_0, v_r) -> Com_1(eval_rsd_bb2_in(v_1, v_2, v_4, v_db_0 - 1, v_db_0, v_r)) :|: v_4 > 0 && v_4 <= 0
+  eval_rsd_14(v_1, v_2, v_4, v_da_0, v_db_0, v_r) -> Com_1(eval_rsd_bb2_in(v_1, v_2, v_4, v_da_0 - 1, v_da_0, v_r)) :|: v_4 <= 0 && v_4 > 0
+  eval_rsd_14(v_1, v_2, v_4, v_da_0, v_db_0, v_r) -> Com_1(eval_rsd_bb2_in(v_1, v_2, v_4, v_db_0 - 1, v_da_0, v_r)) :|: v_4 <= 0 && v_4 <= 0
+  eval_rsd_bb4_in(v_1, v_2, v_4, v_da_0, v_db_0, v_r) -> Com_1(eval_rsd_stop(v_1, v_2, v_4, v_da_0, v_db_0, v_r))
+)

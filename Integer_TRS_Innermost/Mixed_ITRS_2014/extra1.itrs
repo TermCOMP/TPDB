@@ -1,0 +1,6 @@
+# non-deterministic decrease of x to an arbitrary value
+# using an extra variable y for this value
+(VAR x y)
+(RULES
+f(TRUE, x) -> f(x > y && x >= 0, y)
+)

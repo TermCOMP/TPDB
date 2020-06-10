@@ -1,0 +1,1 @@
+{-# htermination pred :: Char -> Char #-}

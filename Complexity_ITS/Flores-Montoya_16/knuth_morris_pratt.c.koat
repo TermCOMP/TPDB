@@ -1,0 +1,45 @@
+(GOAL COMPLEXITY)
+(STARTTERM (FUNCTIONSYMBOLS eval_srch_start))
+(VAR nondef_0 nondef_1 nondef_2 v_11 v_22 v_23 v_3 v_i_0 v_j_0 v_j_1 v_m v_n)
+(RULES
+  eval_srch_start(v_11, v_22, v_23, v_3, v_i_0, v_j_0, v_j_1, v_m, v_n) -> Com_1(eval_srch_bb0_in(v_11, v_22, v_23, v_3, v_i_0, v_j_0, v_j_1, v_m, v_n))
+  eval_srch_bb0_in(v_11, v_22, v_23, v_3, v_i_0, v_j_0, v_j_1, v_m, v_n) -> Com_1(eval_srch_0(v_11, v_22, v_23, v_3, v_i_0, v_j_0, v_j_1, v_m, v_n))
+  eval_srch_0(v_11, v_22, v_23, v_3, v_i_0, v_j_0, v_j_1, v_m, v_n) -> Com_1(eval_srch_1(v_11, v_22, v_23, v_3, v_i_0, v_j_0, v_j_1, v_m, v_n))
+  eval_srch_1(v_11, v_22, v_23, v_3, v_i_0, v_j_0, v_j_1, v_m, v_n) -> Com_1(eval_srch_2(v_11, v_22, v_23, v_3, v_i_0, v_j_0, v_j_1, v_m, v_n))
+  eval_srch_2(v_11, v_22, v_23, v_3, v_i_0, v_j_0, v_j_1, v_m, v_n) -> Com_1(eval_srch_3(v_11, v_22, v_23, v_3, v_i_0, v_j_0, v_j_1, v_m, v_n))
+  eval_srch_3(v_11, v_22, v_23, v_3, v_i_0, v_j_0, v_j_1, v_m, v_n) -> Com_1(eval_srch_4(v_11, v_22, v_23, v_3, v_i_0, v_j_0, v_j_1, v_m, v_n))
+  eval_srch_4(v_11, v_22, v_23, v_3, v_i_0, v_j_0, v_j_1, v_m, v_n) -> Com_1(eval_srch_5(v_11, v_22, v_23, v_3, v_i_0, v_j_0, v_j_1, v_m, v_n))
+  eval_srch_5(v_11, v_22, v_23, v_3, v_i_0, v_j_0, v_j_1, v_m, v_n) -> Com_1(eval_srch_6(v_11, v_22, v_23, v_3, v_i_0, v_j_0, v_j_1, v_m, v_n))
+  eval_srch_6(v_11, v_22, v_23, v_3, v_i_0, v_j_0, v_j_1, v_m, v_n) -> Com_1(eval_srch_7(v_11, v_22, v_23, v_3, v_i_0, v_j_0, v_j_1, v_m, v_n))
+  eval_srch_7(v_11, v_22, v_23, v_3, v_i_0, v_j_0, v_j_1, v_m, v_n) -> Com_1(eval_srch_8(v_11, v_22, v_23, v_3, v_i_0, v_j_0, v_j_1, v_m, v_n))
+  eval_srch_8(v_11, v_22, v_23, v_3, v_i_0, v_j_0, v_j_1, v_m, v_n) -> Com_1(eval_srch_9(v_11, v_22, v_23, v_3, v_i_0, v_j_0, v_j_1, v_m, v_n))
+  eval_srch_9(v_11, v_22, v_23, v_3, v_i_0, v_j_0, v_j_1, v_m, v_n) -> Com_1(eval_srch_10(v_11, v_22, v_23, v_3, v_i_0, v_j_0, v_j_1, v_m, v_n))
+  eval_srch_10(v_11, v_22, v_23, v_3, v_i_0, v_j_0, v_j_1, v_m, v_n) -> Com_1(eval_srch_bb1_in(v_11, v_22, v_23, v_3, 0, 0, v_j_1, v_m, v_n))
+  eval_srch_bb1_in(v_11, v_22, v_23, v_3, v_i_0, v_j_0, v_j_1, v_m, v_n) -> Com_1(eval_srch_bb2_in(v_11, v_22, v_23, v_3, v_i_0, v_j_0, v_j_1, v_m, v_n)) :|: v_i_0 < v_n
+  eval_srch_bb1_in(v_11, v_22, v_23, v_3, v_i_0, v_j_0, v_j_1, v_m, v_n) -> Com_1(eval_srch_bb10_in(v_11, v_22, v_23, v_3, v_i_0, v_j_0, v_j_1, v_m, v_n)) :|: v_i_0 >= v_n
+  eval_srch_bb2_in(v_11, v_22, v_23, v_3, v_i_0, v_j_0, v_j_1, v_m, v_n) -> Com_1(eval_srch_bb3_in(v_11, v_22, v_23, nondef_0, v_i_0, v_j_0, v_j_0, v_m, v_n))
+  eval_srch_bb3_in(v_11, v_22, v_23, v_3, v_i_0, v_j_0, v_j_1, v_m, v_n) -> Com_1(eval_srch_bb4_in(v_11, v_22, v_23, v_3, v_i_0, v_j_0, v_j_1, v_m, v_n)) :|: v_j_1 >= 0
+  eval_srch_bb3_in(v_11, v_22, v_23, v_3, v_i_0, v_j_0, v_j_1, v_m, v_n) -> Com_1(eval_srch__critedge_in(v_11, v_22, v_23, v_3, v_i_0, v_j_0, v_j_1, v_m, v_n)) :|: v_j_1 < 0
+  eval_srch_bb4_in(v_11, v_22, v_23, v_3, v_i_0, v_j_0, v_j_1, v_m, v_n) -> Com_1(eval_srch_bb5_in(v_11, v_22, v_23, v_3, v_i_0, v_j_0, v_j_1, v_m, v_n)) :|: v_3 < nondef_1
+  eval_srch_bb4_in(v_11, v_22, v_23, v_3, v_i_0, v_j_0, v_j_1, v_m, v_n) -> Com_1(eval_srch_bb5_in(v_11, v_22, v_23, v_3, v_i_0, v_j_0, v_j_1, v_m, v_n)) :|: v_3 > nondef_1
+  eval_srch_bb4_in(v_11, v_22, v_23, v_3, v_i_0, v_j_0, v_j_1, v_m, v_n) -> Com_1(eval_srch__critedge_in(v_11, v_22, v_23, v_3, v_i_0, v_j_0, v_j_1, v_m, v_n)) :|: v_3 = nondef_1
+  eval_srch_bb5_in(v_11, v_22, v_23, v_3, v_i_0, v_j_0, v_j_1, v_m, v_n) -> Com_1(eval_srch_bb6_in(nondef_2, v_22, v_23, v_3, v_i_0, v_j_0, v_j_1, v_m, v_n)) :|: nondef_2 > 0
+  eval_srch_bb5_in(v_11, v_22, v_23, v_3, v_i_0, v_j_0, v_j_1, v_m, v_n) -> Com_1(eval_srch_bb9_in(v_11, v_22, v_23, v_3, v_i_0, v_j_0, v_j_1, v_m, v_n)) :|: nondef_2 <= 0
+  eval_srch_bb6_in(v_11, v_22, v_23, v_3, v_i_0, v_j_0, v_j_1, v_m, v_n) -> Com_1(eval_srch_bb7_in(v_11, v_22, v_23, v_3, v_i_0, v_j_0, v_j_1, v_m, v_n)) :|: v_11 <= v_j_1 + 1
+  eval_srch_bb6_in(v_11, v_22, v_23, v_3, v_i_0, v_j_0, v_j_1, v_m, v_n) -> Com_1(eval_srch_bb8_in(v_11, v_22, v_23, v_3, v_i_0, v_j_0, v_j_1, v_m, v_n)) :|: v_11 > v_j_1 + 1
+  eval_srch_bb7_in(v_11, v_22, v_23, v_3, v_i_0, v_j_0, v_j_1, v_m, v_n) -> Com_1(eval_srch_bb3_in(v_11, v_22, v_23, v_3, v_i_0, v_j_0, v_j_1 - v_11, v_m, v_n))
+  eval_srch_bb8_in(v_11, v_22, v_23, v_3, v_i_0, v_j_0, v_j_1, v_m, v_n) -> Com_1(eval_srch_24(v_11, v_22, v_23, v_3, v_i_0, v_j_0, v_j_1, v_m, v_n))
+  eval_srch_24(v_11, v_22, v_23, v_3, v_i_0, v_j_0, v_j_1, v_m, v_n) -> Com_1(eval_srch_25(v_11, v_22, v_23, v_3, v_i_0, v_j_0, v_j_1, v_m, v_n))
+  eval_srch_25(v_11, v_22, v_23, v_3, v_i_0, v_j_0, v_j_1, v_m, v_n) -> Com_1(eval_srch_stop(v_11, v_22, v_23, v_3, v_i_0, v_j_0, v_j_1, v_m, v_n))
+  eval_srch_bb9_in(v_11, v_22, v_23, v_3, v_i_0, v_j_0, v_j_1, v_m, v_n) -> Com_1(eval_srch_26(v_11, v_22, v_23, v_3, v_i_0, v_j_0, v_j_1, v_m, v_n))
+  eval_srch_26(v_11, v_22, v_23, v_3, v_i_0, v_j_0, v_j_1, v_m, v_n) -> Com_1(eval_srch_27(v_11, v_22, v_23, v_3, v_i_0, v_j_0, v_j_1, v_m, v_n))
+  eval_srch_27(v_11, v_22, v_23, v_3, v_i_0, v_j_0, v_j_1, v_m, v_n) -> Com_1(eval_srch_stop(v_11, v_22, v_23, v_3, v_i_0, v_j_0, v_j_1, v_m, v_n))
+  eval_srch__critedge_in(v_11, v_22, v_23, v_3, v_i_0, v_j_0, v_j_1, v_m, v_n) -> Com_1(eval_srch_29(v_11, v_i_0 + 1, v_23, v_3, v_i_0, v_j_0, v_j_1, v_m, v_n))
+  eval_srch_29(v_11, v_22, v_23, v_3, v_i_0, v_j_0, v_j_1, v_m, v_n) -> Com_1(eval_srch_30(v_11, v_22, v_23, v_3, v_i_0, v_j_0, v_j_1, v_m, v_n))
+  eval_srch_30(v_11, v_22, v_23, v_3, v_i_0, v_j_0, v_j_1, v_m, v_n) -> Com_1(eval_srch_31(v_11, v_22, v_j_1 + 1, v_3, v_i_0, v_j_0, v_j_1, v_m, v_n))
+  eval_srch_31(v_11, v_22, v_23, v_3, v_i_0, v_j_0, v_j_1, v_m, v_n) -> Com_1(eval_srch_32(v_11, v_22, v_23, v_3, v_i_0, v_j_0, v_j_1, v_m, v_n))
+  eval_srch_32(v_11, v_22, v_23, v_3, v_i_0, v_j_0, v_j_1, v_m, v_n) -> Com_1(eval_srch_bb10_in(v_11, v_22, v_23, v_3, v_i_0, v_j_0, v_j_1, v_m, v_n)) :|: v_23 = v_m
+  eval_srch_32(v_11, v_22, v_23, v_3, v_i_0, v_j_0, v_j_1, v_m, v_n) -> Com_1(eval_srch_bb1_in(v_11, v_22, v_23, v_3, v_22, v_23, v_j_1, v_m, v_n)) :|: v_23 < v_m
+  eval_srch_32(v_11, v_22, v_23, v_3, v_i_0, v_j_0, v_j_1, v_m, v_n) -> Com_1(eval_srch_bb1_in(v_11, v_22, v_23, v_3, v_22, v_23, v_j_1, v_m, v_n)) :|: v_23 > v_m
+  eval_srch_bb10_in(v_11, v_22, v_23, v_3, v_i_0, v_j_0, v_j_1, v_m, v_n) -> Com_1(eval_srch_stop(v_11, v_22, v_23, v_3, v_i_0, v_j_0, v_j_1, v_m, v_n))
+)

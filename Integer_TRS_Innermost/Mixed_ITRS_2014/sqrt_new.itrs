@@ -1,0 +1,7 @@
+(VAR x y)
+(RULES
+  sqrt(x) -> sqrtAcc(x, 0)
+  sqrtAcc(x, y) -> condAcc(y*y >= x || y < 0, x, y)
+  condAcc(TRUE, x, y) -> y
+  condAcc(FALSE, x, y) -> sqrtAcc(x, y+1)
+)

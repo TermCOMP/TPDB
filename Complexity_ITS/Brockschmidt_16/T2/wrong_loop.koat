@@ -1,0 +1,10 @@
+(GOAL COMPLEXITY)
+(STARTTERM (FUNCTIONSYMBOLS f0))
+(VAR A B C)
+(RULES
+  f0(A,B) -> Com_1(f3(0,B))
+  f3(A,B) -> Com_1(f3(C + 1,B)) :|: A = 5
+  f3(A,B) -> Com_1(f3(A + 1,A)) :|: 9 >= A && 4 >= A
+  f3(A,B) -> Com_1(f3(A + 1,A)) :|: 9 >= A && A >= 6
+  f3(A,B) -> Com_1(f12(A,B)) :|: A >= 10
+)

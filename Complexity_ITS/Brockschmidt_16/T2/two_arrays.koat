@@ -1,0 +1,18 @@
+(GOAL COMPLEXITY)
+(STARTTERM (FUNCTIONSYMBOLS f0))
+(VAR A B C D E F G H I)
+(RULES
+  f0(A,B,C,D,E,F,G) -> Com_1(f15(0,H,I,0,E,F,G))
+  f15(A,B,C,D,E,F,G) -> Com_1(f15(A,B,C,D + 1,E,F,G)) :|: 49 >= D
+  f25(A,B,C,D,E,F,G) -> Com_1(f25(A,B,C,D,E + 1,F,G)) :|: 49 >= E
+  f33(A,B,C,D,E,F,G) -> Com_1(f33(A + 1,B,C,D,E,F,G)) :|: 49 >= A
+  f42(A,B,C,D,E,F,G) -> Com_1(f42(A,B,C,D,E,F + 1,G)) :|: 49 >= F
+  f52(A,B,C,D,E,F,G) -> Com_1(f52(A,B,C,D,E,F,G + 1)) :|: 49 >= G
+  f60(A,B,C,D,E,F,G) -> Com_1(f60(A + 1,B,C,D,E,F,G)) :|: 49 >= A
+  f60(A,B,C,D,E,F,G) -> Com_1(f69(A,B,C,D,E,F,G)) :|: A >= 50
+  f52(A,B,C,D,E,F,G) -> Com_1(f60(0,B,C,D,E,F,G)) :|: G >= 50
+  f42(A,B,C,D,E,F,G) -> Com_1(f52(A,B,C,D,E,F,0)) :|: F >= 50
+  f33(A,B,C,D,E,F,G) -> Com_1(f42(A,B,C,D,E,0,G)) :|: A >= 50
+  f25(A,B,C,D,E,F,G) -> Com_1(f33(0,B,C,D,E,F,G)) :|: E >= 50
+  f15(A,B,C,D,E,F,G) -> Com_1(f25(A,B,C,D,0,F,G)) :|: D >= 50
+)

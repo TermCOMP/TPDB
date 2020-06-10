@@ -1,0 +1,20 @@
+(GOAL COMPLEXITY)
+(STARTTERM (FUNCTIONSYMBOLS evalrealbubblestart))
+(VAR A B C D E F)
+(RULES
+  evalrealbubblestart(A,B,C,D) -> Com_1(evalrealbubbleentryin(A,B,C,D))
+  evalrealbubbleentryin(A,B,C,D) -> Com_1(evalrealbubblebb7in(A - 1,B,C,D))
+  evalrealbubblebb7in(A,B,C,D) -> Com_1(evalrealbubblebb4in(A,0,0,D)) :|: A >= 1
+  evalrealbubblebb7in(A,B,C,D) -> Com_1(evalrealbubblereturnin(A,B,C,D)) :|: 0 >= A
+  evalrealbubblebb4in(A,B,C,D) -> Com_1(evalrealbubblebb1in(A,B,C,D)) :|: A >= B + 1
+  evalrealbubblebb4in(A,B,C,D) -> Com_1(evalrealbubblebb5in(A,B,C,D)) :|: B >= A
+  evalrealbubblebb1in(A,B,C,D) -> Com_1(evalrealbubblebb2in(A,B,C,D)) :|: E >= F + 1
+  evalrealbubblebb1in(A,B,C,D) -> Com_1(evalrealbubblebb3in(A,B,C,C)) :|: F >= E
+  evalrealbubblebb2in(A,B,C,D) -> Com_1(evalrealbubblebb3in(A,B,C,1))
+  evalrealbubblebb3in(A,B,C,D) -> Com_1(evalrealbubblebb4in(A,B + 1,D,D))
+  evalrealbubblebb5in(A,B,C,D) -> Com_1(evalrealbubblereturnin(A,B,C,D)) :|: C = 0
+  evalrealbubblebb5in(A,B,C,D) -> Com_1(evalrealbubblebb6in(A,B,C,D)) :|: 0 >= C + 1
+  evalrealbubblebb5in(A,B,C,D) -> Com_1(evalrealbubblebb6in(A,B,C,D)) :|: C >= 1
+  evalrealbubblebb6in(A,B,C,D) -> Com_1(evalrealbubblebb7in(A - 1,B,C,D))
+  evalrealbubblereturnin(A,B,C,D) -> Com_1(evalrealbubblestop(A,B,C,D))
+)

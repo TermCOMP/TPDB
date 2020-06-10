@@ -1,0 +1,6 @@
+# Bradley/Manna/Sipma: Termination of Polynomial Programs
+(VAR x y z)
+(RULES
+eval(x, y, z) -> eval(x - 1, y - 1, z) :|: x >= 0 && z*z*z >= y
+eval(x, y, z) -> eval(x, y - 1, z + y) :|: x >= 0 && z*z*z >= y
+)

@@ -1,0 +1,17 @@
+(GOAL COMPLEXITY)
+(STARTTERM (FUNCTIONSYMBOLS evalwisestart))
+(VAR A B)
+(RULES
+  evalwisestart(A,B) -> Com_1(evalwiseentryin(A,B))
+  evalwiseentryin(A,B) -> Com_1(evalwisereturnin(A,B)) :|: 0 >= A + 1
+  evalwiseentryin(A,B) -> Com_1(evalwisereturnin(A,B)) :|: 0 >= B + 1
+  evalwiseentryin(A,B) -> Com_1(evalwisebb6in(B,A)) :|: A >= 0 && B >= 0
+  evalwisebb6in(A,B) -> Com_1(evalwisebb3in(A,B)) :|: B >= A + 3
+  evalwisebb6in(A,B) -> Com_1(evalwisebb3in(A,B)) :|: A >= B + 3
+  evalwisebb6in(A,B) -> Com_1(evalwisereturnin(A,B)) :|: 2 + A >= B && 2 + B >= A
+  evalwisebb3in(A,B) -> Com_1(evalwisebb4in(A,B)) :|: A >= B + 1
+  evalwisebb3in(A,B) -> Com_1(evalwisebb5in(A,B)) :|: B >= A
+  evalwisebb4in(A,B) -> Com_1(evalwisebb6in(A,B + 1))
+  evalwisebb5in(A,B) -> Com_1(evalwisebb6in(A + 1,B))
+  evalwisereturnin(A,B) -> Com_1(evalwisestop(A,B))
+)

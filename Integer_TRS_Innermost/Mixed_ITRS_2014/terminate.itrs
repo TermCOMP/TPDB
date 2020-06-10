@@ -1,0 +1,5 @@
+# Colon/Sipma: Synthesis of Linear Ranking Functions
+(VAR i j k)
+(RULES
+eval(i, j, k) -> eval(j, i + 1, k - 1) :|: i <= 100 && j <= k
+)

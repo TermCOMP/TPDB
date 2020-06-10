@@ -1,0 +1,1 @@
+{-# htermination maximum :: [Int] -> Int #-}

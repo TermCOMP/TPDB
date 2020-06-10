@@ -1,0 +1,13 @@
+(GOAL COMPLEXITY)
+(STARTTERM (FUNCTIONSYMBOLS f300))
+(VAR A B C D E F G H I J K L M N O P Q R)
+(RULES
+  f11(A,B,C,D,E,F,G,H,I,J,K,L,M,N) -> Com_1(f11(A,P,B,O,E,F,G,H,I,J,K,L,M,N)) :|: A >= 0 && B >= 1
+  f11(A,B,C,D,E,F,G,H,I,J,K,L,M,N) -> Com_1(f11(A,P,B,O,E,F,G,H,I,J,K,L,M,N)) :|: A >= 0 && 0 >= B + 1
+  f16(A,B,C,D,E,F,G,H,I,J,K,L,M,N) -> Com_1(f16(A,B,C,D,E,F,G + 1,O,O,O,K,L,M,N)) :|: E >= 0 && F >= G + 2
+  f11(A,B,C,D,E,F,G,H,I,J,K,L,M,N) -> Com_1(f13(A,0,C,D,E,F,G,H,I,J,O,L,M,N)) :|: A >= 0 && B = 0
+  f16(A,B,C,D,E,F,G,H,I,J,K,L,M,N) -> Com_1(f11(A,R,P,Q,E,F,G,H,I,J,O,J,J,N)) :|: 1 + G >= F && P >= 1 && E >= 0
+  f16(A,B,C,D,E,F,G,H,I,J,K,L,M,N) -> Com_1(f11(A,R,P,Q,E,F,G,H,I,J,O,J,J,N)) :|: 1 + G >= F && 0 >= P + 1 && E >= 0
+  f300(A,B,C,D,E,F,G,H,I,J,K,L,M,N) -> Com_1(f16(A,B,C,D,E,F,1,O,O,O,K,L,M,P)) :|: F >= 2
+  f300(A,B,C,D,E,F,G,H,I,J,K,L,M,N) -> Com_1(f13(A,0,C,D,E,F,0,H,I,0,O,0,0,P)) :|: 1 >= F
+)

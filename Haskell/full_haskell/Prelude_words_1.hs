@@ -1,0 +1,1 @@
+{-# htermination words :: String -> [String] #-}

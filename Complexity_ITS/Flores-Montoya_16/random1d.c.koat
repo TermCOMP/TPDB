@@ -1,0 +1,17 @@
+(GOAL COMPLEXITY)
+(STARTTERM (FUNCTIONSYMBOLS eval_random1d_start))
+(VAR nondef_0 v_2 v_max v_x_0)
+(RULES
+  eval_random1d_start(v_2, v_max, v_x_0) -> Com_1(eval_random1d_bb0_in(v_2, v_max, v_x_0))
+  eval_random1d_bb0_in(v_2, v_max, v_x_0) -> Com_1(eval_random1d_0(v_2, v_max, v_x_0))
+  eval_random1d_0(v_2, v_max, v_x_0) -> Com_1(eval_random1d_1(v_2, v_max, v_x_0))
+  eval_random1d_1(v_2, v_max, v_x_0) -> Com_1(eval_random1d_bb1_in(v_2, v_max, 1)) :|: v_max > 0
+  eval_random1d_1(v_2, v_max, v_x_0) -> Com_1(eval_random1d_bb3_in(v_2, v_max, v_x_0)) :|: v_max <= 0
+  eval_random1d_bb1_in(v_2, v_max, v_x_0) -> Com_1(eval_random1d_bb2_in(v_2, v_max, v_x_0)) :|: v_x_0 <= v_max
+  eval_random1d_bb1_in(v_2, v_max, v_x_0) -> Com_1(eval_random1d_bb3_in(v_2, v_max, v_x_0)) :|: v_x_0 > v_max
+  eval_random1d_bb2_in(v_2, v_max, v_x_0) -> Com_1(eval_random1d_2(v_2, v_max, v_x_0))
+  eval_random1d_2(v_2, v_max, v_x_0) -> Com_1(eval_random1d_3(nondef_0, v_max, v_x_0))
+  eval_random1d_3(v_2, v_max, v_x_0) -> Com_1(eval_random1d_bb1_in(v_2, v_max, v_x_0 + 1)) :|: v_2 > 0
+  eval_random1d_3(v_2, v_max, v_x_0) -> Com_1(eval_random1d_bb1_in(v_2, v_max, v_x_0 + 1)) :|: v_2 <= 0
+  eval_random1d_bb3_in(v_2, v_max, v_x_0) -> Com_1(eval_random1d_stop(v_2, v_max, v_x_0))
+)

@@ -1,0 +1,1 @@
+{-# htermination isIEEE :: Float -> Bool #-}

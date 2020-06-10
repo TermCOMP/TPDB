@@ -1,0 +1,20 @@
+(GOAL COMPLEXITY)
+(STARTTERM (FUNCTIONSYMBOLS evalnestedLoopstart))
+(VAR A B C D E F G H)
+(RULES
+  evalnestedLoopstart(A,B,C,D,E,F,G,H) -> Com_1(evalnestedLoopentryin(A,B,C,D,E,F,G,H))
+  evalnestedLoopentryin(A,B,C,D,E,F,G,H) -> Com_1(evalnestedLoopbb9in(A,B,C,0,E,F,G,H)) :|: A >= 0 && B >= 0 && C >= 0
+  evalnestedLoopentryin(A,B,C,D,E,F,G,H) -> Com_1(evalnestedLoopreturnin(A,B,C,D,E,F,G,H)) :|: 0 >= A + 1
+  evalnestedLoopentryin(A,B,C,D,E,F,G,H) -> Com_1(evalnestedLoopreturnin(A,B,C,D,E,F,G,H)) :|: 0 >= B + 1
+  evalnestedLoopentryin(A,B,C,D,E,F,G,H) -> Com_1(evalnestedLoopreturnin(A,B,C,D,E,F,G,H)) :|: 0 >= C + 1
+  evalnestedLoopbb9in(A,B,C,D,E,F,G,H) -> Com_1(evalnestedLoopbb7in(A,B,C,D,0,D,G,H)) :|: A >= D + 1
+  evalnestedLoopbb9in(A,B,C,D,E,F,G,H) -> Com_1(evalnestedLoopreturnin(A,B,C,D,E,F,G,H)) :|: D >= A
+  evalnestedLoopbb7in(A,B,C,D,E,F,G,H) -> Com_1(evalnestedLoopbb4in(A,B,C,D,E,F,G,H)) :|: B >= E + 1
+  evalnestedLoopbb7in(A,B,C,D,E,F,G,H) -> Com_1(evalnestedLoopbb8in(A,B,C,D,E,F,G,H)) :|: E >= B
+  evalnestedLoopbb4in(A,B,C,D,E,F,G,H) -> Com_1(evalnestedLoopbb6in(A,B,C,D,E,F,E + 1,F))
+  evalnestedLoopbb6in(A,B,C,D,E,F,G,H) -> Com_1(evalnestedLoopbb5in(A,B,C,D,E,F,G,H)) :|: C >= H + 1
+  evalnestedLoopbb6in(A,B,C,D,E,F,G,H) -> Com_1(evalnestedLoopbb7in(A,B,C,D,G,H,G,H)) :|: H >= C
+  evalnestedLoopbb5in(A,B,C,D,E,F,G,H) -> Com_1(evalnestedLoopbb6in(A,B,C,D,E,F,G,H + 1))
+  evalnestedLoopbb8in(A,B,C,D,E,F,G,H) -> Com_1(evalnestedLoopbb9in(A,B,C,F + 1,E,F,G,H))
+  evalnestedLoopreturnin(A,B,C,D,E,F,G,H) -> Com_1(evalnestedLoopstop(A,B,C,D,E,F,G,H))
+)

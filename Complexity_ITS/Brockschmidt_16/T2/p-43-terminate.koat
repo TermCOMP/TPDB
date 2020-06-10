@@ -1,0 +1,57 @@
+(GOAL COMPLEXITY)
+(STARTTERM (FUNCTIONSYMBOLS f8))
+(VAR A B C D E F G H I J K L M)
+(RULES
+  f13(A,B,C,D,E,F,G,H,I,J) -> Com_1(f31(L,K,-1 + C,-1 + C,E,F,G,H,I,J)) :|: 0 >= K + 1
+  f13(A,B,C,D,E,F,G,H,I,J) -> Com_1(f31(L,K,-1 + C,-1 + C,E,F,G,H,I,J)) :|: K >= 1
+  f13(A,B,C,D,E,F,G,H,I,J) -> Com_1(f29(L,0,-2 + D,-1 + D,E,F,G,H,I,J))
+  f19(A,B,C,D,E,F,G,H,I,J) -> Com_1(f31(L,K,-1 + C,-1 + C,E,F,G,H,I,J)) :|: 0 >= K + 1
+  f19(A,B,C,D,E,F,G,H,I,J) -> Com_1(f31(L,K,-1 + C,-1 + C,E,F,G,H,I,J)) :|: K >= 1
+  f19(A,B,C,D,E,F,G,H,I,J) -> Com_1(f29(L,0,-2 + D,-1 + D,E,F,G,H,I,J))
+  f8(A,B,C,D,E,F,G,H,I,J) -> Com_1(f27(A,B,C,D,0,0,G,H,I,J))
+  f27(A,B,C,D,E,F,G,H,I,J) -> Com_1(f27(L,0,-2 + D,-1 + D,0,F,0,H,I,J)) :|: D >= 1 && C + D >= 1 && C >= 1 && E = 0
+  f27(A,B,C,D,E,F,G,H,I,J) -> Com_1(f27(L,K,-1 + C,-1 + C,0,F,0,H,I,J)) :|: D >= 1 && C >= 1 && 0 >= K + 1 && C + D >= 1 && E = 0
+  f27(A,B,C,D,E,F,G,H,I,J) -> Com_1(f27(L,K,-1 + C,-1 + C,0,F,0,H,I,J)) :|: D >= 1 && C >= 1 && K >= 1 && C + D >= 1 && E = 0
+  f27(A,B,C,D,E,F,G,H,I,J) -> Com_1(f30(L,K,-1 + C,-1 + C,1,F,M,C,D,J)) :|: D >= 1 && C >= 1 && C + D >= 1 && 0 >= K + 1 && 0 >= M + 1 && E = 0
+  f27(A,B,C,D,E,F,G,H,I,J) -> Com_1(f30(L,K,-1 + C,-1 + C,1,F,M,C,D,J)) :|: D >= 1 && C >= 1 && C + D >= 1 && 0 >= K + 1 && M >= 1 && E = 0
+  f27(A,B,C,D,E,F,G,H,I,J) -> Com_1(f30(L,K,-1 + C,-1 + C,1,F,M,C,D,J)) :|: D >= 1 && C >= 1 && C + D >= 1 && K >= 1 && 0 >= M + 1 && E = 0
+  f27(A,B,C,D,E,F,G,H,I,J) -> Com_1(f30(L,K,-1 + C,-1 + C,1,F,M,C,D,J)) :|: D >= 1 && C >= 1 && C + D >= 1 && K >= 1 && M >= 1 && E = 0
+  f27(A,B,C,D,E,F,G,H,I,J) -> Com_1(f28(L,0,-2 + D,-1 + D,1,F,K,C,D,J)) :|: D >= 1 && C >= 1 && 0 >= K + 1 && C + D >= 1 && E = 0
+  f27(A,B,C,D,E,F,G,H,I,J) -> Com_1(f28(L,0,-2 + D,-1 + D,1,F,K,C,D,J)) :|: D >= 1 && C >= 1 && K >= 1 && C + D >= 1 && E = 0
+  f27(A,B,C,D,E,F,G,H,I,J) -> Com_1(f9(A,B,C,D,E,F,G,H,I,L)) :|: 0 >= C
+  f27(A,B,C,D,E,F,G,H,I,J) -> Com_1(f9(A,B,C,D,E,F,G,H,I,L)) :|: C >= 1 && 0 >= D
+  f28(A,B,C,D,E,F,G,H,I,J) -> Com_1(f300(A,B,C,D,1,1,G,H,I,J)) :|: D >= I && C >= H && C + D >= H + I && D >= 1 && C + D >= 1 && C >= 1 && E = 1
+  f28(A,B,C,D,E,F,G,H,I,J) -> Com_1(f30(L,K,-1 + C,-1 + C,1,F,G,H,I,J)) :|: H >= C + 1 && D >= 1 && C >= 1 && 0 >= K + 1 && C + D >= 1 && E = 1
+  f28(A,B,C,D,E,F,G,H,I,J) -> Com_1(f30(L,K,-1 + C,-1 + C,1,F,G,H,I,J)) :|: H >= C + 1 && D >= 1 && C >= 1 && K >= 1 && C + D >= 1 && E = 1
+  f28(A,B,C,D,E,F,G,H,I,J) -> Com_1(f28(L,0,-2 + D,-1 + D,1,F,G,H,I,J)) :|: H >= C + 1 && D >= 1 && C + D >= 1 && C >= 1 && E = 1
+  f28(A,B,C,D,E,F,G,H,I,J) -> Com_1(f30(L,K,-1 + C,-1 + C,1,F,G,H,I,J)) :|: I >= D + 1 && C >= H && D >= 1 && C >= 1 && 0 >= K + 1 && C + D >= 1 && E = 1
+  f28(A,B,C,D,E,F,G,H,I,J) -> Com_1(f30(L,K,-1 + C,-1 + C,1,F,G,H,I,J)) :|: I >= D + 1 && C >= H && D >= 1 && C >= 1 && K >= 1 && C + D >= 1 && E = 1
+  f28(A,B,C,D,E,F,G,H,I,J) -> Com_1(f28(L,0,-2 + D,-1 + D,1,F,G,H,I,J)) :|: I >= D + 1 && C >= H && D >= 1 && C + D >= 1 && C >= 1 && E = 1
+  f28(A,B,C,D,E,F,G,H,I,J) -> Com_1(f9(A,B,C,D,E,F,G,H,I,L)) :|: 0 >= C
+  f28(A,B,C,D,E,F,G,H,I,J) -> Com_1(f9(A,B,C,D,E,F,G,H,I,L)) :|: C >= 1 && 0 >= D
+  f29(A,B,C,D,E,F,G,H,I,J) -> Com_1(f300(A,B,C,D,1,1,G,H,I,J)) :|: D >= I && C >= H && C + D >= H + I && D >= 1 && C + D >= 1 && C >= 1 && E = 1
+  f29(A,B,C,D,E,F,G,H,I,J) -> Com_1(f31(L,K,-1 + C,-1 + C,1,F,G,H,I,J)) :|: H >= C + 1 && D >= 1 && C >= 1 && 0 >= K + 1 && C + D >= 1 && E = 1
+  f29(A,B,C,D,E,F,G,H,I,J) -> Com_1(f31(L,K,-1 + C,-1 + C,1,F,G,H,I,J)) :|: H >= C + 1 && D >= 1 && C >= 1 && K >= 1 && C + D >= 1 && E = 1
+  f29(A,B,C,D,E,F,G,H,I,J) -> Com_1(f29(L,0,-2 + D,-1 + D,1,F,G,H,I,J)) :|: H >= C + 1 && D >= 1 && C + D >= 1 && C >= 1 && E = 1
+  f29(A,B,C,D,E,F,G,H,I,J) -> Com_1(f31(L,K,-1 + C,-1 + C,1,F,G,H,I,J)) :|: I >= D + 1 && C >= H && D >= 1 && C >= 1 && 0 >= K + 1 && C + D >= 1 && E = 1
+  f29(A,B,C,D,E,F,G,H,I,J) -> Com_1(f31(L,K,-1 + C,-1 + C,1,F,G,H,I,J)) :|: I >= D + 1 && C >= H && D >= 1 && C >= 1 && K >= 1 && C + D >= 1 && E = 1
+  f29(A,B,C,D,E,F,G,H,I,J) -> Com_1(f29(L,0,-2 + D,-1 + D,1,F,G,H,I,J)) :|: I >= D + 1 && C >= H && D >= 1 && C + D >= 1 && C >= 1 && E = 1
+  f29(A,B,C,D,E,F,G,H,I,J) -> Com_1(f9(A,B,C,D,E,F,G,H,I,L)) :|: 0 >= C
+  f29(A,B,C,D,E,F,G,H,I,J) -> Com_1(f9(A,B,C,D,E,F,G,H,I,L)) :|: C >= 1 && 0 >= D
+  f30(A,B,C,D,E,F,G,H,I,J) -> Com_1(f300(A,B,C,D,1,1,G,H,I,J)) :|: D >= I && C >= H && C + D >= H + I && D >= 1 && C + D >= 1 && C >= 1 && E = 1
+  f30(A,B,C,D,E,F,G,H,I,J) -> Com_1(f30(L,K,-1 + C,-1 + C,1,F,G,H,I,J)) :|: H >= C + 1 && D >= 1 && C >= 1 && 0 >= K + 1 && C + D >= 1 && E = 1
+  f30(A,B,C,D,E,F,G,H,I,J) -> Com_1(f30(L,K,-1 + C,-1 + C,1,F,G,H,I,J)) :|: H >= C + 1 && D >= 1 && C >= 1 && K >= 1 && C + D >= 1 && E = 1
+  f30(A,B,C,D,E,F,G,H,I,J) -> Com_1(f28(L,0,-2 + D,-1 + D,1,F,G,H,I,J)) :|: H >= C + 1 && D >= 1 && C + D >= 1 && C >= 1 && E = 1
+  f30(A,B,C,D,E,F,G,H,I,J) -> Com_1(f30(L,K,-1 + C,-1 + C,1,F,G,H,I,J)) :|: I >= D + 1 && C >= H && D >= 1 && C >= 1 && 0 >= K + 1 && C + D >= 1 && E = 1
+  f30(A,B,C,D,E,F,G,H,I,J) -> Com_1(f30(L,K,-1 + C,-1 + C,1,F,G,H,I,J)) :|: I >= D + 1 && C >= H && D >= 1 && C >= 1 && K >= 1 && C + D >= 1 && E = 1
+  f30(A,B,C,D,E,F,G,H,I,J) -> Com_1(f28(L,0,-2 + D,-1 + D,1,F,G,H,I,J)) :|: I >= D + 1 && C >= H && D >= 1 && C + D >= 1 && C >= 1 && E = 1
+  f30(A,B,C,D,E,F,G,H,I,J) -> Com_1(f9(A,B,C,D,E,F,G,H,I,L)) :|: 0 >= C
+  f31(A,B,C,D,E,F,G,H,I,J) -> Com_1(f300(A,B,C,D,1,1,G,H,I,J)) :|: D >= I && C >= H && C + D >= H + I && D >= 1 && C + D >= 1 && C >= 1 && E = 1
+  f31(A,B,C,D,E,F,G,H,I,J) -> Com_1(f31(L,K,-1 + C,-1 + C,1,F,G,H,I,J)) :|: H >= C + 1 && D >= 1 && C >= 1 && 0 >= K + 1 && C + D >= 1 && E = 1
+  f31(A,B,C,D,E,F,G,H,I,J) -> Com_1(f31(L,K,-1 + C,-1 + C,1,F,G,H,I,J)) :|: H >= C + 1 && D >= 1 && C >= 1 && K >= 1 && C + D >= 1 && E = 1
+  f31(A,B,C,D,E,F,G,H,I,J) -> Com_1(f29(L,0,-2 + D,-1 + D,1,F,G,H,I,J)) :|: H >= C + 1 && D >= 1 && C + D >= 1 && C >= 1 && E = 1
+  f31(A,B,C,D,E,F,G,H,I,J) -> Com_1(f31(L,K,-1 + C,-1 + C,1,F,G,H,I,J)) :|: I >= D + 1 && C >= H && D >= 1 && C >= 1 && 0 >= K + 1 && C + D >= 1 && E = 1
+  f31(A,B,C,D,E,F,G,H,I,J) -> Com_1(f31(L,K,-1 + C,-1 + C,1,F,G,H,I,J)) :|: I >= D + 1 && C >= H && D >= 1 && C >= 1 && K >= 1 && C + D >= 1 && E = 1
+  f31(A,B,C,D,E,F,G,H,I,J) -> Com_1(f29(L,0,-2 + D,-1 + D,1,F,G,H,I,J)) :|: I >= D + 1 && C >= H && D >= 1 && C + D >= 1 && C >= 1 && E = 1
+  f31(A,B,C,D,E,F,G,H,I,J) -> Com_1(f9(A,B,C,D,E,F,G,H,I,L)) :|: 0 >= C
+)

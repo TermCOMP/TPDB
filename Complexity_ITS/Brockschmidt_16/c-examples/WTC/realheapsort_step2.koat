@@ -1,0 +1,26 @@
+(GOAL COMPLEXITY)
+(STARTTERM (FUNCTIONSYMBOLS evalrealheapsortstep2start))
+(VAR A B C D)
+(RULES
+  evalrealheapsortstep2start(A,B,C,D) -> Com_1(evalrealheapsortstep2entryin(A,B,C,D))
+  evalrealheapsortstep2entryin(A,B,C,D) -> Com_1(evalrealheapsortstep2bbin(A,B,C,D)) :|: A >= 3
+  evalrealheapsortstep2entryin(A,B,C,D) -> Com_1(evalrealheapsortstep2returnin(A,B,C,D)) :|: 2 >= A
+  evalrealheapsortstep2bbin(A,B,C,D) -> Com_1(evalrealheapsortstep2bb11in(A,0,C,D))
+  evalrealheapsortstep2bb11in(A,B,C,D) -> Com_1(evalrealheapsortstep2bb1in(A,B,C,D)) :|: A >= 2 + B
+  evalrealheapsortstep2bb11in(A,B,C,D) -> Com_1(evalrealheapsortstep2returnin(A,B,C,D)) :|: B + 1 >= A
+  evalrealheapsortstep2bb1in(A,B,C,D) -> Com_1(evalrealheapsortstep2bb9in(A,B,0,D))
+  evalrealheapsortstep2bb9in(A,B,C,D) -> Com_1(evalrealheapsortstep2bb2in(A,B,C,D)) :|: A >= B + 3 + 2*C
+  evalrealheapsortstep2bb9in(A,B,C,D) -> Com_1(evalrealheapsortstep2bb10in(A,B,C,D)) :|: 2*C + 2 + B >= A
+  evalrealheapsortstep2bb2in(A,B,C,D) -> Com_1(evalrealheapsortstep2bb4in(A,B,C,D)) :|: A = 2*C + 3 + B
+  evalrealheapsortstep2bb2in(A,B,C,D) -> Com_1(evalrealheapsortstep2bb3in(A,B,C,D)) :|: A >= B + 4 + 2*C
+  evalrealheapsortstep2bb2in(A,B,C,D) -> Com_1(evalrealheapsortstep2bb3in(A,B,C,D)) :|: 2*C + 2 + B >= A
+  evalrealheapsortstep2bb3in(A,B,C,D) -> Com_1(evalrealheapsortstep2bb4in(A,B,C,D))
+  evalrealheapsortstep2bb3in(A,B,C,D) -> Com_1(evalrealheapsortstep2bb5in(A,B,C,D))
+  evalrealheapsortstep2bb4in(A,B,C,D) -> Com_1(evalrealheapsortstep2bb6in(A,B,C,2*C + 1))
+  evalrealheapsortstep2bb5in(A,B,C,D) -> Com_1(evalrealheapsortstep2bb6in(A,B,C,2*C + 2))
+  evalrealheapsortstep2bb6in(A,B,C,D) -> Com_1(evalrealheapsortstep2bb7in(A,B,C,D))
+  evalrealheapsortstep2bb6in(A,B,C,D) -> Com_1(evalrealheapsortstep2bb9in(A,B,A,D))
+  evalrealheapsortstep2bb7in(A,B,C,D) -> Com_1(evalrealheapsortstep2bb9in(A,B,D,D))
+  evalrealheapsortstep2bb10in(A,B,C,D) -> Com_1(evalrealheapsortstep2bb11in(A,B + 1,C,D))
+  evalrealheapsortstep2returnin(A,B,C,D) -> Com_1(evalrealheapsortstep2stop(A,B,C,D))
+)

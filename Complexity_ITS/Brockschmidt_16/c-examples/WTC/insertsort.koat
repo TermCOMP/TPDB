@@ -1,0 +1,17 @@
+(GOAL COMPLEXITY)
+(STARTTERM (FUNCTIONSYMBOLS evalinsertsortstart))
+(VAR A B C D E)
+(RULES
+  evalinsertsortstart(A,B,C,D) -> Com_1(evalinsertsortentryin(A,B,C,D))
+  evalinsertsortentryin(A,B,C,D) -> Com_1(evalinsertsortbb5in(1,B,C,D))
+  evalinsertsortbb5in(A,B,C,D) -> Com_1(evalinsertsortbbin(A,B,C,D)) :|: B >= A + 1
+  evalinsertsortbb5in(A,B,C,D) -> Com_1(evalinsertsortreturnin(A,B,C,D)) :|: A >= B
+  evalinsertsortbbin(A,B,C,D) -> Com_1(evalinsertsortbb2in(A,B,E,A - 1))
+  evalinsertsortbb2in(A,B,C,D) -> Com_1(evalinsertsortbb4in(A,B,C,D)) :|: 0 >= D + 1
+  evalinsertsortbb2in(A,B,C,D) -> Com_1(evalinsertsortbb3in(A,B,C,D)) :|: D >= 0
+  evalinsertsortbb3in(A,B,C,D) -> Com_1(evalinsertsortbb1in(A,B,C,D)) :|: E >= C + 1
+  evalinsertsortbb3in(A,B,C,D) -> Com_1(evalinsertsortbb4in(A,B,C,D)) :|: C >= E
+  evalinsertsortbb1in(A,B,C,D) -> Com_1(evalinsertsortbb2in(A,B,C,D - 1))
+  evalinsertsortbb4in(A,B,C,D) -> Com_1(evalinsertsortbb5in(A + 1,B,C,D))
+  evalinsertsortreturnin(A,B,C,D) -> Com_1(evalinsertsortstop(A,B,C,D))
+)

@@ -1,0 +1,7 @@
+# TRS/Beerendonk/16.trs
+(VAR x y z)
+(RULES
+eval(x, y, z) -> eval(x - 1, y, z) :|: x + y > z && z >= 0 && x > 0
+eval(x, y, z) -> eval(x, y - 1, z) :|: x + y > z && z >= 0 && 0 >= x && y > 0
+eval(x, y, z) -> eval(x, y, z) :|: x + y > z && z >= 0 && 0 >= x && 0 >= y
+)

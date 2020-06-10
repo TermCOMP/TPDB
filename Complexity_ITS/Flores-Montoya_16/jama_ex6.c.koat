@@ -1,0 +1,31 @@
+(GOAL COMPLEXITY)
+(STARTTERM (FUNCTIONSYMBOLS eval_abc_start))
+(VAR v_6 v_7 v_a v_b v_c v_d v_i_0 v_j_0 v_k_0)
+(RULES
+  eval_abc_start(v_6, v_7, v_a, v_b, v_c, v_d, v_i_0, v_j_0, v_k_0) -> Com_1(eval_abc_bb0_in(v_6, v_7, v_a, v_b, v_c, v_d, v_i_0, v_j_0, v_k_0))
+  eval_abc_bb0_in(v_6, v_7, v_a, v_b, v_c, v_d, v_i_0, v_j_0, v_k_0) -> Com_1(eval_abc_0(v_6, v_7, v_a, v_b, v_c, v_d, v_i_0, v_j_0, v_k_0))
+  eval_abc_0(v_6, v_7, v_a, v_b, v_c, v_d, v_i_0, v_j_0, v_k_0) -> Com_1(eval_abc_1(v_6, v_7, v_a, v_b, v_c, v_d, v_i_0, v_j_0, v_k_0))
+  eval_abc_1(v_6, v_7, v_a, v_b, v_c, v_d, v_i_0, v_j_0, v_k_0) -> Com_1(eval_abc_2(v_6, v_7, v_a, v_b, v_c, v_d, v_i_0, v_j_0, v_k_0))
+  eval_abc_2(v_6, v_7, v_a, v_b, v_c, v_d, v_i_0, v_j_0, v_k_0) -> Com_1(eval_abc_3(v_6, v_7, v_a, v_b, v_c, v_d, v_i_0, v_j_0, v_k_0))
+  eval_abc_3(v_6, v_7, v_a, v_b, v_c, v_d, v_i_0, v_j_0, v_k_0) -> Com_1(eval_abc_4(v_6, v_7, v_a, v_b, v_c, v_d, v_i_0, v_j_0, v_k_0))
+  eval_abc_4(v_6, v_7, v_a, v_b, v_c, v_d, v_i_0, v_j_0, v_k_0) -> Com_1(eval_abc_5(v_6, v_7, v_a, v_b, v_c, v_d, v_i_0, v_j_0, v_k_0))
+  eval_abc_5(v_6, v_7, v_a, v_b, v_c, v_d, v_i_0, v_j_0, v_k_0) -> Com_1(eval_abc_6(v_6, v_7, v_a, v_b, v_c, v_d, v_i_0, v_j_0, v_k_0))
+  eval_abc_6(v_6, v_7, v_a, v_b, v_c, v_d, v_i_0, v_j_0, v_k_0) -> Com_1(eval_abc_7(v_6, v_7, v_a, v_b, v_c, v_d, v_i_0, v_j_0, v_k_0))
+  eval_abc_7(v_6, v_7, v_a, v_b, v_c, v_d, v_i_0, v_j_0, v_k_0) -> Com_1(eval_abc_8(v_6, v_7, v_a, v_b, v_c, v_d, v_i_0, v_j_0, v_k_0))
+  eval_abc_8(v_6, v_7, v_a, v_b, v_c, v_d, v_i_0, v_j_0, v_k_0) -> Com_1(eval_abc_bb1_in(v_6, v_7, v_a, v_b, v_c, v_d, v_a, v_j_0, v_k_0))
+  eval_abc_bb1_in(v_6, v_7, v_a, v_b, v_c, v_d, v_i_0, v_j_0, v_k_0) -> Com_1(eval_abc_bb2_in(v_6, v_7, v_a, v_b, v_c, v_d, v_i_0, v_c, v_k_0)) :|: v_i_0 <= v_b
+  eval_abc_bb1_in(v_6, v_7, v_a, v_b, v_c, v_d, v_i_0, v_j_0, v_k_0) -> Com_1(eval_abc_bb8_in(v_6, v_7, v_a, v_b, v_c, v_d, v_i_0, v_j_0, v_k_0)) :|: v_i_0 > v_b
+  eval_abc_bb2_in(v_6, v_7, v_a, v_b, v_c, v_d, v_i_0, v_j_0, v_k_0) -> Com_1(eval_abc_bb3_in(v_6, v_7, v_a, v_b, v_c, v_d, v_i_0, v_j_0, v_k_0)) :|: v_j_0 <= v_d
+  eval_abc_bb2_in(v_6, v_7, v_a, v_b, v_c, v_d, v_i_0, v_j_0, v_k_0) -> Com_1(eval_abc_bb7_in(v_6, v_7, v_a, v_b, v_c, v_d, v_i_0, v_j_0, v_k_0)) :|: v_j_0 > v_d
+  eval_abc_bb3_in(v_6, v_7, v_a, v_b, v_c, v_d, v_i_0, v_j_0, v_k_0) -> Com_1(eval_abc_bb4_in(v_6, v_7, v_a, v_b, v_c, v_d, v_i_0, v_j_0, v_i_0 - v_j_0))
+  eval_abc_bb4_in(v_6, v_7, v_a, v_b, v_c, v_d, v_i_0, v_j_0, v_k_0) -> Com_1(eval_abc_bb5_in(v_6, v_7, v_a, v_b, v_c, v_d, v_i_0, v_j_0, v_k_0)) :|: v_k_0 <= v_i_0 + v_j_0
+  eval_abc_bb4_in(v_6, v_7, v_a, v_b, v_c, v_d, v_i_0, v_j_0, v_k_0) -> Com_1(eval_abc_bb6_in(v_6, v_7, v_a, v_b, v_c, v_d, v_i_0, v_j_0, v_k_0)) :|: v_k_0 > v_i_0 + v_j_0
+  eval_abc_bb5_in(v_6, v_7, v_a, v_b, v_c, v_d, v_i_0, v_j_0, v_k_0) -> Com_1(eval_abc_bb4_in(v_6, v_7, v_a, v_b, v_c, v_d, v_i_0, v_j_0, v_k_0 + 1))
+  eval_abc_bb6_in(v_6, v_7, v_a, v_b, v_c, v_d, v_i_0, v_j_0, v_k_0) -> Com_1(eval_abc_16(v_j_0 + 1, v_7, v_a, v_b, v_c, v_d, v_i_0, v_j_0, v_k_0))
+  eval_abc_16(v_6, v_7, v_a, v_b, v_c, v_d, v_i_0, v_j_0, v_k_0) -> Com_1(eval_abc_17(v_6, v_7, v_a, v_b, v_c, v_d, v_i_0, v_j_0, v_k_0))
+  eval_abc_17(v_6, v_7, v_a, v_b, v_c, v_d, v_i_0, v_j_0, v_k_0) -> Com_1(eval_abc_bb2_in(v_6, v_7, v_a, v_b, v_c, v_d, v_i_0, v_6, v_k_0))
+  eval_abc_bb7_in(v_6, v_7, v_a, v_b, v_c, v_d, v_i_0, v_j_0, v_k_0) -> Com_1(eval_abc_19(v_6, v_i_0 + 1, v_a, v_b, v_c, v_d, v_i_0, v_j_0, v_k_0))
+  eval_abc_19(v_6, v_7, v_a, v_b, v_c, v_d, v_i_0, v_j_0, v_k_0) -> Com_1(eval_abc_20(v_6, v_7, v_a, v_b, v_c, v_d, v_i_0, v_j_0, v_k_0))
+  eval_abc_20(v_6, v_7, v_a, v_b, v_c, v_d, v_i_0, v_j_0, v_k_0) -> Com_1(eval_abc_bb1_in(v_6, v_7, v_a, v_b, v_c, v_d, v_7, v_j_0, v_k_0))
+  eval_abc_bb8_in(v_6, v_7, v_a, v_b, v_c, v_d, v_i_0, v_j_0, v_k_0) -> Com_1(eval_abc_stop(v_6, v_7, v_a, v_b, v_c, v_d, v_i_0, v_j_0, v_k_0))
+)

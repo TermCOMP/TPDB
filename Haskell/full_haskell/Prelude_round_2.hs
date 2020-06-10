@@ -1,0 +1,1 @@
+{-# htermination round :: Float -> Int #-}

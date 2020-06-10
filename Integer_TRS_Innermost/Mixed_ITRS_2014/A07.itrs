@@ -1,0 +1,6 @@
+(VAR x y z)
+(RULES
+f(TRUE, x, y, z) -> g(x > y, x, y, z)
+g(TRUE, x, y, z) -> f(x > z, x, y+1, z)
+g(TRUE, x, y, z) -> f(x > z, x, y, z+1)
+)

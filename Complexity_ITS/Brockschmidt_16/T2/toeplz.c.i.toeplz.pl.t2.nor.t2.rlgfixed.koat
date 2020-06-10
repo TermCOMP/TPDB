@@ -1,0 +1,22 @@
+(GOAL COMPLEXITY)
+(STARTTERM (FUNCTIONSYMBOLS f2))
+(VAR A B C D E F G H I J K L M N O P Q R S T U V)
+(RULES
+  f2(A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R) -> Com_1(f1(1,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R)) :|: A = 1
+  f2(A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R) -> Com_1(f13(A,1,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R)) :|: 0 >= A
+  f2(A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R) -> Com_1(f13(A,1,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R)) :|: A >= 2
+  f13(A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R) -> Com_1(f20(A,B,B + 1,S,T,1,G,H,I,J,K,L,M,N,O,P,Q,R)) :|: A >= B
+  f20(A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R) -> Com_1(f20(A,B,C,S,T,F + 1,G,H,I,J,K,L,M,N,O,P,Q,R)) :|: B >= F
+  f31(A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R) -> Com_1(f31(A,B,C,D,E,F + 1,G,H,I,J,K,L,M,N,O,P,Q,R)) :|: B >= F
+  f45(A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R) -> Com_1(f45(A,B,C,D,E,F + 1,S,T,U,J,K,L,M,N,O,P,Q,R)) :|: B >= F
+  f60(A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R) -> Com_1(f60(A,B,C,D,E,F + 1,G,H,I,J,K - 1,S,T,U,V,K,Q,R)) :|: J >= F
+  f60(A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R) -> Com_1(f13(A,B + 1,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R)) :|: F >= 1 + J
+  f45(A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R) -> Com_1(f60(A,B,C,D,E,1,G,H,I,S,B,L,M,N,O,P,T,U)) :|: F >= 1 + B
+  f31(A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R) -> Com_1(f1(A,B,A,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R)) :|: F >= 1 + B && A = C
+  f31(A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R) -> Com_1(f45(A,B,C,D,E,1,S,T,U,J,K,L,M,N,O,P,Q,R)) :|: A >= C + 1 && F >= 1 + B
+  f31(A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R) -> Com_1(f45(A,B,C,D,E,1,S,T,U,J,K,L,M,N,O,P,Q,R)) :|: C >= 1 + A && F >= 1 + B
+  f20(A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R) -> Com_1(f31(A,B,C,D,E,1,G,H,I,J,K,L,M,N,O,P,Q,R)) :|: 0 >= E + 1 && F >= 1 + B
+  f20(A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R) -> Com_1(f31(A,B,C,D,E,1,G,H,I,J,K,L,M,N,O,P,Q,R)) :|: E >= 1 && F >= 1 + B
+  f20(A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R) -> Com_1(f31(A,B,C,D,0,1,G,H,I,J,K,L,M,N,O,P,Q,R)) :|: F >= 1 + B && E = 0
+  f13(A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R) -> Com_1(f1(A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R)) :|: B >= 1 + A
+)

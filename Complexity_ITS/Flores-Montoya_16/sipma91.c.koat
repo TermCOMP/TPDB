@@ -1,0 +1,26 @@
+(GOAL COMPLEXITY)
+(STARTTERM (FUNCTIONSYMBOLS eval_sipma91_start))
+(VAR v_5 v_6 v_x v_y1_0 v_y1_1 v_y1_2 v_y2_0 v_y2_1 v_y2_2)
+(RULES
+  eval_sipma91_start(v_5, v_6, v_x, v_y1_0, v_y1_1, v_y1_2, v_y2_0, v_y2_1, v_y2_2) -> Com_1(eval_sipma91_bb0_in(v_5, v_6, v_x, v_y1_0, v_y1_1, v_y1_2, v_y2_0, v_y2_1, v_y2_2))
+  eval_sipma91_bb0_in(v_5, v_6, v_x, v_y1_0, v_y1_1, v_y1_2, v_y2_0, v_y2_1, v_y2_2) -> Com_1(eval_sipma91_0(v_5, v_6, v_x, v_y1_0, v_y1_1, v_y1_2, v_y2_0, v_y2_1, v_y2_2))
+  eval_sipma91_0(v_5, v_6, v_x, v_y1_0, v_y1_1, v_y1_2, v_y2_0, v_y2_1, v_y2_2) -> Com_1(eval_sipma91_1(v_5, v_6, v_x, v_y1_0, v_y1_1, v_y1_2, v_y2_0, v_y2_1, v_y2_2))
+  eval_sipma91_1(v_5, v_6, v_x, v_y1_0, v_y1_1, v_y1_2, v_y2_0, v_y2_1, v_y2_2) -> Com_1(eval_sipma91_2(v_5, v_6, v_x, v_y1_0, v_y1_1, v_y1_2, v_y2_0, v_y2_1, v_y2_2))
+  eval_sipma91_2(v_5, v_6, v_x, v_y1_0, v_y1_1, v_y1_2, v_y2_0, v_y2_1, v_y2_2) -> Com_1(eval_sipma91_3(v_5, v_6, v_x, v_y1_0, v_y1_1, v_y1_2, v_y2_0, v_y2_1, v_y2_2))
+  eval_sipma91_3(v_5, v_6, v_x, v_y1_0, v_y1_1, v_y1_2, v_y2_0, v_y2_1, v_y2_2) -> Com_1(eval_sipma91_bb8_in(v_5, v_6, v_x, v_y1_0, v_y1_1, v_y1_2, v_y2_0, v_y2_1, v_y2_2)) :|: v_x > 100
+  eval_sipma91_3(v_5, v_6, v_x, v_y1_0, v_y1_1, v_y1_2, v_y2_0, v_y2_1, v_y2_2) -> Com_1(eval_sipma91_bb1_in(v_5, v_6, v_x, v_x, v_y1_1, v_y1_2, 1, v_y2_1, v_y2_2)) :|: v_x <= 100
+  eval_sipma91_bb1_in(v_5, v_6, v_x, v_y1_0, v_y1_1, v_y1_2, v_y2_0, v_y2_1, v_y2_2) -> Com_1(eval_sipma91_bb2_in(v_5, v_6, v_x, v_y1_0, v_y1_1, v_y1_2, v_y2_0, v_y2_1, v_y2_2)) :|: v_y1_0 <= 100
+  eval_sipma91_bb1_in(v_5, v_6, v_x, v_y1_0, v_y1_1, v_y1_2, v_y2_0, v_y2_1, v_y2_2) -> Com_1(eval_sipma91_bb3_in(v_5, v_6, v_x, v_y1_0, v_y1_0, v_y1_2, v_y2_0, v_y2_0, v_y2_2)) :|: v_y1_0 > 100
+  eval_sipma91_bb2_in(v_5, v_6, v_x, v_y1_0, v_y1_1, v_y1_2, v_y2_0, v_y2_1, v_y2_2) -> Com_1(eval_sipma91_bb1_in(v_5, v_6, v_x, v_y1_0 + 11, v_y1_1, v_y1_2, v_y2_0 + 1, v_y2_1, v_y2_2))
+  eval_sipma91_bb3_in(v_5, v_6, v_x, v_y1_0, v_y1_1, v_y1_2, v_y2_0, v_y2_1, v_y2_2) -> Com_1(eval_sipma91_bb4_in(v_5, v_6, v_x, v_y1_0, v_y1_1, v_y1_2, v_y2_0, v_y2_1, v_y2_2)) :|: v_y2_1 > 1
+  eval_sipma91_bb3_in(v_5, v_6, v_x, v_y1_0, v_y1_1, v_y1_2, v_y2_0, v_y2_1, v_y2_2) -> Com_1(eval_sipma91_bb8_in(v_5, v_6, v_x, v_y1_0, v_y1_1, v_y1_2, v_y2_0, v_y2_1, v_y2_2)) :|: v_y2_1 <= 1
+  eval_sipma91_bb4_in(v_5, v_6, v_x, v_y1_0, v_y1_1, v_y1_2, v_y2_0, v_y2_1, v_y2_2) -> Com_1(eval_sipma91_bb3_in(v_5, v_6, v_x, v_y1_0, v_y1_1 - 10, v_y1_2, v_y2_0, v_y2_1 - 1, v_y2_2)) :|: v_y1_1 - 10 > 100 && v_y2_1 - 1 = 1
+  eval_sipma91_bb4_in(v_5, v_6, v_x, v_y1_0, v_y1_1, v_y1_2, v_y2_0, v_y2_1, v_y2_2) -> Com_1(eval_sipma91_bb5_in(v_y1_1 - 10, v_y2_1 - 1, v_x, v_y1_0, v_y1_1, v_y1_2, v_y2_0, v_y2_1, v_y2_2)) :|: v_y1_1 - 10 <= 100
+  eval_sipma91_bb4_in(v_5, v_6, v_x, v_y1_0, v_y1_1, v_y1_2, v_y2_0, v_y2_1, v_y2_2) -> Com_1(eval_sipma91_bb5_in(v_y1_1 - 10, v_y2_1 - 1, v_x, v_y1_0, v_y1_1, v_y1_2, v_y2_0, v_y2_1, v_y2_2)) :|: v_y2_1 - 1 < 1
+  eval_sipma91_bb4_in(v_5, v_6, v_x, v_y1_0, v_y1_1, v_y1_2, v_y2_0, v_y2_1, v_y2_2) -> Com_1(eval_sipma91_bb5_in(v_y1_1 - 10, v_y2_1 - 1, v_x, v_y1_0, v_y1_1, v_y1_2, v_y2_0, v_y2_1, v_y2_2)) :|: v_y2_1 - 1 > 1
+  eval_sipma91_bb5_in(v_5, v_6, v_x, v_y1_0, v_y1_1, v_y1_2, v_y2_0, v_y2_1, v_y2_2) -> Com_1(eval_sipma91_bb6_in(v_5, v_6, v_x, v_y1_0, v_y1_1, v_y1_2, v_y2_0, v_y2_1, v_y2_2)) :|: v_5 > 100
+  eval_sipma91_bb5_in(v_5, v_6, v_x, v_y1_0, v_y1_1, v_y1_2, v_y2_0, v_y2_1, v_y2_2) -> Com_1(eval_sipma91_bb7_in(v_5, v_6, v_x, v_y1_0, v_y1_1, v_5, v_y2_0, v_y2_1, v_6)) :|: v_5 <= 100
+  eval_sipma91_bb6_in(v_5, v_6, v_x, v_y1_0, v_y1_1, v_y1_2, v_y2_0, v_y2_1, v_y2_2) -> Com_1(eval_sipma91_bb7_in(v_5, v_6, v_x, v_y1_0, v_y1_1, v_5 - 10, v_y2_0, v_y2_1, v_6 - 1))
+  eval_sipma91_bb7_in(v_5, v_6, v_x, v_y1_0, v_y1_1, v_y1_2, v_y2_0, v_y2_1, v_y2_2) -> Com_1(eval_sipma91_bb3_in(v_5, v_6, v_x, v_y1_0, v_y1_2 + 11, v_y1_2, v_y2_0, v_y2_2 + 1, v_y2_2))
+  eval_sipma91_bb8_in(v_5, v_6, v_x, v_y1_0, v_y1_1, v_y1_2, v_y2_0, v_y2_1, v_y2_2) -> Com_1(eval_sipma91_stop(v_5, v_6, v_x, v_y1_0, v_y1_1, v_y1_2, v_y2_0, v_y2_1, v_y2_2))
+)

@@ -1,0 +1,16 @@
+(GOAL COMPLEXITY)
+(STARTTERM (FUNCTIONSYMBOLS evalrealselectstart))
+(VAR A B C D E)
+(RULES
+  evalrealselectstart(A,B,C) -> Com_1(evalrealselectentryin(A,B,C))
+  evalrealselectentryin(A,B,C) -> Com_1(evalrealselectbb6in(0,B,C))
+  evalrealselectbb6in(A,B,C) -> Com_1(evalrealselectbbin(A,B,C)) :|: B >= 2 + A
+  evalrealselectbb6in(A,B,C) -> Com_1(evalrealselectreturnin(A,B,C)) :|: A + 1 >= B
+  evalrealselectbbin(A,B,C) -> Com_1(evalrealselectbb4in(A,B,A + 1))
+  evalrealselectbb4in(A,B,C) -> Com_1(evalrealselectbb1in(A,B,C)) :|: B >= C + 1
+  evalrealselectbb4in(A,B,C) -> Com_1(evalrealselectbb5in(A,B,C)) :|: C >= B
+  evalrealselectbb1in(A,B,C) -> Com_1(evalrealselectbb4in(A,B,C + 1)) :|: D >= E + 1
+  evalrealselectbb1in(A,B,C) -> Com_1(evalrealselectbb4in(A,B,C + 1)) :|: E >= D
+  evalrealselectbb5in(A,B,C) -> Com_1(evalrealselectbb6in(A + 1,B,C))
+  evalrealselectreturnin(A,B,C) -> Com_1(evalrealselectstop(A,B,C))
+)

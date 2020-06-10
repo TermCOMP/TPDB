@@ -1,0 +1,9 @@
+# innermost non-terminating: minus(1, 0) ->^* minus(1, 0)
+(VAR x y u v)
+(RULES
+minus(x, y) -> minusNat(y >= 0 && x = y + 1, x, y)
+minusNat(TRUE, x, y) -> minus(x, round(y))
+round(x) -> if(x % 2 = 0, x, x+1)
+if(TRUE, u, v) -> u
+if(FALSE, u, v) -> v
+)

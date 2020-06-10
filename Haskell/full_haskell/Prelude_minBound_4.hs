@@ -1,0 +1,1 @@
+{-# htermination minBound :: Int #-}

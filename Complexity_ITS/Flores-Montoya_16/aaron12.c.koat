@@ -1,0 +1,25 @@
+(GOAL COMPLEXITY)
+(STARTTERM (FUNCTIONSYMBOLS eval_aaron12_start))
+(VAR nondef_0 v__0 v__01 v__03 v_1 v_x v_y v_z)
+(RULES
+  eval_aaron12_start(v__0, v__01, v__03, v_1, v_x, v_y, v_z) -> Com_1(eval_aaron12_bb0_in(v__0, v__01, v__03, v_1, v_x, v_y, v_z))
+  eval_aaron12_bb0_in(v__0, v__01, v__03, v_1, v_x, v_y, v_z) -> Com_1(eval_aaron12_0(v__0, v__01, v__03, v_1, v_x, v_y, v_z))
+  eval_aaron12_0(v__0, v__01, v__03, v_1, v_x, v_y, v_z) -> Com_1(eval_aaron12_1(v__0, v__01, v__03, v_1, v_x, v_y, v_z))
+  eval_aaron12_1(v__0, v__01, v__03, v_1, v_x, v_y, v_z) -> Com_1(eval_aaron12_2(v__0, v__01, v__03, v_1, v_x, v_y, v_z))
+  eval_aaron12_2(v__0, v__01, v__03, v_1, v_x, v_y, v_z) -> Com_1(eval_aaron12_3(v__0, v__01, v__03, v_1, v_x, v_y, v_z))
+  eval_aaron12_3(v__0, v__01, v__03, v_1, v_x, v_y, v_z) -> Com_1(eval_aaron12_4(v__0, v__01, v__03, v_1, v_x, v_y, v_z))
+  eval_aaron12_4(v__0, v__01, v__03, v_1, v_x, v_y, v_z) -> Com_1(eval_aaron12_5(v__0, v__01, v__03, v_1, v_x, v_y, v_z))
+  eval_aaron12_5(v__0, v__01, v__03, v_1, v_x, v_y, v_z) -> Com_1(eval_aaron12_6(v__0, v__01, v__03, v_1, v_x, v_y, v_z))
+  eval_aaron12_6(v__0, v__01, v__03, v_1, v_x, v_y, v_z) -> Com_1(eval_aaron12_7(v__0, v__01, v__03, v_1, v_x, v_y, v_z))
+  eval_aaron12_7(v__0, v__01, v__03, v_1, v_x, v_y, v_z) -> Com_1(eval_aaron12_8(v__0, v__01, v__03, v_1, v_x, v_y, v_z))
+  eval_aaron12_8(v__0, v__01, v__03, v_1, v_x, v_y, v_z) -> Com_1(eval_aaron12_bb1_in(v_x, v_y, v_z, v_1, v_x, v_y, v_z))
+  eval_aaron12_bb1_in(v__0, v__01, v__03, v_1, v_x, v_y, v_z) -> Com_1(eval_aaron12_bb2_in(v__0, v__01, v__03, v_1, v_x, v_y, v_z)) :|: v__0 >= v__01
+  eval_aaron12_bb1_in(v__0, v__01, v__03, v_1, v_x, v_y, v_z) -> Com_1(eval_aaron12_bb5_in(v__0, v__01, v__03, v_1, v_x, v_y, v_z)) :|: v__0 < v__01
+  eval_aaron12_bb2_in(v__0, v__01, v__03, v_1, v_x, v_y, v_z) -> Com_1(eval_aaron12_9(v__0, v__01, v__03, v_1, v_x, v_y, v_z))
+  eval_aaron12_9(v__0, v__01, v__03, v_1, v_x, v_y, v_z) -> Com_1(eval_aaron12_10(v__0, v__01, v__03, nondef_0, v_x, v_y, v_z))
+  eval_aaron12_10(v__0, v__01, v__03, v_1, v_x, v_y, v_z) -> Com_1(eval_aaron12_bb3_in(v__0, v__01, v__03, v_1, v_x, v_y, v_z)) :|: v_1 > 0
+  eval_aaron12_10(v__0, v__01, v__03, v_1, v_x, v_y, v_z) -> Com_1(eval_aaron12_bb4_in(v__0, v__01, v__03, v_1, v_x, v_y, v_z)) :|: v_1 <= 0
+  eval_aaron12_bb3_in(v__0, v__01, v__03, v_1, v_x, v_y, v_z) -> Com_1(eval_aaron12_bb1_in(v__0 + 1, v__01 + v__0 + 1, v__03, v_1, v_x, v_y, v_z))
+  eval_aaron12_bb4_in(v__0, v__01, v__03, v_1, v_x, v_y, v_z) -> Com_1(eval_aaron12_bb1_in(v__0 - v__03, v__01 + v__03^2, v__03 - 1, v_1, v_x, v_y, v_z))
+  eval_aaron12_bb5_in(v__0, v__01, v__03, v_1, v_x, v_y, v_z) -> Com_1(eval_aaron12_stop(v__0, v__01, v__03, v_1, v_x, v_y, v_z))
+)

@@ -1,0 +1,37 @@
+(GOAL COMPLEXITY)
+(STARTTERM (FUNCTIONSYMBOLS evalrandom2dstart))
+(VAR A B C D E)
+(RULES
+  evalrandom2dstart(A,B,C,D) -> Com_1(evalrandom2dentryin(A,B,C,D))
+  evalrandom2dentryin(A,B,C,D) -> Com_1(evalrandom2dbb10in(0,B,C,D))
+  evalrandom2dbb10in(A,B,C,D) -> Com_1(evalrandom2dbbin(A,B,C,D)) :|: B >= A + 1
+  evalrandom2dbb10in(A,B,C,D) -> Com_1(evalrandom2dreturnin(A,B,C,D)) :|: A >= B
+  evalrandom2dbbin(A,B,C,D) -> Com_1(evalrandom2dbb2in(A,B,A + 1,E)) :|: E >= 0 && 3 >= E
+  evalrandom2dbbin(A,B,C,D) -> Com_1(evalrandom2dbb10in(A + 1,B,C,D)) :|: 0 >= E + 1
+  evalrandom2dbbin(A,B,C,D) -> Com_1(evalrandom2dbb10in(A + 1,B,C,D)) :|: E >= 4
+  evalrandom2dbb2in(A,B,C,D) -> Com_1(evalrandom2dNodeBlock9in(A,B,C,D))
+  evalrandom2dNodeBlock9in(A,B,C,D) -> Com_1(evalrandom2dNodeBlockin(A,B,C,D)) :|: 1 >= D
+  evalrandom2dNodeBlock9in(A,B,C,D) -> Com_1(evalrandom2dNodeBlock7in(A,B,C,D)) :|: D >= 2
+  evalrandom2dNodeBlockin(A,B,C,D) -> Com_1(evalrandom2dLeafBlockin(A,B,C,D)) :|: 0 >= D
+  evalrandom2dNodeBlockin(A,B,C,D) -> Com_1(evalrandom2dLeafBlock1in(A,B,C,D)) :|: D >= 1
+  evalrandom2dLeafBlockin(A,B,C,D) -> Com_1(evalrandom2dbb3in(A,B,C,D)) :|: D = 0
+  evalrandom2dLeafBlockin(A,B,C,D) -> Com_1(evalrandom2dNewDefaultin(A,B,C,D)) :|: 0 >= D + 1
+  evalrandom2dLeafBlockin(A,B,C,D) -> Com_1(evalrandom2dNewDefaultin(A,B,C,D)) :|: D >= 1
+  evalrandom2dbb3in(A,B,C,D) -> Com_1(evalrandom2dbb10in(C,B,C,D))
+  evalrandom2dLeafBlock1in(A,B,C,D) -> Com_1(evalrandom2dbb5in(A,B,C,D)) :|: D = 1
+  evalrandom2dLeafBlock1in(A,B,C,D) -> Com_1(evalrandom2dNewDefaultin(A,B,C,D)) :|: 0 >= D
+  evalrandom2dLeafBlock1in(A,B,C,D) -> Com_1(evalrandom2dNewDefaultin(A,B,C,D)) :|: D >= 2
+  evalrandom2dbb5in(A,B,C,D) -> Com_1(evalrandom2dbb10in(C,B,C,D))
+  evalrandom2dNodeBlock7in(A,B,C,D) -> Com_1(evalrandom2dLeafBlock3in(A,B,C,D)) :|: 2 >= D
+  evalrandom2dNodeBlock7in(A,B,C,D) -> Com_1(evalrandom2dLeafBlock5in(A,B,C,D)) :|: D >= 3
+  evalrandom2dLeafBlock3in(A,B,C,D) -> Com_1(evalrandom2dbb7in(A,B,C,D)) :|: D = 2
+  evalrandom2dLeafBlock3in(A,B,C,D) -> Com_1(evalrandom2dNewDefaultin(A,B,C,D)) :|: 1 >= D
+  evalrandom2dLeafBlock3in(A,B,C,D) -> Com_1(evalrandom2dNewDefaultin(A,B,C,D)) :|: D >= 3
+  evalrandom2dbb7in(A,B,C,D) -> Com_1(evalrandom2dbb10in(C,B,C,D))
+  evalrandom2dLeafBlock5in(A,B,C,D) -> Com_1(evalrandom2dbb9in(A,B,C,D)) :|: D = 3
+  evalrandom2dLeafBlock5in(A,B,C,D) -> Com_1(evalrandom2dNewDefaultin(A,B,C,D)) :|: 2 >= D
+  evalrandom2dLeafBlock5in(A,B,C,D) -> Com_1(evalrandom2dNewDefaultin(A,B,C,D)) :|: D >= 4
+  evalrandom2dbb9in(A,B,C,D) -> Com_1(evalrandom2dbb10in(C,B,C,D))
+  evalrandom2dNewDefaultin(A,B,C,D) -> Com_1(evalrandom2dbb10in(C,B,C,D))
+  evalrandom2dreturnin(A,B,C,D) -> Com_1(evalrandom2dstop(A,B,C,D))
+)

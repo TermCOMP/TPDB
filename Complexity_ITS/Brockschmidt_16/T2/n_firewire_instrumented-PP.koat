@@ -1,0 +1,20 @@
+(GOAL COMPLEXITY)
+(STARTTERM (FUNCTIONSYMBOLS f0))
+(VAR A B C D E F G H I J)
+(RULES
+  f38(A,B,C,D,E,F,G) -> Com_1(f11(A,A,C,D,E,F,G)) :|: A = B
+  f0(A,B,C,D,E,F,G) -> Com_1(f11(0,0,H,0,1,I,I)) :|: H >= 0 && I >= 1
+  f11(A,B,C,D,E,F,G) -> Com_1(f34(0,H,C,D + 1,E,F,G)) :|: H >= 0 && 1 >= H && G >= 1 && 0 >= C && 0 >= D
+  f11(A,B,C,D,E,F,G) -> Com_1(f34(1,H,C,D + 1,E,F,G)) :|: H >= 0 && 1 >= H && G >= 1 && 0 >= C && D = 1
+  f11(A,B,C,D,E,F,G) -> Com_1(f34(0,H,C,D + 1,E,F,G)) :|: H >= 0 && 1 >= H && G >= 1 && 0 >= C && D = 2
+  f11(A,B,C,D,E,F,G) -> Com_1(f34(I,J,H,0,E + 1,F,G)) :|: J >= 0 && 1 >= J && I >= 0 && 1 >= I && H >= 0 && G >= 1 && 0 >= C && D >= 3
+  f11(A,B,C,D,E,F,G) -> Com_1(f34(H,I,C - 1,D,E,F,G)) :|: I >= 0 && 1 >= I && H >= 0 && 1 >= H && C >= 1 && G >= 1
+  f34(A,B,C,D,E,F,G) -> Com_1(f38(A,B,C,D + 1,E,F,G)) :|: 0 >= B && 0 >= C && 0 >= D
+  f34(A,B,C,D,E,F,G) -> Com_1(f38(A,B,C,D + 1,E,F,G)) :|: B >= 1 && 0 >= C && D = 1
+  f34(A,B,C,D,E,F,G) -> Com_1(f38(A,B,C,D + 1,E,F,G)) :|: 0 >= B && 0 >= C && D = 2
+  f34(A,B,C,D,E,F,G) -> Com_1(f38(A,B,H,0,E + 1,F,G)) :|: H >= 0 && 0 >= C && D >= 3
+  f34(A,B,C,D,E,F,G) -> Com_1(f38(A,B,C - 1,D,E,F,G)) :|: C >= 1
+  f38(A,B,C,D,E,F,G) -> Com_1(f11(A,B,C,D,E,F,G - 1)) :|: B >= A + 1
+  f38(A,B,C,D,E,F,G) -> Com_1(f11(A,B,C,D,E,F,G - 1)) :|: A >= 1 + B
+  f11(A,B,C,D,E,F,G) -> Com_1(f53(A,B,C,D,E,F,G)) :|: 0 >= G
+)

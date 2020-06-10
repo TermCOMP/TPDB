@@ -1,0 +1,1 @@
+{-# htermination getChar :: IO Char #-}

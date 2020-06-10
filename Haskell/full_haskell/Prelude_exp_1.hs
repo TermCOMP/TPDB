@@ -1,0 +1,1 @@
+{-# htermination exp :: Float -> Float #-}

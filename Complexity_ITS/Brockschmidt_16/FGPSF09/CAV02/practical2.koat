@@ -1,0 +1,18 @@
+(GOAL COMPLEXITY)
+(STARTTERM (FUNCTIONSYMBOLS eval0))
+(VAR A B C D)
+(RULES
+  eval0(A,B,C,D) -> Com_1(eval1(B,B,1,D))
+  eval1(A,B,C,D) -> Com_1(end(A,B,C,D)) :|: A >= 101
+  eval1(A,B,C,D) -> Com_1(eval3(A,B,C,D)) :|: 100 >= A
+  eval3(A,B,C,D) -> Com_1(eval3(A + 11,B,C + 1,D)) :|: 100 >= A
+  eval3(A,B,C,D) -> Com_1(eval5(A,B,C,D)) :|: A >= 101
+  eval5(A,B,C,D) -> Com_1(eval7(A - 10,B,C - 1,D)) :|: C >= 2
+  eval7(A,B,C,D) -> Com_1(eval5(A,B,C,A - 10)) :|: A >= 101 && C = 1
+  eval7(A,B,C,D) -> Com_1(eval9(A,B,C,D)) :|: 100 >= A
+  eval7(A,B,C,D) -> Com_1(eval9(A,B,C,D)) :|: 2 >= C
+  eval7(A,B,C,D) -> Com_1(eval9(A,B,C,D)) :|: C >= 0
+  eval9(A,B,C,D) -> Com_1(eval11(A - 10,B,C - 1,D)) :|: A >= 101
+  eval9(A,B,C,D) -> Com_1(eval11(A,B,C,D)) :|: 100 >= A
+  eval11(A,B,C,D) -> Com_1(eval5(A + 11,B,C + 1,D))
+)

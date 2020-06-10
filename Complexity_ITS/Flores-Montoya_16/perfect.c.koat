@@ -1,0 +1,27 @@
+(GOAL COMPLEXITY)
+(STARTTERM (FUNCTIONSYMBOLS eval_perfect_start))
+(VAR v__y3_0 v_1 v_6 v_x v_y1_0_sink v_y2_1 v_y3_0)
+(RULES
+  eval_perfect_start(v__y3_0, v_1, v_6, v_x, v_y1_0_sink, v_y2_1, v_y3_0) -> Com_1(eval_perfect_bb0_in(v__y3_0, v_1, v_6, v_x, v_y1_0_sink, v_y2_1, v_y3_0))
+  eval_perfect_bb0_in(v__y3_0, v_1, v_6, v_x, v_y1_0_sink, v_y2_1, v_y3_0) -> Com_1(eval_perfect_0(v__y3_0, v_1, v_6, v_x, v_y1_0_sink, v_y2_1, v_y3_0))
+  eval_perfect_0(v__y3_0, v_1, v_6, v_x, v_y1_0_sink, v_y2_1, v_y3_0) -> Com_1(eval_perfect_1(v__y3_0, v_1, v_6, v_x, v_y1_0_sink, v_y2_1, v_y3_0))
+  eval_perfect_1(v__y3_0, v_1, v_6, v_x, v_y1_0_sink, v_y2_1, v_y3_0) -> Com_1(eval_perfect_bb6_in(v__y3_0, v_1, v_6, v_x, v_y1_0_sink, v_y2_1, v_y3_0)) :|: v_x <= 1
+  eval_perfect_1(v__y3_0, v_1, v_6, v_x, v_y1_0_sink, v_y2_1, v_y3_0) -> Com_1(eval_perfect_bb1_in(v__y3_0, v_1, v_6, v_x, v_x, v_y2_1, v_x)) :|: v_x > 1
+  eval_perfect_bb1_in(v__y3_0, v_1, v_6, v_x, v_y1_0_sink, v_y2_1, v_y3_0) -> Com_1(eval_perfect_bb2_in(v__y3_0, v_y1_0_sink - 1, v_6, v_x, v_y1_0_sink, v_x, v_y3_0)) :|: v_y1_0_sink - 1 > 0
+  eval_perfect_bb1_in(v__y3_0, v_1, v_6, v_x, v_y1_0_sink, v_y2_1, v_y3_0) -> Com_1(eval_perfect_bb5_in(v__y3_0, v_1, v_6, v_x, v_y1_0_sink, v_y2_1, v_y3_0)) :|: v_y1_0_sink - 1 <= 0
+  eval_perfect_bb2_in(v__y3_0, v_1, v_6, v_x, v_y1_0_sink, v_y2_1, v_y3_0) -> Com_1(eval_perfect_bb3_in(v__y3_0, v_1, v_6, v_x, v_y1_0_sink, v_y2_1, v_y3_0)) :|: v_y2_1 >= v_1
+  eval_perfect_bb2_in(v__y3_0, v_1, v_6, v_x, v_y1_0_sink, v_y2_1, v_y3_0) -> Com_1(eval_perfect_bb4_in(v__y3_0, v_1, v_6, v_x, v_y1_0_sink, v_y2_1, v_y3_0)) :|: v_y2_1 < v_1
+  eval_perfect_bb3_in(v__y3_0, v_1, v_6, v_x, v_y1_0_sink, v_y2_1, v_y3_0) -> Com_1(eval_perfect_bb2_in(v__y3_0, v_1, v_6, v_x, v_y1_0_sink, v_y2_1 - v_1, v_y3_0))
+  eval_perfect_bb4_in(v__y3_0, v_1, v_6, v_x, v_y1_0_sink, v_y2_1, v_y3_0) -> Com_1(eval_perfect_7(v__y3_0, v_1, v_y3_0 - v_1, v_x, v_y1_0_sink, v_y2_1, v_y3_0))
+  eval_perfect_7(v__y3_0, v_1, v_6, v_x, v_y1_0_sink, v_y2_1, v_y3_0) -> Com_1(eval_perfect_8(v__y3_0, v_1, v_6, v_x, v_y1_0_sink, v_y2_1, v_y3_0))
+  eval_perfect_8(v__y3_0, v_1, v_6, v_x, v_y1_0_sink, v_y2_1, v_y3_0) -> Com_1(eval_perfect_9(v_6, v_1, v_6, v_x, v_y1_0_sink, v_y2_1, v_y3_0)) :|: v_y2_1 = 0
+  eval_perfect_8(v__y3_0, v_1, v_6, v_x, v_y1_0_sink, v_y2_1, v_y3_0) -> Com_1(eval_perfect_9(v_y3_0, v_1, v_6, v_x, v_y1_0_sink, v_y2_1, v_y3_0)) :|: v_y2_1 < 0
+  eval_perfect_8(v__y3_0, v_1, v_6, v_x, v_y1_0_sink, v_y2_1, v_y3_0) -> Com_1(eval_perfect_9(v_y3_0, v_1, v_6, v_x, v_y1_0_sink, v_y2_1, v_y3_0)) :|: v_y2_1 > 0
+  eval_perfect_9(v__y3_0, v_1, v_6, v_x, v_y1_0_sink, v_y2_1, v_y3_0) -> Com_1(eval_perfect_10(v__y3_0, v_1, v_6, v_x, v_y1_0_sink, v_y2_1, v_y3_0))
+  eval_perfect_10(v__y3_0, v_1, v_6, v_x, v_y1_0_sink, v_y2_1, v_y3_0) -> Com_1(eval_perfect_11(v__y3_0, v_1, v_6, v_x, v_y1_0_sink, v_y2_1, v_y3_0))
+  eval_perfect_11(v__y3_0, v_1, v_6, v_x, v_y1_0_sink, v_y2_1, v_y3_0) -> Com_1(eval_perfect_bb1_in(v__y3_0, v_1, v_6, v_x, v_1, v_y2_1, v__y3_0))
+  eval_perfect_bb5_in(v__y3_0, v_1, v_6, v_x, v_y1_0_sink, v_y2_1, v_y3_0) -> Com_1(eval_perfect_bb6_in(v__y3_0, v_1, v_6, v_x, v_y1_0_sink, v_y2_1, v_y3_0)) :|: v_y3_0 < 0
+  eval_perfect_bb5_in(v__y3_0, v_1, v_6, v_x, v_y1_0_sink, v_y2_1, v_y3_0) -> Com_1(eval_perfect_bb6_in(v__y3_0, v_1, v_6, v_x, v_y1_0_sink, v_y2_1, v_y3_0)) :|: v_y3_0 > 0
+  eval_perfect_bb5_in(v__y3_0, v_1, v_6, v_x, v_y1_0_sink, v_y2_1, v_y3_0) -> Com_1(eval_perfect_bb6_in(v__y3_0, v_1, v_6, v_x, v_y1_0_sink, v_y2_1, v_y3_0)) :|: v_y3_0 = 0
+  eval_perfect_bb6_in(v__y3_0, v_1, v_6, v_x, v_y1_0_sink, v_y2_1, v_y3_0) -> Com_1(eval_perfect_stop(v__y3_0, v_1, v_6, v_x, v_y1_0_sink, v_y2_1, v_y3_0))
+)

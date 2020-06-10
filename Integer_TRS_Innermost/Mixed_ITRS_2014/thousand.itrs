@@ -1,0 +1,5 @@
+# count up to 1000
+(VAR x)
+(RULES
+f(TRUE, x) -> f(1000 >= x, x+1)
+)

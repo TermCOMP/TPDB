@@ -1,0 +1,19 @@
+(GOAL COMPLEXITY)
+(STARTTERM (FUNCTIONSYMBOLS eval_ex3_start))
+(VAR v__0 v_b v_x)
+(RULES
+  eval_ex3_start(v__0, v_b, v_x) -> Com_1(eval_ex3_bb0_in(v__0, v_b, v_x))
+  eval_ex3_bb0_in(v__0, v_b, v_x) -> Com_1(eval_ex3_0(v__0, v_b, v_x))
+  eval_ex3_0(v__0, v_b, v_x) -> Com_1(eval_ex3_1(v__0, v_b, v_x))
+  eval_ex3_1(v__0, v_b, v_x) -> Com_1(eval_ex3_2(v__0, v_b, v_x))
+  eval_ex3_2(v__0, v_b, v_x) -> Com_1(eval_ex3_3(v__0, v_b, v_x))
+  eval_ex3_3(v__0, v_b, v_x) -> Com_1(eval_ex3_4(v__0, v_b, v_x))
+  eval_ex3_4(v__0, v_b, v_x) -> Com_1(eval_ex3_bb1_in(v_x, v_b, v_x))
+  eval_ex3_bb1_in(v__0, v_b, v_x) -> Com_1(eval_ex3_bb2_in(v__0, v_b, v_x)) :|: 0 < v__0 && v__0 < 255
+  eval_ex3_bb1_in(v__0, v_b, v_x) -> Com_1(eval_ex3_bb3_in(v__0, v_b, v_x)) :|: 0 >= v__0
+  eval_ex3_bb1_in(v__0, v_b, v_x) -> Com_1(eval_ex3_bb3_in(v__0, v_b, v_x)) :|: v__0 >= 255
+  eval_ex3_bb2_in(v__0, v_b, v_x) -> Com_1(eval_ex3_bb1_in(v__0 + 1, v_b, v_x)) :|: v_b < 0
+  eval_ex3_bb2_in(v__0, v_b, v_x) -> Com_1(eval_ex3_bb1_in(v__0 + 1, v_b, v_x)) :|: v_b > 0
+  eval_ex3_bb2_in(v__0, v_b, v_x) -> Com_1(eval_ex3_bb1_in(v__0 - 1, v_b, v_x)) :|: v_b = 0
+  eval_ex3_bb3_in(v__0, v_b, v_x) -> Com_1(eval_ex3_stop(v__0, v_b, v_x))
+)

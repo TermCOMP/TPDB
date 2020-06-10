@@ -1,0 +1,15 @@
+(GOAL COMPLEXITY)
+(STARTTERM (FUNCTIONSYMBOLS evalspeedFails4start))
+(VAR A B C D)
+(RULES
+  evalspeedFails4start(A,B,C,D) -> Com_1(evalspeedFails4entryin(A,B,C,D))
+  evalspeedFails4entryin(A,B,C,D) -> Com_1(evalspeedFails4bb6in(1,C,A,B)) :|: A >= 1
+  evalspeedFails4entryin(A,B,C,D) -> Com_1(evalspeedFails4bb6in(-1,C,A,B)) :|: 0 >= A
+  evalspeedFails4bb6in(A,B,C,D) -> Com_1(evalspeedFails4bb3in(A,B,C,D)) :|: B >= D
+  evalspeedFails4bb6in(A,B,C,D) -> Com_1(evalspeedFails4returnin(A,B,C,D)) :|: D >= B + 1
+  evalspeedFails4bb3in(A,B,C,D) -> Com_1(evalspeedFails4bb4in(A,B,C,D)) :|: C >= 1
+  evalspeedFails4bb3in(A,B,C,D) -> Com_1(evalspeedFails4bb5in(A,B,C,D)) :|: 0 >= C
+  evalspeedFails4bb4in(A,B,C,D) -> Com_1(evalspeedFails4bb6in(A,B,C,D + A))
+  evalspeedFails4bb5in(A,B,C,D) -> Com_1(evalspeedFails4bb6in(A,B,C,D - A))
+  evalspeedFails4returnin(A,B,C,D) -> Com_1(evalspeedFails4stop(A,B,C,D))
+)

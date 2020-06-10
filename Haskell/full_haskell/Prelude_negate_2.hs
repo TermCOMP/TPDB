@@ -1,0 +1,1 @@
+{-# htermination negate :: Int -> Int #-}

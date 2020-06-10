@@ -1,0 +1,20 @@
+(GOAL COMPLEXITY)
+(STARTTERM (FUNCTIONSYMBOLS evalfstart))
+(VAR A B C D E F G)
+(RULES
+  evalfstart(A,B,C,D,E,F,G) -> Com_1(evalfentryin(A,B,C,D,E,F,G))
+  evalfentryin(A,B,C,D,E,F,G) -> Com_1(evalfbb10in(B,C,D,A,E,F,G))
+  evalfbb10in(A,B,C,D,E,F,G) -> Com_1(evalfbb8in(A,B,C,D,1,F,G)) :|: D >= 1
+  evalfbb10in(A,B,C,D,E,F,G) -> Com_1(evalfreturnin(A,B,C,D,E,F,G)) :|: 0 >= D
+  evalfbb8in(A,B,C,D,E,F,G) -> Com_1(evalfbb6in(A,B,C,D,E,D,G)) :|: A >= E
+  evalfbb8in(A,B,C,D,E,F,G) -> Com_1(evalfbb9in(A,B,C,D,E,F,G)) :|: E >= A + 1
+  evalfbb6in(A,B,C,D,E,F,G) -> Com_1(evalfbb4in(A,B,C,D,E,F,C)) :|: B >= F
+  evalfbb6in(A,B,C,D,E,F,G) -> Com_1(evalfbb7in(A,B,C,D,E,F,G)) :|: F >= B + 1
+  evalfbb4in(A,B,C,D,E,F,G) -> Com_1(evalfbb3in(A,B,C,D,E,F,G)) :|: E >= G
+  evalfbb4in(A,B,C,D,E,F,G) -> Com_1(evalfbb5in(A,B,C,D,E,F,G)) :|: G >= E + 1
+  evalfbb3in(A,B,C,D,E,F,G) -> Com_1(evalfbb4in(A,B,C,D,E,F,G - 1))
+  evalfbb5in(A,B,C,D,E,F,G) -> Com_1(evalfbb6in(A,B,C,D,E,F + 1,G))
+  evalfbb7in(A,B,C,D,E,F,G) -> Com_1(evalfbb8in(A,B,C,D,E + 1,F,G))
+  evalfbb9in(A,B,C,D,E,F,G) -> Com_1(evalfbb10in(A,B,C,D - 1,E,F,G))
+  evalfreturnin(A,B,C,D,E,F,G) -> Com_1(evalfstop(A,B,C,D,E,F,G))
+)

@@ -1,0 +1,22 @@
+(GOAL COMPLEXITY)
+(STARTTERM (FUNCTIONSYMBOLS eval_start_start))
+(VAR v__0 v__01 v__1 v__2 v_x v_y)
+(RULES
+  eval_start_start(v__0, v__01, v__1, v__2, v_x, v_y) -> Com_1(eval_start_bb0_in(v__0, v__01, v__1, v__2, v_x, v_y))
+  eval_start_bb0_in(v__0, v__01, v__1, v__2, v_x, v_y) -> Com_1(eval_start_0(v__0, v__01, v__1, v__2, v_x, v_y))
+  eval_start_0(v__0, v__01, v__1, v__2, v_x, v_y) -> Com_1(eval_start_1(v__0, v__01, v__1, v__2, v_x, v_y))
+  eval_start_1(v__0, v__01, v__1, v__2, v_x, v_y) -> Com_1(eval_start_2(v__0, v__01, v__1, v__2, v_x, v_y))
+  eval_start_2(v__0, v__01, v__1, v__2, v_x, v_y) -> Com_1(eval_start_3(v__0, v__01, v__1, v__2, v_x, v_y))
+  eval_start_3(v__0, v__01, v__1, v__2, v_x, v_y) -> Com_1(eval_start_4(v__0, v__01, v__1, v__2, v_x, v_y))
+  eval_start_4(v__0, v__01, v__1, v__2, v_x, v_y) -> Com_1(eval_start_bb1_in(v_x, v_y, v__1, v__2, v_x, v_y))
+  eval_start_bb1_in(v__0, v__01, v__1, v__2, v_x, v_y) -> Com_1(eval_start_bb2_in(v__0, v__01, v__1, v__2, v_x, v_y)) :|: v__0 > 0
+  eval_start_bb1_in(v__0, v__01, v__1, v__2, v_x, v_y) -> Com_1(eval_start_bb3_in(v__0, v__01, v__01, v__2, v_x, v_y)) :|: v__0 <= 0
+  eval_start_bb2_in(v__0, v__01, v__1, v__2, v_x, v_y) -> Com_1(eval_start_bb1_in(v__0 - 1, v__01 + 2, v__1, v__2, v_x, v_y))
+  eval_start_bb3_in(v__0, v__01, v__1, v__2, v_x, v_y) -> Com_1(eval_start_bb4_in(v__0, v__01, v__1, v__2, v_x, v_y)) :|: v__1 > 0
+  eval_start_bb3_in(v__0, v__01, v__1, v__2, v_x, v_y) -> Com_1(eval_start_bb5_in(v__0, v__01, v__1, v__1, v_x, v_y)) :|: v__1 <= 0
+  eval_start_bb4_in(v__0, v__01, v__1, v__2, v_x, v_y) -> Com_1(eval_start_bb3_in(v__0, v__01, v__1 - 1, v__2, v_x, v_y))
+  eval_start_bb5_in(v__0, v__01, v__1, v__2, v_x, v_y) -> Com_1(eval_start_bb6_in(v__0, v__01, v__1, v__2, v_x, v_y)) :|: v__2 > 0
+  eval_start_bb5_in(v__0, v__01, v__1, v__2, v_x, v_y) -> Com_1(eval_start_bb7_in(v__0, v__01, v__1, v__2, v_x, v_y)) :|: v__2 <= 0
+  eval_start_bb6_in(v__0, v__01, v__1, v__2, v_x, v_y) -> Com_1(eval_start_bb5_in(v__0, v__01, v__1, v__2 - 1, v_x, v_y))
+  eval_start_bb7_in(v__0, v__01, v__1, v__2, v_x, v_y) -> Com_1(eval_start_stop(v__0, v__01, v__1, v__2, v_x, v_y))
+)

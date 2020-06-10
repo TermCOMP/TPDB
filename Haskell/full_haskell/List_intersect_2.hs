@@ -1,0 +1,2 @@
+{-# htermination intersect :: [()] -> [()] -> [()] #-}
+import List

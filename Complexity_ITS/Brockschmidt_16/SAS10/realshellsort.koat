@@ -1,0 +1,19 @@
+(GOAL COMPLEXITY)
+(STARTTERM (FUNCTIONSYMBOLS start0))
+(VAR A B C D E F G H I J K L M N O P Q)
+(RULES
+  start(A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P) -> Com_1(lbl21(A,B,C,D,E,F,G,H,I,J,K,L,M,N,Q,P)) :|: A = B && C = D && E = F && G = H && I = J && K = L && M = N && O = P
+  lbl121(A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P) -> Com_1(lbl123(A,B,C,D,E,F,A,H,I,J,K,L,M,N,O,P)) :|: G >= 2*A && 2*A + 1 >= G && 2*O + 1 >= L && O >= G && E >= 0 && G >= 1 && L >= 1 + E && K = L && I = L && M + 1 = L
+  lbl123(A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P) -> Com_1(stop(A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P)) :|: E >= 0 && 2*O + 1 >= L && O >= 1 && L >= E + 1 && O >= 0 && G = 0 && K = L && I = L && M + 1 = L && A = 0
+  lbl123(A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P) -> Com_1(lbl121(Q,B,C,D,E,F,G,H,0,J,K,L,M,N,O,P)) :|: A >= 1 && 0 >= L && A >= 0 && E >= 0 && 2*O + 1 >= L && O >= 1 && L >= E + 1 && O >= 2*A && K = L && I = L && M + 1 = L && G = A
+  lbl123(A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P) -> Com_1(lbl71(A,B,Q,D,0,F,G,H,0,J,K,L,M,N,O,P)) :|: L >= 1 && A >= 1 && A >= 0 && E >= 0 && 2*O + 1 >= L && O >= 1 && L >= E + 1 && O >= 2*A && K = L && I = L && M + 1 = L && G = A
+  lbl101(A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P) -> Com_1(lbl101(A,B,C,D,E - G,F,G,H,I,J,K,L,M,N,O,P)) :|: E >= G && I >= G + E && O >= G && L >= I + 1 && G >= 1 && 2*O + 1 >= L && E >= 0 && K = L
+  lbl101(A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P) -> Com_1(lbl53(A,B,C,D,E,F,G,H,1 + I,J,K,L,I,N,O,P)) :|: I >= G + E && O >= G && L >= I + 1 && G >= 1 && 2*O + 1 >= L && E >= 0 && K = L
+  lbl71(A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P) -> Com_1(lbl101(A,B,C,D,E - G,F,G,H,I,J,K,L,M,N,O,P)) :|: E >= G && 2*O + 1 >= L && O >= G && G >= 1 && E >= 0 && L >= E + 1 && I = E && K = L
+  lbl71(A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P) -> Com_1(lbl53(A,B,C,D,E,F,G,H,1 + I,J,K,L,I,N,O,P)) :|: 2*O + 1 >= L && O >= G && G >= 1 && E >= 0 && L >= E + 1 && I = E && K = L
+  lbl53(A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P) -> Com_1(lbl121(Q,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P)) :|: L >= 1 + E && G >= 1 && E >= 0 && O >= G && 2*O + 1 >= L && I = L && K = L && M + 1 = L
+  lbl53(A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P) -> Com_1(lbl71(A,B,Q,D,I,F,G,H,I,J,K,L,M,N,O,P)) :|: L >= M + 2 && L >= M + 1 && M >= E && G >= 1 && E >= 0 && O >= G && 2*O + 1 >= L && I = M + 1 && K = L
+  lbl21(A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P) -> Com_1(stop(A,B,C,D,E,F,O,H,I,J,K,L,M,N,O,P)) :|: L >= 2*O && 0 >= O && 2*O + 1 >= L && M = N && A = B && C = D && E = F && G = H && I = J && K = L
+  lbl21(A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P) -> Com_1(lbl71(A,B,Q,D,0,F,O,H,0,J,K,L,M,N,O,P)) :|: L >= 2*O && O >= 1 && 2*O + 1 >= L && M = N && A = B && C = D && E = F && G = H && I = J && K = L
+  start0(A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P) -> Com_1(start(B,B,D,D,F,F,H,H,J,J,L,L,N,N,P,P))
+)

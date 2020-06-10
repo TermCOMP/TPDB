@@ -1,0 +1,21 @@
+(GOAL COMPLEXITY)
+(STARTTERM (FUNCTIONSYMBOLS eval_speedSimpleMultiple_start))
+(VAR v_m v_n v_x_0 v_y_0)
+(RULES
+  eval_speedSimpleMultiple_start(v_m, v_n, v_x_0, v_y_0) -> Com_1(eval_speedSimpleMultiple_bb0_in(v_m, v_n, v_x_0, v_y_0))
+  eval_speedSimpleMultiple_bb0_in(v_m, v_n, v_x_0, v_y_0) -> Com_1(eval_speedSimpleMultiple_0(v_m, v_n, v_x_0, v_y_0))
+  eval_speedSimpleMultiple_0(v_m, v_n, v_x_0, v_y_0) -> Com_1(eval_speedSimpleMultiple_1(v_m, v_n, v_x_0, v_y_0))
+  eval_speedSimpleMultiple_1(v_m, v_n, v_x_0, v_y_0) -> Com_1(eval_speedSimpleMultiple_2(v_m, v_n, v_x_0, v_y_0))
+  eval_speedSimpleMultiple_2(v_m, v_n, v_x_0, v_y_0) -> Com_1(eval_speedSimpleMultiple_3(v_m, v_n, v_x_0, v_y_0))
+  eval_speedSimpleMultiple_3(v_m, v_n, v_x_0, v_y_0) -> Com_1(eval_speedSimpleMultiple_4(v_m, v_n, v_x_0, v_y_0))
+  eval_speedSimpleMultiple_4(v_m, v_n, v_x_0, v_y_0) -> Com_1(eval_speedSimpleMultiple_5(v_m, v_n, v_x_0, v_y_0))
+  eval_speedSimpleMultiple_5(v_m, v_n, v_x_0, v_y_0) -> Com_1(eval_speedSimpleMultiple_6(v_m, v_n, v_x_0, v_y_0))
+  eval_speedSimpleMultiple_6(v_m, v_n, v_x_0, v_y_0) -> Com_1(eval_speedSimpleMultiple_bb1_in(v_m, v_n, 0, 0))
+  eval_speedSimpleMultiple_bb1_in(v_m, v_n, v_x_0, v_y_0) -> Com_1(eval_speedSimpleMultiple_bb2_in(v_m, v_n, v_x_0, v_y_0)) :|: v_x_0 < v_n
+  eval_speedSimpleMultiple_bb1_in(v_m, v_n, v_x_0, v_y_0) -> Com_1(eval_speedSimpleMultiple_bb3_in(v_m, v_n, v_x_0, v_y_0)) :|: v_x_0 >= v_n
+  eval_speedSimpleMultiple_bb2_in(v_m, v_n, v_x_0, v_y_0) -> Com_1(eval_speedSimpleMultiple_bb1_in(v_m, v_n, v_x_0, v_y_0 + 1)) :|: v_y_0 < v_m && v_y_0 < v_m
+  eval_speedSimpleMultiple_bb2_in(v_m, v_n, v_x_0, v_y_0) -> Com_1(eval_speedSimpleMultiple_bb1_in(v_m, v_n, v_x_0 + 1, v_y_0 + 1)) :|: v_y_0 < v_m && v_y_0 >= v_m
+  eval_speedSimpleMultiple_bb2_in(v_m, v_n, v_x_0, v_y_0) -> Com_1(eval_speedSimpleMultiple_bb1_in(v_m, v_n, v_x_0, v_y_0)) :|: v_y_0 >= v_m && v_y_0 < v_m
+  eval_speedSimpleMultiple_bb2_in(v_m, v_n, v_x_0, v_y_0) -> Com_1(eval_speedSimpleMultiple_bb1_in(v_m, v_n, v_x_0 + 1, v_y_0)) :|: v_y_0 >= v_m && v_y_0 >= v_m
+  eval_speedSimpleMultiple_bb3_in(v_m, v_n, v_x_0, v_y_0) -> Com_1(eval_speedSimpleMultiple_stop(v_m, v_n, v_x_0, v_y_0))
+)

@@ -1,0 +1,23 @@
+(GOAL COMPLEXITY)
+(STARTTERM (FUNCTIONSYMBOLS eval_wcet1_start))
+(VAR nondef_0 v_1 v_i_0 v_j_0 v_j_3 v_n)
+(RULES
+  eval_wcet1_start(v_1, v_i_0, v_j_0, v_j_3, v_n) -> Com_1(eval_wcet1_bb0_in(v_1, v_i_0, v_j_0, v_j_3, v_n))
+  eval_wcet1_bb0_in(v_1, v_i_0, v_j_0, v_j_3, v_n) -> Com_1(eval_wcet1_0(v_1, v_i_0, v_j_0, v_j_3, v_n))
+  eval_wcet1_0(v_1, v_i_0, v_j_0, v_j_3, v_n) -> Com_1(eval_wcet1_1(v_1, v_i_0, v_j_0, v_j_3, v_n))
+  eval_wcet1_1(v_1, v_i_0, v_j_0, v_j_3, v_n) -> Com_1(eval_wcet1_2(v_1, v_i_0, v_j_0, v_j_3, v_n))
+  eval_wcet1_2(v_1, v_i_0, v_j_0, v_j_3, v_n) -> Com_1(eval_wcet1_3(v_1, v_i_0, v_j_0, v_j_3, v_n))
+  eval_wcet1_3(v_1, v_i_0, v_j_0, v_j_3, v_n) -> Com_1(eval_wcet1_bb1_in(v_1, v_n, 0, v_j_3, v_n)) :|: v_n >= 1
+  eval_wcet1_3(v_1, v_i_0, v_j_0, v_j_3, v_n) -> Com_1(eval_wcet1_bb5_in(v_1, v_i_0, v_j_0, v_j_3, v_n)) :|: v_n < 1
+  eval_wcet1_bb1_in(v_1, v_i_0, v_j_0, v_j_3, v_n) -> Com_1(eval_wcet1_4(v_1, v_i_0, v_j_0, v_j_3, v_n))
+  eval_wcet1_4(v_1, v_i_0, v_j_0, v_j_3, v_n) -> Com_1(eval_wcet1_5(nondef_0, v_i_0, v_j_0, v_j_3, v_n))
+  eval_wcet1_5(v_1, v_i_0, v_j_0, v_j_3, v_n) -> Com_1(eval_wcet1_bb2_in(v_1, v_i_0, v_j_0, v_j_3, v_n)) :|: v_1 > 0
+  eval_wcet1_5(v_1, v_i_0, v_j_0, v_j_3, v_n) -> Com_1(eval_wcet1_bb3_in(v_1, v_i_0, v_j_0, v_j_3, v_n)) :|: v_1 <= 0
+  eval_wcet1_bb2_in(v_1, v_i_0, v_j_0, v_j_3, v_n) -> Com_1(eval_wcet1_bb4_in(v_1, v_i_0, v_j_0, 0, v_n)) :|: v_j_0 + 1 >= v_n
+  eval_wcet1_bb2_in(v_1, v_i_0, v_j_0, v_j_3, v_n) -> Com_1(eval_wcet1_bb4_in(v_1, v_i_0, v_j_0, v_j_0 + 1, v_n)) :|: v_j_0 + 1 < v_n
+  eval_wcet1_bb3_in(v_1, v_i_0, v_j_0, v_j_3, v_n) -> Com_1(eval_wcet1_bb4_in(v_1, v_i_0, v_j_0, 0, v_n)) :|: v_j_0 - 1 <= 0
+  eval_wcet1_bb3_in(v_1, v_i_0, v_j_0, v_j_3, v_n) -> Com_1(eval_wcet1_bb4_in(v_1, v_i_0, v_j_0, v_j_0 - 1, v_n)) :|: v_j_0 - 1 > 0
+  eval_wcet1_bb4_in(v_1, v_i_0, v_j_0, v_j_3, v_n) -> Com_1(eval_wcet1_bb1_in(v_1, v_i_0 - 1, v_j_3, v_j_3, v_n)) :|: v_i_0 - 1 > 0
+  eval_wcet1_bb4_in(v_1, v_i_0, v_j_0, v_j_3, v_n) -> Com_1(eval_wcet1_bb5_in(v_1, v_i_0, v_j_0, v_j_3, v_n)) :|: v_i_0 - 1 <= 0
+  eval_wcet1_bb5_in(v_1, v_i_0, v_j_0, v_j_3, v_n) -> Com_1(eval_wcet1_stop(v_1, v_i_0, v_j_0, v_j_3, v_n))
+)

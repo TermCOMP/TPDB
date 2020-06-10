@@ -1,0 +1,33 @@
+(GOAL COMPLEXITY)
+(STARTTERM (FUNCTIONSYMBOLS eval_alain_start))
+(VAR v__01 v__02 v__03 v__1 v__14 v_15 v_9 v_n1 v_n2 v_x v_y v_z)
+(RULES
+  eval_alain_start(v__01, v__02, v__03, v__1, v__14, v_15, v_9, v_n1, v_n2, v_x, v_y, v_z) -> Com_1(eval_alain_bb0_in(v__01, v__02, v__03, v__1, v__14, v_15, v_9, v_n1, v_n2, v_x, v_y, v_z))
+  eval_alain_bb0_in(v__01, v__02, v__03, v__1, v__14, v_15, v_9, v_n1, v_n2, v_x, v_y, v_z) -> Com_1(eval_alain_0(v__01, v__02, v__03, v__1, v__14, v_15, v_9, v_n1, v_n2, v_x, v_y, v_z))
+  eval_alain_0(v__01, v__02, v__03, v__1, v__14, v_15, v_9, v_n1, v_n2, v_x, v_y, v_z) -> Com_1(eval_alain_1(v__01, v__02, v__03, v__1, v__14, v_15, v_9, v_n1, v_n2, v_x, v_y, v_z))
+  eval_alain_1(v__01, v__02, v__03, v__1, v__14, v_15, v_9, v_n1, v_n2, v_x, v_y, v_z) -> Com_1(eval_alain_2(v__01, v__02, v__03, v__1, v__14, v_15, v_9, v_n1, v_n2, v_x, v_y, v_z))
+  eval_alain_2(v__01, v__02, v__03, v__1, v__14, v_15, v_9, v_n1, v_n2, v_x, v_y, v_z) -> Com_1(eval_alain_3(v__01, v__02, v__03, v__1, v__14, v_15, v_9, v_n1, v_n2, v_x, v_y, v_z))
+  eval_alain_3(v__01, v__02, v__03, v__1, v__14, v_15, v_9, v_n1, v_n2, v_x, v_y, v_z) -> Com_1(eval_alain_4(v__01, v__02, v__03, v__1, v__14, v_15, v_9, v_n1, v_n2, v_x, v_y, v_z))
+  eval_alain_4(v__01, v__02, v__03, v__1, v__14, v_15, v_9, v_n1, v_n2, v_x, v_y, v_z) -> Com_1(eval_alain_5(v__01, v__02, v__03, v__1, v__14, v_15, v_9, v_n1, v_n2, v_x, v_y, v_z))
+  eval_alain_5(v__01, v__02, v__03, v__1, v__14, v_15, v_9, v_n1, v_n2, v_x, v_y, v_z) -> Com_1(eval_alain_6(v__01, v__02, v__03, v__1, v__14, v_15, v_9, v_n1, v_n2, v_x, v_y, v_z))
+  eval_alain_6(v__01, v__02, v__03, v__1, v__14, v_15, v_9, v_n1, v_n2, v_x, v_y, v_z) -> Com_1(eval_alain_bb7_in(v__01, v__02, v__03, v__1, v__14, v_15, v_9, v_n1, v_n2, v_x, v_y, v_z)) :|: v_n2 <= 2*v_y
+  eval_alain_6(v__01, v__02, v__03, v__1, v__14, v_15, v_9, v_n1, v_n2, v_x, v_y, v_z) -> Com_1(eval_alain_bb7_in(v__01, v__02, v__03, v__1, v__14, v_15, v_9, v_n1, v_n2, v_x, v_y, v_z)) :|: v_n2 <= v_z + v_y
+  eval_alain_6(v__01, v__02, v__03, v__1, v__14, v_15, v_9, v_n1, v_n2, v_x, v_y, v_z) -> Com_1(eval_alain_bb1_in(v__01, v__02, v__03, v__1, v__14, v_15, v_9, v_n1, v_n2, v_x, v_y, v_z)) :|: v_n2 > 2*v_y && v_n2 > v_z + v_y
+  eval_alain_bb1_in(v__01, v__02, v__03, v__1, v__14, v_15, v_9, v_n1, v_n2, v_x, v_y, v_z) -> Com_1(eval_alain_bb2_in(v_z, v_n1, v_n2, v__1, v__14, v_15, v_9, v_n1, v_n2, v_x, v_y, v_z)) :|: v_z >= 0 && v_x >= 0 && v_y >= 0 && v_n1 >= 0 && v_n2 >= 0
+  eval_alain_bb1_in(v__01, v__02, v__03, v__1, v__14, v_15, v_9, v_n1, v_n2, v_x, v_y, v_z) -> Com_1(eval_alain_bb7_in(v__01, v__02, v__03, v__1, v__14, v_15, v_9, v_n1, v_n2, v_x, v_y, v_z)) :|: v_z < 0
+  eval_alain_bb1_in(v__01, v__02, v__03, v__1, v__14, v_15, v_9, v_n1, v_n2, v_x, v_y, v_z) -> Com_1(eval_alain_bb7_in(v__01, v__02, v__03, v__1, v__14, v_15, v_9, v_n1, v_n2, v_x, v_y, v_z)) :|: v_x < 0
+  eval_alain_bb1_in(v__01, v__02, v__03, v__1, v__14, v_15, v_9, v_n1, v_n2, v_x, v_y, v_z) -> Com_1(eval_alain_bb7_in(v__01, v__02, v__03, v__1, v__14, v_15, v_9, v_n1, v_n2, v_x, v_y, v_z)) :|: v_y < 0
+  eval_alain_bb1_in(v__01, v__02, v__03, v__1, v__14, v_15, v_9, v_n1, v_n2, v_x, v_y, v_z) -> Com_1(eval_alain_bb7_in(v__01, v__02, v__03, v__1, v__14, v_15, v_9, v_n1, v_n2, v_x, v_y, v_z)) :|: v_n1 < 0
+  eval_alain_bb1_in(v__01, v__02, v__03, v__1, v__14, v_15, v_9, v_n1, v_n2, v_x, v_y, v_z) -> Com_1(eval_alain_bb7_in(v__01, v__02, v__03, v__1, v__14, v_15, v_9, v_n1, v_n2, v_x, v_y, v_z)) :|: v_n2 < 0
+  eval_alain_bb2_in(v__01, v__02, v__03, v__1, v__14, v_15, v_9, v_n1, v_n2, v_x, v_y, v_z) -> Com_1(eval_alain_bb3_in(v__01, v__02, v__03, v__1, v__14, v_15, v__02 - 1, v_n1, v_n2, v_x, v_y, v_z)) :|: v__02 - 1 >= 0
+  eval_alain_bb2_in(v__01, v__02, v__03, v__1, v__14, v_15, v_9, v_n1, v_n2, v_x, v_y, v_z) -> Com_1(eval_alain_bb7_in(v__01, v__02, v__03, v__1, v__14, v_15, v_9, v_n1, v_n2, v_x, v_y, v_z)) :|: v__02 - 1 < 0
+  eval_alain_bb3_in(v__01, v__02, v__03, v__1, v__14, v_15, v_9, v_n1, v_n2, v_x, v_y, v_z) -> Com_1(eval_alain_bb4_in(v__01, v__02, v__03, v__01, v__03, v_15, v_9, v_n1, v_n2, v_x, v_y, v_z))
+  eval_alain_bb4_in(v__01, v__02, v__03, v__1, v__14, v_15, v_9, v_n1, v_n2, v_x, v_y, v_z) -> Com_1(eval_alain_bb5_in(v__01, v__02, v__03, v__1, v__14, v_15, v_9, v_n1, v_n2, v_x, v_y, v_z)) :|: v__14 > 0
+  eval_alain_bb4_in(v__01, v__02, v__03, v__1, v__14, v_15, v_9, v_n1, v_n2, v_x, v_y, v_z) -> Com_1(eval_alain_bb6_in(v__01, v__02, v__03, v__1, v__14, v_15, v_9, v_n1, v_n2, v_x, v_y, v_z)) :|: v__14 <= 0
+  eval_alain_bb5_in(v__01, v__02, v__03, v__1, v__14, v_15, v_9, v_n1, v_n2, v_x, v_y, v_z) -> Com_1(eval_alain_bb4_in(v__01, v__02, v__03, v_y, v__14 - 1, v_15, v_9, v_n1, v_n2, v_x, v_y, v_z))
+  eval_alain_bb6_in(v__01, v__02, v__03, v__1, v__14, v_15, v_9, v_n1, v_n2, v_x, v_y, v_z) -> Com_1(eval_alain_17(v__01, v__02, v__03, v__1, v__14, v__1 + v_y, v_9, v_n1, v_n2, v_x, v_y, v_z))
+  eval_alain_17(v__01, v__02, v__03, v__1, v__14, v_15, v_9, v_n1, v_n2, v_x, v_y, v_z) -> Com_1(eval_alain_18(v__01, v__02, v__03, v__1, v__14, v_15, v_9, v_n1, v_n2, v_x, v_y, v_z))
+  eval_alain_18(v__01, v__02, v__03, v__1, v__14, v_15, v_9, v_n1, v_n2, v_x, v_y, v_z) -> Com_1(eval_alain_19(v__01, v__02, v__03, v__1, v__14, v_15, v_9, v_n1, v_n2, v_x, v_y, v_z))
+  eval_alain_19(v__01, v__02, v__03, v__1, v__14, v_15, v_9, v_n1, v_n2, v_x, v_y, v_z) -> Com_1(eval_alain_bb2_in(v_15, v_9, v_15, v__1, v__14, v_15, v_9, v_n1, v_n2, v_x, v_y, v_z))
+  eval_alain_bb7_in(v__01, v__02, v__03, v__1, v__14, v_15, v_9, v_n1, v_n2, v_x, v_y, v_z) -> Com_1(eval_alain_stop(v__01, v__02, v__03, v__1, v__14, v_15, v_9, v_n1, v_n2, v_x, v_y, v_z))
+)

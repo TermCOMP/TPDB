@@ -1,0 +1,4 @@
+(VAR x y)
+(RULES
+f(x, y) -> f(x, y + 1) :|: x > y
+)

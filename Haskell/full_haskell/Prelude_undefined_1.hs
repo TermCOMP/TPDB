@@ -1,0 +1,1 @@
+{-# htermination undefined :: a #-}

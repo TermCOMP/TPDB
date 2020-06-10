@@ -1,0 +1,1 @@
+{-# htermination isAlpha :: Char -> Bool #-}

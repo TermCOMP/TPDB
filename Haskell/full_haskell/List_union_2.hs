@@ -1,0 +1,2 @@
+{-# htermination union :: [()] -> [()] -> [()] #-}
+import List

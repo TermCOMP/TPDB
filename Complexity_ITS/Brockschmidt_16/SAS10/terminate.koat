@@ -1,0 +1,12 @@
+(GOAL COMPLEXITY)
+(STARTTERM (FUNCTIONSYMBOLS start0))
+(VAR A B C D E F G H)
+(RULES
+  start(A,B,C,D,E,F,G,H) -> Com_1(stop(A,B,C,D,E,F,G,H)) :|: A >= 101 && B = C && D = E && F = A && G = H
+  start(A,B,C,D,E,F,G,H) -> Com_1(stop(A,B,C,D,E,F,G,H)) :|: E >= C + 1 && B = C && D = E && F = A && G = H
+  start(A,B,C,D,E,F,G,H) -> Com_1(lbl72(A,B - 1,C,1 + F,E,D,F,H)) :|: C >= E && 100 >= A && B = C && D = E && F = A && G = H
+  lbl72(A,B,C,D,E,F,G,H) -> Com_1(stop(A,B,C,D,E,F,G,H)) :|: F >= 101 && 100 >= A && 101 + F + B >= A + E + C && B + 1 >= F && C >= 1 + B && C >= E && G + 1 + F + B = A + E + C && D + F + B = A + E + C
+  lbl72(A,B,C,D,E,F,G,H) -> Com_1(stop(A,B,C,D,E,F,G,H)) :|: A + E + C >= F + 2*B + 1 && 100 >= A && 101 + F + B >= A + E + C && B + 1 >= F && C >= 1 + B && C >= E && G + 1 + F + B = A + E + C && D + F + B = A + E + C
+  lbl72(A,B,C,D,E,F,G,H) -> Com_1(lbl72(A,B - 1,C,1 + F,E,D,F,H)) :|: 2*B + F >= A + E + C && 100 >= F && 100 >= A && 101 + F + B >= A + E + C && B + 1 >= F && C >= 1 + B && C >= E && G + 1 + F + B = A + E + C && D + F + B = A + E + C
+  start0(A,B,C,D,E,F,G,H) -> Com_1(start(A,C,C,E,E,A,H,H))
+)

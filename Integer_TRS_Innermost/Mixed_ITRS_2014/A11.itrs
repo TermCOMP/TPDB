@@ -1,0 +1,4 @@
+(VAR x y)
+(RULES
+f(TRUE, x, y) -> f(x > y, x+1, y+2)
+)

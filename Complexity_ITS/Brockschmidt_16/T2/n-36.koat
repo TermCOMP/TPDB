@@ -1,0 +1,15 @@
+(GOAL COMPLEXITY)
+(STARTTERM (FUNCTIONSYMBOLS f300))
+(VAR A B C D E F G H I J K L M N O P Q R S T U V W X Y Z A1 B1 C1 D1)
+(RULES
+  f300(A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U) -> Com_1(f1(V,W,X,Y,Z,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U))
+  f1(A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U) -> Com_1(f1(A,B,C,D,E,F,G,256,V,W,X,Y,Z,B1,C1,D1,Q,R,S,T,U)) :|: A1 >= 1 && F + 1 = G && H = 256
+  f1(A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U) -> Com_1(f1(A,B,C,D,E,F,G,H,V,W,X,Y,Z,B1,C1,P,Q,R,S,T,U)) :|: 0 >= H && F + 1 = G
+  f1(A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U) -> Com_1(f1(A,B,C,D,E,F,G,H,V,W,X,Y,Z,B1,C1,D1,256,R,S,T,U)) :|: A1 >= 1 && G >= 1 + F && G >= 2 + F && Q = 256
+  f1(A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U) -> Com_1(f1(A,B,C,D,E,F,G,H,V,W,X,Y,Z,B1,C1,P,Q,R,S,T,U)) :|: 0 >= Q && G >= 1 + F && G >= 2 + F
+  f1(A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U) -> Com_1(f2(A,B,C,D,E,F,G,H,V,W,K,L,M,N,O,P,Q,0,0,0,U)) :|: F >= G
+  f1(A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U) -> Com_1(f3(A,B,C,D,E,F,G,H,V,W,X,Y,Z,B1,C1,D1,Q,H,H,H,A1)) :|: H >= 1 && H >= 257 && F + 1 = G
+  f1(A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U) -> Com_1(f3(A,B,C,D,E,F,G,H,V,W,X,Y,Z,B1,C1,D1,Q,H,H,H,A1)) :|: H >= 1 && 255 >= H && F + 1 = G
+  f1(A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U) -> Com_1(f3(A,B,C,D,E,F,G,H,V,W,X,Y,Z,B1,C1,D1,Q,Q,Q,Q,A1)) :|: Q >= 1 && Q >= 257 && G >= 1 + F && G >= 2 + F
+  f1(A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U) -> Com_1(f3(A,B,C,D,E,F,G,H,V,W,X,Y,Z,B1,C1,D1,Q,Q,Q,Q,A1)) :|: Q >= 1 && 255 >= Q && G >= 1 + F && G >= 2 + F
+)

@@ -1,0 +1,1 @@
+{-# htermination isInfinite :: Float -> Bool #-}

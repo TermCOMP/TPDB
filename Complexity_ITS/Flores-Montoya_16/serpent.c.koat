@@ -1,0 +1,31 @@
+(GOAL COMPLEXITY)
+(STARTTERM (FUNCTIONSYMBOLS eval_serpent_start))
+(VAR nondef_0 nondef_1 v_3 v_6 v_8 v_n v_x_0 v_y_0 v_y_1 v_y_2)
+(RULES
+  eval_serpent_start(v_3, v_6, v_8, v_n, v_x_0, v_y_0, v_y_1, v_y_2) -> Com_1(eval_serpent_bb0_in(v_3, v_6, v_8, v_n, v_x_0, v_y_0, v_y_1, v_y_2))
+  eval_serpent_bb0_in(v_3, v_6, v_8, v_n, v_x_0, v_y_0, v_y_1, v_y_2) -> Com_1(eval_serpent_0(v_3, v_6, v_8, v_n, v_x_0, v_y_0, v_y_1, v_y_2))
+  eval_serpent_0(v_3, v_6, v_8, v_n, v_x_0, v_y_0, v_y_1, v_y_2) -> Com_1(eval_serpent_1(v_3, v_6, v_8, v_n, v_x_0, v_y_0, v_y_1, v_y_2))
+  eval_serpent_1(v_3, v_6, v_8, v_n, v_x_0, v_y_0, v_y_1, v_y_2) -> Com_1(eval_serpent_bb7_in(v_3, v_6, v_8, v_n, v_x_0, v_y_0, v_y_1, v_y_2)) :|: v_n <= 0
+  eval_serpent_1(v_3, v_6, v_8, v_n, v_x_0, v_y_0, v_y_1, v_y_2) -> Com_1(eval_serpent__critedge1_in(v_3, v_6, v_8, v_n, v_n, v_n, v_y_1, v_y_2)) :|: v_n > 0
+  eval_serpent__critedge1_in(v_3, v_6, v_8, v_n, v_x_0, v_y_0, v_y_1, v_y_2) -> Com_1(eval_serpent_bb1_in(v_3, v_6, v_8, v_n, v_x_0, v_y_0, v_y_0, v_y_2)) :|: v_x_0 >= 0
+  eval_serpent__critedge1_in(v_3, v_6, v_8, v_n, v_x_0, v_y_0, v_y_1, v_y_2) -> Com_1(eval_serpent_bb7_in(v_3, v_6, v_8, v_n, v_x_0, v_y_0, v_y_1, v_y_2)) :|: v_x_0 < 0
+  eval_serpent_bb1_in(v_3, v_6, v_8, v_n, v_x_0, v_y_0, v_y_1, v_y_2) -> Com_1(eval_serpent_bb2_in(v_3, v_6, v_8, v_n, v_x_0, v_y_0, v_y_1, v_y_2)) :|: v_y_1 >= 0
+  eval_serpent_bb1_in(v_3, v_6, v_8, v_n, v_x_0, v_y_0, v_y_1, v_y_2) -> Com_1(eval_serpent__critedge_in(v_3, v_6, v_8, v_n, v_x_0, v_y_0, v_y_1, v_y_2)) :|: v_y_1 < 0
+  eval_serpent_bb2_in(v_3, v_6, v_8, v_n, v_x_0, v_y_0, v_y_1, v_y_2) -> Com_1(eval_serpent_2(v_3, v_6, v_8, v_n, v_x_0, v_y_0, v_y_1, v_y_2))
+  eval_serpent_2(v_3, v_6, v_8, v_n, v_x_0, v_y_0, v_y_1, v_y_2) -> Com_1(eval_serpent_3(nondef_0, v_6, v_8, v_n, v_x_0, v_y_0, v_y_1, v_y_2))
+  eval_serpent_3(v_3, v_6, v_8, v_n, v_x_0, v_y_0, v_y_1, v_y_2) -> Com_1(eval_serpent_bb3_in(v_3, v_6, v_8, v_n, v_x_0, v_y_0, v_y_1, v_y_2)) :|: v_3 > 0
+  eval_serpent_3(v_3, v_6, v_8, v_n, v_x_0, v_y_0, v_y_1, v_y_2) -> Com_1(eval_serpent__critedge_in(v_3, v_6, v_8, v_n, v_x_0, v_y_0, v_y_1, v_y_2)) :|: v_3 <= 0
+  eval_serpent_bb3_in(v_3, v_6, v_8, v_n, v_x_0, v_y_0, v_y_1, v_y_2) -> Com_1(eval_serpent_bb1_in(v_3, v_6, v_8, v_n, v_x_0, v_y_0, v_y_1 - 1, v_y_2))
+  eval_serpent__critedge_in(v_3, v_6, v_8, v_n, v_x_0, v_y_0, v_y_1, v_y_2) -> Com_1(eval_serpent_7(v_3, v_x_0 - 1, v_8, v_n, v_x_0, v_y_0, v_y_1, v_y_2))
+  eval_serpent_7(v_3, v_6, v_8, v_n, v_x_0, v_y_0, v_y_1, v_y_2) -> Com_1(eval_serpent_8(v_3, v_6, v_8, v_n, v_x_0, v_y_0, v_y_1, v_y_2))
+  eval_serpent_8(v_3, v_6, v_8, v_n, v_x_0, v_y_0, v_y_1, v_y_2) -> Com_1(eval_serpent_9(v_3, v_6, v_8, v_n, v_x_0, v_y_0, v_y_1, v_y_2))
+  eval_serpent_9(v_3, v_6, v_8, v_n, v_x_0, v_y_0, v_y_1, v_y_2) -> Com_1(eval_serpent_bb4_in(v_3, v_6, v_8, v_n, v_x_0, v_y_0, v_y_1, v_y_1))
+  eval_serpent_bb4_in(v_3, v_6, v_8, v_n, v_x_0, v_y_0, v_y_1, v_y_2) -> Com_1(eval_serpent_bb5_in(v_3, v_6, v_8, v_n, v_x_0, v_y_0, v_y_1, v_y_2)) :|: v_y_2 <= v_n
+  eval_serpent_bb4_in(v_3, v_6, v_8, v_n, v_x_0, v_y_0, v_y_1, v_y_2) -> Com_1(eval_serpent__critedge1_in(v_3, v_6, v_8, v_n, v_6, v_y_2, v_y_1, v_y_2)) :|: v_y_2 > v_n
+  eval_serpent_bb5_in(v_3, v_6, v_8, v_n, v_x_0, v_y_0, v_y_1, v_y_2) -> Com_1(eval_serpent_10(v_3, v_6, v_8, v_n, v_x_0, v_y_0, v_y_1, v_y_2))
+  eval_serpent_10(v_3, v_6, v_8, v_n, v_x_0, v_y_0, v_y_1, v_y_2) -> Com_1(eval_serpent_11(v_3, v_6, nondef_1, v_n, v_x_0, v_y_0, v_y_1, v_y_2))
+  eval_serpent_11(v_3, v_6, v_8, v_n, v_x_0, v_y_0, v_y_1, v_y_2) -> Com_1(eval_serpent_bb6_in(v_3, v_6, v_8, v_n, v_x_0, v_y_0, v_y_1, v_y_2)) :|: v_8 > 0
+  eval_serpent_11(v_3, v_6, v_8, v_n, v_x_0, v_y_0, v_y_1, v_y_2) -> Com_1(eval_serpent__critedge1_in(v_3, v_6, v_8, v_n, v_6, v_y_2, v_y_1, v_y_2)) :|: v_8 <= 0
+  eval_serpent_bb6_in(v_3, v_6, v_8, v_n, v_x_0, v_y_0, v_y_1, v_y_2) -> Com_1(eval_serpent_bb4_in(v_3, v_6, v_8, v_n, v_x_0, v_y_0, v_y_1, v_y_2 + 1))
+  eval_serpent_bb7_in(v_3, v_6, v_8, v_n, v_x_0, v_y_0, v_y_1, v_y_2) -> Com_1(eval_serpent_stop(v_3, v_6, v_8, v_n, v_x_0, v_y_0, v_y_1, v_y_2))
+)

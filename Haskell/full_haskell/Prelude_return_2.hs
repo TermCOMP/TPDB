@@ -1,0 +1,1 @@
+{-# htermination return :: a -> [] a #-}

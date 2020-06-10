@@ -1,0 +1,1 @@
+{-# htermination index :: ((),()) -> () -> Int #-}

@@ -1,0 +1,25 @@
+(GOAL COMPLEXITY)
+(STARTTERM (FUNCTIONSYMBOLS evalEx5start))
+(VAR A B C D E F)
+(RULES
+  evalEx5start(A,B,C,D,E) -> Com_1(evalEx5entryin(A,B,C,D,E))
+  evalEx5entryin(A,B,C,D,E) -> Com_1(evalEx5bb6in(0,A,C,D,E))
+  evalEx5bb6in(A,B,C,D,E) -> Com_1(evalEx5bb3in(A,B,0,B,E)) :|: B >= A + 1
+  evalEx5bb6in(A,B,C,D,E) -> Com_1(evalEx5returnin(A,B,C,D,E)) :|: A >= B
+  evalEx5bb3in(A,B,C,D,E) -> Com_1(evalEx5bb1in(A,B,C,D,E)) :|: 0 >= F + 1
+  evalEx5bb3in(A,B,C,D,E) -> Com_1(evalEx5bb1in(A,B,C,D,E)) :|: F >= 1
+  evalEx5bb3in(A,B,C,D,E) -> Com_1(evalEx5bb4in(A,B,C,D,E))
+  evalEx5bb1in(A,B,C,D,E) -> Com_1(evalEx5bb2in(A,B,C,D,D - 1)) :|: 0 >= F + 1
+  evalEx5bb1in(A,B,C,D,E) -> Com_1(evalEx5bb2in(A,B,C,D,D - 1)) :|: 0 >= F + 1 && F >= 1
+  evalEx5bb1in(A,B,C,D,E) -> Com_1(evalEx5bb2in(A,B,C,D,D - 1)) :|: F >= 1
+  evalEx5bb1in(A,B,C,D,E) -> Com_1(evalEx5bb3in(A,B,C,D - 1,E)) :|: 0 >= 1
+  evalEx5bb1in(A,B,C,D,E) -> Com_1(evalEx5bb3in(A,B,C,D - 1,E)) :|: 0 >= 1
+  evalEx5bb1in(A,B,C,D,E) -> Com_1(evalEx5bb2in(A,B,C,D,D)) :|: 0 >= 1
+  evalEx5bb1in(A,B,C,D,E) -> Com_1(evalEx5bb2in(A,B,C,D,D)) :|: 0 >= 1
+  evalEx5bb1in(A,B,C,D,E) -> Com_1(evalEx5bb3in(A,B,C,D,E))
+  evalEx5bb2in(A,B,C,D,E) -> Com_1(evalEx5bb3in(A,B,1,E,E))
+  evalEx5bb4in(A,B,C,D,E) -> Com_1(evalEx5bb6in(A + 1,D,C,D,E)) :|: C = 0
+  evalEx5bb4in(A,B,C,D,E) -> Com_1(evalEx5bb6in(A,D,C,D,E)) :|: 0 >= C + 1
+  evalEx5bb4in(A,B,C,D,E) -> Com_1(evalEx5bb6in(A,D,C,D,E)) :|: C >= 1
+  evalEx5returnin(A,B,C,D,E) -> Com_1(evalEx5stop(A,B,C,D,E))
+)

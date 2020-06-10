@@ -1,0 +1,1 @@
+{-# htermination isNegativeZero :: Float -> Bool #-}

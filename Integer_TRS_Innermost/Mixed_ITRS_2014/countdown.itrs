@@ -1,0 +1,4 @@
+(VAR x)
+(RULES
+cd(TRUE, x) -> cd (x > 0, x - 1)
+)

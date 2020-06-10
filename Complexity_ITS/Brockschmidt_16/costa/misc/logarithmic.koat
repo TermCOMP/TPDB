@@ -1,0 +1,9 @@
+(GOAL COMPLEXITY)
+(STARTTERM (FUNCTIONSYMBOLS start))
+(VAR A B)
+(RULES
+  start(A) -> Com_1(a(A)) :|: A >= 1
+  start(A) -> Com_1(a(A)) :|: A >= 2
+  start(A) -> Com_1(a(A)) :|: A >= 4
+  a(A) -> Com_1(a(A*B)) :|: 1 >= 2*B && 3*B >= 2 && A >= 2
+)

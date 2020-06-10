@@ -1,0 +1,1 @@
+{-# htermination floor :: Float -> Int #-}

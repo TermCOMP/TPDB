@@ -1,0 +1,17 @@
+(GOAL COMPLEXITY)
+(STARTTERM (FUNCTIONSYMBOLS evalNestedMultiplestart))
+(VAR A B C D E F)
+(RULES
+  evalNestedMultiplestart(A,B,C,D,E) -> Com_1(evalNestedMultipleentryin(A,B,C,D,E))
+  evalNestedMultipleentryin(A,B,C,D,E) -> Com_1(evalNestedMultiplebb5in(B,A,D,C,E))
+  evalNestedMultiplebb5in(A,B,C,D,E) -> Com_1(evalNestedMultiplebb2in(A,B,C,D,D)) :|: A >= B + 1
+  evalNestedMultiplebb5in(A,B,C,D,E) -> Com_1(evalNestedMultiplereturnin(A,B,C,D,E)) :|: B >= A
+  evalNestedMultiplebb2in(A,B,C,D,E) -> Com_1(evalNestedMultiplebb4in(A,B,C,D,E)) :|: E >= C
+  evalNestedMultiplebb2in(A,B,C,D,E) -> Com_1(evalNestedMultiplebb3in(A,B,C,D,E)) :|: C >= E + 1
+  evalNestedMultiplebb3in(A,B,C,D,E) -> Com_1(evalNestedMultiplebb1in(A,B,C,D,E)) :|: 0 >= F + 1
+  evalNestedMultiplebb3in(A,B,C,D,E) -> Com_1(evalNestedMultiplebb1in(A,B,C,D,E)) :|: F >= 1
+  evalNestedMultiplebb3in(A,B,C,D,E) -> Com_1(evalNestedMultiplebb4in(A,B,C,D,E))
+  evalNestedMultiplebb1in(A,B,C,D,E) -> Com_1(evalNestedMultiplebb2in(A,B,C,D,E + 1))
+  evalNestedMultiplebb4in(A,B,C,D,E) -> Com_1(evalNestedMultiplebb5in(A,B + 1,C,E,E))
+  evalNestedMultiplereturnin(A,B,C,D,E) -> Com_1(evalNestedMultiplestop(A,B,C,D,E))
+)

@@ -1,0 +1,1 @@
+{-# htermination reverse :: [a] -> [a] #-}

@@ -1,0 +1,5 @@
+# Podelski/Rybalchenko: A Complete Method for the Synthesis of Linear Ranking Functions
+(VAR i j nat pos)
+(RULES
+eval(i, j) -> eval(i - nat, j + pos) :|: i - j >= 1 && nat >= 0 && pos > 0
+)

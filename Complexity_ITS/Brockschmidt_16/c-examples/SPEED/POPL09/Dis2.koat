@@ -1,0 +1,14 @@
+(GOAL COMPLEXITY)
+(STARTTERM (FUNCTIONSYMBOLS evalDis2start))
+(VAR A B C)
+(RULES
+  evalDis2start(A,B,C) -> Com_1(evalDis2entryin(A,B,C))
+  evalDis2entryin(A,B,C) -> Com_1(evalDis2bb3in(B,C,A))
+  evalDis2bb3in(A,B,C) -> Com_1(evalDis2bbin(A,B,C)) :|: A >= C + 1
+  evalDis2bb3in(A,B,C) -> Com_1(evalDis2returnin(A,B,C)) :|: C >= A
+  evalDis2bbin(A,B,C) -> Com_1(evalDis2bb1in(A,B,C)) :|: B >= C + 1
+  evalDis2bbin(A,B,C) -> Com_1(evalDis2bb2in(A,B,C)) :|: C >= B
+  evalDis2bb1in(A,B,C) -> Com_1(evalDis2bb3in(A,B,C + 1))
+  evalDis2bb2in(A,B,C) -> Com_1(evalDis2bb3in(A,B + 1,C))
+  evalDis2returnin(A,B,C) -> Com_1(evalDis2stop(A,B,C))
+)

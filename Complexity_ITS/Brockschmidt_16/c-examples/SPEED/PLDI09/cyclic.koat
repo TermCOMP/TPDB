@@ -1,0 +1,16 @@
+(GOAL COMPLEXITY)
+(STARTTERM (FUNCTIONSYMBOLS evalcyclicstart))
+(VAR A B C D)
+(RULES
+  evalcyclicstart(A,B,C) -> Com_1(evalcyclicentryin(A,B,C))
+  evalcyclicentryin(A,B,C) -> Com_1(evalcyclicbb3in(A,B,A + 1)) :|: A >= 0 && B >= A + 1
+  evalcyclicbb3in(A,B,C) -> Com_1(evalcyclicreturnin(A,B,C)) :|: C = A
+  evalcyclicbb3in(A,B,C) -> Com_1(evalcyclicbb4in(A,B,C)) :|: A >= C + 1
+  evalcyclicbb3in(A,B,C) -> Com_1(evalcyclicbb4in(A,B,C)) :|: C >= A + 1
+  evalcyclicbb4in(A,B,C) -> Com_1(evalcyclicbbin(A,B,C)) :|: 0 >= D + 1
+  evalcyclicbb4in(A,B,C) -> Com_1(evalcyclicbbin(A,B,C)) :|: D >= 1
+  evalcyclicbb4in(A,B,C) -> Com_1(evalcyclicreturnin(A,B,C))
+  evalcyclicbbin(A,B,C) -> Com_1(evalcyclicbb3in(A,B,C + 1)) :|: B >= C
+  evalcyclicbbin(A,B,C) -> Com_1(evalcyclicbb3in(A,B,0)) :|: C >= B + 1
+  evalcyclicreturnin(A,B,C) -> Com_1(evalcyclicstop(A,B,C))
+)

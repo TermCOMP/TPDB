@@ -1,0 +1,5 @@
+(VAR x y z)
+(RULES
+f(x, y, z) -> f(x, y + 1, z) :|: x > y && x > z
+f(x, y, z) -> f(x, y, z + 1) :|: x > y && x > z
+)

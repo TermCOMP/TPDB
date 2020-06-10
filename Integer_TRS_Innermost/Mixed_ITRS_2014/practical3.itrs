@@ -1,0 +1,69 @@
+# Colon/Sipma: Practical Methods for Proving Program Termination
+(VAR n i j k l t h m p q r up)
+(RULES
+eval_0(n, i, j, k, l, t, h, m, p, q, r, up) -> eval_1(n, i, j, k, l, t, h, m, p, q, r, TRUE) :|: n > 0
+eval_1(n, i, j, k, l, t, h, m, p, q, r, up) -> eval_2(n, i, j, k, l, t, h, m, 1, q, r, up)
+eval_2(n, i, j, k, l, t, h, m, p, q, r, up) -> eval_3(n, i, j, k, l, t, h, m, p, q, r, up)
+eval_3(n, i, j, k, l, t, h, m, p, q, r, up) -> eval_4(n, i, j, k, l, t, 1, m, p, q, r, up)
+eval_4(n, i, j, k, l, t, h, m, p, q, r, up) -> eval_5(n, i, j, k, l, t, h, n, p, q, r, up)
+eval_5(n, i, j, k, l, t, h, m, p, q, r, up) -> eval_6(n, i, j, k, l, t, h, m, p, q, r, up) :|: up
+eval_6(n, i, j, k, l, t, h, m, p, q, r, up) -> eval_7(n, 1, j, k, l, t, h, m, p, q, r, up)
+eval_7(n, i, j, k, l, t, h, m, p, q, r, up) -> eval_8(n, i, n, k, l, t, h, m, p, q, r, up)
+eval_8(n, i, j, k, l, t, h, m, p, q, r, up) -> eval_9(n, i, j, n + 1, l, t, h, n, p, q, r, up)
+eval_9(n, i, j, k, l, t, h, m, p, q, r, up) -> eval_14(n, i, j, k, 2 * n, t, h, n, p, q, r, up)
+eval_5(n, i, j, k, l, t, h, m, p, q, r, up) -> eval_10(n, i, j, k, l, t, h, m, p, q, r, up) :|: !up
+eval_10(n, i, j, k, l, t, h, m, p, q, r, up) -> eval_11(n, i, j, 1, l, t, h, m, p, q, r, up)
+eval_11(n, i, j, k, l, t, h, m, p, q, r, up) -> eval_12(n, i, j, k, n, t, h, m, p, q, r, up)
+eval_12(n, i, j, k, l, t, h, m, p, q, r, up) -> eval_13(n, n + 1, j, k, l, t, h, m, p, q, r, up)
+eval_13(n, i, j, k, l, t, h, m, p, q, r, up) -> eval_14(n, i, 2 * n, k, l, t, h, m, p, q, r, up)
+eval_14(n, i, j, k, l, t, h, m, p, q, r, up) -> eval_15(n, i, j, k, l, t, h, m, p, q, r, up)
+eval_15(n, i, j, k, l, t, h, m, p, q, r, up) -> eval_16(n, i, j, k, l, t, h, m, p, q, r, up) :|: m >= p
+eval_16(n, i, j, k, l, t, h, m, p, q, r, up) -> eval_18(n, i, j, k, l, t, h, m, p, p, r, up)
+eval_15(n, i, j, k, l, t, h, m, p, q, r, up) -> eval_17(n, i, j, k, l, t, h, m, p, q, r, up) :|: m < p
+eval_17(n, i, j, k, l, t, h, m, p, q, r, up) -> eval_18(n, i, j, k, l, t, h, m, p, m, r, up)
+eval_18(n, i, j, k, l, t, h, m, p, q, r, up) -> eval_19(n, i, j, k, l, t, h, m - q, p, q, r, up)
+eval_19(n, i, j, k, l, t, h, m, p, q, r, up) -> eval_20(n, i, j, k, l, t, h, m, p, q, r, up) :|: m >= p
+eval_20(n, i, j, k, l, t, h, m, p, q, r, up) -> eval_22(n, i, j, k, l, t, h, m, p, q, p, up)
+eval_19(n, i, j, k, l, t, h, m, p, q, r, up) -> eval_21(n, i, j, k, l, t, h, m, p, q, r, up) :|: m < p
+eval_21(n, i, j, k, l, t, h, m, p, q, r, up) -> eval_22(n, i, j, k, l, t, h, m, p, q, m, up)
+eval_22(n, i, j, k, l, t, h, m, p, q, r, up) -> eval_23(n, i, j, k, l, t, h, m - r, p, q, r, up)
+eval_23(n, i, j, k, l, t, h, m, p, q, r, up) -> eval_24(n, i, j, k, l, t, h, m, p, q, r, up) :|: q > 0 && r > 0
+eval_24(n, i, j, k, l, t, h, m, p, q, r, up) -> eval_25(n, i, j, k, l, t, h, m, p, q, r, up)
+eval_25(n, i, j, k, l, t, h, m, p, q, r, up) -> eval_26(n, i, j, k, l, t, h, m, p, q, r, up)
+eval_26(n, i, j, k, l, t, h, m, p, q, r, up) -> eval_27(n, i, j, k + h, l, t, h, m, p, q, r, up)
+eval_27(n, i, j, k, l, t, h, m, p, q, r, up) -> eval_28(n, i + 1, j, k, l, t, h, m, p, q, r, up)
+eval_28(n, i, j, k, l, t, h, m, p, q, r, up) -> eval_23(n, i, j, k, l, t, h, m, p, q - 1, r, up)
+eval_24(n, i, j, k, l, t, h, m, p, q, r, up) -> eval_29(n, i, j, k, l, t, h, m, p, q, r, up)
+eval_29(n, i, j, k, l, t, h, m, p, q, r, up) -> eval_30(n, i, j, k, l, t, h, m, p, q, r, up)
+eval_30(n, i, j, k, l, t, h, m, p, q, r, up) -> eval_31(n, i, j, k + h, l, t, h, m, p, q, r, up)
+eval_31(n, i, j, k, l, t, h, m, p, q, r, up) -> eval_32(n, i, j - 1, k, l, t, h, m, p, q, r, up)
+eval_32(n, i, j, k, l, t, h, m, p, q, r, up) -> eval_23(n, i, j, k, l, t, h, m, p, q, r - 1, up)
+eval_23(n, i, j, k, l, t, h, m, p, q, r, up) -> eval_33(n, i, j, k, l, t, h, m, p, q, r, up) :|: q <= 0 || r <= 0
+eval_33(n, i, j, k, l, t, h, m, p, q, r, up) -> eval_34(n, i, j, k, l, t, h, m, p, q, r, up) :|: r > 0
+eval_34(n, i, j, k, l, t, h, m, p, q, r, up) -> eval_35(n, i, j, k, l, t, h, m, p, q, r, up)
+eval_35(n, i, j, k, l, t, h, m, p, q, r, up) -> eval_36(n, i, j, k + h, l, t, h, m, p, q, r, up)
+eval_36(n, i, j, k, l, t, h, m, p, q, r, up) -> eval_37(n, i, j - 1, k, l, t, h, m, p, q, r, up)
+eval_37(n, i, j, k, l, t, h, m, p, q, r, up) -> eval_33(n, i, j, k, l, t, h, m, p, q, r - 1, up)
+eval_33(n, i, j, k, l, t, h, m, p, q, r, up) -> eval_38(n, i, j, k, l, t, h, m, p, q, r, up) :|: r <= 0
+eval_38(n, i, j, k, l, t, h, m, p, q, r, up) -> eval_39(n, i, j, k, l, t, h, m, p, q, r, up) :|: q > 0
+eval_39(n, i, j, k, l, t, h, m, p, q, r, up) -> eval_40(n, i, j, k, l, t, h, m, p, q, r, up)
+eval_40(n, i, j, k, l, t, h, m, p, q, r, up) -> eval_41(n, i, j, k + h, l, t, h, m, p, q, r, up)
+eval_41(n, i, j, k, l, t, h, m, p, q, r, up) -> eval_42(n, i + 1, j, k, l, t, h, m, p, q, r, up)
+eval_42(n, i, j, k, l, t, h, m, p, q, r, up) -> eval_38(n, i, j, k, l, t, h, m, p, q - 1, r, up)
+eval_38(n, i, j, k, l, t, h, m, p, q, r, up) -> eval_43(n, i, j, k, l, t, h, m, p, q, r, up) :|: q <= 0
+eval_43(n, i, j, k, l, t, h, m, p, q, r, up) -> eval_44(n, i, j, k, l, t, -h, m, p, q, r, up)
+eval_44(n, i, j, k, l, t, h, m, p, q, r, up) -> eval_45(n, i, j, k, l, k, h, m, p, q, r, up)
+eval_45(n, i, j, k, l, t, h, m, p, q, r, up) -> eval_46(n, i, j, l, l, t, h, m, p, q, r, up)
+eval_46(n, i, j, k, l, t, h, m, p, q, r, up) -> eval_47(n, i, j, k, t, t, h, m, p, q, r, up) :|: m <= 0
+eval_46(n, i, j, k, l, t, h, m, p, q, r, up) -> eval_14(n, i, j, k, l, t, h, m, p, q, r, up) :|: m > 0
+eval_47(n, i, j, k, l, t, h, m, p, q, r, up) -> eval_48(n, i, j, k, l, t, h, m, p, q, r, !up)
+eval_48(n, i, j, k, l, t, h, m, p, q, r, up) -> eval_49(n, i, j, k, l, t, h, m, 2 * p, q, r, up) :|: p >= n
+eval_48(n, i, j, k, l, t, h, m, p, q, r, up) -> eval_2(n, i, j, k, l, t, h, m, p, q, r, up) :|: p < n
+eval_49(n, i, j, k, l, t, h, m, p, q, r, up) -> eval_50(n, i, j, k, l, t, h, m, p, q, r, up) :|: !up
+eval_50(n, i, j, k, l, t, h, m, p, q, r, up) -> eval_51(n, 1, j, k, l, t, h, m, p, q, r, up)
+eval_51(n, i, j, k, l, t, h, m, p, q, r, up) -> eval_52(n, i, j, k, l, t, h, m, p, q, r, up) :|: i <= n
+eval_52(n, i, j, k, l, t, h, m, p, q, r, up) -> eval_53(n, i, j, k, l, t, h, m, p, q, r, up)
+eval_53(n, i, j, k, l, t, h, m, p, q, r, up) -> eval_51(n, i + 1, j, k, l, t, h, m, p, q, r, up)
+eval_51(n, i, j, k, l, t, h, m, p, q, r, up) -> eval_end(n, i, j, k, l, t, h, m, p, q, r, up) :|: i > n
+eval_49(n, i, j, k, l, t, h, m, p, q, r, up) -> eval_end(n, i, j, k, l, t, h, m, p, q, r, up) :|: up
+)

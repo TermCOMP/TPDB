@@ -1,0 +1,24 @@
+(GOAL COMPLEXITY)
+(STARTTERM (FUNCTIONSYMBOLS evalrealshellsortstart))
+(VAR A B C D E F)
+(RULES
+  evalrealshellsortstart(A,B,C,D,E) -> Com_1(evalrealshellsortentryin(A,B,C,D,E))
+  evalrealshellsortentryin(A,B,C,D,E) -> Com_1(evalrealshellsortbb8in(A,0,C,D,E)) :|: A = 0
+  evalrealshellsortentryin(A,B,C,D,E) -> Com_1(evalrealshellsortbb8in(A,F,C,D,E)) :|: A >= 1 && F >= 0 && A >= 2*F && 1 + 2*F >= A
+  evalrealshellsortentryin(A,B,C,D,E) -> Com_1(evalrealshellsortbb8in(A,F,C,D,E)) :|: 0 >= A + 1 && 0 >= F && 2*F >= A && 1 + A >= 2*F
+  evalrealshellsortbb8in(A,B,C,D,E) -> Com_1(evalrealshellsortbb6in(A,B,0,D,E)) :|: B >= 1
+  evalrealshellsortbb8in(A,B,C,D,E) -> Com_1(evalrealshellsortreturnin(A,B,C,D,E)) :|: 0 >= B
+  evalrealshellsortbb6in(A,B,C,D,E) -> Com_1(evalrealshellsortbb1in(A,B,C,D,E)) :|: A >= C + 1
+  evalrealshellsortbb6in(A,B,C,D,E) -> Com_1(evalrealshellsortbb7in(A,B,C,D,E)) :|: C >= A
+  evalrealshellsortbb1in(A,B,C,D,E) -> Com_1(evalrealshellsortbb3in(A,B,C,F,C))
+  evalrealshellsortbb3in(A,B,C,D,E) -> Com_1(evalrealshellsortbb5in(A,B,C,D,E)) :|: B >= E + 1
+  evalrealshellsortbb3in(A,B,C,D,E) -> Com_1(evalrealshellsortbb4in(A,B,C,D,E)) :|: E >= B
+  evalrealshellsortbb4in(A,B,C,D,E) -> Com_1(evalrealshellsortbb2in(A,B,C,D,E)) :|: F >= D + 1
+  evalrealshellsortbb4in(A,B,C,D,E) -> Com_1(evalrealshellsortbb5in(A,B,C,D,E)) :|: D >= F
+  evalrealshellsortbb2in(A,B,C,D,E) -> Com_1(evalrealshellsortbb3in(A,B,C,D,E - B))
+  evalrealshellsortbb5in(A,B,C,D,E) -> Com_1(evalrealshellsortbb6in(A,B,C + 1,D,E))
+  evalrealshellsortbb7in(A,B,C,D,E) -> Com_1(evalrealshellsortbb8in(A,0,C,D,E)) :|: B = 0
+  evalrealshellsortbb7in(A,B,C,D,E) -> Com_1(evalrealshellsortbb8in(A,F,C,D,E)) :|: B >= 1 && F >= 0 && B >= 2*F && 1 + 2*F >= B
+  evalrealshellsortbb7in(A,B,C,D,E) -> Com_1(evalrealshellsortbb8in(A,F,C,D,E)) :|: 0 >= B + 1 && 0 >= F && 2*F >= B && 1 + B >= 2*F
+  evalrealshellsortreturnin(A,B,C,D,E) -> Com_1(evalrealshellsortstop(A,B,C,D,E))
+)

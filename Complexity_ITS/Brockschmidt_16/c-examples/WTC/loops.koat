@@ -1,0 +1,17 @@
+(GOAL COMPLEXITY)
+(STARTTERM (FUNCTIONSYMBOLS evalloopsstart))
+(VAR A B C)
+(RULES
+  evalloopsstart(A,B) -> Com_1(evalloopsentryin(A,B))
+  evalloopsentryin(A,B) -> Com_1(evalloopsbb6in(A,B)) :|: A >= 0
+  evalloopsentryin(A,B) -> Com_1(evalloopsreturnin(A,B)) :|: 0 >= A + 1
+  evalloopsbb6in(A,B) -> Com_1(evalloopsbb1in(A,B)) :|: A >= 0
+  evalloopsbb6in(A,B) -> Com_1(evalloopsreturnin(A,B)) :|: 0 >= A + 1
+  evalloopsbb1in(A,B) -> Com_1(evalloopsbb4in(A,1)) :|: A >= 2
+  evalloopsbb1in(A,B) -> Com_1(evalloopsbb5in(A,C)) :|: 1 >= A
+  evalloopsbb4in(A,B) -> Com_1(evalloopsbb3in(A,B)) :|: A >= B + 1
+  evalloopsbb4in(A,B) -> Com_1(evalloopsbb5in(A,B)) :|: B >= A
+  evalloopsbb3in(A,B) -> Com_1(evalloopsbb4in(A,2*B))
+  evalloopsbb5in(A,B) -> Com_1(evalloopsbb6in(A - 1,B))
+  evalloopsreturnin(A,B) -> Com_1(evalloopsstop(A,B))
+)

@@ -1,0 +1,5 @@
+(VAR x y)
+(RULES 
+ log(1, y) -> 0 :|: y >= 2
+ log(x, y) -> 1 + log((x-y)/y, y) :|: x >= 2 && y >= 2
+)

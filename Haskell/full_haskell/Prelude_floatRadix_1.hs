@@ -1,0 +1,1 @@
+{-# htermination floatRadix :: Float -> Integer #-}

@@ -1,0 +1,4 @@
+(VAR x)
+(RULES
+cu(TRUE, x) -> cu(x < 100000, x + 1)
+)

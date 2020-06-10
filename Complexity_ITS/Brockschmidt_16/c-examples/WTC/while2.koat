@@ -1,0 +1,14 @@
+(GOAL COMPLEXITY)
+(STARTTERM (FUNCTIONSYMBOLS evalwhile2start))
+(VAR A B C)
+(RULES
+  evalwhile2start(A,B,C) -> Com_1(evalwhile2entryin(A,B,C))
+  evalwhile2entryin(A,B,C) -> Com_1(evalwhile2bb4in(B,B,C))
+  evalwhile2bb4in(A,B,C) -> Com_1(evalwhile2bb2in(A,B,B)) :|: A >= 1
+  evalwhile2bb4in(A,B,C) -> Com_1(evalwhile2returnin(A,B,C)) :|: 0 >= A
+  evalwhile2bb2in(A,B,C) -> Com_1(evalwhile2bb1in(A,B,C)) :|: C >= 1
+  evalwhile2bb2in(A,B,C) -> Com_1(evalwhile2bb3in(A,B,C)) :|: 0 >= C
+  evalwhile2bb1in(A,B,C) -> Com_1(evalwhile2bb2in(A,B,C - 1))
+  evalwhile2bb3in(A,B,C) -> Com_1(evalwhile2bb4in(A - 1,B,C))
+  evalwhile2returnin(A,B,C) -> Com_1(evalwhile2stop(A,B,C))
+)

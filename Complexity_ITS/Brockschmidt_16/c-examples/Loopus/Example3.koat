@@ -1,0 +1,16 @@
+(GOAL COMPLEXITY)
+(STARTTERM (FUNCTIONSYMBOLS evalfstart))
+(VAR A B)
+(RULES
+  evalfstart(A,B) -> Com_1(evalfentryin(A,B))
+  evalfentryin(A,B) -> Com_1(evalfbb3in(B,A))
+  evalfbb3in(A,B) -> Com_1(evalfbbin(A,B)) :|: B >= 1 && 254 >= B
+  evalfbb3in(A,B) -> Com_1(evalfreturnin(A,B)) :|: 0 >= B
+  evalfbb3in(A,B) -> Com_1(evalfreturnin(A,B)) :|: B >= 255
+  evalfbbin(A,B) -> Com_1(evalfbb1in(A,B)) :|: 0 >= A + 1
+  evalfbbin(A,B) -> Com_1(evalfbb1in(A,B)) :|: A >= 1
+  evalfbbin(A,B) -> Com_1(evalfbb2in(A,B)) :|: A = 0
+  evalfbb1in(A,B) -> Com_1(evalfbb3in(A,B + 1))
+  evalfbb2in(A,B) -> Com_1(evalfbb3in(A,B - 1))
+  evalfreturnin(A,B) -> Com_1(evalfstop(A,B))
+)

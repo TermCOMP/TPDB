@@ -1,0 +1,11 @@
+(GOAL COMPLEXITY)
+(STARTTERM (FUNCTIONSYMBOLS evaleasy2start))
+(VAR A)
+(RULES
+  evaleasy2start(A) -> Com_1(evaleasy2entryin(A))
+  evaleasy2entryin(A) -> Com_1(evaleasy2bb1in(A))
+  evaleasy2bb1in(A) -> Com_1(evaleasy2bbin(A)) :|: A >= 1
+  evaleasy2bb1in(A) -> Com_1(evaleasy2returnin(A)) :|: 0 >= A
+  evaleasy2bbin(A) -> Com_1(evaleasy2bb1in(A - 1))
+  evaleasy2returnin(A) -> Com_1(evaleasy2stop(A))
+)

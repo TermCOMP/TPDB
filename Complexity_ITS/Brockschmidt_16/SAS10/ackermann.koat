@@ -1,0 +1,13 @@
+(GOAL COMPLEXITY)
+(STARTTERM (FUNCTIONSYMBOLS start0))
+(VAR A B C D E)
+(RULES
+  start(A,B,C,D) -> Com_1(stop1(A,B,C,D)) :|: A >= 0 && B >= 0 && C >= 0 && D = 0
+  start(A,B,C,D) -> Com_1(cont1(A,B,C,D)) :|: D >= 1 && A >= 0 && B >= 0 && C >= 0 && D >= 0 && A >= D
+  cont1(A,B,C,D) -> Com_1(stop2(A,B,1,D - 1)) :|: D >= 1 && B >= 0 && A >= D && C = 0
+  cont1(A,B,C,D) -> Com_1(a(A,B,C - 1,D)) :|: C >= 1 && D >= 1 && C >= 0 && B >= 0 && A >= D
+  a(A,B,C,D) -> Com_1(b(A,B,E,D - 1)) :|: A >= D && B >= 0 && C >= 0 && D >= 1
+  b(A,B,C,D) -> Com_1(start(A,B,C,D)) :|: C >= 0 && D >= 0 && B >= 0 && A >= D + 1
+  b(A,B,C,D) -> Com_1(stop3(A,B,C,D)) :|: 0 >= C + 1 && D >= 0 && B >= 0 && A >= D + 1
+  start0(A,B,C,D) -> Com_1(start(A,B,B,A)) :|: A >= 0 && B >= 0
+)

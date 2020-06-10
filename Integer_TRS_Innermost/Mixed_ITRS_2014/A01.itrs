@@ -1,0 +1,7 @@
+# Ex. 1 from "Proving Termination by Bounded Increase" (CADE'07)
+(VAR x y)
+(RULES
+minus(x, y) -> cond(x > y, x, y)
+cond(FALSE, x, y) -> 0
+cond(TRUE, x, y) -> 1 + minus(x, y+1)
+)

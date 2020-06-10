@@ -1,0 +1,20 @@
+(GOAL COMPLEXITY)
+(STARTTERM (FUNCTIONSYMBOLS eval_wise_start))
+(VAR v__0 v__01 v_x v_y)
+(RULES
+  eval_wise_start(v__0, v__01, v_x, v_y) -> Com_1(eval_wise_bb0_in(v__0, v__01, v_x, v_y))
+  eval_wise_bb0_in(v__0, v__01, v_x, v_y) -> Com_1(eval_wise_0(v__0, v__01, v_x, v_y))
+  eval_wise_0(v__0, v__01, v_x, v_y) -> Com_1(eval_wise_1(v__0, v__01, v_x, v_y))
+  eval_wise_1(v__0, v__01, v_x, v_y) -> Com_1(eval_wise_2(v__0, v__01, v_x, v_y))
+  eval_wise_2(v__0, v__01, v_x, v_y) -> Com_1(eval_wise_bb2_in(v__0, v__01, v_x, v_y)) :|: v_x < 0
+  eval_wise_2(v__0, v__01, v_x, v_y) -> Com_1(eval_wise_bb2_in(v__0, v__01, v_x, v_y)) :|: v_y < 0
+  eval_wise_2(v__0, v__01, v_x, v_y) -> Com_1(eval_wise_bb1_in(v_x, v_y, v_x, v_y)) :|: v_x >= 0 && v_y >= 0
+  eval_wise_bb1_in(v__0, v__01, v_x, v_y) -> Com_1(eval_wise__critedge_in(v__0, v__01, v_x, v_y)) :|: v__0 - v__01 > 2
+  eval_wise_bb1_in(v__0, v__01, v_x, v_y) -> Com_1(eval_wise__critedge_in(v__0, v__01, v_x, v_y)) :|: v__01 - v__0 > 2
+  eval_wise_bb1_in(v__0, v__01, v_x, v_y) -> Com_1(eval_wise_bb2_in(v__0, v__01, v_x, v_y)) :|: v__0 - v__01 <= 2 && v__01 - v__0 <= 2
+  eval_wise__critedge_in(v__0, v__01, v_x, v_y) -> Com_1(eval_wise_bb1_in(v__0 + 1, v__01, v_x, v_y)) :|: v__0 < v__01 && v__0 < v__01
+  eval_wise__critedge_in(v__0, v__01, v_x, v_y) -> Com_1(eval_wise_bb1_in(v__0, v__01, v_x, v_y)) :|: v__0 < v__01 && v__0 >= v__01
+  eval_wise__critedge_in(v__0, v__01, v_x, v_y) -> Com_1(eval_wise_bb1_in(v__0 + 1, v__01 + 1, v_x, v_y)) :|: v__0 >= v__01 && v__0 < v__01
+  eval_wise__critedge_in(v__0, v__01, v_x, v_y) -> Com_1(eval_wise_bb1_in(v__0, v__01 + 1, v_x, v_y)) :|: v__0 >= v__01 && v__0 >= v__01
+  eval_wise_bb2_in(v__0, v__01, v_x, v_y) -> Com_1(eval_wise_stop(v__0, v__01, v_x, v_y))
+)

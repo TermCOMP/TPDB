@@ -1,0 +1,7 @@
+# increase of x to an arbitrary but fixed value
+# using an extra variable y for this value
+(VAR x y)
+(RULES
+f(TRUE, x) -> ft(TRUE, x, y)
+ft(TRUE, x, y) -> ft(y >= x, x+1, y)
+)

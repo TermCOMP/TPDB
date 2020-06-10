@@ -1,0 +1,6 @@
+(VAR x y)
+(RULES
+div(x, y) -> 0 :|: 0 >= y
+div(x, y) -> 0 :|: y >= x
+div(x, y) -> div(x - y, y) + 1  :|: x > y && y > 0
+)

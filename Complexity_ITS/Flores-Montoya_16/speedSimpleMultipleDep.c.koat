@@ -1,0 +1,22 @@
+(GOAL COMPLEXITY)
+(STARTTERM (FUNCTIONSYMBOLS eval_speedSimpleMultipleDep_start))
+(VAR v_m v_n v_x_0 v_y_0)
+(RULES
+  eval_speedSimpleMultipleDep_start(v_m, v_n, v_x_0, v_y_0) -> Com_1(eval_speedSimpleMultipleDep_bb0_in(v_m, v_n, v_x_0, v_y_0))
+  eval_speedSimpleMultipleDep_bb0_in(v_m, v_n, v_x_0, v_y_0) -> Com_1(eval_speedSimpleMultipleDep_0(v_m, v_n, v_x_0, v_y_0))
+  eval_speedSimpleMultipleDep_0(v_m, v_n, v_x_0, v_y_0) -> Com_1(eval_speedSimpleMultipleDep_1(v_m, v_n, v_x_0, v_y_0))
+  eval_speedSimpleMultipleDep_1(v_m, v_n, v_x_0, v_y_0) -> Com_1(eval_speedSimpleMultipleDep_2(v_m, v_n, v_x_0, v_y_0))
+  eval_speedSimpleMultipleDep_2(v_m, v_n, v_x_0, v_y_0) -> Com_1(eval_speedSimpleMultipleDep_3(v_m, v_n, v_x_0, v_y_0))
+  eval_speedSimpleMultipleDep_3(v_m, v_n, v_x_0, v_y_0) -> Com_1(eval_speedSimpleMultipleDep_4(v_m, v_n, v_x_0, v_y_0))
+  eval_speedSimpleMultipleDep_4(v_m, v_n, v_x_0, v_y_0) -> Com_1(eval_speedSimpleMultipleDep_5(v_m, v_n, v_x_0, v_y_0))
+  eval_speedSimpleMultipleDep_5(v_m, v_n, v_x_0, v_y_0) -> Com_1(eval_speedSimpleMultipleDep_6(v_m, v_n, v_x_0, v_y_0))
+  eval_speedSimpleMultipleDep_6(v_m, v_n, v_x_0, v_y_0) -> Com_1(eval_speedSimpleMultipleDep_7(v_m, v_n, v_x_0, v_y_0))
+  eval_speedSimpleMultipleDep_7(v_m, v_n, v_x_0, v_y_0) -> Com_1(eval_speedSimpleMultipleDep_bb1_in(v_m, v_n, 0, 0))
+  eval_speedSimpleMultipleDep_bb1_in(v_m, v_n, v_x_0, v_y_0) -> Com_1(eval_speedSimpleMultipleDep_bb2_in(v_m, v_n, v_x_0, v_y_0)) :|: v_x_0 < v_n
+  eval_speedSimpleMultipleDep_bb1_in(v_m, v_n, v_x_0, v_y_0) -> Com_1(eval_speedSimpleMultipleDep_bb3_in(v_m, v_n, v_x_0, v_y_0)) :|: v_x_0 >= v_n
+  eval_speedSimpleMultipleDep_bb2_in(v_m, v_n, v_x_0, v_y_0) -> Com_1(eval_speedSimpleMultipleDep_bb1_in(v_m, v_n, v_x_0, v_y_0 + 1)) :|: v_y_0 < v_m && v_y_0 < v_m
+  eval_speedSimpleMultipleDep_bb2_in(v_m, v_n, v_x_0, v_y_0) -> Com_1(eval_speedSimpleMultipleDep_bb1_in(v_m, v_n, v_x_0 + 1, v_y_0 + 1)) :|: v_y_0 < v_m && v_y_0 >= v_m
+  eval_speedSimpleMultipleDep_bb2_in(v_m, v_n, v_x_0, v_y_0) -> Com_1(eval_speedSimpleMultipleDep_bb1_in(v_m, v_n, v_x_0, 0)) :|: v_y_0 >= v_m && v_y_0 < v_m
+  eval_speedSimpleMultipleDep_bb2_in(v_m, v_n, v_x_0, v_y_0) -> Com_1(eval_speedSimpleMultipleDep_bb1_in(v_m, v_n, v_x_0 + 1, 0)) :|: v_y_0 >= v_m && v_y_0 >= v_m
+  eval_speedSimpleMultipleDep_bb3_in(v_m, v_n, v_x_0, v_y_0) -> Com_1(eval_speedSimpleMultipleDep_stop(v_m, v_n, v_x_0, v_y_0))
+)

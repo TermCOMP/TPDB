@@ -1,0 +1,48 @@
+(GOAL COMPLEXITY)
+(STARTTERM (FUNCTIONSYMBOLS eval_heapsort_start))
+(VAR nondef_0 nondef_1 v_13 v_2 v_4 v_8 v_i_0 v_max_1 v_max_3 v_size)
+(RULES
+  eval_heapsort_start(v_13, v_2, v_4, v_8, v_i_0, v_max_1, v_max_3, v_size) -> Com_1(eval_heapsort_bb0_in(v_13, v_2, v_4, v_8, v_i_0, v_max_1, v_max_3, v_size))
+  eval_heapsort_bb0_in(v_13, v_2, v_4, v_8, v_i_0, v_max_1, v_max_3, v_size) -> Com_1(eval_heapsort_0(v_13, v_2, v_4, v_8, v_i_0, v_max_1, v_max_3, v_size))
+  eval_heapsort_0(v_13, v_2, v_4, v_8, v_i_0, v_max_1, v_max_3, v_size) -> Com_1(eval_heapsort_1(v_13, v_2, v_4, v_8, v_i_0, v_max_1, v_max_3, v_size))
+  eval_heapsort_1(v_13, v_2, v_4, v_8, v_i_0, v_max_1, v_max_3, v_size) -> Com_1(eval_heapsort_2(v_13, v_2, v_4, v_8, v_i_0, v_max_1, v_max_3, v_size))
+  eval_heapsort_2(v_13, v_2, v_4, v_8, v_i_0, v_max_1, v_max_3, v_size) -> Com_1(eval_heapsort_3(v_13, v_2, v_4, v_8, v_i_0, v_max_1, v_max_3, v_size))
+  eval_heapsort_3(v_13, v_2, v_4, v_8, v_i_0, v_max_1, v_max_3, v_size) -> Com_1(eval_heapsort_4(v_13, v_2, v_4, v_8, v_i_0, v_max_1, v_max_3, v_size))
+  eval_heapsort_4(v_13, v_2, v_4, v_8, v_i_0, v_max_1, v_max_3, v_size) -> Com_1(eval_heapsort_5(v_13, v_2, v_4, v_8, v_i_0, v_max_1, v_max_3, v_size))
+  eval_heapsort_5(v_13, v_2, v_4, v_8, v_i_0, v_max_1, v_max_3, v_size) -> Com_1(eval_heapsort_6(v_13, v_2, v_4, v_8, v_i_0, v_max_1, v_max_3, v_size))
+  eval_heapsort_6(v_13, v_2, v_4, v_8, v_i_0, v_max_1, v_max_3, v_size) -> Com_1(eval_heapsort_7(v_13, v_2, v_4, v_8, v_i_0, v_max_1, v_max_3, v_size))
+  eval_heapsort_7(v_13, v_2, v_4, v_8, v_i_0, v_max_1, v_max_3, v_size) -> Com_1(eval_heapsort_8(v_13, v_2, v_4, v_8, v_i_0, v_max_1, v_max_3, v_size))
+  eval_heapsort_8(v_13, v_2, v_4, v_8, v_i_0, v_max_1, v_max_3, v_size) -> Com_1(eval_heapsort_9(v_13, v_2, v_4, v_8, v_i_0, v_max_1, v_max_3, v_size))
+  eval_heapsort_9(v_13, v_2, v_4, v_8, v_i_0, v_max_1, v_max_3, v_size) -> Com_1(eval_heapsort_bb1_in(v_13, v_2, v_4, v_8, 1, v_max_1, v_max_3, v_size))
+  eval_heapsort_bb1_in(v_13, v_2, v_4, v_8, v_i_0, v_max_1, v_max_3, v_size) -> Com_1(eval_heapsort_bb2_in(v_13, v_2, v_4, v_8, v_i_0, v_max_1, v_max_3, v_size)) :|: v_size > 0 && v_i_0 >= 1
+  eval_heapsort_bb1_in(v_13, v_2, v_4, v_8, v_i_0, v_max_1, v_max_3, v_size) -> Com_1(eval_heapsort_bb11_in(v_13, v_2, v_4, v_8, v_i_0, v_max_1, v_max_3, v_size)) :|: v_size <= 0
+  eval_heapsort_bb1_in(v_13, v_2, v_4, v_8, v_i_0, v_max_1, v_max_3, v_size) -> Com_1(eval_heapsort_bb11_in(v_13, v_2, v_4, v_8, v_i_0, v_max_1, v_max_3, v_size)) :|: v_i_0 < 1
+  eval_heapsort_bb2_in(v_13, v_2, v_4, v_8, v_i_0, v_max_1, v_max_3, v_size) -> Com_1(eval_heapsort_bb3_in(v_13, 2*v_i_0, 2*v_i_0 + 1, v_8, v_i_0, v_max_1, v_max_3, v_size)) :|: 2*v_i_0 <= v_size
+  eval_heapsort_bb2_in(v_13, v_2, v_4, v_8, v_i_0, v_max_1, v_max_3, v_size) -> Com_1(eval_heapsort_bb5_in(v_13, 2*v_i_0, 2*v_i_0 + 1, v_8, v_i_0, v_i_0, v_max_3, v_size)) :|: 2*v_i_0 > v_size
+  eval_heapsort_bb3_in(v_13, v_2, v_4, v_8, v_i_0, v_max_1, v_max_3, v_size) -> Com_1(eval_heapsort_bb11_in(v_13, v_2, v_4, v_8, v_i_0, v_max_1, v_max_3, v_size)) :|: v_2 < 1
+  eval_heapsort_bb3_in(v_13, v_2, v_4, v_8, v_i_0, v_max_1, v_max_3, v_size) -> Com_1(eval_heapsort_bb11_in(v_13, v_2, v_4, v_8, v_i_0, v_max_1, v_max_3, v_size)) :|: v_2 > v_size
+  eval_heapsort_bb3_in(v_13, v_2, v_4, v_8, v_i_0, v_max_1, v_max_3, v_size) -> Com_1(eval_heapsort_bb4_in(v_13, v_2, v_4, v_8, v_i_0, v_max_1, v_max_3, v_size)) :|: v_2 >= 1 && v_2 <= v_size
+  eval_heapsort_bb4_in(v_13, v_2, v_4, v_8, v_i_0, v_max_1, v_max_3, v_size) -> Com_1(eval_heapsort_14(v_13, v_2, v_4, v_8, v_i_0, v_max_1, v_max_3, v_size))
+  eval_heapsort_14(v_13, v_2, v_4, v_8, v_i_0, v_max_1, v_max_3, v_size) -> Com_1(eval_heapsort_15(v_13, v_2, v_4, nondef_0, v_i_0, v_max_1, v_max_3, v_size))
+  eval_heapsort_15(v_13, v_2, v_4, v_8, v_i_0, v_max_1, v_max_3, v_size) -> Com_1(eval_heapsort_bb5_in(v_13, v_2, v_4, v_8, v_i_0, v_2, v_max_3, v_size)) :|: v_8 > 0
+  eval_heapsort_15(v_13, v_2, v_4, v_8, v_i_0, v_max_1, v_max_3, v_size) -> Com_1(eval_heapsort_bb5_in(v_13, v_2, v_4, v_8, v_i_0, v_i_0, v_max_3, v_size)) :|: v_8 <= 0
+  eval_heapsort_bb5_in(v_13, v_2, v_4, v_8, v_i_0, v_max_1, v_max_3, v_size) -> Com_1(eval_heapsort_bb6_in(v_13, v_2, v_4, v_8, v_i_0, v_max_1, v_max_3, v_size)) :|: v_4 <= v_size
+  eval_heapsort_bb5_in(v_13, v_2, v_4, v_8, v_i_0, v_max_1, v_max_3, v_size) -> Com_1(eval_heapsort_bb8_in(v_13, v_2, v_4, v_8, v_i_0, v_max_1, v_max_1, v_size)) :|: v_4 > v_size
+  eval_heapsort_bb6_in(v_13, v_2, v_4, v_8, v_i_0, v_max_1, v_max_3, v_size) -> Com_1(eval_heapsort_bb11_in(v_13, v_2, v_4, v_8, v_i_0, v_max_1, v_max_3, v_size)) :|: v_4 < 1
+  eval_heapsort_bb6_in(v_13, v_2, v_4, v_8, v_i_0, v_max_1, v_max_3, v_size) -> Com_1(eval_heapsort_bb11_in(v_13, v_2, v_4, v_8, v_i_0, v_max_1, v_max_3, v_size)) :|: v_4 > v_size
+  eval_heapsort_bb6_in(v_13, v_2, v_4, v_8, v_i_0, v_max_1, v_max_3, v_size) -> Com_1(eval_heapsort_bb7_in(v_13, v_2, v_4, v_8, v_i_0, v_max_1, v_max_3, v_size)) :|: v_4 >= 1 && v_4 <= v_size
+  eval_heapsort_bb7_in(v_13, v_2, v_4, v_8, v_i_0, v_max_1, v_max_3, v_size) -> Com_1(eval_heapsort_17(v_13, v_2, v_4, v_8, v_i_0, v_max_1, v_max_3, v_size))
+  eval_heapsort_17(v_13, v_2, v_4, v_8, v_i_0, v_max_1, v_max_3, v_size) -> Com_1(eval_heapsort_18(nondef_1, v_2, v_4, v_8, v_i_0, v_max_1, v_max_3, v_size))
+  eval_heapsort_18(v_13, v_2, v_4, v_8, v_i_0, v_max_1, v_max_3, v_size) -> Com_1(eval_heapsort_bb8_in(v_13, v_2, v_4, v_8, v_i_0, v_max_1, v_4, v_size)) :|: v_13 > 0
+  eval_heapsort_18(v_13, v_2, v_4, v_8, v_i_0, v_max_1, v_max_3, v_size) -> Com_1(eval_heapsort_bb8_in(v_13, v_2, v_4, v_8, v_i_0, v_max_1, v_max_1, v_size)) :|: v_13 <= 0
+  eval_heapsort_bb8_in(v_13, v_2, v_4, v_8, v_i_0, v_max_1, v_max_3, v_size) -> Com_1(eval_heapsort_bb9_in(v_13, v_2, v_4, v_8, v_i_0, v_max_1, v_max_3, v_size)) :|: v_i_0 < v_max_3
+  eval_heapsort_bb8_in(v_13, v_2, v_4, v_8, v_i_0, v_max_1, v_max_3, v_size) -> Com_1(eval_heapsort_bb9_in(v_13, v_2, v_4, v_8, v_i_0, v_max_1, v_max_3, v_size)) :|: v_i_0 > v_max_3
+  eval_heapsort_bb8_in(v_13, v_2, v_4, v_8, v_i_0, v_max_1, v_max_3, v_size) -> Com_1(eval_heapsort_bb11_in(v_13, v_2, v_4, v_8, v_i_0, v_max_1, v_max_3, v_size)) :|: v_i_0 = v_max_3
+  eval_heapsort_bb9_in(v_13, v_2, v_4, v_8, v_i_0, v_max_1, v_max_3, v_size) -> Com_1(eval_heapsort_bb11_in(v_13, v_2, v_4, v_8, v_i_0, v_max_1, v_max_3, v_size)) :|: v_i_0 < 1
+  eval_heapsort_bb9_in(v_13, v_2, v_4, v_8, v_i_0, v_max_1, v_max_3, v_size) -> Com_1(eval_heapsort_bb11_in(v_13, v_2, v_4, v_8, v_i_0, v_max_1, v_max_3, v_size)) :|: v_i_0 > v_size
+  eval_heapsort_bb9_in(v_13, v_2, v_4, v_8, v_i_0, v_max_1, v_max_3, v_size) -> Com_1(eval_heapsort_bb10_in(v_13, v_2, v_4, v_8, v_i_0, v_max_1, v_max_3, v_size)) :|: v_i_0 >= 1 && v_i_0 <= v_size
+  eval_heapsort_bb10_in(v_13, v_2, v_4, v_8, v_i_0, v_max_1, v_max_3, v_size) -> Com_1(eval_heapsort_bb11_in(v_13, v_2, v_4, v_8, v_i_0, v_max_1, v_max_3, v_size)) :|: v_max_3 < 1
+  eval_heapsort_bb10_in(v_13, v_2, v_4, v_8, v_i_0, v_max_1, v_max_3, v_size) -> Com_1(eval_heapsort_bb11_in(v_13, v_2, v_4, v_8, v_i_0, v_max_1, v_max_3, v_size)) :|: v_max_3 > v_size
+  eval_heapsort_bb10_in(v_13, v_2, v_4, v_8, v_i_0, v_max_1, v_max_3, v_size) -> Com_1(eval_heapsort_bb1_in(v_13, v_2, v_4, v_8, v_max_3, v_max_1, v_max_3, v_size)) :|: v_max_3 >= 1 && v_max_3 <= v_size
+  eval_heapsort_bb11_in(v_13, v_2, v_4, v_8, v_i_0, v_max_1, v_max_3, v_size) -> Com_1(eval_heapsort_stop(v_13, v_2, v_4, v_8, v_i_0, v_max_1, v_max_3, v_size))
+)

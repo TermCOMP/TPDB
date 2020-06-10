@@ -1,0 +1,14 @@
+(GOAL COMPLEXITY)
+(STARTTERM (FUNCTIONSYMBOLS evalcousot9start))
+(VAR A B C D)
+(RULES
+  evalcousot9start(A,B,C) -> Com_1(evalcousot9entryin(A,B,C))
+  evalcousot9entryin(A,B,C) -> Com_1(evalcousot9bb3in(D,C,C))
+  evalcousot9bb3in(A,B,C) -> Com_1(evalcousot9bbin(A,B,C)) :|: B >= 1
+  evalcousot9bb3in(A,B,C) -> Com_1(evalcousot9returnin(A,B,C)) :|: 0 >= B
+  evalcousot9bbin(A,B,C) -> Com_1(evalcousot9bb1in(A,B,C)) :|: A >= 1
+  evalcousot9bbin(A,B,C) -> Com_1(evalcousot9bb2in(A,B,C)) :|: 0 >= A
+  evalcousot9bb1in(A,B,C) -> Com_1(evalcousot9bb3in(A - 1,B,C))
+  evalcousot9bb2in(A,B,C) -> Com_1(evalcousot9bb3in(C,B - 1,C))
+  evalcousot9returnin(A,B,C) -> Com_1(evalcousot9stop(A,B,C))
+)

@@ -1,0 +1,8 @@
+(GOAL COMPLEXITY)
+(STARTTERM (FUNCTIONSYMBOLS start))
+(VAR A B C)
+(RULES
+  f(A,B,C) -> Com_1(f(A,B + 1,C)) :|: A >= B + 1 && A >= C + 1
+  f(A,B,C) -> Com_1(f(A,B,C + 1)) :|: A >= B + 1 && A >= C + 1
+  start(A,B,C) -> Com_1(f(A,B,C))
+)

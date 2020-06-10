@@ -1,0 +1,5 @@
+# recursive rule to increment list elements by x
+(VAR x y ys)
+(RULES
+g(x, cons(y, ys)) -> cons(x + y, g(x, ys))
+)

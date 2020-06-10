@@ -1,0 +1,6 @@
+(VAR x y)
+(RULES
+mult(0, y) -> 0
+mult(x, y) -> mult(x - 1, y) + y :|: x > 0
+mult(x, y) -> -mult(-x, y) :|: 0 > x
+)

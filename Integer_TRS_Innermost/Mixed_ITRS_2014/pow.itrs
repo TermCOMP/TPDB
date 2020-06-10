@@ -1,0 +1,6 @@
+(VAR x y)
+(RULES
+pow(x, y) -> if(y > 0, x, y)
+if (TRUE, x, y) -> x * pow(x, y-1)
+if (FALSE, x, y) -> 1
+)

@@ -1,0 +1,24 @@
+(VAR x y zs ys)
+(RULES
+isprime(x) -> mem(x, primes(x))
+mem(x, nil) -> FALSE
+mem(x, cons(y, zs)) -> TRUE :|: x = y
+mem(x, cons(y, zs)) -> mem(x, zs) :|: y > x
+mem(x, cons(y, zs)) -> mem(x, zs) :|: x > y
+primes(x) -> sieve(nats(2, x))
+nats(x, y) -> nil :|: x > y
+nats(x, y) -> cons(x, nil) :|: x = y
+nats(x, y) -> cons(x, nats(x + 1, y)) :|: y > x
+sieve(nil) -> nil
+sieve(cons(x, ys)) -> cons(x, sieve(filter(x, ys)))
+filter(x, nil) -> nil
+filter(x, cons(y, zs)) -> if_1(isdiv(x, y), x, y, zs)
+if_1(TRUE, x, y, zs) -> filter(x, zs)
+filter(x, cons(y, zs)) -> if_2(isdiv(x, y), x, y, zs)
+if_2(FALSE, x, y, zs) -> cons(x, filter(x, zs))
+isdiv(x, 0) -> TRUE :|: x > 0
+isdiv(x, y) -> FALSE :|: x > y && y > 0
+isdiv(x, y) -> isdiv(x, (-x) + y) :|: y >= x && x > 0
+isdiv(x, y) -> isdiv(x, -y) :|: 0 > y
+isdiv(x, y) -> isdiv(-x, y) :|: 0 > x
+)

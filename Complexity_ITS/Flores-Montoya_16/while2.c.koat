@@ -1,0 +1,21 @@
+(GOAL COMPLEXITY)
+(STARTTERM (FUNCTIONSYMBOLS eval_while2_start))
+(VAR v_3 v_N v_i_0 v_j_0)
+(RULES
+  eval_while2_start(v_3, v_N, v_i_0, v_j_0) -> Com_1(eval_while2_bb0_in(v_3, v_N, v_i_0, v_j_0))
+  eval_while2_bb0_in(v_3, v_N, v_i_0, v_j_0) -> Com_1(eval_while2_0(v_3, v_N, v_i_0, v_j_0))
+  eval_while2_0(v_3, v_N, v_i_0, v_j_0) -> Com_1(eval_while2_1(v_3, v_N, v_i_0, v_j_0))
+  eval_while2_1(v_3, v_N, v_i_0, v_j_0) -> Com_1(eval_while2_2(v_3, v_N, v_i_0, v_j_0))
+  eval_while2_2(v_3, v_N, v_i_0, v_j_0) -> Com_1(eval_while2_3(v_3, v_N, v_i_0, v_j_0))
+  eval_while2_3(v_3, v_N, v_i_0, v_j_0) -> Com_1(eval_while2_4(v_3, v_N, v_i_0, v_j_0))
+  eval_while2_4(v_3, v_N, v_i_0, v_j_0) -> Com_1(eval_while2_bb1_in(v_3, v_N, v_N, v_j_0))
+  eval_while2_bb1_in(v_3, v_N, v_i_0, v_j_0) -> Com_1(eval_while2_bb2_in(v_3, v_N, v_i_0, v_N)) :|: v_i_0 > 0
+  eval_while2_bb1_in(v_3, v_N, v_i_0, v_j_0) -> Com_1(eval_while2_bb5_in(v_3, v_N, v_i_0, v_j_0)) :|: v_i_0 <= 0
+  eval_while2_bb2_in(v_3, v_N, v_i_0, v_j_0) -> Com_1(eval_while2_bb3_in(v_3, v_N, v_i_0, v_j_0)) :|: v_j_0 > 0
+  eval_while2_bb2_in(v_3, v_N, v_i_0, v_j_0) -> Com_1(eval_while2_bb4_in(v_3, v_N, v_i_0, v_j_0)) :|: v_j_0 <= 0
+  eval_while2_bb3_in(v_3, v_N, v_i_0, v_j_0) -> Com_1(eval_while2_bb2_in(v_3, v_N, v_i_0, v_j_0 - 1))
+  eval_while2_bb4_in(v_3, v_N, v_i_0, v_j_0) -> Com_1(eval_while2_8(v_i_0 - 1, v_N, v_i_0, v_j_0))
+  eval_while2_8(v_3, v_N, v_i_0, v_j_0) -> Com_1(eval_while2_9(v_3, v_N, v_i_0, v_j_0))
+  eval_while2_9(v_3, v_N, v_i_0, v_j_0) -> Com_1(eval_while2_bb1_in(v_3, v_N, v_3, v_j_0))
+  eval_while2_bb5_in(v_3, v_N, v_i_0, v_j_0) -> Com_1(eval_while2_stop(v_3, v_N, v_i_0, v_j_0))
+)

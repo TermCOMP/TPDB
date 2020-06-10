@@ -1,0 +1,17 @@
+(GOAL COMPLEXITY)
+(STARTTERM (FUNCTIONSYMBOLS start0))
+(VAR A B C D)
+(RULES
+  start(A,B,C,D) -> Com_1(stop(A,B,C,D)) :|: 0 >= A + 1 && B = C && D = A
+  start(A,B,C,D) -> Com_1(stop(A,B,C,D)) :|: 0 >= C + 1 && B = C && D = A
+  start(A,B,C,D) -> Com_1(stop(A,B,C,D)) :|: A >= 0 && A + 2 >= C && C >= 0 && C + 2 >= A && B = C && D = A
+  start(A,B,C,D) -> Com_1(lbl81(A,B,C,1 + D)) :|: A >= 0 && C >= A + 3 && B = C && D = A
+  start(A,B,C,D) -> Com_1(lbl91(A,1 + B,C,D)) :|: A >= C + 3 && C >= 0 && B = C && D = A
+  lbl81(A,B,C,D) -> Com_1(stop(A,B,C,D)) :|: C >= 3 + A && A >= 0 && D + 2 = C && B = C
+  lbl81(A,B,C,D) -> Com_1(lbl81(A,B,C,1 + D)) :|: C >= D + 3 && D >= A + 1 && A >= 0 && C >= D + 2 && B = C
+  lbl81(A,B,C,D) -> Com_1(lbl91(A,1 + B,C,D)) :|: D >= C + 3 && D >= A + 1 && A >= 0 && C >= D + 2 && B = C
+  lbl91(A,B,C,D) -> Com_1(stop(A,B,C,D)) :|: A >= 3 + C && C >= 0 && B + 2 = A && D = A
+  lbl91(A,B,C,D) -> Com_1(lbl81(A,B,C,1 + D)) :|: B >= A + 3 && A >= B + 2 && B >= C + 1 && C >= 0 && D = A
+  lbl91(A,B,C,D) -> Com_1(lbl91(A,1 + B,C,D)) :|: A >= B + 3 && A >= B + 2 && B >= C + 1 && C >= 0 && D = A
+  start0(A,B,C,D) -> Com_1(start(A,C,C,A))
+)

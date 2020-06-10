@@ -1,0 +1,26 @@
+(GOAL COMPLEXITY)
+(STARTTERM (FUNCTIONSYMBOLS evalNestedLoopstart))
+(VAR A B C D E F G H I)
+(RULES
+  evalNestedLoopstart(A,B,C,D,E,F,G,H) -> Com_1(evalNestedLoopentryin(A,B,C,D,E,F,G,H))
+  evalNestedLoopentryin(A,B,C,D,E,F,G,H) -> Com_1(evalNestedLoopbb9in(A,B,C,0,E,F,G,H)) :|: A >= 0 && B >= 0 && C >= 0
+  evalNestedLoopbb9in(A,B,C,D,E,F,G,H) -> Com_1(evalNestedLoopreturnin(A,B,C,D,E,F,G,H)) :|: D >= A
+  evalNestedLoopbb9in(A,B,C,D,E,F,G,H) -> Com_1(evalNestedLoopbb10in(A,B,C,D,E,F,G,H)) :|: A >= D + 1
+  evalNestedLoopbb10in(A,B,C,D,E,F,G,H) -> Com_1(evalNestedLoopbb6in(A,B,C,D,0,D,G,H)) :|: 0 >= I + 1
+  evalNestedLoopbb10in(A,B,C,D,E,F,G,H) -> Com_1(evalNestedLoopbb6in(A,B,C,D,0,D,G,H)) :|: I >= 1
+  evalNestedLoopbb10in(A,B,C,D,E,F,G,H) -> Com_1(evalNestedLoopreturnin(A,B,C,D,E,F,G,H))
+  evalNestedLoopbb6in(A,B,C,D,E,F,G,H) -> Com_1(evalNestedLoopbb8in(A,B,C,D,E,F,G,H)) :|: E >= B
+  evalNestedLoopbb6in(A,B,C,D,E,F,G,H) -> Com_1(evalNestedLoopbb7in(A,B,C,D,E,F,G,H)) :|: B >= E + 1
+  evalNestedLoopbb7in(A,B,C,D,E,F,G,H) -> Com_1(evalNestedLoopbb1in(A,B,C,D,E,F,G,H)) :|: 0 >= I + 1
+  evalNestedLoopbb7in(A,B,C,D,E,F,G,H) -> Com_1(evalNestedLoopbb1in(A,B,C,D,E,F,G,H)) :|: I >= 1
+  evalNestedLoopbb7in(A,B,C,D,E,F,G,H) -> Com_1(evalNestedLoopbb8in(A,B,C,D,E,F,G,H))
+  evalNestedLoopbb1in(A,B,C,D,E,F,G,H) -> Com_1(evalNestedLoopbb3in(A,B,C,D,E,F,E + 1,F))
+  evalNestedLoopbb3in(A,B,C,D,E,F,G,H) -> Com_1(evalNestedLoopbb6in(A,B,C,D,G,H,G,H)) :|: H >= C
+  evalNestedLoopbb3in(A,B,C,D,E,F,G,H) -> Com_1(evalNestedLoopbb4in(A,B,C,D,E,F,G,H)) :|: C >= H + 1
+  evalNestedLoopbb4in(A,B,C,D,E,F,G,H) -> Com_1(evalNestedLoopbb2in(A,B,C,D,E,F,G,H)) :|: 0 >= I + 1
+  evalNestedLoopbb4in(A,B,C,D,E,F,G,H) -> Com_1(evalNestedLoopbb2in(A,B,C,D,E,F,G,H)) :|: I >= 1
+  evalNestedLoopbb4in(A,B,C,D,E,F,G,H) -> Com_1(evalNestedLoopbb6in(A,B,C,D,G,H,G,H))
+  evalNestedLoopbb2in(A,B,C,D,E,F,G,H) -> Com_1(evalNestedLoopbb3in(A,B,C,D,E,F,G,H + 1))
+  evalNestedLoopbb8in(A,B,C,D,E,F,G,H) -> Com_1(evalNestedLoopbb9in(A,B,C,F + 1,E,F,G,H))
+  evalNestedLoopreturnin(A,B,C,D,E,F,G,H) -> Com_1(evalNestedLoopstop(A,B,C,D,E,F,G,H))
+)

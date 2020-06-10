@@ -1,0 +1,16 @@
+(GOAL COMPLEXITY)
+(STARTTERM (FUNCTIONSYMBOLS start0))
+(VAR A B C D E F G H I J)
+(RULES
+  start(A,B,C,D,E,F,G,H,I,J) -> Com_1(stop(A,B,C,D,1,F,G,H,I,J)) :|: A >= 1 && B >= C + 1 && D = B && E = F && G = C && H = I && J = A
+  start(A,B,C,D,E,F,G,H,I,J) -> Com_1(lbl71(A,B,C,1 + D,1,F,G,H,I,J)) :|: A >= 1 && C >= B && D = B && E = F && G = C && H = I && J = A
+  start(A,B,C,D,E,F,G,H,I,J) -> Com_1(stop(A,B,C,D,-1,F,G,H,I,J)) :|: B >= C + 1 && 0 >= A && D = B && E = F && G = C && H = I && J = A
+  start(A,B,C,D,E,F,G,H,I,J) -> Com_1(lbl81(A,B,C,1 + D,-1,F,G,H,I,J)) :|: C >= B && 0 >= A && D = B && E = F && G = C && H = I && J = A
+  lbl71(A,B,C,D,E,F,G,H,I,J) -> Com_1(stop(A,B,C,D,E,F,G,H,I,J)) :|: C >= B && A >= 1 && D = C + 1 && E = 1 && J = A && H = I && G = C
+  lbl71(A,B,C,D,E,F,G,H,I,J) -> Com_1(lbl71(A,B,C,E + D,E,F,G,H,I,J)) :|: A >= 1 && C >= D && D >= B + 1 && C + 1 >= D && E = 1 && J = A && H = I && G = C
+  lbl71(A,B,C,D,E,F,G,H,I,J) -> Com_1(lbl81(A,B,C,D - E,E,F,G,H,I,J)) :|: C >= D && 0 >= A && D >= B + 1 && C + 1 >= D && A >= 1 && E = 1 && J = A && H = I && G = C
+  lbl81(A,B,C,D,E,F,G,H,I,J) -> Com_1(stop(A,B,C,D,E,F,G,H,I,J)) :|: 0 >= A && C >= B && D = C + 1 && E + 1 = 0 && J = A && H = I && G = C
+  lbl81(A,B,C,D,E,F,G,H,I,J) -> Com_1(lbl71(A,B,C,E + D,E,F,G,H,I,J)) :|: A >= 1 && C >= D && 0 >= A && D >= B + 1 && C + 1 >= D && E + 1 = 0 && J = A && H = I && G = C
+  lbl81(A,B,C,D,E,F,G,H,I,J) -> Com_1(lbl81(A,B,C,D - E,E,F,G,H,I,J)) :|: C >= D && 0 >= A && D >= B + 1 && C + 1 >= D && E + 1 = 0 && J = A && H = I && G = C
+  start0(A,B,C,D,E,F,G,H,I,J) -> Com_1(start(A,B,C,B,F,F,C,I,I,A))
+)

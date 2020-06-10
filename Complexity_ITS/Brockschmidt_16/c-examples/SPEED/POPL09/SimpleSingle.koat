@@ -1,0 +1,11 @@
+(GOAL COMPLEXITY)
+(STARTTERM (FUNCTIONSYMBOLS evalSimpleSinglestart))
+(VAR A B)
+(RULES
+  evalSimpleSinglestart(A,B) -> Com_1(evalSimpleSingleentryin(A,B))
+  evalSimpleSingleentryin(A,B) -> Com_1(evalSimpleSinglebb3in(0,B))
+  evalSimpleSinglebb3in(A,B) -> Com_1(evalSimpleSinglebbin(A,B)) :|: B >= A + 1
+  evalSimpleSinglebb3in(A,B) -> Com_1(evalSimpleSinglereturnin(A,B)) :|: A >= B
+  evalSimpleSinglebbin(A,B) -> Com_1(evalSimpleSinglebb3in(A + 1,B))
+  evalSimpleSinglereturnin(A,B) -> Com_1(evalSimpleSinglestop(A,B))
+)

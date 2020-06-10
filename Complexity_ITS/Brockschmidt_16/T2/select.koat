@@ -1,0 +1,28 @@
+(GOAL COMPLEXITY)
+(STARTTERM (FUNCTIONSYMBOLS f0))
+(VAR A B C D E F G H I J K L M N)
+(RULES
+  f63(A,B,C,D,E,F,G,H,I,J,K) -> Com_1(f11(A,B,C,D,E,F,G,H,I,J,K)) :|: A >= 1 + B
+  f0(A,B,C,D,E,F,G,H,I,J,K) -> Com_1(f11(A,10,20,1,20,0,0,H,I,J,K))
+  f11(A,B,C,D,E,F,G,H,I,J,K) -> Com_1(f11(A,B,C,D,E,F,1,H,I,J,K)) :|: D >= E && G = 0
+  f11(A,B,C,D,E,F,G,H,I,J,K) -> Com_1(f11(A,B,C,D,E,F,1,H,I,J,K)) :|: D + 1 >= E && E >= 2 + D && G = 0
+  f11(A,B,C,D,E,F,G,H,I,J,K) -> Com_1(f11(A,B,C,D,D + 1,F,1,H,I,J,K)) :|: E = D + 1 && G = 0
+  f11(A,B,C,D,E,F,G,H,I,J,K) -> Com_1(f11(A,B,C,D,D + 1,F,1,N,I,J,K)) :|: L >= M + 1 && E = D + 1 && G = 0
+  f11(A,B,C,D,E,F,G,H,I,J,K) -> Com_1(f40(E,B,C,D,E,F,0,N,L,D + 1,M)) :|: E >= 2 + D && G = 0
+  f40(A,B,C,D,E,F,G,H,I,J,K) -> Com_1(f59(A,B,C,D,E,F,G,H,I,J,K)) :|: 0 >= F + 1
+  f40(A,B,C,D,E,F,G,H,I,J,K) -> Com_1(f59(A,B,C,D,E,F,G,H,I,J,K)) :|: F >= 1
+  f40(A,B,C,D,E,F,G,H,I,J,K) -> Com_1(f43(A,B,C,D,E,0,G,H,I,J + 1,K)) :|: F = 0
+  f43(A,B,C,D,E,F,G,H,I,J,K) -> Com_1(f43(A,B,C,D,E,F,G,H,I,J + 1,K)) :|: K >= N + 1
+  f48(A,B,C,D,E,F,G,H,I,J,K) -> Com_1(f48(A - 1,B,C,D,E,F,G,H,I,J,K))
+  f54(A,B,C,D,E,F,G,H,I,J,K) -> Com_1(f40(A,B,C,D,E,F,G,H,I,J,K)) :|: 0 >= F + 1
+  f54(A,B,C,D,E,F,G,H,I,J,K) -> Com_1(f40(A,B,C,D,E,F,G,H,I,J,K)) :|: F >= 1
+  f54(A,B,C,D,E,F,G,H,I,J,K) -> Com_1(f40(A,B,C,D,E,0,G,N,I,J,K)) :|: F = 0
+  f59(A,B,C,D,E,F,G,H,I,J,K) -> Com_1(f63(A,B,C,D,E,F,G,H,I,J,K)) :|: B >= A + 1
+  f59(A,B,C,D,E,F,G,H,I,J,K) -> Com_1(f63(A,B,C,D,A - 1,F,G,H,I,J,K)) :|: A >= B
+  f63(A,B,C,D,E,F,G,H,I,J,K) -> Com_1(f11(A,B,C,J,E,F,G,H,I,J,K)) :|: B >= A
+  f48(A,B,C,D,E,F,G,H,I,J,K) -> Com_1(f54(A,B,C,D,E,F,G,H,I,J,K)) :|: A >= J
+  f48(A,B,C,D,E,F,G,H,I,J,K) -> Com_1(f54(A,B,C,D,E,1,G,H,I,J,K)) :|: J >= A + 1
+  f43(A,B,C,D,E,F,G,H,I,J,K) -> Com_1(f48(A - 1,B,C,D,E,F,G,H,I,J,K))
+  f11(A,B,C,D,E,F,G,H,I,J,K) -> Com_1(f69(A,B,C,D,E,F,G,H,I,J,K)) :|: 0 >= G + 1
+  f11(A,B,C,D,E,F,G,H,I,J,K) -> Com_1(f69(A,B,C,D,E,F,G,H,I,J,K)) :|: G >= 1
+)

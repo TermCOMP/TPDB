@@ -1,0 +1,25 @@
+(GOAL COMPLEXITY)
+(STARTTERM (FUNCTIONSYMBOLS f0))
+(VAR A B C D E F G H I J K L M N)
+(RULES
+  f25(A,B,C,D,E,F,G,H,I,J) -> Com_1(f16(A,B,C,D,E,F,G,H,I,J)) :|: 0 >= A
+  f0(A,B,C,D,E,F,G,H,I,J) -> Com_1(f16(A,1,0,1,N,0,M,L,K,J)) :|: K >= 0 && L >= K && L >= 0 && M >= L && N >= 0 && M >= 0
+  f16(A,B,C,D,E,F,G,H,I,J) -> Com_1(f25(0,B,C,D,E,F + 1,G,H,I,J)) :|: I >= 1 && 0 >= F && 0 >= E
+  f16(A,B,C,D,E,F,G,H,I,J) -> Com_1(f25(N,B,C,D,E,F,G,H,I,J)) :|: I >= 1 && F >= 2 && 0 >= E && 1 >= N && N >= 0
+  f16(A,B,C,D,E,F,G,H,I,J) -> Com_1(f25(1,B,C + 1,D,E,F,G,H,I,J)) :|: I >= 1 && 0 >= E && 0 >= C && F = 1
+  f16(A,B,C,D,E,F,G,H,I,J) -> Com_1(f25(0,B,0,D - 1,E,F,G,H,I,J)) :|: I >= 1 && 0 >= E && D >= 1 && F = 1 && C = 1
+  f16(A,B,C,D,E,F,G,H,I,J) -> Com_1(f25(M,B + 1,0,B + 1,N,0,G,H,I,J)) :|: I >= 1 && 0 >= E && M >= 0 && 1 >= M && C >= 2 && N >= 0 && F = 1
+  f16(A,B,C,D,E,F,G,H,I,J) -> Com_1(f25(M,B + 1,0,B + 1,N,0,G,H,I,J)) :|: I >= 1 && 0 >= E && 0 >= D && M >= 0 && 1 >= M && N >= 0 && F = 1 && C = 1
+  f16(A,B,C,D,E,F,G,H,I,J) -> Com_1(f25(N,B,C,D,E - 1,F,G,H,I,J)) :|: I >= 1 && E >= 1 && 1 >= N && N >= 0
+  f25(A,B,C,D,E,F,G,H,I,J) -> Com_1(f50(A,B,C,D,E,F + 1,G,H,I,0)) :|: A >= 1 && 0 >= F && 0 >= E
+  f25(A,B,C,D,E,F,G,H,I,J) -> Com_1(f50(A,B,C,D,E,F,G,H,I,N)) :|: A >= 1 && F >= 2 && 0 >= E && 1 >= N && N >= 0
+  f25(A,B,C,D,E,F,G,H,I,J) -> Com_1(f50(A,B,C + 1,D,E,F,G,H,I,1)) :|: A >= 1 && 0 >= E && 0 >= C && F = 1
+  f25(A,B,C,D,E,F,G,H,I,J) -> Com_1(f50(A,B,0,D - 1,E,F,G,H,I,0)) :|: A >= 1 && 0 >= E && D >= 1 && F = 1 && C = 1
+  f25(A,B,C,D,E,F,G,H,I,J) -> Com_1(f50(A,B + 1,0,B + 1,N,0,G,H,I,M)) :|: A >= 1 && 0 >= E && M >= 0 && 1 >= M && C >= 2 && N >= 0 && F = 1
+  f25(A,B,C,D,E,F,G,H,I,J) -> Com_1(f50(A,B + 1,0,B + 1,N,0,G,H,I,M)) :|: A >= 1 && 0 >= E && 0 >= D && M >= 0 && 1 >= M && N >= 0 && F = 1 && C = 1
+  f25(A,B,C,D,E,F,G,H,I,J) -> Com_1(f50(A,B,C,D,E - 1,F,G,H,I,N)) :|: A >= 1 && E >= 1 && 1 >= N && N >= 0
+  f50(A,B,C,D,E,F,G,H,I,J) -> Com_1(f16(A,B,C,D,E,F,G,H,I,J)) :|: I >= H && J >= 1
+  f50(A,B,C,D,E,F,G,H,I,J) -> Com_1(f16(A,B,C,D,E,F,G,H,I + 1,J)) :|: H >= I + 1 && J >= 1
+  f50(A,B,C,D,E,F,G,H,I,J) -> Com_1(f16(A,B,C,D,E,F,G,H,I - 1,J)) :|: 0 >= J
+  f16(A,B,C,D,E,F,G,H,I,J) -> Com_1(f73(A,B,C,D,E,F,G,H,I,J)) :|: 0 >= I
+)

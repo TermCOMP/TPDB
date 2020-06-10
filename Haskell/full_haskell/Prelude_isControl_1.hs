@@ -1,0 +1,1 @@
+{-# htermination isControl :: Char -> Bool #-}

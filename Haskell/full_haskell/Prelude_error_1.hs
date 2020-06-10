@@ -1,0 +1,1 @@
+{-# htermination error :: String -> a #-}

@@ -1,0 +1,11 @@
+(VAR x y)
+(RULES
+random(x) -> rand(x, w(0))
+rand(x, y) -> y :|: x = 0
+rand(x, y) -> rand(x - 1, id_inc(y)) :|: x > 0
+rand(x, y) -> rand(x + 1, id_dec(y)) :|: 0 > x
+id_inc(w(x)) -> w(x)
+id_inc(w(x)) -> w(x + 1)
+id_dec(w(x)) -> w(x)
+id_dec(w(x)) -> w(x - 1)
+)

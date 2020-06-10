@@ -1,0 +1,8 @@
+(GOAL COMPLEXITY)
+(STARTTERM (FUNCTIONSYMBOLS start))
+(VAR A B C)
+(RULES
+  zip3(A,B,C) -> Com_1(zip3(A - 1,B - 1,C - 1)) :|: A >= 1 && B >= 1 && C >= 1
+  group3(A,B,C) -> Com_1(group3(A - 3,B,C)) :|: A >= 4
+  start(A,B,C) -> Com_1(zip3(A,B,C))
+)

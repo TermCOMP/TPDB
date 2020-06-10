@@ -1,0 +1,16 @@
+(GOAL COMPLEXITY)
+(STARTTERM (FUNCTIONSYMBOLS eval_speedFails1_start))
+(VAR v__0 v_i v_m v_n)
+(RULES
+  eval_speedFails1_start(v__0, v_i, v_m, v_n) -> Com_1(eval_speedFails1_bb0_in(v__0, v_i, v_m, v_n))
+  eval_speedFails1_bb0_in(v__0, v_i, v_m, v_n) -> Com_1(eval_speedFails1_0(v__0, v_i, v_m, v_n))
+  eval_speedFails1_0(v__0, v_i, v_m, v_n) -> Com_1(eval_speedFails1_1(v__0, v_i, v_m, v_n))
+  eval_speedFails1_1(v__0, v_i, v_m, v_n) -> Com_1(eval_speedFails1_2(v__0, v_i, v_m, v_n))
+  eval_speedFails1_2(v__0, v_i, v_m, v_n) -> Com_1(eval_speedFails1_3(v__0, v_i, v_m, v_n))
+  eval_speedFails1_3(v__0, v_i, v_m, v_n) -> Com_1(eval_speedFails1_4(v__0, v_i, v_m, v_n))
+  eval_speedFails1_4(v__0, v_i, v_m, v_n) -> Com_1(eval_speedFails1_bb1_in(v_i, v_i, v_m, v_n))
+  eval_speedFails1_bb1_in(v__0, v_i, v_m, v_n) -> Com_1(eval_speedFails1_bb2_in(v__0, v_i, v_m, v_n)) :|: v__0 <= v_n
+  eval_speedFails1_bb1_in(v__0, v_i, v_m, v_n) -> Com_1(eval_speedFails1_bb3_in(v__0, v_i, v_m, v_n)) :|: v__0 > v_n
+  eval_speedFails1_bb2_in(v__0, v_i, v_m, v_n) -> Com_1(eval_speedFails1_bb1_in(v__0 + v_m, v_i, v_m, v_n))
+  eval_speedFails1_bb3_in(v__0, v_i, v_m, v_n) -> Com_1(eval_speedFails1_stop(v__0, v_i, v_m, v_n))
+)

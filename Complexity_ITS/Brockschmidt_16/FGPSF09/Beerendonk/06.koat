@@ -1,0 +1,7 @@
+(GOAL COMPLEXITY)
+(STARTTERM (FUNCTIONSYMBOLS start))
+(VAR A B)
+(RULES
+  eval(A) -> Com_1(eval(2*B)) :|: 2*B >= 0 && A = 1 + 2*B
+  start(A) -> Com_1(eval(A))
+)

@@ -1,0 +1,1 @@
+{-# htermination product :: [Float] -> Float #-}

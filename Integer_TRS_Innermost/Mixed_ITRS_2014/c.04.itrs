@@ -1,0 +1,7 @@
+# Cook/Podelski/Rybalchenko: Termination Proofs for Systems Code (PLDI 2006)
+(VAR x y z)
+(RULES
+eval_0(x, y, z) -> eval_1(x, y, z) :|: y > 0
+eval_1(x, y, z) -> eval_1(x + y, y, z) :|: y > x && z > y && y > 0
+eval_1(x, y, z) -> eval_1(x, y, x - y) :|: y > x && z > y && y > 0
+)

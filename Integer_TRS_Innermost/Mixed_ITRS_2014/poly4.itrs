@@ -1,0 +1,8 @@
+# Bradley/Manna/Sipma: Termination of Polynomial Programs
+(VAR an bn cn i j)
+(RULES
+eval(an, bn, cn, i, j) -> eval(an, bn, cn + 1, i, j + 1) :|: j < bn && i < an
+eval(an, bn, cn, i, j) -> eval(an, bn, cn + 1, i + 1, j) :|: j < bn && i < an
+eval(an, bn, cn, i, j) -> eval(an, bn, cn + 1, i + 1, j) :|: j >= bn && i < an
+eval(an, bn, cn, i, j) -> eval(an, bn, cn + 1, i, j + 1) :|: j < bn && i >= an
+)

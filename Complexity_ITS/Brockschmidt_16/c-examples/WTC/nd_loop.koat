@@ -1,0 +1,12 @@
+(GOAL COMPLEXITY)
+(STARTTERM (FUNCTIONSYMBOLS evalndloopstart))
+(VAR A B)
+(RULES
+  evalndloopstart(A) -> Com_1(evalndloopentryin(A))
+  evalndloopentryin(A) -> Com_1(evalndloopbbin(0))
+  evalndloopbbin(A) -> Com_1(evalndloopbbin(B)) :|: 2 + A >= B && B >= A + 1 && 9 >= B
+  evalndloopbbin(A) -> Com_1(evalndloopreturnin(A)) :|: B >= A + 3
+  evalndloopbbin(A) -> Com_1(evalndloopreturnin(A)) :|: A >= B
+  evalndloopbbin(A) -> Com_1(evalndloopreturnin(A)) :|: B >= 10
+  evalndloopreturnin(A) -> Com_1(evalndloopstop(A))
+)

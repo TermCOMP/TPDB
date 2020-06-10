@@ -1,0 +1,14 @@
+(GOAL COMPLEXITY)
+(STARTTERM (FUNCTIONSYMBOLS f0))
+(VAR A B C D E F G H I J K L M N O P Q R S T U)
+(RULES
+  f0(A,B,C,D,E,F,G,H,I,J,K,L,M) -> Com_1(f1(A,B,C,D,E,F,G,H,I,J,K,L,M))
+  f1(A,B,C,D,E,F,G,H,I,J,K,L,M) -> Com_1(f2(0,O,P,3,N,0,O,P,3,N,2,L,M)) :|: 7 >= N && N >= 1
+  f4(A,B,C,D,E,F,G,H,I,J,K,L,M) -> Com_1(f2(0,O,P,N,Q,0,O,P,N,Q,2,L,M)) :|: L >= 1 && L >= P + 1 && M >= 1 && M >= O + 1 && 7 >= Q && 7 >= N && Q >= 1 && N >= 1
+  f1(A,B,C,D,E,F,G,H,I,J,K,L,M) -> Com_1(f1(O,P,N,2,Q,O,P,N,2,Q,1,L,M)) :|: R >= 1 && 7 >= R && S >= 1 && 7 >= S && Q >= 1 && 7 >= Q && 1 >= O && O >= 0
+  f2(A,B,C,D,E,F,G,H,I,J,K,L,M) -> Com_1(f1(O,P,N,2,Q,O,P,N,2,Q,1,L,M)) :|: R >= 1 && 7 >= R && S >= 1 && 7 >= S && Q >= 1 && 7 >= Q && 1 >= O && O >= 0
+  f4(A,B,C,D,E,F,G,H,I,J,K,L,M) -> Com_1(f1(O,P,N,2,Q,O,P,N,2,Q,1,L,M)) :|: R >= L && S >= M && T >= 1 && 7 >= T && U >= 1 && 7 >= U && Q >= 1 && 7 >= Q && 1 >= O && O >= 0
+  f4(A,B,C,D,E,F,G,H,I,J,K,L,M) -> Com_1(f1(O,P,N,2,Q,O,P,N,2,Q,1,L,M)) :|: R >= 1 && 7 >= R && S >= 1 && 7 >= S && Q >= 1 && 7 >= Q && 1 >= O && O >= 0
+  f2(A,B,C,D,E,F,G,H,I,J,K,L,M) -> Com_1(f4(O,P,N,Q,2,O,P,N,Q,2,4,L,M)) :|: R >= 1 && 7 >= R && S >= 1 && 7 >= S && T >= 1 && 7 >= T && U >= 1 && 7 >= U && Q >= 1 && 7 >= Q && 1 >= O && O >= 0
+  f2(A,B,C,D,E,F,G,H,I,J,K,L,M) -> Com_1(f4(O,P,N,Q,7,O,P,N,Q,7,4,L,M)) :|: R >= 1 && 7 >= R && S >= 1 && 7 >= S && T >= 1 && 7 >= T && U >= 1 && 7 >= U && Q >= 1 && 7 >= Q && 1 >= O && O >= 0
+)

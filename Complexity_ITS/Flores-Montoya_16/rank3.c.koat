@@ -1,0 +1,42 @@
+(GOAL COMPLEXITY)
+(STARTTERM (FUNCTIONSYMBOLS eval_rank2_start))
+(VAR nondef_0 nondef_1 v_10 v_14 v_15 v_16 v_5 v_m v_x_0 v_x_1 v_x_2 v_y_0 v_y_1 v_y_2)
+(RULES
+  eval_rank2_start(v_10, v_14, v_15, v_16, v_5, v_m, v_x_0, v_x_1, v_x_2, v_y_0, v_y_1, v_y_2) -> Com_1(eval_rank2_bb0_in(v_10, v_14, v_15, v_16, v_5, v_m, v_x_0, v_x_1, v_x_2, v_y_0, v_y_1, v_y_2))
+  eval_rank2_bb0_in(v_10, v_14, v_15, v_16, v_5, v_m, v_x_0, v_x_1, v_x_2, v_y_0, v_y_1, v_y_2) -> Com_1(eval_rank2_0(v_10, v_14, v_15, v_16, v_5, v_m, v_x_0, v_x_1, v_x_2, v_y_0, v_y_1, v_y_2))
+  eval_rank2_0(v_10, v_14, v_15, v_16, v_5, v_m, v_x_0, v_x_1, v_x_2, v_y_0, v_y_1, v_y_2) -> Com_1(eval_rank2_1(v_10, v_14, v_15, v_16, v_5, v_m, v_x_0, v_x_1, v_x_2, v_y_0, v_y_1, v_y_2))
+  eval_rank2_1(v_10, v_14, v_15, v_16, v_5, v_m, v_x_0, v_x_1, v_x_2, v_y_0, v_y_1, v_y_2) -> Com_1(eval_rank2_2(v_10, v_14, v_15, v_16, v_5, v_m, v_x_0, v_x_1, v_x_2, v_y_0, v_y_1, v_y_2))
+  eval_rank2_2(v_10, v_14, v_15, v_16, v_5, v_m, v_x_0, v_x_1, v_x_2, v_y_0, v_y_1, v_y_2) -> Com_1(eval_rank2_3(v_10, v_14, v_15, v_16, v_5, v_m, v_x_0, v_x_1, v_x_2, v_y_0, v_y_1, v_y_2))
+  eval_rank2_3(v_10, v_14, v_15, v_16, v_5, v_m, v_x_0, v_x_1, v_x_2, v_y_0, v_y_1, v_y_2) -> Com_1(eval_rank2_4(v_10, v_14, v_15, v_16, v_5, v_m, v_x_0, v_x_1, v_x_2, v_y_0, v_y_1, v_y_2))
+  eval_rank2_4(v_10, v_14, v_15, v_16, v_5, v_m, v_x_0, v_x_1, v_x_2, v_y_0, v_y_1, v_y_2) -> Com_1(eval_rank2_5(v_10, v_14, v_15, v_16, v_5, v_m, v_x_0, v_x_1, v_x_2, v_y_0, v_y_1, v_y_2))
+  eval_rank2_5(v_10, v_14, v_15, v_16, v_5, v_m, v_x_0, v_x_1, v_x_2, v_y_0, v_y_1, v_y_2) -> Com_1(eval_rank2_6(v_10, v_14, v_15, v_16, v_5, v_m, v_x_0, v_x_1, v_x_2, v_y_0, v_y_1, v_y_2))
+  eval_rank2_6(v_10, v_14, v_15, v_16, v_5, v_m, v_x_0, v_x_1, v_x_2, v_y_0, v_y_1, v_y_2) -> Com_1(eval_rank2_7(v_10, v_14, v_15, v_16, v_5, v_m, v_x_0, v_x_1, v_x_2, v_y_0, v_y_1, v_y_2))
+  eval_rank2_7(v_10, v_14, v_15, v_16, v_5, v_m, v_x_0, v_x_1, v_x_2, v_y_0, v_y_1, v_y_2) -> Com_1(eval_rank2_8(v_10, v_14, v_15, v_16, v_5, v_m, v_x_0, v_x_1, v_x_2, v_y_0, v_y_1, v_y_2))
+  eval_rank2_8(v_10, v_14, v_15, v_16, v_5, v_m, v_x_0, v_x_1, v_x_2, v_y_0, v_y_1, v_y_2) -> Com_1(eval_rank2_bb1_in(v_10, v_14, v_15, v_16, v_5, v_m, v_m, v_x_1, v_x_2, v_m, v_y_1, v_y_2))
+  eval_rank2_bb1_in(v_10, v_14, v_15, v_16, v_5, v_m, v_x_0, v_x_1, v_x_2, v_y_0, v_y_1, v_y_2) -> Com_1(eval_rank2_bb2_in(v_10, v_14, v_15, v_16, v_5, v_m, v_x_0, v_x_1, v_x_2, v_y_0, v_y_1, v_y_2)) :|: v_x_0 >= 2
+  eval_rank2_bb1_in(v_10, v_14, v_15, v_16, v_5, v_m, v_x_0, v_x_1, v_x_2, v_y_0, v_y_1, v_y_2) -> Com_1(eval_rank2_bb9_in(v_10, v_14, v_15, v_16, v_5, v_m, v_x_0, v_x_1, v_x_2, v_y_0, v_y_1, v_y_2)) :|: v_x_0 < 2
+  eval_rank2_bb2_in(v_10, v_14, v_15, v_16, v_5, v_m, v_x_0, v_x_1, v_x_2, v_y_0, v_y_1, v_y_2) -> Com_1(eval_rank2_bb3_in(v_10, v_14, v_15, v_16, v_5, v_m, v_x_0, v_x_0 - 1, v_x_2, v_y_0, v_y_0 + v_x_0 - 1, v_y_2))
+  eval_rank2_bb3_in(v_10, v_14, v_15, v_16, v_5, v_m, v_x_0, v_x_1, v_x_2, v_y_0, v_y_1, v_y_2) -> Com_1(eval_rank2_bb4_in(v_10, v_14, v_15, v_16, v_5, v_m, v_x_0, v_x_1, v_x_2, v_y_0, v_y_1, v_y_2)) :|: v_y_1 >= v_x_1 + 1
+  eval_rank2_bb3_in(v_10, v_14, v_15, v_16, v_5, v_m, v_x_0, v_x_1, v_x_2, v_y_0, v_y_1, v_y_2) -> Com_1(eval_rank2__critedge_in(v_10, v_14, v_15, v_16, v_5, v_m, v_x_0, v_x_1, v_x_2, v_y_0, v_y_1, v_y_2)) :|: v_y_1 < v_x_1 + 1
+  eval_rank2_bb4_in(v_10, v_14, v_15, v_16, v_5, v_m, v_x_0, v_x_1, v_x_2, v_y_0, v_y_1, v_y_2) -> Com_1(eval_rank2_14(v_10, v_14, v_15, v_16, v_5, v_m, v_x_0, v_x_1, v_x_2, v_y_0, v_y_1, v_y_2))
+  eval_rank2_14(v_10, v_14, v_15, v_16, v_5, v_m, v_x_0, v_x_1, v_x_2, v_y_0, v_y_1, v_y_2) -> Com_1(eval_rank2_15(v_10, v_14, v_15, v_16, nondef_0, v_m, v_x_0, v_x_1, v_x_2, v_y_0, v_y_1, v_y_2))
+  eval_rank2_15(v_10, v_14, v_15, v_16, v_5, v_m, v_x_0, v_x_1, v_x_2, v_y_0, v_y_1, v_y_2) -> Com_1(eval_rank2_bb5_in(v_10, v_14, v_15, v_16, v_5, v_m, v_x_0, v_x_1, v_x_2, v_y_0, v_y_1, v_y_2)) :|: v_5 > 0
+  eval_rank2_15(v_10, v_14, v_15, v_16, v_5, v_m, v_x_0, v_x_1, v_x_2, v_y_0, v_y_1, v_y_2) -> Com_1(eval_rank2__critedge_in(v_10, v_14, v_15, v_16, v_5, v_m, v_x_0, v_x_1, v_x_2, v_y_0, v_y_1, v_y_2)) :|: v_5 <= 0
+  eval_rank2_bb5_in(v_10, v_14, v_15, v_16, v_5, v_m, v_x_0, v_x_1, v_x_2, v_y_0, v_y_1, v_y_2) -> Com_1(eval_rank2_bb6_in(v_10, v_14, v_15, v_16, v_5, v_m, v_x_0, v_x_1, v_x_1, v_y_0, v_y_1, v_y_1 - 1))
+  eval_rank2_bb6_in(v_10, v_14, v_15, v_16, v_5, v_m, v_x_0, v_x_1, v_x_2, v_y_0, v_y_1, v_y_2) -> Com_1(eval_rank2_bb7_in(v_10, v_14, v_15, v_16, v_5, v_m, v_x_0, v_x_1, v_x_2, v_y_0, v_y_1, v_y_2)) :|: v_y_2 >= v_x_2 + 3
+  eval_rank2_bb6_in(v_10, v_14, v_15, v_16, v_5, v_m, v_x_0, v_x_1, v_x_2, v_y_0, v_y_1, v_y_2) -> Com_1(eval_rank2__critedge1_in(v_10, v_14, v_15, v_16, v_5, v_m, v_x_0, v_x_1, v_x_2, v_y_0, v_y_1, v_y_2)) :|: v_y_2 < v_x_2 + 3
+  eval_rank2_bb7_in(v_10, v_14, v_15, v_16, v_5, v_m, v_x_0, v_x_1, v_x_2, v_y_0, v_y_1, v_y_2) -> Com_1(eval_rank2_20(v_10, v_14, v_15, v_16, v_5, v_m, v_x_0, v_x_1, v_x_2, v_y_0, v_y_1, v_y_2))
+  eval_rank2_20(v_10, v_14, v_15, v_16, v_5, v_m, v_x_0, v_x_1, v_x_2, v_y_0, v_y_1, v_y_2) -> Com_1(eval_rank2_21(nondef_1, v_14, v_15, v_16, v_5, v_m, v_x_0, v_x_1, v_x_2, v_y_0, v_y_1, v_y_2))
+  eval_rank2_21(v_10, v_14, v_15, v_16, v_5, v_m, v_x_0, v_x_1, v_x_2, v_y_0, v_y_1, v_y_2) -> Com_1(eval_rank2_bb8_in(v_10, v_14, v_15, v_16, v_5, v_m, v_x_0, v_x_1, v_x_2, v_y_0, v_y_1, v_y_2)) :|: v_10 > 0
+  eval_rank2_21(v_10, v_14, v_15, v_16, v_5, v_m, v_x_0, v_x_1, v_x_2, v_y_0, v_y_1, v_y_2) -> Com_1(eval_rank2__critedge1_in(v_10, v_14, v_15, v_16, v_5, v_m, v_x_0, v_x_1, v_x_2, v_y_0, v_y_1, v_y_2)) :|: v_10 <= 0
+  eval_rank2_bb8_in(v_10, v_14, v_15, v_16, v_5, v_m, v_x_0, v_x_1, v_x_2, v_y_0, v_y_1, v_y_2) -> Com_1(eval_rank2_bb6_in(v_10, v_14, v_15, v_16, v_5, v_m, v_x_0, v_x_1, v_x_2 + 1, v_y_0, v_y_1, v_y_2 - 2))
+  eval_rank2__critedge1_in(v_10, v_14, v_15, v_16, v_5, v_m, v_x_0, v_x_1, v_x_2, v_y_0, v_y_1, v_y_2) -> Com_1(eval_rank2_26(v_10, v_y_2 - 1, v_15, v_16, v_5, v_m, v_x_0, v_x_1, v_x_2, v_y_0, v_y_1, v_y_2))
+  eval_rank2_26(v_10, v_14, v_15, v_16, v_5, v_m, v_x_0, v_x_1, v_x_2, v_y_0, v_y_1, v_y_2) -> Com_1(eval_rank2_27(v_10, v_14, v_15, v_16, v_5, v_m, v_x_0, v_x_1, v_x_2, v_y_0, v_y_1, v_y_2))
+  eval_rank2_27(v_10, v_14, v_15, v_16, v_5, v_m, v_x_0, v_x_1, v_x_2, v_y_0, v_y_1, v_y_2) -> Com_1(eval_rank2_bb3_in(v_10, v_14, v_15, v_16, v_5, v_m, v_x_0, v_x_2, v_x_2, v_y_0, v_14, v_y_2))
+  eval_rank2__critedge_in(v_10, v_14, v_15, v_16, v_5, v_m, v_x_0, v_x_1, v_x_2, v_y_0, v_y_1, v_y_2) -> Com_1(eval_rank2_29(v_10, v_14, v_x_1 - 1, v_16, v_5, v_m, v_x_0, v_x_1, v_x_2, v_y_0, v_y_1, v_y_2))
+  eval_rank2_29(v_10, v_14, v_15, v_16, v_5, v_m, v_x_0, v_x_1, v_x_2, v_y_0, v_y_1, v_y_2) -> Com_1(eval_rank2_30(v_10, v_14, v_15, v_16, v_5, v_m, v_x_0, v_x_1, v_x_2, v_y_0, v_y_1, v_y_2))
+  eval_rank2_30(v_10, v_14, v_15, v_16, v_5, v_m, v_x_0, v_x_1, v_x_2, v_y_0, v_y_1, v_y_2) -> Com_1(eval_rank2_31(v_10, v_14, v_15, v_y_1 - v_15, v_5, v_m, v_x_0, v_x_1, v_x_2, v_y_0, v_y_1, v_y_2))
+  eval_rank2_31(v_10, v_14, v_15, v_16, v_5, v_m, v_x_0, v_x_1, v_x_2, v_y_0, v_y_1, v_y_2) -> Com_1(eval_rank2_32(v_10, v_14, v_15, v_16, v_5, v_m, v_x_0, v_x_1, v_x_2, v_y_0, v_y_1, v_y_2))
+  eval_rank2_32(v_10, v_14, v_15, v_16, v_5, v_m, v_x_0, v_x_1, v_x_2, v_y_0, v_y_1, v_y_2) -> Com_1(eval_rank2_bb1_in(v_10, v_14, v_15, v_16, v_5, v_m, v_15, v_x_1, v_x_2, v_16, v_y_1, v_y_2))
+  eval_rank2_bb9_in(v_10, v_14, v_15, v_16, v_5, v_m, v_x_0, v_x_1, v_x_2, v_y_0, v_y_1, v_y_2) -> Com_1(eval_rank2_stop(v_10, v_14, v_15, v_16, v_5, v_m, v_x_0, v_x_1, v_x_2, v_y_0, v_y_1, v_y_2))
+)

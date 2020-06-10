@@ -1,0 +1,1 @@
+{-# htermination fromDouble :: Double -> Float #-}

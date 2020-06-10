@@ -1,0 +1,10 @@
+(VAR x y)
+(RULES
+cu(TRUE, x) -> cu(x < exp(10, 2), x + 1)
+exp(x, y) -> if(y > 0, x, y)
+if(TRUE, x, y) -> x * exp(x, y-1)
+if(FALSE, x, y) -> 1
+
+
+
+)

@@ -1,0 +1,1 @@
+{-# htermination toUpper :: Char -> Char #-}

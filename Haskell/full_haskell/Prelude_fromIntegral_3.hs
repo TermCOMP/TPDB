@@ -1,0 +1,1 @@
+{-# htermination fromIntegral :: Int -> Float #-}

@@ -1,0 +1,1 @@
+{-# htermination minimum :: [Float] -> Float #-}

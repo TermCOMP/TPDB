@@ -1,0 +1,1 @@
+{-# htermination minimum :: [Ordering] -> Ordering #-}

@@ -1,0 +1,1 @@
+{-# htermination product :: [Int] -> Int #-}

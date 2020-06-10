@@ -1,0 +1,5 @@
+# TRS/Beerendonk/4.trs
+(VAR x y)
+(RULES
+eval(x, y) -> eval(y, x) :|: x > y
+)

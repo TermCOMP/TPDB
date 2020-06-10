@@ -1,0 +1,1 @@
+{-# htermination head :: [a] -> a #-}

@@ -1,0 +1,17 @@
+(GOAL COMPLEXITY)
+(STARTTERM (FUNCTIONSYMBOLS evalsipmabubblestart))
+(VAR A B C D)
+(RULES
+  evalsipmabubblestart(A,B) -> Com_1(evalsipmabubbleentryin(A,B))
+  evalsipmabubbleentryin(A,B) -> Com_1(evalsipmabubblebb6in(A,B))
+  evalsipmabubblebb6in(A,B) -> Com_1(evalsipmabubblebb4in(A,0)) :|: A >= 0
+  evalsipmabubblebb6in(A,B) -> Com_1(evalsipmabubblereturnin(A,B)) :|: 0 >= A + 1
+  evalsipmabubblebb4in(A,B) -> Com_1(evalsipmabubblebb1in(A,B)) :|: A >= 1 + B
+  evalsipmabubblebb4in(A,B) -> Com_1(evalsipmabubblebb5in(A,B)) :|: B >= A
+  evalsipmabubblebb1in(A,B) -> Com_1(evalsipmabubblebb2in(A,B)) :|: C >= D + 1
+  evalsipmabubblebb1in(A,B) -> Com_1(evalsipmabubblebb3in(A,B)) :|: D >= C
+  evalsipmabubblebb2in(A,B) -> Com_1(evalsipmabubblebb3in(A,B))
+  evalsipmabubblebb3in(A,B) -> Com_1(evalsipmabubblebb4in(A,B + 1))
+  evalsipmabubblebb5in(A,B) -> Com_1(evalsipmabubblebb6in(A - 1,B))
+  evalsipmabubblereturnin(A,B) -> Com_1(evalsipmabubblestop(A,B))
+)

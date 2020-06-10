@@ -1,0 +1,6 @@
+(VAR x z u w)
+(RULES
+sqrt(x) -> f(x, 0, 1, 1)
+f(x, z, u, w) -> f(x, z + 1, u + 2, w + u + 2) :|: x >= w && u >= 0
+f(x, z, u, w) -> z :|: w > x
+)

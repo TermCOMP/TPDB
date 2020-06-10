@@ -1,0 +1,6 @@
+# Podelski/Rybalchenko: Transition Invariants (LICS 2004)
+(VAR x y)
+(RULES
+eval(x, y) -> eval(x - 1, x) :|: x > 0 && y > 0
+eval(x, y) -> eval(y - 2, x + 1) :|: x > 0 && y > 0
+)

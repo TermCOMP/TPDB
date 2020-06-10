@@ -1,0 +1,26 @@
+(GOAL COMPLEXITY)
+(STARTTERM (FUNCTIONSYMBOLS eval_insertsort_start))
+(VAR nondef_0 nondef_1 v_20 v_3 v_i_0 v_j_0 v_length)
+(RULES
+  eval_insertsort_start(v_20, v_3, v_i_0, v_j_0, v_length) -> Com_1(eval_insertsort_bb0_in(v_20, v_3, v_i_0, v_j_0, v_length))
+  eval_insertsort_bb0_in(v_20, v_3, v_i_0, v_j_0, v_length) -> Com_1(eval_insertsort_0(v_20, v_3, v_i_0, v_j_0, v_length))
+  eval_insertsort_0(v_20, v_3, v_i_0, v_j_0, v_length) -> Com_1(eval_insertsort_1(v_20, v_3, v_i_0, v_j_0, v_length))
+  eval_insertsort_1(v_20, v_3, v_i_0, v_j_0, v_length) -> Com_1(eval_insertsort_2(v_20, v_3, v_i_0, v_j_0, v_length))
+  eval_insertsort_2(v_20, v_3, v_i_0, v_j_0, v_length) -> Com_1(eval_insertsort_3(v_20, v_3, v_i_0, v_j_0, v_length))
+  eval_insertsort_3(v_20, v_3, v_i_0, v_j_0, v_length) -> Com_1(eval_insertsort_4(v_20, v_3, v_i_0, v_j_0, v_length))
+  eval_insertsort_4(v_20, v_3, v_i_0, v_j_0, v_length) -> Com_1(eval_insertsort_5(v_20, v_3, v_i_0, v_j_0, v_length))
+  eval_insertsort_5(v_20, v_3, v_i_0, v_j_0, v_length) -> Com_1(eval_insertsort_6(v_20, v_3, v_i_0, v_j_0, v_length))
+  eval_insertsort_6(v_20, v_3, v_i_0, v_j_0, v_length) -> Com_1(eval_insertsort_bb1_in(v_20, v_3, 1, v_j_0, v_length))
+  eval_insertsort_bb1_in(v_20, v_3, v_i_0, v_j_0, v_length) -> Com_1(eval_insertsort_bb2_in(v_20, v_3, v_i_0, v_j_0, v_length)) :|: v_i_0 < v_length
+  eval_insertsort_bb1_in(v_20, v_3, v_i_0, v_j_0, v_length) -> Com_1(eval_insertsort_bb7_in(v_20, v_3, v_i_0, v_j_0, v_length)) :|: v_i_0 >= v_length
+  eval_insertsort_bb2_in(v_20, v_3, v_i_0, v_j_0, v_length) -> Com_1(eval_insertsort_bb3_in(v_20, nondef_0, v_i_0, v_i_0 - 1, v_length))
+  eval_insertsort_bb3_in(v_20, v_3, v_i_0, v_j_0, v_length) -> Com_1(eval_insertsort_bb4_in(v_20, v_3, v_i_0, v_j_0, v_length)) :|: v_j_0 >= 0
+  eval_insertsort_bb3_in(v_20, v_3, v_i_0, v_j_0, v_length) -> Com_1(eval_insertsort_bb6_in(v_20, v_3, v_i_0, v_j_0, v_length)) :|: v_j_0 < 0
+  eval_insertsort_bb4_in(v_20, v_3, v_i_0, v_j_0, v_length) -> Com_1(eval_insertsort_bb5_in(v_20, v_3, v_i_0, v_j_0, v_length)) :|: nondef_1 > v_3
+  eval_insertsort_bb4_in(v_20, v_3, v_i_0, v_j_0, v_length) -> Com_1(eval_insertsort_bb6_in(v_20, v_3, v_i_0, v_j_0, v_length)) :|: nondef_1 <= v_3
+  eval_insertsort_bb5_in(v_20, v_3, v_i_0, v_j_0, v_length) -> Com_1(eval_insertsort_bb3_in(v_20, v_3, v_i_0, v_j_0 - 1, v_length))
+  eval_insertsort_bb6_in(v_20, v_3, v_i_0, v_j_0, v_length) -> Com_1(eval_insertsort_25(v_i_0 + 1, v_3, v_i_0, v_j_0, v_length))
+  eval_insertsort_25(v_20, v_3, v_i_0, v_j_0, v_length) -> Com_1(eval_insertsort_26(v_20, v_3, v_i_0, v_j_0, v_length))
+  eval_insertsort_26(v_20, v_3, v_i_0, v_j_0, v_length) -> Com_1(eval_insertsort_bb1_in(v_20, v_3, v_20, v_j_0, v_length))
+  eval_insertsort_bb7_in(v_20, v_3, v_i_0, v_j_0, v_length) -> Com_1(eval_insertsort_stop(v_20, v_3, v_i_0, v_j_0, v_length))
+)

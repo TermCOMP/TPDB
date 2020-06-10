@@ -1,0 +1,32 @@
+(GOAL COMPLEXITY)
+(STARTTERM (FUNCTIONSYMBOLS f0))
+(VAR A B C D E F G H I J K L M N O P)
+(RULES
+  f0(A,B,C,D,E,F,G,H,I,J,K,L,M,N) -> Com_1(f1(A,B,C,D,E,F,G,H,I,J,K,L,M,N))
+  f1(A,B,C,D,E,F,G,H,I,J,K,L,M,N) -> Com_1(f7(1,C,C,E,E,P,O,0,1,P,O,7,M,N)) :|: 7 >= O && 7 >= P && 3 >= O && O >= 1 && P >= 1
+  f1(A,B,C,D,E,F,G,H,I,J,K,L,M,N) -> Com_1(f7(1,C,C,E,E,P,O,0,1,P,O,7,M,N)) :|: 7 >= O && 7 >= P && O >= 5 && P >= 1
+  f1(A,B,C,D,E,F,G,H,I,J,K,L,M,N) -> Com_1(f7(1,C + 1,C + 1,E + 1,E + 1,P,4,1,1,P,4,7,M,N)) :|: 7 >= P && P >= 1
+  f1(A,B,C,D,E,F,G,H,I,J,K,L,M,N) -> Com_1(f2(0,C,C,E,E,3,P,0,0,3,P,2,M,N)) :|: 7 >= P && 3 >= P && P >= 1
+  f1(A,B,C,D,E,F,G,H,I,J,K,L,M,N) -> Com_1(f2(0,C,C,E,E,3,P,0,0,3,P,2,M,N)) :|: 7 >= P && P >= 5
+  f1(A,B,C,D,E,F,G,H,I,J,K,L,M,N) -> Com_1(f2(0,C + 1,C + 1,E + 1,E + 1,3,4,1,0,3,4,2,M,N))
+  f2(A,B,C,D,E,F,G,H,I,J,K,L,M,N) -> Com_1(f7(1,C,C,E,E,P,O,H,1,P,O,7,M,N)) :|: 7 >= O && 7 >= P && 3 >= O && O >= 1 && P >= 1
+  f2(A,B,C,D,E,F,G,H,I,J,K,L,M,N) -> Com_1(f7(1,C,C,E,E,P,O,H,1,P,O,7,M,N)) :|: 7 >= O && 7 >= P && O >= 5 && P >= 1
+  f2(A,B,C,D,E,F,G,H,I,J,K,L,M,N) -> Com_1(f7(1,C + 1,C + 1,E + 1,E + 1,P,4,1,1,P,4,7,M,N)) :|: 7 >= P && P >= 1
+  f2(A,B,C,D,E,F,G,H,I,J,K,L,M,N) -> Com_1(f3(0,C,C,E,E,P,O,H,0,P,O,3,M,N)) :|: 7 >= O && 7 >= P && 3 >= O && O >= 1 && P >= 1
+  f2(A,B,C,D,E,F,G,H,I,J,K,L,M,N) -> Com_1(f3(0,C,C,E,E,P,O,H,0,P,O,3,M,N)) :|: 7 >= O && 7 >= P && O >= 5 && P >= 1
+  f2(A,B,C,D,E,F,G,H,I,J,K,L,M,N) -> Com_1(f3(0,C + 1,C + 1,E + 1,E + 1,P,4,1,0,P,4,3,M,N)) :|: 7 >= P && P >= 1
+  f3(A,B,C,D,E,F,G,H,I,J,K,L,M,N) -> Com_1(f6(1,C,C,E,E,P,O,H,1,P,O,6,M,N)) :|: 7 >= O && 7 >= P && 3 >= O && O >= 1 && P >= 1
+  f3(A,B,C,D,E,F,G,H,I,J,K,L,M,N) -> Com_1(f6(1,C,C,E,E,P,O,H,1,P,O,6,M,N)) :|: 7 >= O && 7 >= P && O >= 5 && P >= 1
+  f3(A,B,C,D,E,F,G,H,I,J,K,L,M,N) -> Com_1(f6(1,C + 1,C + 1,E + 1,E + 1,P,4,1,1,P,4,6,M,N)) :|: 7 >= P && P >= 1
+  f6(A,B,C,D,E,F,G,H,I,J,K,L,M,N) -> Com_1(f4(P,C,C,E,E,O,2,0,P,O,2,4,M,N)) :|: 7 >= O && 1 >= P && P >= 0 && O >= 1
+  f6(A,B,C,D,E,F,G,H,I,J,K,L,M,N) -> Com_1(f4(P,C,C,E,E,O,7,1,P,O,7,4,M,N)) :|: 7 >= O && 1 >= P && P >= 0 && O >= 1 && H = 1
+  f4(A,B,C,D,E,F,G,H,I,J,K,L,M,N) -> Com_1(f2(0,C,C,E,E,P,O,0,0,P,O,2,M,N)) :|: M >= 1 && M >= E + 1 && N >= 1 && N >= C + 1 && 7 >= O && 7 >= P && 3 >= O && O >= 1 && P >= 1 && H = 1
+  f4(A,B,C,D,E,F,G,H,I,J,K,L,M,N) -> Com_1(f2(0,C,C,E,E,P,O,0,0,P,O,2,M,N)) :|: M >= 1 && M >= E + 1 && N >= 1 && N >= C + 1 && 7 >= O && 7 >= P && O >= 5 && P >= 1 && H = 1
+  f4(A,B,C,D,E,F,G,H,I,J,K,L,M,N) -> Com_1(f2(0,C + 1,C + 1,E + 1,E + 1,P,4,0,0,P,4,2,M,N)) :|: M >= E + 2 && N >= C + 2 && M >= 1 && N >= 1 && 7 >= P && P >= 1
+  f4(A,B,C,D,E,F,G,H,I,J,K,L,M,N) -> Com_1(f7(0,C,C,E,E,P,O,H,0,P,O,7,M,N)) :|: E >= M && C >= N && 7 >= O && 7 >= P && 3 >= O && O >= 1 && P >= 1
+  f4(A,B,C,D,E,F,G,H,I,J,K,L,M,N) -> Com_1(f7(0,C,C,E,E,P,O,H,0,P,O,7,M,N)) :|: E >= M && C >= N && 7 >= O && 7 >= P && O >= 5 && P >= 1
+  f4(A,B,C,D,E,F,G,H,I,J,K,L,M,N) -> Com_1(f7(0,C + 1,C + 1,E + 1,E + 1,P,4,1,0,P,4,7,M,N)) :|: E + 1 >= M && C + 1 >= N && 7 >= P && P >= 1
+  f4(A,B,C,D,E,F,G,H,I,J,K,L,M,N) -> Com_1(f7(1,C,C,E,E,P,O,H,1,P,O,7,M,N)) :|: 7 >= O && 7 >= P && 3 >= O && O >= 1 && P >= 1
+  f4(A,B,C,D,E,F,G,H,I,J,K,L,M,N) -> Com_1(f7(1,C,C,E,E,P,O,H,1,P,O,7,M,N)) :|: 7 >= O && 7 >= P && O >= 5 && P >= 1
+  f4(A,B,C,D,E,F,G,H,I,J,K,L,M,N) -> Com_1(f7(1,C + 1,C + 1,E + 1,E + 1,P,4,1,1,P,4,7,M,N)) :|: 7 >= P && P >= 1
+)

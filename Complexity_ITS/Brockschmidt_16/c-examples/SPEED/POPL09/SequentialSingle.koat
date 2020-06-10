@@ -1,0 +1,17 @@
+(GOAL COMPLEXITY)
+(STARTTERM (FUNCTIONSYMBOLS evalSequentialSinglestart))
+(VAR A B C)
+(RULES
+  evalSequentialSinglestart(A,B) -> Com_1(evalSequentialSingleentryin(A,B))
+  evalSequentialSingleentryin(A,B) -> Com_1(evalSequentialSinglebb1in(0,B))
+  evalSequentialSinglebb1in(A,B) -> Com_1(evalSequentialSinglebb5in(A,B)) :|: A >= B
+  evalSequentialSinglebb1in(A,B) -> Com_1(evalSequentialSinglebb2in(A,B)) :|: B >= A + 1
+  evalSequentialSinglebb2in(A,B) -> Com_1(evalSequentialSinglebbin(A,B)) :|: 0 >= C + 1
+  evalSequentialSinglebb2in(A,B) -> Com_1(evalSequentialSinglebbin(A,B)) :|: C >= 1
+  evalSequentialSinglebb2in(A,B) -> Com_1(evalSequentialSinglebb5in(A,B))
+  evalSequentialSinglebbin(A,B) -> Com_1(evalSequentialSinglebb1in(A + 1,B))
+  evalSequentialSinglebb5in(A,B) -> Com_1(evalSequentialSinglebb4in(A,B)) :|: B >= A + 1
+  evalSequentialSinglebb5in(A,B) -> Com_1(evalSequentialSinglereturnin(A,B)) :|: A >= B
+  evalSequentialSinglebb4in(A,B) -> Com_1(evalSequentialSinglebb5in(A + 1,B))
+  evalSequentialSinglereturnin(A,B) -> Com_1(evalSequentialSinglestop(A,B))
+)

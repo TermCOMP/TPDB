@@ -1,0 +1,1 @@
+{-# htermination (/=) :: Float -> Float -> Bool #-}

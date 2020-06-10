@@ -1,0 +1,16 @@
+# Heapsort
+# Cousot/Halbwachs: Automatic Discovery of Linear Restraints Among Variables of a Program (POPL 1978)
+(VAR i j l r n)
+(RULES
+eval_1(i, j, l, r, n) -> eval_2(i, j, l - 1, r, n) :|: l >= 2
+eval_1(i, j, l, r, n) -> eval_2(i, j, l, r - 1, n) :|: 2 > l
+eval_2(i, j, l, r, n) -> eval_3(l, 2 * l, l, r, n) :|: r >= 2
+eval_3(i, j, l, r, n) -> eval_4(i, j, l, r, n) :|: r >= j && r - 1 >= j
+eval_3(i, j, l, r, n) -> eval_4(i, j + 1, l, r, n) :|: r >= j && r - 1 >= j
+eval_3(i, j, l, r, n) -> eval_3(j, 2 * j, l, r, n) :|: r >= j && r - 1 >= j && j >= 1
+eval_3(i, j, l, r, n) -> eval_3(j + 1, 2 * j + 2, l, r, n) :|: r >= j && r - 1 >= j && j >= 1
+eval_3(i, j, l, r, n) -> eval_4(i, j, l, r, n) :|: r >= j && j > r - 1
+eval_3(i, j, l, r, n) -> eval_3(j, 2 * j, l, r, n) :|: r >= j && j > r - 1 && j >= 1
+eval_4(i, j, l, r, n) -> eval_2(i, j, l - 1, r, n) :|: l >= 2 && l >= 1 && r >= 2
+eval_4(i, j, l, r, n) -> eval_2(i, j, l, r - 1, n) :|: 2 > l && l >= 1 && r >= 2
+)

@@ -1,0 +1,1 @@
+{-# htermination (>=) :: Ordering -> Ordering -> Bool #-}

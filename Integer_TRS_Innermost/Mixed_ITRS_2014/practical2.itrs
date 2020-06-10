@@ -1,0 +1,15 @@
+# Colon/Sipma: Practical Methods for Proving Program Termination
+(VAR x y1 y2 z)
+(RULES
+eval_0(x, y1, y2, z) -> eval_1(x, x, 1, z)
+eval_1(x, y1, y2, z) -> eval_2(x, y1, y2, y1 - 10) :|: y1 > 100
+eval_1(x, y1, y2, z) -> eval_3(x, y1, y2, z) :|: y1 <= 100
+eval_3(x, y1, y2, z) -> eval_3(x, y1 + 11, y2 + 1, z) :|: y1 <= 100
+eval_3(x, y1, y2, z) -> eval_5(x, y1, y2, z) :|: y1 > 100
+eval_5(x, y1, y2, z) -> eval_7(x, y1 - 10, y2 - 1, z) :|: y2 > 1
+eval_7(x, y1, y2, z) -> eval_5(x, y1, y2, y1 - 10) :|: y1 > 100 && y2 = 1
+eval_7(x, y1, y2, z) -> eval_9(x, y1, y2, z) :|: y1 <= 100 || !(y2 = 1)
+eval_9(x, y1, y2, z) -> eval_11(x, y1 - 10, y2 - 1, z) :|: y1 > 100
+eval_9(x, y1, y2, z) -> eval_11(x, y1, y2, z) :|: y1 <= 100
+eval_11(x, y1, y2, z) -> eval_5(x, y1 + 11, y2 + 1, z)
+)

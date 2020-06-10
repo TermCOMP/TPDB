@@ -1,0 +1,8 @@
+(GOAL COMPLEXITY)
+(STARTTERM (FUNCTIONSYMBOLS sqrt))
+(VAR A B C D)
+(RULES
+  sqrt(A,B,C,D) -> Com_1(f(0,1,1,D))
+  f(A,B,C,D) -> Com_1(f(A + 1,B + 2,C + B + 2,D)) :|: D >= C && B >= 0
+  f(A,B,C,D) -> Com_1(end(A,B,C,D)) :|: C >= D + 1
+)

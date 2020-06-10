@@ -1,0 +1,6 @@
+# Ex. 12 from "Proving Termination by Bounded Increase" (CADE'07)
+(VAR x y z)
+(RULES
+f(TRUE, x, y, z) -> f(x > y+z, x, y+1, z)
+f(TRUE, x, y, z) -> f(x > y+z, x, y, z+1)
+)

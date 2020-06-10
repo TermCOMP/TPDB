@@ -1,0 +1,7 @@
+# "sum" example to illustrate Def. 1
+(VAR x y)
+(RULES
+sum(x, y) -> sif(x >= y, x, y)
+sif(TRUE, x, y) -> y + sum(x, y+1)
+sif(FALSE, x, y) -> 0
+)

@@ -1,0 +1,25 @@
+(GOAL COMPLEXITY)
+(STARTTERM (FUNCTIONSYMBOLS eval_perfectg_start))
+(VAR nondef_0 v_0 v_2 v_8 v_x v_y1_0 v_y2_1 v_y3_0 v_y3_2)
+(RULES
+  eval_perfectg_start(v_0, v_2, v_8, v_x, v_y1_0, v_y2_1, v_y3_0, v_y3_2) -> Com_1(eval_perfectg_bb0_in(v_0, v_2, v_8, v_x, v_y1_0, v_y2_1, v_y3_0, v_y3_2))
+  eval_perfectg_bb0_in(v_0, v_2, v_8, v_x, v_y1_0, v_y2_1, v_y3_0, v_y3_2) -> Com_1(eval_perfectg_1(nondef_0, v_2, v_8, v_x, v_y1_0, v_y2_1, v_y3_0, v_y3_2))
+  eval_perfectg_1(v_0, v_2, v_8, v_x, v_y1_0, v_y2_1, v_y3_0, v_y3_2) -> Com_1(eval_perfectg_2(v_0, v_2, v_8, v_x, v_y1_0, v_y2_1, v_y3_0, v_y3_2))
+  eval_perfectg_2(v_0, v_2, v_8, v_x, v_y1_0, v_y2_1, v_y3_0, v_y3_2) -> Com_1(eval_perfectg_3(v_0, v_2, v_8, v_x, v_y1_0, v_y2_1, v_y3_0, v_y3_2))
+  eval_perfectg_3(v_0, v_2, v_8, v_x, v_y1_0, v_y2_1, v_y3_0, v_y3_2) -> Com_1(eval_perfectg_bb2_in(v_0, v_2, v_8, v_x, v_y1_0, v_y2_1, v_y3_0, v_0)) :|: v_x <= 1
+  eval_perfectg_3(v_0, v_2, v_8, v_x, v_y1_0, v_y2_1, v_y3_0, v_y3_2) -> Com_1(eval_perfectg_bb1_in(v_0, v_2, v_8, v_x, v_x, v_y2_1, v_x, v_y3_2)) :|: v_x > 1
+  eval_perfectg_bb1_in(v_0, v_2, v_8, v_x, v_y1_0, v_y2_1, v_y3_0, v_y3_2) -> Com_1(eval_perfectg_bb2_in(v_0, v_2, v_8, v_x, v_y1_0, v_y2_1, v_y3_0, v_y3_0)) :|: v_y1_0 - 1 = 0
+  eval_perfectg_bb1_in(v_0, v_2, v_8, v_x, v_y1_0, v_y2_1, v_y3_0, v_y3_2) -> Com_1(eval_perfectg_bb3_in(v_0, v_y1_0 - 1, v_8, v_x, v_y1_0, v_x, v_y3_0, v_y3_2)) :|: v_y1_0 - 1 < 0
+  eval_perfectg_bb1_in(v_0, v_2, v_8, v_x, v_y1_0, v_y2_1, v_y3_0, v_y3_2) -> Com_1(eval_perfectg_bb3_in(v_0, v_y1_0 - 1, v_8, v_x, v_y1_0, v_x, v_y3_0, v_y3_2)) :|: v_y1_0 - 1 > 0
+  eval_perfectg_bb2_in(v_0, v_2, v_8, v_x, v_y1_0, v_y2_1, v_y3_0, v_y3_2) -> Com_1(eval_perfectg_stop(v_0, v_2, v_8, v_x, v_y1_0, v_y2_1, v_y3_0, v_y3_2)) :|: v_y3_2 < 0
+  eval_perfectg_bb2_in(v_0, v_2, v_8, v_x, v_y1_0, v_y2_1, v_y3_0, v_y3_2) -> Com_1(eval_perfectg_stop(v_0, v_2, v_8, v_x, v_y1_0, v_y2_1, v_y3_0, v_y3_2)) :|: v_y3_2 > 0
+  eval_perfectg_bb2_in(v_0, v_2, v_8, v_x, v_y1_0, v_y2_1, v_y3_0, v_y3_2) -> Com_1(eval_perfectg_stop(v_0, v_2, v_8, v_x, v_y1_0, v_y2_1, v_y3_0, v_y3_2)) :|: v_y3_2 = 0
+  eval_perfectg_bb3_in(v_0, v_2, v_8, v_x, v_y1_0, v_y2_1, v_y3_0, v_y3_2) -> Com_1(eval_perfectg_bb4_in(v_0, v_2, v_8, v_x, v_y1_0, v_y2_1, v_y3_0, v_y3_2)) :|: v_y2_1 < v_2
+  eval_perfectg_bb3_in(v_0, v_2, v_8, v_x, v_y1_0, v_y2_1, v_y3_0, v_y3_2) -> Com_1(eval_perfectg_bb5_in(v_0, v_2, v_8, v_x, v_y1_0, v_y2_1, v_y3_0, v_y3_2)) :|: v_y2_1 >= v_2
+  eval_perfectg_bb4_in(v_0, v_2, v_8, v_x, v_y1_0, v_y2_1, v_y3_0, v_y3_2) -> Com_1(eval_perfectg_9(v_0, v_2, v_y3_0 - v_2, v_x, v_y1_0, v_y2_1, v_y3_0, v_y3_2))
+  eval_perfectg_9(v_0, v_2, v_8, v_x, v_y1_0, v_y2_1, v_y3_0, v_y3_2) -> Com_1(eval_perfectg_10(v_0, v_2, v_8, v_x, v_y1_0, v_y2_1, v_y3_0, v_y3_2))
+  eval_perfectg_10(v_0, v_2, v_8, v_x, v_y1_0, v_y2_1, v_y3_0, v_y3_2) -> Com_1(eval_perfectg_bb1_in(v_0, v_2, v_8, v_x, v_2, v_y2_1, v_y3_0, v_y3_2)) :|: v_y2_1 < 0
+  eval_perfectg_10(v_0, v_2, v_8, v_x, v_y1_0, v_y2_1, v_y3_0, v_y3_2) -> Com_1(eval_perfectg_bb1_in(v_0, v_2, v_8, v_x, v_2, v_y2_1, v_y3_0, v_y3_2)) :|: v_y2_1 > 0
+  eval_perfectg_10(v_0, v_2, v_8, v_x, v_y1_0, v_y2_1, v_y3_0, v_y3_2) -> Com_1(eval_perfectg_bb1_in(v_0, v_2, v_8, v_x, v_2, v_y2_1, v_8, v_y3_2)) :|: v_y2_1 = 0
+  eval_perfectg_bb5_in(v_0, v_2, v_8, v_x, v_y1_0, v_y2_1, v_y3_0, v_y3_2) -> Com_1(eval_perfectg_bb3_in(v_0, v_2, v_8, v_x, v_y1_0, v_y2_1 - v_2, v_y3_0, v_y3_2))
+)

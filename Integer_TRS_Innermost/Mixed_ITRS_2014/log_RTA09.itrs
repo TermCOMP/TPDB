@@ -1,0 +1,7 @@
+# "log" example to illustrate Def. 1
+(VAR x y)
+(RULES
+log(x, y) -> lif(x >= y && y > 1, x, y)
+lif(TRUE, x, y) -> 1 + log(x/y, y)
+lif(FALSE, x, y) -> 0
+)

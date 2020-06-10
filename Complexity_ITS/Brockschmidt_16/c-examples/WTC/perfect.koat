@@ -1,0 +1,21 @@
+(GOAL COMPLEXITY)
+(STARTTERM (FUNCTIONSYMBOLS evalperfectstart))
+(VAR A B C D)
+(RULES
+  evalperfectstart(A,B,C,D) -> Com_1(evalperfectentryin(A,B,C,D))
+  evalperfectentryin(A,B,C,D) -> Com_1(evalperfectreturnin(A,B,C,D)) :|: 1 >= A
+  evalperfectentryin(A,B,C,D) -> Com_1(evalperfectbb1in(A,B,C,D)) :|: A >= 2
+  evalperfectbb1in(A,B,C,D) -> Com_1(evalperfectbb8in(A,A,A - 1,D))
+  evalperfectbb8in(A,B,C,D) -> Com_1(evalperfectbb4in(A,B,C,A)) :|: C >= 1
+  evalperfectbb8in(A,B,C,D) -> Com_1(evalperfectbb9in(B,B,C,D)) :|: 0 >= C
+  evalperfectbb4in(A,B,C,D) -> Com_1(evalperfectbb3in(A,B,C,D)) :|: D >= C
+  evalperfectbb4in(A,B,C,D) -> Com_1(evalperfectbb5in(A,B,C,D)) :|: C >= D + 1
+  evalperfectbb3in(A,B,C,D) -> Com_1(evalperfectbb4in(A,B,C,D - C))
+  evalperfectbb5in(A,B,C,D) -> Com_1(evalperfectbb8in(A,B - C,C - 1,D)) :|: D = 0
+  evalperfectbb5in(A,B,C,D) -> Com_1(evalperfectbb8in(A,B,C - 1,D)) :|: 0 >= D + 1
+  evalperfectbb5in(A,B,C,D) -> Com_1(evalperfectbb8in(A,B,C - 1,D)) :|: D >= 1
+  evalperfectbb9in(A,B,C,D) -> Com_1(evalperfectreturnin(A,B,C,D)) :|: 0 >= A + 1
+  evalperfectbb9in(A,B,C,D) -> Com_1(evalperfectreturnin(A,B,C,D)) :|: A >= 1
+  evalperfectbb9in(A,B,C,D) -> Com_1(evalperfectreturnin(A,B,C,D)) :|: A = 0
+  evalperfectreturnin(A,B,C,D) -> Com_1(evalperfectstop(A,B,C,D))
+)

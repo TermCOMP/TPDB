@@ -1,0 +1,10 @@
+(VAR x)
+(RULES
+  f(x) -> cond1(x > 1, x)
+
+  cond1(TRUE, x) -> cond2(x % 2 = 0, x)
+  cond1(FALSE, x) -> x
+
+  cond2(TRUE, x) -> f(x/2)
+  cond2(FALSE, x) -> f(3*x + 1)
+)

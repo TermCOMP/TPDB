@@ -1,0 +1,14 @@
+(VAR b e r)
+(RULES
+  pow(b, e) -> condLoop(e > 0, b, e, 1)
+
+  condLoop(FALSE, b, e, r) -> r
+  condLoop(TRUE, b, e, r)  -> condMod(e %@z 2 = 1, b, e, r)
+
+  condMod(FALSE, b, e, r) -> sqBase(b, e, r)
+  condMod(TRUE, b, e, r)  -> sqBase(b, e, r*b)
+
+  sqBase(b, e, r) -> halfExp(b*b, e, r)
+
+  halfExp(b, e, r) -> condLoop(e > 0, b, e/2, r)
+)

@@ -1,0 +1,5 @@
+(VAR x y)
+(RULES
+cu(TRUE, x) -> cu(x < exp(x), x + 1)
+exp(x) -> 2 * x
+)

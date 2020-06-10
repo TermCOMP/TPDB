@@ -1,0 +1,19 @@
+(GOAL COMPLEXITY)
+(STARTTERM (FUNCTIONSYMBOLS eval_speedpldi3_start))
+(VAR v_i_0 v_j_0 v_m v_n)
+(RULES
+  eval_speedpldi3_start(v_i_0, v_j_0, v_m, v_n) -> Com_1(eval_speedpldi3_bb0_in(v_i_0, v_j_0, v_m, v_n))
+  eval_speedpldi3_bb0_in(v_i_0, v_j_0, v_m, v_n) -> Com_1(eval_speedpldi3_0(v_i_0, v_j_0, v_m, v_n))
+  eval_speedpldi3_0(v_i_0, v_j_0, v_m, v_n) -> Com_1(eval_speedpldi3_1(v_i_0, v_j_0, v_m, v_n))
+  eval_speedpldi3_1(v_i_0, v_j_0, v_m, v_n) -> Com_1(eval_speedpldi3_2(v_i_0, v_j_0, v_m, v_n))
+  eval_speedpldi3_2(v_i_0, v_j_0, v_m, v_n) -> Com_1(eval_speedpldi3_bb3_in(v_i_0, v_j_0, v_m, v_n)) :|: v_m <= 0
+  eval_speedpldi3_2(v_i_0, v_j_0, v_m, v_n) -> Com_1(eval_speedpldi3_bb3_in(v_i_0, v_j_0, v_m, v_n)) :|: v_n <= v_m
+  eval_speedpldi3_2(v_i_0, v_j_0, v_m, v_n) -> Com_1(eval_speedpldi3_bb1_in(0, 0, v_m, v_n)) :|: v_m > 0 && v_n > v_m
+  eval_speedpldi3_bb1_in(v_i_0, v_j_0, v_m, v_n) -> Com_1(eval_speedpldi3_bb2_in(v_i_0, v_j_0, v_m, v_n)) :|: v_i_0 < v_n
+  eval_speedpldi3_bb1_in(v_i_0, v_j_0, v_m, v_n) -> Com_1(eval_speedpldi3_bb3_in(v_i_0, v_j_0, v_m, v_n)) :|: v_i_0 >= v_n
+  eval_speedpldi3_bb2_in(v_i_0, v_j_0, v_m, v_n) -> Com_1(eval_speedpldi3_bb1_in(v_i_0, v_j_0 + 1, v_m, v_n)) :|: v_j_0 < v_m && v_j_0 < v_m
+  eval_speedpldi3_bb2_in(v_i_0, v_j_0, v_m, v_n) -> Com_1(eval_speedpldi3_bb1_in(v_i_0 + 1, v_j_0 + 1, v_m, v_n)) :|: v_j_0 < v_m && v_j_0 >= v_m
+  eval_speedpldi3_bb2_in(v_i_0, v_j_0, v_m, v_n) -> Com_1(eval_speedpldi3_bb1_in(v_i_0, 0, v_m, v_n)) :|: v_j_0 >= v_m && v_j_0 < v_m
+  eval_speedpldi3_bb2_in(v_i_0, v_j_0, v_m, v_n) -> Com_1(eval_speedpldi3_bb1_in(v_i_0 + 1, 0, v_m, v_n)) :|: v_j_0 >= v_m && v_j_0 >= v_m
+  eval_speedpldi3_bb3_in(v_i_0, v_j_0, v_m, v_n) -> Com_1(eval_speedpldi3_stop(v_i_0, v_j_0, v_m, v_n))
+)

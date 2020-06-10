@@ -1,0 +1,5 @@
+(VAR x y z)
+(RULES
+f(TRUE, x, y, z) -> f(x > y && x > z, x, y+1, z)
+f(TRUE, x, y, z) -> f(x > y && x > z, x, y, z+1)
+)

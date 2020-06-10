@@ -1,0 +1,1 @@
+{-# htermination print :: Ordering -> IO () #-}

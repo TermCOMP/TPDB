@@ -1,0 +1,1 @@
+{-# htermination log :: Float -> Float #-}

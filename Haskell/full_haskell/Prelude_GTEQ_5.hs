@@ -1,0 +1,1 @@
+{-# htermination (>=) :: Int -> Int -> Bool #-}

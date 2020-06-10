@@ -1,0 +1,16 @@
+(GOAL COMPLEXITY)
+(STARTTERM (FUNCTIONSYMBOLS eval1))
+(VAR A B C D)
+(RULES
+  eval1(A,B,C,D) -> Com_1(eval2(A - 1,B,C,D)) :|: A >= 2
+  eval1(A,B,C,D) -> Com_1(eval2(A,B - 1,C,D)) :|: 1 >= A
+  eval2(A,B,C,D) -> Com_1(eval3(A,B,A,2*A)) :|: B >= 2
+  eval3(A,B,C,D) -> Com_1(eval4(A,B,C,D)) :|: B >= D && B >= 1 + D
+  eval3(A,B,C,D) -> Com_1(eval4(A,B,C,D + 1)) :|: B >= D && B >= 1 + D
+  eval3(A,B,C,D) -> Com_1(eval3(A,B,D,2*D)) :|: B >= D && B >= 1 + D && D >= 1
+  eval3(A,B,C,D) -> Com_1(eval3(A,B,D + 1,2*D + 2)) :|: B >= D && B >= 1 + D && D >= 1
+  eval3(A,B,C,D) -> Com_1(eval4(A,B,C,D)) :|: B = D
+  eval3(A,B,C,D) -> Com_1(eval3(A,B,D,2*D)) :|: D >= 1 && B = D
+  eval4(A,B,C,D) -> Com_1(eval2(A - 1,B,C,D)) :|: A >= 2 && A >= 1 && B >= 2
+  eval4(A,B,C,D) -> Com_1(eval2(A,B - 1,C,D)) :|: B >= 2 && A = 1
+)

@@ -1,0 +1,1 @@
+{-# htermination print :: Int -> IO () #-}

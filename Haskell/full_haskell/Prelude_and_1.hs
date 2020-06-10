@@ -1,0 +1,1 @@
+{-# htermination and :: [Bool] -> Bool #-}

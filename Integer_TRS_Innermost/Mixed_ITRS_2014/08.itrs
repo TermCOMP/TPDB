@@ -1,0 +1,5 @@
+# TRS/Beerendonk/8.trs
+(VAR x y)
+(RULES
+eval(x, y) -> eval(x - 1, y - 1) :|: x > 0 && y > 0
+)

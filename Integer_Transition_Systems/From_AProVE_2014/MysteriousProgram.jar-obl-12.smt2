@@ -1,0 +1,68 @@
+(declare-sort Loc 0)
+(declare-const f1_0_main_ConstantStackPush Loc)
+(declare-const f92_0_main_GE Loc)
+(declare-const f167_0_init_GE Loc)
+(declare-const f575_0_mysterious_GE Loc)
+(declare-const f312_0_display_GE Loc)
+(declare-const f1202_0_mysteriousRecursive_ArrayLength Loc)
+(declare-const f1372_0_display_GE Loc)
+(declare-const f1376_0_display_GE Loc)
+(declare-const f1763_0_mysteriousRecursive_GE Loc)
+(declare-const f1764_0_mysteriousRecursive_GE Loc)
+(declare-const f2030_0_swap3_ArrayAccess Loc)
+(declare-const f2034_0_swap3_ArrayAccess Loc)
+(declare-const __init Loc)
+(assert (distinct f1_0_main_ConstantStackPush f92_0_main_GE f167_0_init_GE f575_0_mysterious_GE f312_0_display_GE f1202_0_mysteriousRecursive_ArrayLength f1372_0_display_GE f1376_0_display_GE f1763_0_mysteriousRecursive_GE f1764_0_mysteriousRecursive_GE f2030_0_swap3_ArrayAccess f2034_0_swap3_ArrayAccess __init ))
+
+(define-fun cfg_init ( (pc Loc) (src Loc) (rel Bool) ) Bool
+  (and (= pc src) rel))
+
+(define-fun cfg_trans2 ( (pc Loc) (src Loc)
+                         (pc1 Loc) (dst Loc)
+                         (rel Bool) ) Bool
+  (and (= pc src) (= pc1 dst) rel))
+
+(define-fun cfg_trans3 ( (pc Loc) (exit Loc)
+                         (pc1 Loc) (call Loc)
+                         (pc2 Loc) (return Loc)
+                         (rel Bool) ) Bool
+  (and (= pc exit) (= pc1 call) (= pc2 return) rel))
+
+(define-fun init_main ( (pc Loc) (arg1 Int) (arg2 Int) (arg3 Int) (arg4 Int) (arg5 Int) ) Bool
+  (cfg_init pc __init true))
+
+(define-fun next_main (
+                 (pc Loc) (arg1 Int) (arg2 Int) (arg3 Int) (arg4 Int) (arg5 Int)
+                 (pc1 Loc) (arg1P Int) (arg2P Int) (arg3P Int) (arg4P Int) (arg5P Int)
+             ) Bool
+  (or
+    (cfg_trans2 pc f1_0_main_ConstantStackPush pc1 f92_0_main_GE (and (and (and (and (and (and (<= arg1P arg1) (> arg2 (- 1))) (> arg1 0)) (> arg1P 0)) (= 2 arg2P)) (= 0 arg3P)) (= arg2 arg4P)))
+    (cfg_trans2 pc f92_0_main_GE pc1 f92_0_main_GE (and (and (and (and (and (and (and (and (> arg4 (- 1)) (> arg2 1)) (> arg4 arg3)) (<= arg1P arg1)) (> arg1 0)) (> arg1P 0)) (= (* 2 arg2) arg2P)) (= (+ arg3 1) arg3P)) (= arg4 arg4P)))
+    (cfg_trans2 pc f92_0_main_GE pc1 f167_0_init_GE (and (and (and (and (and (and (<= arg4 arg3) (> arg2 (- 1))) (>= arg1 arg1P)) (> arg1 0)) (> arg1P 0)) (= 0 arg2P)) (= arg2 arg3P)))
+    (cfg_trans2 pc f167_0_init_GE pc1 f167_0_init_GE (and (and (and (and (and (and (and (> arg3 arg2) (> arg2 (- 1))) (> arg3 (- 1))) (<= arg1P arg1)) (> arg1 0)) (> arg1P 0)) (= (+ arg2 1) arg2P)) (= arg3 arg3P)))
+    (cfg_trans2 pc f167_0_init_GE pc1 f575_0_mysterious_GE (and (and (and (and (and (and (and (< (- arg3 1) arg3) (> arg3 0)) (<= arg3 arg2)) (<= arg1P arg1)) (> arg1 0)) (> arg1P 0)) (= 0 arg2P)) (= arg3 arg3P)))
+    (cfg_trans2 pc f575_0_mysterious_GE pc1 f575_0_mysterious_GE (and (and (and (and (and (and (> arg3 arg2) (> arg3 1)) (<= arg1P arg1)) (> arg1 0)) (> arg1P 0)) (= (+ arg2 1) arg2P)) (= arg3 arg3P)))
+    (cfg_trans2 pc f575_0_mysterious_GE pc1 f312_0_display_GE (and (and (and (and (and (and (> arg3 arg2) (> arg3 1)) (<= arg1P arg1)) (> arg1 0)) (> arg1P 0)) (= 0 arg2P)) (= arg3 arg3P)))
+    (cfg_trans2 pc f312_0_display_GE pc1 f312_0_display_GE (and (and (and (and (and (and (> arg3 (- 1)) (> arg3 arg2)) (<= arg1P arg1)) (> arg1 0)) (> arg1P 0)) (= (+ arg2 1) arg2P)) (= arg3 arg3P)))
+    (cfg_trans2 pc f575_0_mysterious_GE pc1 f1202_0_mysteriousRecursive_ArrayLength (and (and (and (and (and (and (and (and (and (and (> arg3 1) (<= arg3 arg2)) (<= arg1P arg1)) (<= arg2P arg1)) (<= arg4P arg1)) (> arg1 0)) (> arg1P 0)) (> arg2P 0)) (> arg4P 0)) (= 0 arg3P)) (= arg3 arg5P)))
+    (cfg_trans2 pc f1202_0_mysteriousRecursive_ArrayLength pc1 f1372_0_display_GE (and (and (and (and (and (and (and (and (and (and (and (<= arg2P arg1) (> arg5 0)) (<= arg2P arg2)) (<= arg2P arg4)) (> arg1 0)) (> arg2 0)) (> arg4 0)) (> arg2P 0)) (= arg3 (- arg5 1))) (= (- arg5 1) arg1P)) (= 0 arg3P)) (= arg5 arg4P)))
+    (cfg_trans2 pc f1202_0_mysteriousRecursive_ArrayLength pc1 f1376_0_display_GE (and (and (and (and (and (and (and (and (and (and (and (<= arg2P arg1) (> arg5 0)) (<= arg2P arg2)) (<= arg2P arg4)) (> arg1 0)) (> arg2 0)) (> arg4 0)) (> arg2P 0)) (= arg3 (- arg5 1))) (= (- arg5 1) arg1P)) (= 0 arg3P)) (= arg5 arg4P)))
+    (cfg_trans2 pc f1372_0_display_GE pc1 f1372_0_display_GE (and (and (and (and (and (and (and (> arg4 (- 1)) (> arg4 arg3)) (<= arg2P arg2)) (> arg2 0)) (> arg2P 0)) (= arg1 arg1P)) (= (+ arg3 1) arg3P)) (= arg4 arg4P)))
+    (cfg_trans2 pc f1376_0_display_GE pc1 f1376_0_display_GE (and (and (and (and (and (and (and (> arg4 (- 1)) (> arg4 arg3)) (<= arg2P arg2)) (> arg2 0)) (> arg2P 0)) (= arg1 arg1P)) (= (+ arg3 1) arg3P)) (= arg4 arg4P)))
+    (cfg_trans2 pc f1202_0_mysteriousRecursive_ArrayLength pc1 f1763_0_mysteriousRecursive_GE (and (and (and (and (and (and (and (and (and (and (and (and (> (- arg5 1) arg3) (> arg5 0)) (<= arg1P arg1)) (<= arg1P arg2)) (<= arg1P arg4)) (> arg1 0)) (> arg2 0)) (> arg4 0)) (> arg1P 0)) (= arg3 arg2P)) (= arg3 arg3P)) (= arg3 arg4P)) (= arg5 arg5P)))
+    (cfg_trans2 pc f1202_0_mysteriousRecursive_ArrayLength pc1 f1763_0_mysteriousRecursive_GE (and (and (and (and (and (and (and (and (and (and (and (and (< (- arg5 1) arg3) (> arg5 0)) (<= arg1P arg1)) (<= arg1P arg2)) (<= arg1P arg4)) (> arg1 0)) (> arg2 0)) (> arg4 0)) (> arg1P 0)) (= arg3 arg2P)) (= arg3 arg3P)) (= arg3 arg4P)) (= arg5 arg5P)))
+    (cfg_trans2 pc f1372_0_display_GE pc1 f1763_0_mysteriousRecursive_GE (and (and (and (and (and (and (and (and (> arg4 (- 1)) (<= arg4 arg3)) (<= arg1P arg2)) (> arg2 0)) (> arg1P 0)) (= arg1 arg2P)) (= arg1 arg3P)) (= arg1 arg4P)) (= arg4 arg5P)))
+    (cfg_trans2 pc f1202_0_mysteriousRecursive_ArrayLength pc1 f1764_0_mysteriousRecursive_GE (and (and (and (and (and (and (and (and (and (and (and (and (> (- arg5 1) arg3) (> arg5 0)) (<= arg1P arg1)) (<= arg1P arg2)) (<= arg1P arg4)) (> arg1 0)) (> arg2 0)) (> arg4 0)) (> arg1P 0)) (= arg3 arg2P)) (= arg3 arg3P)) (= arg3 arg4P)) (= arg5 arg5P)))
+    (cfg_trans2 pc f1202_0_mysteriousRecursive_ArrayLength pc1 f1764_0_mysteriousRecursive_GE (and (and (and (and (and (and (and (and (and (and (and (and (< (- arg5 1) arg3) (> arg5 0)) (<= arg1P arg1)) (<= arg1P arg2)) (<= arg1P arg4)) (> arg1 0)) (> arg2 0)) (> arg4 0)) (> arg1P 0)) (= arg3 arg2P)) (= arg3 arg3P)) (= arg3 arg4P)) (= arg5 arg5P)))
+    (cfg_trans2 pc f1376_0_display_GE pc1 f1764_0_mysteriousRecursive_GE (and (and (and (and (and (and (and (and (> arg4 (- 1)) (<= arg4 arg3)) (<= arg1P arg2)) (> arg2 0)) (> arg1P 0)) (= arg1 arg2P)) (= arg1 arg3P)) (= arg1 arg4P)) (= arg4 arg5P)))
+    (cfg_trans2 pc f1763_0_mysteriousRecursive_GE pc1 f1202_0_mysteriousRecursive_ArrayLength (and (and (and (and (and (and (and (and (and (and (and (and (and (and (> arg5 arg2) (> arg5 1)) (> arg5 arg3)) (> arg2 (- 1))) (> (+ arg2 1) arg2)) (<= arg1P arg1)) (<= arg2P arg1)) (<= arg4P arg1)) (> arg1 0)) (> arg1P 0)) (> arg2P 0)) (> arg4P 0)) (= arg3 arg4)) (= (+ arg2 1) arg3P)) (= arg5 arg5P)))
+    (cfg_trans2 pc f1764_0_mysteriousRecursive_GE pc1 f1202_0_mysteriousRecursive_ArrayLength (and (and (and (and (and (and (and (and (and (and (and (and (and (and (> arg5 arg2) (> arg5 1)) (> arg5 arg3)) (> arg2 (- 1))) (> (+ arg2 1) arg2)) (<= arg1P arg1)) (<= arg2P arg1)) (<= arg4P arg1)) (> arg1 0)) (> arg1P 0)) (> arg2P 0)) (> arg4P 0)) (= arg3 arg4)) (= (+ arg2 1) arg3P)) (= arg5 arg5P)))
+    (cfg_trans2 pc f1763_0_mysteriousRecursive_GE pc1 f2030_0_swap3_ArrayAccess (and (and (and (and (and (and (and (and (and (and (and (> arg5 arg2) (> arg5 1)) (> arg5 arg3)) (> arg2 (- 1))) (> (+ arg2 1) arg2)) (<= arg2P arg1)) (> arg1 0)) (> arg2P 0)) (= arg3 arg4)) (= arg3 arg1P)) (= arg2 arg3P)) (= arg5 arg4P)))
+    (cfg_trans2 pc f1763_0_mysteriousRecursive_GE pc1 f2030_0_swap3_ArrayAccess (and (and (and (and (and (and (and (and (and (and (> arg5 arg2) (> arg5 1)) (> arg5 arg3)) (> arg2 (- 1))) (> (+ arg2 1) arg2)) (<= arg2P arg1)) (> arg1 0)) (> arg2P 0)) (= arg3 arg4)) (= arg3 arg1P)) (= arg2 arg3P)))
+    (cfg_trans2 pc f1764_0_mysteriousRecursive_GE pc1 f2034_0_swap3_ArrayAccess (and (and (and (and (and (and (and (and (and (and (and (> arg5 arg2) (> arg5 1)) (> arg5 arg3)) (> arg2 (- 1))) (> (+ arg2 1) arg2)) (<= arg2P arg1)) (> arg1 0)) (> arg2P 0)) (= arg3 arg4)) (= arg3 arg1P)) (= arg2 arg3P)) (= arg5 arg4P)))
+    (cfg_trans2 pc f1764_0_mysteriousRecursive_GE pc1 f2034_0_swap3_ArrayAccess (and (and (and (and (and (and (and (and (and (and (> arg5 arg2) (> arg5 1)) (> arg5 arg3)) (> arg2 (- 1))) (> (+ arg2 1) arg2)) (<= arg2P arg1)) (> arg1 0)) (> arg2P 0)) (= arg3 arg4)) (= arg3 arg1P)) (= arg2 arg3P)))
+    (cfg_trans2 pc f2030_0_swap3_ArrayAccess pc1 f1763_0_mysteriousRecursive_GE (and (and (and (and (and (and (and (and (and (> arg4 arg3) (> arg4 arg1)) (> arg4 (- 1))) (<= arg1P arg2)) (> arg2 0)) (> arg1P 0)) (= arg3 arg2P)) (= (+ arg1 1) arg3P)) (= (+ arg1 1) arg4P)) (= arg4 arg5P)))
+    (cfg_trans2 pc f2034_0_swap3_ArrayAccess pc1 f1764_0_mysteriousRecursive_GE (and (and (and (and (and (and (and (and (and (> arg4 arg3) (> arg4 arg1)) (> arg4 (- 1))) (<= arg1P arg2)) (> arg2 0)) (> arg1P 0)) (= arg3 arg2P)) (= (+ arg1 1) arg3P)) (= (+ arg1 1) arg4P)) (= arg4 arg5P)))
+    (cfg_trans2 pc __init pc1 f1_0_main_ConstantStackPush true)
+  )
+)

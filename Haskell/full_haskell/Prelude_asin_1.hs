@@ -1,0 +1,1 @@
+{-# htermination asin :: Float -> Float #-}

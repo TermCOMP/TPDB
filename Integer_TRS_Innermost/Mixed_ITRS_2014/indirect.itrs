@@ -1,0 +1,12 @@
+(VAR x y)
+(RULES 
+  f(x, y) -> if1(x > y, x, y)
+  
+  h(x, y) -> if2(x > y, x, y)
+  
+  if1(TRUE, x, y) -> h(x, y)
+  if1(FALSE, x, y) -> 0
+  
+  if2(TRUE, x, y) -> 0
+  if2(FALSE, x, y) -> f(x, y)
+)

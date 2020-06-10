@@ -1,0 +1,16 @@
+# count up to ack(10,10) where ack is the Ackermann function
+(VAR x y)
+(RULES
+f(TRUE, x) -> f(ack(10,10) >= x, x+1)
+
+ack(x, y) -> ackNat(x >= 0 && y >= 0, x, y)
+
+ackNat(TRUE, x, y) -> cond1(x = 0, x, y)
+ackNat(FALSE, x, y) -> 0
+
+cond1(TRUE, x, y) -> y+1
+cond1(FALSE, x, y) -> cond2(y = 0, x, y)
+
+cond2(TRUE, x, y) -> ack(x-1, y+1)
+cond2(FALSE, x, y) -> ack(x-1, ack(x, y-1))
+)

@@ -1,0 +1,19 @@
+(GOAL COMPLEXITY)
+(STARTTERM (FUNCTIONSYMBOLS eval_easy1_start))
+(VAR nondef_0 v_0 v_x_0)
+(RULES
+  eval_easy1_start(v_0, v_x_0) -> Com_1(eval_easy1_bb0_in(v_0, v_x_0))
+  eval_easy1_bb0_in(v_0, v_x_0) -> Com_1(eval_easy1_1(nondef_0, v_x_0))
+  eval_easy1_1(v_0, v_x_0) -> Com_1(eval_easy1_2(v_0, v_x_0))
+  eval_easy1_2(v_0, v_x_0) -> Com_1(eval_easy1_3(v_0, v_x_0))
+  eval_easy1_3(v_0, v_x_0) -> Com_1(eval_easy1_4(v_0, v_x_0))
+  eval_easy1_4(v_0, v_x_0) -> Com_1(eval_easy1_5(v_0, v_x_0))
+  eval_easy1_5(v_0, v_x_0) -> Com_1(eval_easy1_6(v_0, v_x_0))
+  eval_easy1_6(v_0, v_x_0) -> Com_1(eval_easy1_bb1_in(v_0, 0))
+  eval_easy1_bb1_in(v_0, v_x_0) -> Com_1(eval_easy1_bb2_in(v_0, v_x_0)) :|: v_x_0 < 40
+  eval_easy1_bb1_in(v_0, v_x_0) -> Com_1(eval_easy1_bb3_in(v_0, v_x_0)) :|: v_x_0 >= 40
+  eval_easy1_bb2_in(v_0, v_x_0) -> Com_1(eval_easy1_bb1_in(v_0, v_x_0 + 1)) :|: v_0 = 0
+  eval_easy1_bb2_in(v_0, v_x_0) -> Com_1(eval_easy1_bb1_in(v_0, v_x_0 + 2)) :|: v_0 < 0
+  eval_easy1_bb2_in(v_0, v_x_0) -> Com_1(eval_easy1_bb1_in(v_0, v_x_0 + 2)) :|: v_0 > 0
+  eval_easy1_bb3_in(v_0, v_x_0) -> Com_1(eval_easy1_stop(v_0, v_x_0))
+)

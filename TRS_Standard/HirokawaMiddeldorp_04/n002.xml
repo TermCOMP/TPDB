@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="../../xml/xtcHTML.xsl"?>
+<problem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xml/xtc.xsd" type="termination">
+<trs>
+<rules>
+<rule>
+<lhs>
+<funapp>
+<name>f</name>
+<arg>
+<var>x</var>
+</arg>
+</funapp>
+</lhs>
+<rhs>
+<funapp>
+<name>f</name>
+<arg>
+<var>x</var>
+</arg>
+</funapp>
+</rhs>
+</rule>
+</rules>
+<signature>
+<funcsym>
+<name>f</name>
+<arity>1</arity>
+</funcsym>
+</signature>
+</trs>
+<strategy>FULL</strategy>
+<metainformation>
+<originalfilename>./TRS/HM/n002.trs</originalfilename>
+</metainformation>
+</problem>

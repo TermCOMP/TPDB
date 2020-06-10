@@ -1,0 +1,1 @@
+{-# htermination tail :: [a] -> [a] #-}

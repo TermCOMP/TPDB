@@ -1,0 +1,18 @@
+(GOAL COMPLEXITY)
+(STARTTERM (FUNCTIONSYMBOLS f0))
+(VAR A B C D E)
+(RULES
+  f0(A,B,C) -> Com_1(f8(0,B,C))
+  f8(A,B,C) -> Com_1(f14(A,A,C)) :|: 99 >= A && 99 >= D
+  f8(A,B,C) -> Com_1(f14(A,A,C)) :|: 99 >= A
+  f23(A,B,C) -> Com_1(f28(A,B,D)) :|: 99 >= A && 0 >= E + 1
+  f23(A,B,C) -> Com_1(f28(A,B,D)) :|: 99 >= A
+  f23(A,B,C) -> Com_1(f23(A + 1,B,C)) :|: 99 >= A
+  f28(A,B,C) -> Com_1(f23(A + 1,B,C))
+  f28(A,B,C) -> Com_1(f23(A + 1,B,C)) :|: 98 >= D
+  f23(A,B,C) -> Com_1(f38(A,B,C)) :|: A >= 100
+  f8(A,B,C) -> Com_1(f8(A + 1,A,C)) :|: 99 >= A
+  f14(A,B,C) -> Com_1(f8(A + 1,B,C))
+  f14(A,B,C) -> Com_1(f8(A + 1,B,C)) :|: 98 >= D
+  f8(A,B,C) -> Com_1(f23(0,B,C)) :|: A >= 100
+)

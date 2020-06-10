@@ -1,0 +1,8 @@
+(GOAL COMPLEXITY)
+(STARTTERM (FUNCTIONSYMBOLS start))
+(VAR A B)
+(RULES
+  sumto(A,B) -> Com_1(end(A,B)) :|: A >= B + 1
+  sumto(A,B) -> Com_1(sumto(A + 1,B)) :|: B >= A
+  start(A,B) -> Com_1(sumto(A,B))
+)

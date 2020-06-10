@@ -1,0 +1,21 @@
+(GOAL COMPLEXITY)
+(STARTTERM (FUNCTIONSYMBOLS eval_wcet2_start))
+(VAR v__0 v_4 v_i v_j_0)
+(RULES
+  eval_wcet2_start(v__0, v_4, v_i, v_j_0) -> Com_1(eval_wcet2_bb0_in(v__0, v_4, v_i, v_j_0))
+  eval_wcet2_bb0_in(v__0, v_4, v_i, v_j_0) -> Com_1(eval_wcet2_0(v__0, v_4, v_i, v_j_0))
+  eval_wcet2_0(v__0, v_4, v_i, v_j_0) -> Com_1(eval_wcet2_1(v__0, v_4, v_i, v_j_0))
+  eval_wcet2_1(v__0, v_4, v_i, v_j_0) -> Com_1(eval_wcet2_2(v__0, v_4, v_i, v_j_0))
+  eval_wcet2_2(v__0, v_4, v_i, v_j_0) -> Com_1(eval_wcet2_3(v__0, v_4, v_i, v_j_0))
+  eval_wcet2_3(v__0, v_4, v_i, v_j_0) -> Com_1(eval_wcet2_bb1_in(v_i, v_4, v_i, v_j_0))
+  eval_wcet2_bb1_in(v__0, v_4, v_i, v_j_0) -> Com_1(eval_wcet2_bb2_in(v__0, v_4, v_i, 0)) :|: v__0 < 5
+  eval_wcet2_bb1_in(v__0, v_4, v_i, v_j_0) -> Com_1(eval_wcet2_bb5_in(v__0, v_4, v_i, v_j_0)) :|: v__0 >= 5
+  eval_wcet2_bb2_in(v__0, v_4, v_i, v_j_0) -> Com_1(eval_wcet2_bb3_in(v__0, v_4, v_i, v_j_0)) :|: v__0 > 2 && v_j_0 <= 9
+  eval_wcet2_bb2_in(v__0, v_4, v_i, v_j_0) -> Com_1(eval_wcet2_bb4_in(v__0, v_4, v_i, v_j_0)) :|: v__0 <= 2
+  eval_wcet2_bb2_in(v__0, v_4, v_i, v_j_0) -> Com_1(eval_wcet2_bb4_in(v__0, v_4, v_i, v_j_0)) :|: v_j_0 > 9
+  eval_wcet2_bb3_in(v__0, v_4, v_i, v_j_0) -> Com_1(eval_wcet2_bb2_in(v__0, v_4, v_i, v_j_0 + 1))
+  eval_wcet2_bb4_in(v__0, v_4, v_i, v_j_0) -> Com_1(eval_wcet2_7(v__0, v__0 + 1, v_i, v_j_0))
+  eval_wcet2_7(v__0, v_4, v_i, v_j_0) -> Com_1(eval_wcet2_8(v__0, v_4, v_i, v_j_0))
+  eval_wcet2_8(v__0, v_4, v_i, v_j_0) -> Com_1(eval_wcet2_bb1_in(v_4, v_4, v_i, v_j_0))
+  eval_wcet2_bb5_in(v__0, v_4, v_i, v_j_0) -> Com_1(eval_wcet2_stop(v__0, v_4, v_i, v_j_0))
+)

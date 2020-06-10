@@ -1,0 +1,1 @@
+{-# htermination isHexDigit :: Char -> Bool #-}

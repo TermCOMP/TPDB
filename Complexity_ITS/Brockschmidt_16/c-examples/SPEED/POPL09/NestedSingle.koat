@@ -1,0 +1,17 @@
+(GOAL COMPLEXITY)
+(STARTTERM (FUNCTIONSYMBOLS evalNestedSinglestart))
+(VAR A B C D)
+(RULES
+  evalNestedSinglestart(A,B,C) -> Com_1(evalNestedSingleentryin(A,B,C))
+  evalNestedSingleentryin(A,B,C) -> Com_1(evalNestedSinglebb5in(0,B,C))
+  evalNestedSinglebb5in(A,B,C) -> Com_1(evalNestedSinglebb2in(A,B,A)) :|: B >= A + 1
+  evalNestedSinglebb5in(A,B,C) -> Com_1(evalNestedSinglereturnin(A,B,C)) :|: A >= B
+  evalNestedSinglebb2in(A,B,C) -> Com_1(evalNestedSinglebb4in(A,B,C)) :|: C >= B
+  evalNestedSinglebb2in(A,B,C) -> Com_1(evalNestedSinglebb3in(A,B,C)) :|: B >= C + 1
+  evalNestedSinglebb3in(A,B,C) -> Com_1(evalNestedSinglebb1in(A,B,C)) :|: 0 >= D + 1
+  evalNestedSinglebb3in(A,B,C) -> Com_1(evalNestedSinglebb1in(A,B,C)) :|: D >= 1
+  evalNestedSinglebb3in(A,B,C) -> Com_1(evalNestedSinglebb4in(A,B,C))
+  evalNestedSinglebb1in(A,B,C) -> Com_1(evalNestedSinglebb2in(A,B,C + 1))
+  evalNestedSinglebb4in(A,B,C) -> Com_1(evalNestedSinglebb5in(C + 1,B,C))
+  evalNestedSinglereturnin(A,B,C) -> Com_1(evalNestedSinglestop(A,B,C))
+)

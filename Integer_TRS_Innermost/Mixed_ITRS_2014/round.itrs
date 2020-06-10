@@ -1,0 +1,6 @@
+(VAR x y)
+(RULES 
+f(x,y) -> f(x,round(x)) :|: x >= 1 && y = x - 1
+round(x) -> x
+round(x) -> x + 1
+)

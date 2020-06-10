@@ -1,0 +1,1 @@
+{-# htermination init :: [a] -> [a] #-}
