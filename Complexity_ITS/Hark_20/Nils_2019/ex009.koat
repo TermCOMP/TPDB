@@ -7,5 +7,5 @@
   l1(A,B,F,X,Y) -> Com_1(l2(A,B,F,X,Y)) :|: Y < 1
   l2(A,B,F,X,Y) -> Com_1(l2(A,B,F - 1,X,Y)) :|: F >= 1
   l2(A,B,F,X,Y) -> Com_1(l3(A,B,F,X,Y)) :|: F < 1
-  l3(A,B,F,X,Y) -> Com_1(l3(A + B,B - 1,F,X)) :|: A >= 1
+  l3(A,B,F,X,Y) -> Com_1(l3(A + B,B - 1,F,X,Y)) :|: A >= 1
 )
