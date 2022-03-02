@@ -7,9 +7,9 @@ int twn05(int a, int b, int c, int d, int e, int f) {
         a = a + c;
         c = c - 1;
       }
-      while(a < b * b && a > 0) {
-        a = 5 * a + c * c;
-        b = 2 * b;
+      while(a < b*b && a > 0) {
+        a = 5*a + c*c;
+        b = 2*b;
       }
       a = d;
       b = e;

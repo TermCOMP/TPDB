@@ -16,9 +16,9 @@ void f(int x, int y, int f, int a, int b, int c) {
       v = __VERIFIER_nondet_int();
       f = v;
     } else {
-      while(a < b * b && a > 0) {
-        a = 5 * a + c * c;
-        b = 2 * b;
+      while(a < b*b && a > 0) {
+        a = 5*a + c*c;
+        b = 2*b;
       }
       break;
     }
