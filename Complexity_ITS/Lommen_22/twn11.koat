@@ -1,0 +1,7 @@
+(GOAL COMPLEXITY)
+(STARTTERM (FUNCTIONSYMBOLS l0))
+(VAR A B C)
+(RULES
+  l0(A,B,C) -> l1(A,B,C)
+  l1(A,B,C) -> l1(A + 8*A*B^2 + 16*B^3 + 16*B^2*C,B - A^2 - 4*A*B - 4*A*C - 4*B^2 - 8*B*C - 4*C^2,C - 4*A*B^2 - 8*B^3 - 8*B^2*C + A^2 + 4*A*B + 4*A*C + 4*B^2 + 8*B*C + 4*C^2) :|: 4*B^2+A+B+C > 0
+)

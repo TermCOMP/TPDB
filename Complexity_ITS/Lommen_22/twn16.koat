@@ -1,0 +1,7 @@
+(GOAL COMPLEXITY)
+(STARTTERM (FUNCTIONSYMBOLS l0))
+(VAR A)
+(RULES
+  l0(A) -> l1(A)
+  l1(A) -> l1(17 * A) :|: A > 0 && 42 > A
+)
