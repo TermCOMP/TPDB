@@ -1,0 +1,16 @@
+(GOAL COMPLEXITY)
+(STARTTERM (FUNCTIONSYMBOLS l0))
+(VAR A B C D T1 T2)
+(RULES
+  l0(A,B,C,D,T1,T2) -> l1(A,B,C,D,A,0)
+  l1(A,B,C,D,T1,T2) -> l2(A,B,C,D,T1 - 1,B + C) :|: T1 > 0
+  l2(A,B,C,D,T1,T2) -> l3(A,B,C,D,T1,T2 - 1) :|: T2 > 0
+  l3(A,B,C,D,T1,T2) -> l4(A,D,A,D,T1,T2)
+  l3(A,B,C,D,T1,T2) -> l4(A,A,D,D,T1,T2)
+  l4(A,B,C,D,T1,T2) -> l2(A,B,C,D,T1,T2)
+  l2(A,B,C,D,T1,T2) -> l1(A,B,C,B + C,T1,T2)
+  l2(A,B,C,D,T1,T2) -> l5(A,B,C,D,T1,T2)
+  l5(A,B,C,D,T1,T2) -> l6(A,B,C,D - 1,T1,T2) :|: D > 0
+  l6(A,B,C,D,T1,T2) -> l5(A,B,A + B + C,D,T1,T2)
+  l6(A,B,C,D,T1,T2) -> l5(A,A,B,D,T1,T2)
+)

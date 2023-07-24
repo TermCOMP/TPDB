@@ -1,0 +1,13 @@
+(GOAL COMPLEXITY)
+(STARTTERM (FUNCTIONSYMBOLS l0))
+(VAR X Y U V A B C)
+(RULES
+  l0(X,Y,A,B,C) -> l1(U,Y,A,B,C)
+  l1(X,Y,A,B,C) -> l1(X+1,Y,A,B,C) :|: 1 <= X && X <= 3 && V = 0
+  l2(X,Y,A,B,C) -> l1(X,Y-1,A,B,C)
+  l1(X,Y,A,B,C) -> l2(X,Y,A,B,C) :|: Y > 0 && V = 1
+  l2(X,Y,A,B,C) -> l3(X,Y,A,B,C)
+  l3(X,Y,A,B,C) -> l3(X,Y,A + C^3,B + C^2,C + 1) :|: A < B && C != 0
+  l3(X,Y,A,B,C) -> l4(X,Y,A,B,C)
+  l4(X,Y,A,B,C) -> l4(X,Y,A,B - 1,C) :|: B > 0
+)
