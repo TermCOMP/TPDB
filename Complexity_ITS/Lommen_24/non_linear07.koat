@@ -1,0 +1,8 @@
+(GOAL COMPLEXITY)
+(STARTTERM (FUNCTIONSYMBOLS l0))
+(VAR Y1 Y2 X2 X3)
+(RULES
+  l0(Y1, Y2, X2, X3) -> l1(Y1, Y2, X2, X3)
+  l1(Y1, Y2, X2, X3) -> l1(2*Y1^2 + 2*Y1, -Y1^2 + 2*Y2, 3*X2, 4*X3) :|: X3 < Y1 + 2*Y2 && X3 > 0
+  l1(Y1, Y2, X2, X3) -> l1(2*Y1^2 + 2*Y1, -Y1^2 + 2*Y2, 3*X2, 4*X3) :|: X3 < X2 && X3 > 0
+)
