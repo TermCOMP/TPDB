@@ -1,0 +1,8 @@
+(GOAL COMPLEXITY)
+(STARTTERM (FUNCTIONSYMBOLS l0))
+(VAR X1 X2)
+(RULES
+  l0(X1, X2) -> l1(X1, X2)
+  l1(X1, X2) -> l1(2*X1, 3*X2) :|: X2 < X1 && X2 > 0
+  l1(X1, X2) -> l1(2*X1, 4*X2) :|: X2 < X1 && X2 > 0
+)
