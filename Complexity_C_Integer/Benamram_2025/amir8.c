@@ -14,15 +14,15 @@ void amir8(int L1, int L2, int X, int Y)
             int tmp=A;
             B = A;
             A = tmp;
-        };
+        }
         R1 = A;
         A = Y;
         B = X;
-        loop L1 {
+        for (i=0; i<L1; i++) {
             int tmp=A;
             B = A;
             A = tmp;
-        };
+        }
         R2 = A;
         X =  R1 +R2;
     }

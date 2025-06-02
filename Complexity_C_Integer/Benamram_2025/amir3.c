@@ -9,7 +9,7 @@ void amir3(int x5, int x1, int x2)
     int x3 = 0;
     int x4 = 0;
     while (x5-- > 0) {
-        if (nondet()) {}
+        if (nondet()) {
             x3 = x1+x2;
             x4 = x2;
         }  else {
