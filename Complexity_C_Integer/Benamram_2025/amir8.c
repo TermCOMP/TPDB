@@ -5,7 +5,7 @@
 
 void amir8(int L1, int L2, int X, int Y)
 {
-    int A, B;
+    int A, B, i;
     int R1 = 0;
     int R2 = 0;
     while ( L2-- > 0 ) {
