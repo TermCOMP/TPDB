@@ -1,6 +1,9 @@
 extern void __VERIFIER_error() __attribute__ ((__noreturn__));
 
-extern void __VERIFIER_assume(int);
+extern void exit (int __status) __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__noreturn__));
+void __VERIFIER_assume(int b) {
+  if (!b) exit(0);
+}
 typedef long unsigned int size_t;
 typedef int wchar_t;
 
@@ -522,8 +525,6 @@ extern int atexit (void (*__func) (void)) __attribute__ ((__nothrow__ , __leaf__
 
 extern int on_exit (void (*__func) (int __status, void *__arg), void *__arg)
      __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (1)));
-
-extern void exit (int __status) __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__noreturn__));
 
 
 extern void _Exit (int __status) __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__noreturn__));

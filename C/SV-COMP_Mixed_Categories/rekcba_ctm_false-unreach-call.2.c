@@ -128,7 +128,10 @@ extern void __startrek_cpu_lock(void) ;
 #line 16
 extern void __startrek_cpu_unlock(void) ;
 #line 25
-extern void __VERIFIER_assume(_Bool  ) ;
+extern  __attribute__((__nothrow__, __noreturn__)) void exit(int __status ) ;
+void __VERIFIER_assume(int b) {
+  if (!b) exit(0);
+}
 #line 26
 void assert(_Bool arg) { if (!arg) { ERROR: __VERIFIER_error();} }
 #line 171 "src/startrek.h"

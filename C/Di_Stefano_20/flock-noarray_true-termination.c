@@ -7,6 +7,10 @@
  * Contact: luca <dot> distefano <at> gssi <dot> it
  */
 extern int __VERIFIER_nondet_int(void);
+extern  __attribute__((__nothrow__, __noreturn__)) void exit(int __status ) ;
+void __VERIFIER_assume(int b) {
+  if (!b) exit(0);
+}
 typedef char TYPEOFVALUES;
 typedef unsigned char TYPEOFPC;
 typedef unsigned char TYPEOFTIME;
